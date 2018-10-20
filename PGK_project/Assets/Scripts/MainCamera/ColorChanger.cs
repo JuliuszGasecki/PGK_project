@@ -8,7 +8,7 @@ public class ColorChanger : MonoBehaviour {
     public Color color2 = Color.red;
     public Color color3 = Color.green;
     public float duration = 1.0f;
-
+    private int colorFlag = 0;
     public Camera cam;
 
 	// Use this for initialization
@@ -19,15 +19,12 @@ public class ColorChanger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float t = Mathf.Sin(duration*Time.time);
-        /* int rand = Random.Range(1, 3);
-         if (rand == 1)
-             cam.backgroundColor = Color.Lerp(color1, color2, t);
-         else if (rand == 2)
-             cam.backgroundColor = Color.Lerp(color2, color3, t);
-         else if (rand == 3)
-             cam.backgroundColor = Color.Lerp(color3, color1, t);
-             */
-        cam.backgroundColor = Color.Lerp(color1, color3, t);
+
+        float r = Mathf.Sin(duration*Time.time);
+        float g = Mathf.Sin(duration*Time.time*3.14f);
+        float b = Mathf.Cos(duration * Time.time+3);
+
+        cam.backgroundColor = new Vector4(r, g , b , 0.5f );
+        
     }
 }
