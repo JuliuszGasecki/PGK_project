@@ -2401,12 +2401,12 @@ GameObject:
   - component: {fileID: 1109299344}
   - component: {fileID: 1109299343}
   - component: {fileID: 1109299345}
-  - component: {fileID: 1109299346}
   - component: {fileID: 1109299348}
   - component: {fileID: 1109299347}
+  - component: {fileID: 1109299346}
   m_Layer: 0
   m_Name: Hero
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2464,7 +2464,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1109299342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.105, y: -0.986, z: -1}
+  m_LocalPosition: {x: 0.574, y: -0.802, z: -1}
   m_LocalScale: {x: 0.76456803, y: 0.71204704, z: 0.861}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2481,21 +2481,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5dcbb316f20e3a4e9aeb577c2a6554c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 5
 --- !u!114 &1109299346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1109299342}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67e930f82b89ba74b98620e22f4fb054, type: 3}
+  m_Script: {fileID: 11500000, guid: ad5c41d9778d70249b7fb5b62efa2745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FollowTarget: {fileID: 0}
-  TargetOffset: {x: 0, y: 0, z: 0}
-  MoveSpeed: 2
+  health: 0
+  speed: 0
+  poisoning: 0
+  drugWithdrawal: 0
+  attack: 0
 --- !u!58 &1109299347
 CircleCollider2D:
   m_ObjectHideFlags: 0
