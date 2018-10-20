@@ -54,16 +54,29 @@ public class HeroController : MonoBehaviour
     }
     void move()
     {
-        if (Input.GetKey(KeyCode.D))
-            transform.position -= new Vector3(ogarnij_cipe_2(ogarnij_cipe(direction)).x * speed * Time.deltaTime, ogarnij_cipe_2(ogarnij_cipe(direction)).y * speed * Time.deltaTime, 0.0f);
-        if (Input.GetKey(KeyCode.A))
-            transform.position += new Vector3(ogarnij_cipe_2(ogarnij_cipe(direction)).x * speed * Time.deltaTime, ogarnij_cipe_2(ogarnij_cipe(direction)).y * speed * Time.deltaTime, 0.0f);
+        Vector2 ogar = ogarnij_cipe(direction);
         if (Input.GetKey(KeyCode.W))
-            transform.position += new Vector3(ogarnij_cipe(direction).x * speed * Time.deltaTime,
-                ogarnij_cipe(direction).y * speed * Time.deltaTime, 0.0f);
+            transform.position += new Vector3(ogar.x * speed * Time.deltaTime,
+                ogar.y * speed * Time.deltaTime, 0.0f);
         if (Input.GetKey(KeyCode.S))
-            transform.position -= new Vector3(ogarnij_cipe(direction).x * speed * Time.deltaTime,
-                ogarnij_cipe(direction).y * speed * Time.deltaTime, 0.0f);
+            transform.position -= new Vector3(ogar.x * speed * Time.deltaTime,
+                ogar.y * speed * Time.deltaTime, 0.0f);
+        if (direction.y < 0)
+        {
+            if (Input.GetKey(KeyCode.D))
+                transform.position += new Vector3(ogarnij_cipe_2(ogar).x * speed * Time.deltaTime, ogarnij_cipe_2(ogar).y * speed * Time.deltaTime, 0.0f);
+            if (Input.GetKey(KeyCode.A))
+                transform.position -= new Vector3(ogarnij_cipe_2(ogar).x * speed * Time.deltaTime, ogarnij_cipe_2(ogar).y * speed * Time.deltaTime, 0.0f);
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.D))
+                transform.position -= new Vector3(ogarnij_cipe_2(ogar).x * speed * Time.deltaTime,
+                    ogarnij_cipe_2(ogar).y * speed * Time.deltaTime, 0.0f);
+            if (Input.GetKey(KeyCode.A))
+                transform.position += new Vector3(ogarnij_cipe_2(ogar).x * speed * Time.deltaTime,
+                    ogarnij_cipe_2(ogar).y * speed * Time.deltaTime, 0.0f);
+        }
     }
 	
 	// Update is called once per frame
