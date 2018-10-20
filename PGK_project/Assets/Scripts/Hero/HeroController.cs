@@ -47,17 +47,23 @@ public class HeroController : MonoBehaviour
         return new Vector2(x,y);
 
     }
+
+    Vector2 ogarnij_cipe_2(Vector2 twoja_stara)
+    {
+        return new Vector2(-twoja_stara.y, twoja_stara.x);
+    }
     void move()
     {
         if (Input.GetKey(KeyCode.D))
-            transform.position += new Vector3(speed * Time.deltaTime, 0.0f, 0.0f);
+            transform.position -= new Vector3(ogarnij_cipe_2(ogarnij_cipe(direction)).x * speed * Time.deltaTime, ogarnij_cipe_2(ogarnij_cipe(direction)).y * speed * Time.deltaTime, 0.0f);
         if (Input.GetKey(KeyCode.A))
-            transform.position -= new Vector3(speed * Time.deltaTime, 0.0f, 0.0f);
+            transform.position += new Vector3(ogarnij_cipe_2(ogarnij_cipe(direction)).x * speed * Time.deltaTime, ogarnij_cipe_2(ogarnij_cipe(direction)).y * speed * Time.deltaTime, 0.0f);
         if (Input.GetKey(KeyCode.W))
             transform.position += new Vector3(ogarnij_cipe(direction).x * speed * Time.deltaTime,
                 ogarnij_cipe(direction).y * speed * Time.deltaTime, 0.0f);
         if (Input.GetKey(KeyCode.S))
-            transform.position -= new Vector3(0.0f, speed * Time.deltaTime, 0.0f);
+            transform.position -= new Vector3(ogarnij_cipe(direction).x * speed * Time.deltaTime,
+                ogarnij_cipe(direction).y * speed * Time.deltaTime, 0.0f);
     }
 	
 	// Update is called once per frame
