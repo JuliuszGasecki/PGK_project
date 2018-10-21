@@ -61,7 +61,7 @@ public class HeroController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
             transform.position -= new Vector3(ogar.x * speed * Time.deltaTime,
                 ogar.y * speed * Time.deltaTime, 0.0f);
-        if (direction.y < 0)
+        if (ogar.y < 0)
         {
             if (Input.GetKey(KeyCode.D))
                 transform.position += new Vector3(ogarnij_cipe_2(ogar).x * speed * Time.deltaTime, ogarnij_cipe_2(ogar).y * speed * Time.deltaTime, 0.0f);
