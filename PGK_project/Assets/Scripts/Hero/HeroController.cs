@@ -26,8 +26,6 @@ public class HeroController : MonoBehaviour
         {
             Debug.LogError("No Player");
         }
-
-        speed = hero.speed;
     }
 
     void faceMouse()
@@ -97,7 +95,8 @@ public class HeroController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    faceMouse();
+	    speed = hero.speed;
+        faceMouse();
 	    move();
 	}
 }

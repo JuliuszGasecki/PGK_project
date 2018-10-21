@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DrugsTimer : MonoBehaviour {
 
-    public HeroController hero;
+    public Hero hero;
     public Slider extasySlider;
     public float extasyTime = 0f;
     private bool extasyFlag = false;

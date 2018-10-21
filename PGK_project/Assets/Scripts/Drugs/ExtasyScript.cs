@@ -16,7 +16,7 @@ public class ExtasyScript : MonoBehaviour {
     public Texture2D cursorTexture;
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
-    void OnMouseEnter()
+    /*void OnMouseEnter()
     {
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
     }
@@ -24,7 +24,7 @@ public class ExtasyScript : MonoBehaviour {
     void OnMouseExit()
     {
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
-    }
+    }*/
 
     // Update is called once per frame
     void Update () {
@@ -42,7 +42,7 @@ public class ExtasyScript : MonoBehaviour {
         {
             hero.extasyTime += 5;
             destroyObject();
-            OnMouseExit();
+           // OnMouseExit();
         }
     }
 

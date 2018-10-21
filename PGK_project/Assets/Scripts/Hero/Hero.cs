@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hero : MonoBehaviour
 {
@@ -35,15 +36,16 @@ public class Hero : MonoBehaviour
     }
 
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+	    respawn();
 	}
 
     void respawn()
     {
         if (!isAlive())
         {
-
+            SceneManager.LoadScene(1);
         }
     }
     Boolean isAlive()
