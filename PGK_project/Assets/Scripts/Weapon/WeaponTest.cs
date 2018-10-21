@@ -23,7 +23,7 @@ public class WeaponTest : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     { 
-	        if (Input.GetKeyDown(KeyCode.Space) && Time.time > timeUntilFire)
+	        if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire)
 	        {
 	            timeUntilFire = Time.time + 1 / fireRate;
 	            Shoot();
