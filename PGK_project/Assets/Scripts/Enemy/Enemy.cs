@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour {
     public float czas_ataku;
     public int bron;
     public float time = 0;
-    public Transform spawn;
+    public Vector3 spawn;
     GameObject player;
     Rigidbody2D wrog;
 
@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour {
         player = GameObject.FindWithTag("Player");
         wrog = this.GetComponent<Rigidbody2D>();
         time = Time.time;
+        spawn = this.transform.position;
     }
 
     // Update is called once per frame
@@ -32,15 +33,11 @@ public class Enemy : MonoBehaviour {
     }
 
     void porusz_w_strone_gracza(){
-        Vector3 zwrot = player.transform.position - this.transform.position;
-        transform.up = zwrot;
-        Debug.Log(zwrot.x + " " + zwrot.y);
-        this.transform.position += new Vector3(kierunek(new Vector2(zwrot.x,zwrot.y)).x , kierunek(kierunek(new Vector2(zwrot.x, zwrot.y))).y, 0f) * speed;
-        Debug.Log(zwrot.x + " " + zwrot.y);
-
+        Vector3 elo = player.transform.position - this.transform.position;
+        this.transform.position += kierunek(elo) * Time.deltaTime;
     }
 
-    Vector2 kierunek(Vector2 zycie){
+    Vector3 kierunek(Vector3 zycie){
         float x = zycie.x;
         float y = zycie.y;
         if (Mathf.Abs(x) >= Mathf.Abs(y))
@@ -54,7 +51,7 @@ public class Enemy : MonoBehaviour {
             x = x / Mathf.Abs(y);
             y = y / Mathf.Abs(y);
         }
-        return new Vector2(x, y);
+        return new Vector3(x, y,0f);
     }
 
 
