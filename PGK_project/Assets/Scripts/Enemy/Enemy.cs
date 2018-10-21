@@ -30,11 +30,19 @@ public class Enemy : MonoBehaviour {
         if(tag_trafienia()){
             porusz_w_strone_gracza();
         }
+        else{
+            wracaj_na_sapwn();
+        }
     }
 
+    void wracaj_na_sapwn(){
+        Vector3 elo = spawn - this.transform.position;
+        if (elo.magnitude > 0.1f)
+            this.transform.position += kierunek(elo) * Time.deltaTime * speed;
+       }
     void porusz_w_strone_gracza(){
         Vector3 elo = player.transform.position - this.transform.position;
-        this.transform.position += kierunek(elo) * Time.deltaTime;
+        this.transform.position += kierunek(elo) * Time.deltaTime *speed;
     }
 
     Vector3 kierunek(Vector3 zycie){
