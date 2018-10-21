@@ -1886,6 +1886,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &592024992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592024993}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &592024993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 592024992}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.44, y: -1.3, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 63
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &600565803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3060,7 +3088,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1109299342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.574, y: -0.802, z: -1}
+  m_LocalPosition: {x: 0.574, y: 1.3, z: -1}
   m_LocalScale: {x: 0.76456803, y: 0.71204704, z: 0.861}
   m_Children:
   - {fileID: 1881440771}
@@ -3090,11 +3118,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5c41d9778d70249b7fb5b62efa2745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 10
   speed: 20
   poisoning: 0
   drugWithdrawal: 0
   attack: 0
+  spawnPoint: {fileID: 592024993}
 --- !u!58 &1109299347
 CircleCollider2D:
   m_ObjectHideFlags: 0
