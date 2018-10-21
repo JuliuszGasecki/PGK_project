@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour {
 
 
-    public int zycie;
+    public int zycie = 5;
     public int atak;
     public float speed = 5f;
     public float czas_ataku;
@@ -88,6 +88,16 @@ public class Enemy : MonoBehaviour {
         if (collision.gameObject.tag == "Bullet")
         {
 
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Bullet"){
+            if(zycie == 0){
+                this.transform.position = new Vector3(999f, 9999f, 9999f);
+            }
+            zycie =zycie - 1;
+            Debug.Log(zycie);
         }
     }
 }
