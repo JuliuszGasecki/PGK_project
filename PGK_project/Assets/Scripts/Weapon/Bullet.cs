@@ -11,7 +11,6 @@ public class Bullet : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	    //StartCoroutine(SelfDestruct());
 	}
 	
 	// Update is called once per frame
@@ -20,6 +19,7 @@ public class Bullet : MonoBehaviour
 	}
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("twoja sra");
         if (collision.gameObject.tag == "Wall")
         {
             Destroy(gameObject);
