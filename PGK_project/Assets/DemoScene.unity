@@ -3104,6 +3104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7748711b6d6b9e6469f2eab0430c5fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hero: {fileID: 1109299345}
   extasySlider: {fileID: 459494507}
   extasyTime: 0
 --- !u!114 &1109299350
