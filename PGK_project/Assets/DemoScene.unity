@@ -252,6 +252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c771362ab140fc41bbc65839c6d07ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: f6633c41f1ec3084b9f1904d82d0b95b, type: 3}
+  cursorMode: 1
+  hotSpot: {x: 0, y: 0}
 --- !u!58 &39060288
 CircleCollider2D:
   m_ObjectHideFlags: 0
