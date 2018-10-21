@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ExtasyScript : MonoBehaviour {
-
-    public Hero hero;
+    DrugsTimer hero;
     private float axis = 0;
     private bool playerOnTarget = false;
 
@@ -18,9 +17,7 @@ public class ExtasyScript : MonoBehaviour {
         bounce();
         if (playerOnTarget == true  && Input.GetMouseButton(1))
         {
-            hero.poisoning += 1;
-            hero.speed += 4;
-            Debug.Log(hero.speed);
+            hero.extasyTime += 10;
             destroyObject();
         }
     }
@@ -36,6 +33,7 @@ public class ExtasyScript : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            hero = other.gameObject.GetComponent<DrugsTimer>();
             playerOnTarget = true;
         }
         else
