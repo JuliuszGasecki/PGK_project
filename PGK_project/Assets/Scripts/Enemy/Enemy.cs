@@ -70,12 +70,12 @@ public class Enemy : MonoBehaviour {
         RaycastHit2D trafienie = Physics2D.Raycast(transform.position,przesuniecie);
         if (trafienie.collider.tag == "Player")
         {
-            Debug.Log("eloo");
+
             return true;
         }
         else
         {
-            Debug.Log("niee");
+
             return false;
         }
     }
