@@ -34,7 +34,7 @@ public class ExtasyScript : MonoBehaviour {
             playerOnTarget = false;
             time = 0;
         }
-        if(playerOnTarget == true)
+        if(playerOnTarget == true && time>=0)
         {
             time -= Time.fixedDeltaTime;
         }
@@ -59,10 +59,10 @@ public class ExtasyScript : MonoBehaviour {
         {
             hero = other.gameObject.GetComponent<DrugsTimer>();
             playerOnTarget = true;
-            time = 1;
+            time += 1;
         }
         else
-            playerOnTarget = false;
+        playerOnTarget = false;
     }
 
 
