@@ -8,7 +8,8 @@ public class DrugsTimer : MonoBehaviour {
     public Hero hero;
     public Slider extasySlider;
     public float extasyTime = 0f;
-    private bool extasyFlag = false;
+    public bool extasyFlag = false;
+    public Camera cameraEffect;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,7 @@ public class DrugsTimer : MonoBehaviour {
 
     public void addExtasyTime()
     {
-        extasyTime += 10f;
+        extasyTime += 20f;
     }
     private void checkExtasy()
     {
