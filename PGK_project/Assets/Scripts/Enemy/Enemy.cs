@@ -5,29 +5,32 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour {
 
 
-    public int zycie = 5;
+    public int zycie;
     public int atak;
-    public float speed = 5f;
+    public float speed;
     public float czas_ataku;
     public int bron;
-    public float time = 0;
+    public float time;
     public Vector3 spawn;
     GameObject player;
     Rigidbody2D wrog;
+    Transform fire_point;
+    public GameObject bullet;
 
-    // Use this for initialization
     void Start () {
 
         player = GameObject.FindWithTag("Player");
         wrog = this.GetComponent<Rigidbody2D>();
         time = Time.time;
         spawn = this.transform.position;
+        if (this.transform.Find("FirePoint"))
+            fire_point = this.transform.Find("FirePoint");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(tag_trafienia()){
+        if(znaleziono_gracza()){
             porusz_w_strone_gracza();
         }
         else{
@@ -64,32 +67,16 @@ public class Enemy : MonoBehaviour {
 
 
 
-    bool tag_trafienia(){
+    bool znaleziono_gracza(){
         Vector2 pozycja_gracza = new Vector2(player.transform.position.x, player.transform.position.y);
         Vector2 przesuniecie = pozycja_gracza - new Vector2(transform.position.x, transform.position.y);
         RaycastHit2D trafienie = Physics2D.Raycast(transform.position,przesuniecie);
         if (trafienie.collider.tag == "Player")
-        {
-
             return true;
-        }
         else
-        {
-
             return false;
-        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player"){
-
-        }
-        if (collision.gameObject.tag == "Bullet")
-        {
-
-        }
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Bullet"){
@@ -99,5 +86,9 @@ public class Enemy : MonoBehaviour {
             zycie =zycie - 1;
             Debug.Log(zycie);
         }
+    }
+
+    void strzel(){
+        Instantiate(bullet, fire_point.position, fire_point.rotation);
     }
 }
