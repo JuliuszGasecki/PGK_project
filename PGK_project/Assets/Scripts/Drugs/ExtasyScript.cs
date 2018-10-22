@@ -40,7 +40,7 @@ public class ExtasyScript : MonoBehaviour {
         }
         if (playerOnTarget == true  && Input.GetMouseButton(1))
         {
-            hero.extasyTime += 5;
+            hero.extasyTime += 10;
             destroyObject();
            // OnMouseExit();
         }
