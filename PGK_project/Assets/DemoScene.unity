@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 24553555}
   - component: {fileID: 24553557}
   - component: {fileID: 24553558}
-  - component: {fileID: 24553559}
   m_Layer: 2
   m_Name: przeciwnik
   m_TagString: Untagged
@@ -211,7 +210,7 @@ MonoBehaviour:
   time: 0
   spawn: {x: 0, y: 0, z: 0}
   bullet: {fileID: 1480845407829184, guid: 690c2227dd2a1fa42b8dd03d17081a7c, type: 2}
-  statyczny: 0
+  statyczny: 1
   czas_ataku_wrecz: 0
   zasieg: 10
 --- !u!58 &24553558
@@ -229,28 +228,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
---- !u!114 &24553559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 24553554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1982b64bf846b4c1d9d657bc2b2b0bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zycie: 0
-  atak: 0
-  speed: 0
-  czas_ataku: 0
-  bron: 0
-  time: 0
-  spawn: {x: 0, y: 0, z: 0}
-  bullet: {fileID: 0}
-  statyczny: 0
-  czas_ataku_wrecz: 0
-  zasieg: 0
 --- !u!1 &39060286
 GameObject:
   m_ObjectHideFlags: 0
@@ -6416,7 +6393,6 @@ GameObject:
   - component: {fileID: 1787105477}
   - component: {fileID: 1787105476}
   - component: {fileID: 1787105475}
-  - component: {fileID: 1787105474}
   m_Layer: 2
   m_Name: przeciwnik (1)
   m_TagString: Untagged
@@ -6424,28 +6400,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1787105474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1787105473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1982b64bf846b4c1d9d657bc2b2b0bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zycie: 0
-  atak: 0
-  speed: 0
-  czas_ataku: 0
-  bron: 0
-  time: 0
-  spawn: {x: 0, y: 0, z: 0}
-  bullet: {fileID: 0}
-  statyczny: 0
-  czas_ataku_wrecz: 0
-  zasieg: 0
 --- !u!58 &1787105475
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6475,7 +6429,7 @@ MonoBehaviour:
   zycie: 5
   atak: 0
   speed: 5
-  czas_ataku: 0
+  czas_ataku: 0.2
   bron: 0
   time: 0
   spawn: {x: 0, y: 0, z: 0}
