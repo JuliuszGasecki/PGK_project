@@ -7,12 +7,12 @@ public class Withdrawal : MonoBehaviour {
 
     public Hero hero;
     public Slider withdrawalSLider;
-    public float drugWithdrawalMax = 30;
+    public float drugWithdrawalMax = 20;
     public bool stopWithdrawalFlag = false;
 
 
     void Start () {
-        hero.drugWithdrawal = 20;
+        hero.drugWithdrawal = 10;
 	}
 	
 	// Update is called once per frame
