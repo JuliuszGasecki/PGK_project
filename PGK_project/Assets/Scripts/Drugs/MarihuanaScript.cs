@@ -42,7 +42,7 @@ public class MarihuanaScript : MonoBehaviour {
         }
         if (playerOnTarget == true && Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
         {
-            hero.marihuanaTime += 50;
+            hero.marihuanaTime += 30;
             destroyObject();
             //OnMouseExit();
         }
