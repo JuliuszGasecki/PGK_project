@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float bulletSpeed;
 
-    public float bulletDamage;
+    public int bulletDamage;
 
 	// Use this for initialization
 	void Start ()
@@ -19,14 +19,14 @@ public class Bullet : MonoBehaviour
 	}
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Untagged" || collision.gameObject.tag == "-1")
-
-        {
-            Destroy(gameObject);
+        Destroy(gameObject);
+        if(collision.gameObject.tag == "Player"){
+            collision.gameObject.GetComponent<Hero>().health -= bulletDamage;
         }
-
-        
+        if(collision.gameObject.tag == "Enemy"){
+            collision.gameObject.GetComponent<Enemy>().zycie -= bulletDamage;
+            
+        }
     }
 
 }
