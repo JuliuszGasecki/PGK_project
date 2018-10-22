@@ -49,7 +49,7 @@ public class ExtasyScript : MonoBehaviour {
     private void bounce()
     {
         float lastY = transform.position.y;
-        transform.position = new Vector3(transform.position.x, lastY + Mathf.Sin(angle) /40, transform.position.z);
+        transform.position = new Vector3(transform.position.x, lastY + Mathf.Sin(angle) /80, transform.position.z);
         angle += 3.14f / 64f;
     }
 

@@ -97,7 +97,7 @@ MonoBehaviour:
       logMin: -8
       logMax: 4
   bloom:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       bloom:
         intensity: 0.5
@@ -106,14 +106,14 @@ MonoBehaviour:
         radius: 4
         antiFlicker: 0
       lensDirt:
-        texture: {fileID: 0}
+        texture: {fileID: 2800000, guid: 3aac3087967ea4fae858ec0494fd24d9, type: 3}
         intensity: 3
   colorGrading:
     m_Enabled: 1
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.0255
+        neutralBlackIn: -0.0187
         neutralWhiteIn: 10
         neutralBlackOut: 0
         neutralWhiteOut: 10
