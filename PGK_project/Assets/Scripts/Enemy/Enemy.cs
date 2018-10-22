@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
     bool w_zasiegu_ataku_wrecz;
     public float czas_ataku_wrecz;
     public float zasieg;
+    public float czas_na_powrot;
+    private float time_tracker_powrotu;
 
 
     void Start()
@@ -37,6 +39,7 @@ public class Enemy : MonoBehaviour
         time_tracker_strzalu = Time.time;
         w_zasiegu_ataku_wrecz = false;
         time_tracker_gonga = Time.time;
+        time_tracker_powrotu = Time.time;
     }
 
     // Update is called once per frame
@@ -46,6 +49,7 @@ public class Enemy : MonoBehaviour
 
         if (znaleziono_gracza())
         {
+            time_tracker_powrotu = Time.time;
             obroc_do_playera();
             if (statyczny)
             {
@@ -67,11 +71,19 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            wracaj_na_sapwn();
+            if(time_tracker_powrotu + czas_na_powrot < Time.time)
+                wracaj_na_spawn();
+
         }
     }
 
-    void wracaj_na_sapwn()
+    void odbij_od_sciany()
+    {
+
+                   
+              
+    }
+    void wracaj_na_spawn()
     {
         Vector3 elo = spawn - this.transform.position;
         if (elo.magnitude > 0.1f)
@@ -108,7 +120,7 @@ public class Enemy : MonoBehaviour
         Vector2 pozycja_gracza = new Vector2(player.transform.position.x, player.transform.position.y);
         Vector2 przesuniecie = pozycja_gracza - new Vector2(transform.position.x, transform.position.y);
         RaycastHit2D trafienie = Physics2D.Raycast(transform.position, przesuniecie, zasieg);
-        if (trafienie.collider.tag == "Player")
+        if (trafienie.collider.gameObject.tag == "Player")
             return true;
         else
             return false;
@@ -147,6 +159,8 @@ public class Enemy : MonoBehaviour
         return false;
 
     }
+
+
 
     void obroc_do_playera()
     {
