@@ -28,11 +28,14 @@ public class ChangeSprite : MonoBehaviour {
                 {
                     spriteR.sprite = Resources.Load<Sprite>(spriteHero);
                     isChange = false;
+                    this.GetComponent<Hero>().canShoot = false;
+
                 }
                 else
                 {
                     spriteR.sprite = Resources.Load<Sprite>(spriteWeapon);
                     isChange = true;
+                    this.GetComponent<Hero>().canShoot = true;
                 }
             }
 
