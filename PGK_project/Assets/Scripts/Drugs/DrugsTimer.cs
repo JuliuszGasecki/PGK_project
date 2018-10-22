@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DrugsTimer : MonoBehaviour {
 
     public Hero hero;
+    public Withdrawal heroW;
     public bool tookDrug = false;
 
 
@@ -54,10 +55,12 @@ public class DrugsTimer : MonoBehaviour {
     private void useExtasy()
     {
         hero.speed += 5;
+        heroW.addWithdrawalPoints(7);
     }
     private void resetExtasy()
     {
         hero.speed -= 5;
+        heroW.addWithdrawalPoints(5);
     }
 
     public void addMarihuanaTime()
@@ -88,12 +91,15 @@ public class DrugsTimer : MonoBehaviour {
     {
         Time.timeScale = 0.2f;
         hero.speed += 5;
+        heroW.stopWithdrawal();
 
     }
     private void resetMarihuana()
     {
         Time.timeScale = 1f;
         hero.speed -= 5;
+        heroW.startWithdrawal();
+        heroW.addWithdrawalPoints(10);
     }
 
 }

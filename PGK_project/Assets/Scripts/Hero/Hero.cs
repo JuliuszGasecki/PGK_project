@@ -9,7 +9,7 @@ public class Hero : MonoBehaviour
     public int health;
     public float speed;
     public int poisoning;
-    public int drugWithdrawal;
+    public float drugWithdrawal;
     public float attack;
 
     public Transform spawnPoint;
@@ -20,7 +20,7 @@ public class Hero : MonoBehaviour
 
     private int tempPoisoning;
 
-    private int tempDrugWithdrawal;
+    private float tempDrugWithdrawal;
 
     private float tempAttack;
     public bool canShoot { set; get; }
