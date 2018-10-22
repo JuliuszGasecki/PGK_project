@@ -6,6 +6,7 @@ using UnityEngine.PostProcessing;
 public class ExtasyEffect : MonoBehaviour {
 
     public DrugsTimer hero;
+    public PostProcessingProfile extasyProfile;
     private PostProcessingBehaviour effect;
     // Use this for initialization
     void Start () {
@@ -16,9 +17,9 @@ public class ExtasyEffect : MonoBehaviour {
 	void Update () {
         if (hero.extasyFlag == true)
         {
-            effect.enabled = true;
+            GetComponent<PostProcessingBehaviour>().profile = extasyProfile;
         }
         else
-            effect.enabled = false;
+            GetComponent<PostProcessingBehaviour>().profile = null;
     }
 }
