@@ -6,19 +6,24 @@ using UnityEngine.UI;
 public class DrugsTimer : MonoBehaviour {
 
     public Hero hero;
+    
     public Slider extasySlider;
     public float extasyTime = 0f;
     public bool extasyFlag = false;
-    public Camera cameraEffect;
 
-	// Use this for initialization
-	void Start () {
+    public Slider marihuanaSlider;
+    public float marihuanaTime = 0f;
+    public bool marihuanaFlag = false;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
         checkExtasy();
+        checkMarihuana();
     }
 
     public void addExtasyTime()
@@ -49,6 +54,41 @@ public class DrugsTimer : MonoBehaviour {
     }
     private void resetExtasy()
     {
+        hero.speed -= 5;
+    }
+
+    public void addMarihuanaTime()
+    {
+        marihuanaTime += 20f;
+    }
+    private void checkMarihuana()
+    {
+        if (marihuanaTime > 0)
+        {
+            marihuanaTime -= Time.fixedDeltaTime;
+            marihuanaSlider.value = marihuanaTime;
+            if (marihuanaFlag == false)
+            {
+                useMarihuana();
+            }
+            marihuanaFlag = true;
+        }
+        else if (marihuanaFlag == true)
+        {
+            resetMarihuana();
+            marihuanaFlag = false;
+        }
+    }
+
+    private void useMarihuana()
+    {
+        Time.timeScale = 0.5f;
+        hero.speed += 5;
+
+    }
+    private void resetMarihuana()
+    {
+        Time.timeScale = 1f;
         hero.speed -= 5;
     }
 
