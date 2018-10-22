@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
 	}
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+
         if(collision.gameObject.tag == "Player"){
             collision.gameObject.GetComponent<Hero>().health -= bulletDamage;
         }
@@ -27,6 +27,7 @@ public class Bullet : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().zycie -= bulletDamage;
             
         }
+        Destroy(gameObject);
     }
 
 }
