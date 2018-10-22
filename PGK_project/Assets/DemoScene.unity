@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 204609669}
-  startMission: {fileID: 8300000, guid: 84538387ac438f144aac06ab85f00f2c, type: 3}
+  startMission: {fileID: 8300000, guid: e6f253ab7c89cce48a244ff937e400fa, type: 3}
   onDrugs: {fileID: 8300000, guid: 84538387ac438f144aac06ab85f00f2c, type: 3}
   onWeed: {fileID: 8300000, guid: 7dff4693518628e4489db1856d48f8e6, type: 3}
   hero: {fileID: 1109299349}
