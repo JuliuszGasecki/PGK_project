@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58736668350743408}
   m_Layer: 2
   m_Name: Seba
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

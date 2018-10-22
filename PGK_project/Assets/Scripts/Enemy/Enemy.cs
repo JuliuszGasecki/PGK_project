@@ -27,8 +27,8 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-
-        player = GameObject.FindWithTag("Player");
+        if(GameObject.FindWithTag("Player"))
+            player = GameObject.FindWithTag("Player");
         wrog = this.GetComponent<Rigidbody2D>();
         time = Time.time;
         spawn = this.transform.position;

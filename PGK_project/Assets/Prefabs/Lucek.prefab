@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58488765946651008}
   m_Layer: 2
   m_Name: Lucek
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
