@@ -7,6 +7,7 @@ public class ExtasyEffect : MonoBehaviour {
 
     public DrugsTimer hero;
     public PostProcessingProfile extasyProfile;
+    public PostProcessingProfile noDrugProfile;
     private PostProcessingBehaviour effect;
     // Use this for initialization
     void Start () {
@@ -20,6 +21,6 @@ public class ExtasyEffect : MonoBehaviour {
             GetComponent<PostProcessingBehaviour>().profile = extasyProfile;
         }
         else
-            GetComponent<PostProcessingBehaviour>().profile = null;
+            GetComponent<PostProcessingBehaviour>().profile = noDrugProfile;
     }
 }

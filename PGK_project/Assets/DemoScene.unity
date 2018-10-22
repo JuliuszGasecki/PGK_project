@@ -5070,6 +5070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hero: {fileID: 1109299349}
   extasyProfile: {fileID: 11400000, guid: 700b70fbd86bbec43b5fca8d8613852e, type: 2}
+  noDrugProfile: {fileID: 11400000, guid: d032bfe96d6f8164188da506ac4acb95, type: 2}
 --- !u!114 &1433970151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5081,7 +5082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 0}
+  profile: {fileID: 11400000, guid: d032bfe96d6f8164188da506ac4acb95, type: 2}
 --- !u!1 &1441181801
 GameObject:
   m_ObjectHideFlags: 0
