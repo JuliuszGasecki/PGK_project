@@ -2122,7 +2122,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2133,7 +2133,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 592024992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44, y: -1.3, z: -1}
+  m_LocalPosition: {x: 0.44, y: -1.6, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5087,6 +5087,7 @@ GameObject:
   - component: {fileID: 1433970149}
   - component: {fileID: 1433970151}
   - component: {fileID: 1433970150}
+  - component: {fileID: 1433970152}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5167,7 +5168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FollowTarget: {fileID: 1109299344}
   TargetOffset: {x: 0, y: 0, z: -1}
-  MoveSpeed: 10
+  MoveSpeed: 100
 --- !u!114 &1433970149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5207,6 +5208,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 0}
+--- !u!114 &1433970152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433970144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3dc6cfddf614e7448a9502e23ae999d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 1f5f5df2d1ecc7d40ad35323b557631c, type: 3}
+  cursorMode: 1
+  hotSpot: {x: 0, y: 0}
 --- !u!1 &1441181801
 GameObject:
   m_ObjectHideFlags: 0
@@ -6193,7 +6208,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1881440770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6, y: 13.2, z: 0}
+  m_LocalPosition: {x: 2.6, y: 13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1109299344}

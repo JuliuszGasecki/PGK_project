@@ -42,7 +42,7 @@ public class ExtasyScript : MonoBehaviour {
         {
             hero.extasyTime += 10;
             destroyObject();
-           // OnMouseExit();
+            //OnMouseExit();
         }
     }
 

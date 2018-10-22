@@ -11,7 +11,6 @@ public class HeroController : MonoBehaviour
     private Vector3 mousePosition;
     public Hero hero;
     private Transform _myTransform;
- 
 
     // Use this for initialization
     void Start ()
