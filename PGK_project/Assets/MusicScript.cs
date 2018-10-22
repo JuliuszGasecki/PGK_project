@@ -32,7 +32,7 @@ public class MusicScript : MonoBehaviour {
                 audioSource.Play();
                 onDrugsFlag = true;
             }
-           
+
             if (hero.marihuanaFlag == true)
             {
                 if (onDrugsFlag == true)
@@ -42,7 +42,15 @@ public class MusicScript : MonoBehaviour {
                     audioSource.clip = onWeed;
                     audioSource.Play();
                 }
-                
+
+
+            }
+            else if (onDrugsFlag == false)
+            {
+                audioSource.Stop();
+                audioSource.clip = onDrugs;
+                audioSource.Play();
+                onDrugsFlag = true;
             }
         }
               
