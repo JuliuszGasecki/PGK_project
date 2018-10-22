@@ -19,14 +19,7 @@ public class Bullet : MonoBehaviour
 	}
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Untagged" || collision.gameObject.tag == "-1")
-
-        {
-            Destroy(gameObject);
-        }
-
-        
+        Destroy(gameObject);
     }
 
 }
