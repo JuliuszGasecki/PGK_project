@@ -208,6 +208,7 @@ MonoBehaviour:
   bron: 0
   time: 0
   spawn: {x: 0, y: 0, z: 0}
+  bullet: {fileID: 0}
 --- !u!58 &24553558
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -813,6 +814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 204609668}
   - component: {fileID: 204609667}
+  - component: {fileID: 204609669}
   m_Layer: 0
   m_Name: MusicObject
   m_TagString: Untagged
@@ -820,7 +822,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &204609667
+--- !u!114 &204609667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 204609666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37a15261f4aa0648b92708abed602a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 204609669}
+  startMission: {fileID: 8300000, guid: 84538387ac438f144aac06ab85f00f2c, type: 3}
+  onDrugs: {fileID: 8300000, guid: 84538387ac438f144aac06ab85f00f2c, type: 3}
+  onWeed: {fileID: 8300000, guid: 7dff4693518628e4489db1856d48f8e6, type: 3}
+  hero: {fileID: 1109299349}
+--- !u!4 &204609668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 204609666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.2965047, y: 0.7939972, z: -1.0058594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 77
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &204609669
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -829,7 +860,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 84538387ac438f144aac06ab85f00f2c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -915,19 +946,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &204609668
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 204609666}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2965047, y: 0.7939972, z: -1.0058594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 77
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &204805386
 GameObject:
   m_ObjectHideFlags: 0
@@ -4128,6 +4146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hero: {fileID: 1109299346}
+  tookDrug: 0
   extasySlider: {fileID: 459494507}
   extasyTime: 0
   extasyFlag: 0
@@ -5939,7 +5958,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 20
+  m_MaxValue: 60
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -7356,7 +7375,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2063438140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.747, y: 24.035, z: 0}
+  m_LocalPosition: {x: -1.747, y: 24.035, z: -1}
   m_LocalScale: {x: 0.291205, y: 0.291205, z: 0.291205}
   m_Children: []
   m_Father: {fileID: 0}

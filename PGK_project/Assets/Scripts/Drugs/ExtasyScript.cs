@@ -38,7 +38,7 @@ public class ExtasyScript : MonoBehaviour {
         {
             time -= Time.fixedDeltaTime;
         }
-        if (playerOnTarget == true  && Input.GetMouseButton(1))
+        if (playerOnTarget == true  && Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
         {
             hero.extasyTime += 10;
             destroyObject();

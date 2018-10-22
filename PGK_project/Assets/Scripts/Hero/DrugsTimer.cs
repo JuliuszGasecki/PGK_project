@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class DrugsTimer : MonoBehaviour {
 
     public Hero hero;
-    
+    public bool tookDrug = false;
+
+
     public Slider extasySlider;
     public float extasyTime = 0f;
     public bool extasyFlag = false;
@@ -34,6 +36,7 @@ public class DrugsTimer : MonoBehaviour {
     {
         if(extasyTime>0)
         {
+            tookDrug = true;
             extasyTime -= Time.fixedDeltaTime;
             extasySlider.value = extasyTime;
             if(extasyFlag == false)
@@ -59,12 +62,13 @@ public class DrugsTimer : MonoBehaviour {
 
     public void addMarihuanaTime()
     {
-        marihuanaTime += 20f;
+        marihuanaTime += 50f;
     }
     private void checkMarihuana()
     {
         if (marihuanaTime > 0)
         {
+            tookDrug = true;
             marihuanaTime -= Time.fixedDeltaTime;
             marihuanaSlider.value = marihuanaTime;
             if (marihuanaFlag == false)
@@ -82,7 +86,7 @@ public class DrugsTimer : MonoBehaviour {
 
     private void useMarihuana()
     {
-        Time.timeScale = 0.5f;
+        Time.timeScale = 0.2f;
         hero.speed += 5;
 
     }

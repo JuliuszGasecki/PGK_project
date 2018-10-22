@@ -40,9 +40,9 @@ public class MarihuanaScript : MonoBehaviour {
         {
             time -= Time.fixedDeltaTime;
         }
-        if (playerOnTarget == true && Input.GetMouseButton(1))
+        if (playerOnTarget == true && Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
         {
-            hero.marihuanaTime += 10;
+            hero.marihuanaTime += 50;
             destroyObject();
             //OnMouseExit();
         }
