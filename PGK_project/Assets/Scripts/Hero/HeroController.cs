@@ -9,7 +9,6 @@ public class HeroController : MonoBehaviour
     public float speed { set; get; }
     private Vector2 direction;
     private Vector3 mousePosition;
-    public Hero hero;
     private Transform _myTransform;
 
     // Use this for initialization
@@ -20,7 +19,7 @@ public class HeroController : MonoBehaviour
 
     void setSetting()
     {
-        _myTransform = hero.transform;
+        _myTransform = this.GetComponent<Hero>().transform;
         if (_myTransform == null)
         {
             Debug.LogError("No Player");
@@ -94,7 +93,7 @@ public class HeroController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    speed = hero.speed;
+	    speed = this.GetComponent<Hero>().speed;
         faceMouse();
 	    move();
 	}
