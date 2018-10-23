@@ -9,7 +9,7 @@ public class ChangeSprite : MonoBehaviour
     private string spriteKnife = "hero2";
     private SpriteRenderer spriteR;
     private bool isChange;
-    private float change_freeze = 0.1f;
+    private float change_freeze = 0.5f;
     private float timer;
     private CircleCollider2D collider;
 
