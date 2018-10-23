@@ -25,6 +25,10 @@ public class Enemy : MonoBehaviour
     public float zasieg;
     public float czas_na_powrot;
     private float time_tracker_powrotu;
+    public int rate_ganja; // 1-100
+    public int rate_extasy;
+    public GameObject ganja; 
+    public GameObject extasy;
 
 
     void Start()
@@ -45,6 +49,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         sprawdz_czy_umarl();
 
         if (znaleziono_gracza())
@@ -138,7 +144,13 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("zycie " + zycie);
         if (this.zycie < 0)
+        {
+            if (Random.Range(0f,2f) > 1)
+                Instantiate(ganja, transform.position, transform.rotation);
+            if (Random.Range(0f, 3f) > 1)
+                    Instantiate(extasy, transform.position, transform.rotation);
             Destroy(this.gameObject);
+        }
     }
 
     void strzel()

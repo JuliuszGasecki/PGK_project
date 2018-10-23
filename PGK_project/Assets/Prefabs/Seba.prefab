@@ -79,6 +79,11 @@ MonoBehaviour:
   statyczny: 0
   czas_ataku_wrecz: 0.1
   zasieg: 10
+  czas_na_powrot: 0
+  rate_ganja: 0
+  rate_extasy: 0
+  ganja: {fileID: 1615165178999096, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
+  extasy: {fileID: 1358745081234772, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
 --- !u!212 &212256014939228106
 SpriteRenderer:
   m_ObjectHideFlags: 1
