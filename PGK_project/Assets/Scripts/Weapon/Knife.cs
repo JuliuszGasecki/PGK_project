@@ -2,15 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Knife : MonoBehaviour {
+public class Knife : MonoBehaviour
+{
+    public Hero hero;
+    private GameObject knife;
+    private bool canShoot;
+    // Use this for initialization
+    void Start()
+    {
+        knife = GameObject.Find("knife");
+        canShoot = hero.canShoot;
+        Debug.Log(canShoot);
+        knife.SetActive(false);
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Attack()
+    {
+        Debug.Log(canShoot);
+        if (canShoot == false)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                knife.SetActive(true);
+            }
+        }
+        else
+        {
+            knife.SetActive(false);
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        canShoot = hero.canShoot;
+        Debug.Log(canShoot);
+        Attack();
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
