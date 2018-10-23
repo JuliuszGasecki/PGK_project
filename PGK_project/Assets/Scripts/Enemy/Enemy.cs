@@ -12,7 +12,8 @@ public class Enemy : MonoBehaviour
     public float czas_ataku;
     public int bron;
     public float time;
-    public Vector3 spawn;
+    private Vector3 spawn;
+    private Vector3 rotacja_orginalna;
     GameObject player;
     Rigidbody2D wrog;
     Transform fire_point;
@@ -29,10 +30,41 @@ public class Enemy : MonoBehaviour
     public int rate_extasy;
     public GameObject ganja; 
     public GameObject extasy;
+    private List<Vector3> punkty_powrotne;
+    private float czas_pomiedzy_punktami;
+
+
+    void zrob_punkt(Vector3 miejsce){
+        punkty_powrotne.Add(miejsce);
+    }
+    void usun_ostatni(){
+        if(punkty_powrotne.Count >=1)
+            punkty_powrotne.RemoveAt(punkty_powrotne.Count - 1);
+    }
+
+    void wracaj_po_punkcie(){
+        if (punkty_powrotne.Count > 0)
+        {
+            Vector3 last_point = punkty_powrotne[punkty_powrotne.Count - 1];
+
+            Vector3 wypadkowy_wektor = last_point - this.transform.position;
+            if (wypadkowy_wektor.magnitude > 0.1f)
+            {
+                this.transform.position += kierunek(wypadkowy_wektor) * Time.deltaTime * speed;
+            }
+            else
+                usun_ostatni();
+        }
+        else
+            wracaj_na_spawn();
+    }
 
 
     void Start()
     {
+        rotacja_orginalna = transform.rotation.eulerAngles;
+        punkty_powrotne = new List<Vector3>();
+        czas_pomiedzy_punktami = 0.2f;
         if(GameObject.FindWithTag("Player"))
             player = GameObject.FindWithTag("Player");
         wrog = this.GetComponent<Rigidbody2D>();
@@ -50,12 +82,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 
-
         sprawdz_czy_umarl();
 
         if (znaleziono_gracza())
         {
-            time_tracker_powrotu = Time.time;
             obroc_do_playera();
             if (statyczny)
             {
@@ -68,6 +98,13 @@ public class Enemy : MonoBehaviour
             else
             {
                 porusz_w_strone_gracza();
+                if (time_tracker_powrotu < Time.time)
+                {
+                    Debug.Log("cooo");
+                    zrob_punkt(transform.position);
+                    time_tracker_powrotu = Time.time + czas_na_powrot;
+                    Debug.Log(punkty_powrotne.Count);
+                }
                 if (time_tracker_gonga < Time.time)
                 {
                     if (atak_wrecz())
@@ -77,8 +114,8 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            if(time_tracker_powrotu + czas_na_powrot < Time.time)
-                wracaj_na_spawn();
+            if (time_tracker_powrotu + czas_na_powrot < Time.time)
+                wracaj_po_punkcie();
 
         }
     }
@@ -94,6 +131,8 @@ public class Enemy : MonoBehaviour
         Vector3 elo = spawn - this.transform.position;
         if (elo.magnitude > 0.1f)
             this.transform.position += kierunek(elo) * Time.deltaTime * speed;
+        else
+            this.transform.rotation = Quaternion.Euler(rotacja_orginalna);
     }
     void porusz_w_strone_gracza()
     {
