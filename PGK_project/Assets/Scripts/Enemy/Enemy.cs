@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
-
-
     public int zycie;
     public int atak;
     public float speed;
@@ -30,6 +28,7 @@ public class Enemy : MonoBehaviour
     public int rate_extasy;
     public GameObject ganja; 
     public GameObject extasy;
+    public GameObject coca;
     private List<Vector3> punkty_powrotne;
     private float czas_pomiedzy_punktami;
 
@@ -165,8 +164,13 @@ public class Enemy : MonoBehaviour
         Vector2 pozycja_gracza = new Vector2(player.transform.position.x, player.transform.position.y);
         Vector2 przesuniecie = pozycja_gracza - new Vector2(transform.position.x, transform.position.y);
         RaycastHit2D trafienie = Physics2D.Raycast(transform.position, przesuniecie, zasieg);
-        if (trafienie.collider.gameObject.tag == "Player")
-            return true;
+        if (trafienie.collider != null)
+        {
+            if (trafienie.collider.gameObject.tag == "Player")
+                return true;
+            else
+                return false;
+        }
         else
             return false;
     }
@@ -188,6 +192,8 @@ public class Enemy : MonoBehaviour
                 Instantiate(ganja, transform.position, transform.rotation);
             if (Random.Range(0f, 3f) > 1)
                     Instantiate(extasy, transform.position, transform.rotation);
+            if (Random.Range(0f, 4f) > 3)
+                Instantiate(coca, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
     }
