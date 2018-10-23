@@ -8,11 +8,12 @@ public class HeroController : MonoBehaviour
 {
     public float speed { set; get; }
     private Vector2 direction;
+    private Vector2 directionHero;
     private Vector3 mousePosition;
     private Transform _myTransform;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         setSetting();
     }
@@ -36,65 +37,26 @@ public class HeroController : MonoBehaviour
 
         transform.up = direction;
     }
-    
 
-    Vector2 normalizationVector(Vector2 vector)
-    {
-        float x = vector.x;
-        float y = vector.y;
-        if (Mathf.Abs(x) >= Mathf.Abs(y))
-        {
-            y = y / Mathf.Abs(x);
-            x = x / Mathf.Abs(x);
-          
-        }
-        else if (Mathf.Abs(x) < Mathf.Abs(y))
-        {
-            x = x / Mathf.Abs(y);
-            y = y / Mathf.Abs(y);
-          }
-        return new Vector2(x,y);
-
-    }
-
-    Vector2 perpendicualrVector(Vector2 vector)
-    {
-        return new Vector2(-vector.y, vector.x);
-    }
     void move()
     {
-        Vector2 normalizedVector = normalizationVector(direction);
-        float pVX = perpendicualrVector(normalizedVector).x;
-        float pVY = perpendicualrVector(normalizedVector).y;
-        if (Input.GetKey(KeyCode.W))
-            transform.position += new Vector3(normalizedVector.x * speed * Time.deltaTime,
-                normalizedVector.y * speed * Time.deltaTime, 0.0f);
-        if (Input.GetKey(KeyCode.S))
-            transform.position -= new Vector3(normalizedVector.x * speed * Time.deltaTime,
-                normalizedVector.y * speed * Time.deltaTime, 0.0f);
-        if (normalizedVector.y < 0)
+        Vector2 normalizedVector = direction.normalized;
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
-            if (Input.GetKey(KeyCode.D))
-                transform.position += new Vector3(pVX * speed * Time.deltaTime, pVY * speed * Time.deltaTime, 0.0f);
-            if (Input.GetKey(KeyCode.A))
-                transform.position -= new Vector3(pVX * speed * Time.deltaTime, pVY * speed * Time.deltaTime, 0.0f);
-        }
-        else
-        {
-            if (Input.GetKey(KeyCode.D))
-                transform.position -= new Vector3(pVX * speed * Time.deltaTime,
-                    pVY * speed * Time.deltaTime, 0.0f);
-            if (Input.GetKey(KeyCode.A))
-                transform.position += new Vector3(pVX * speed * Time.deltaTime,
-                    pVY * speed * Time.deltaTime, 0.0f);
+            if (normalizedVector.y < 0)
+                directionHero = new Vector2(-Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            else
+                directionHero = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            directionHero.Normalize();
+            transform.Translate(directionHero * Time.deltaTime * speed);
         }
     }
-	
-	// Update is called once per frame
-	void Update ()
-	{
-	    speed = this.GetComponent<Hero>().speed;
+
+    // Update is called once per frame
+    void Update()
+    {
+        speed = this.GetComponent<Hero>().speed;
         faceMouse();
-	    move();
-	}
+        move();
+    }
 }
