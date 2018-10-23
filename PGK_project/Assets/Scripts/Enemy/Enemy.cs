@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
-
-
     public int zycie;
     public int atak;
     public float speed;
@@ -165,8 +163,13 @@ public class Enemy : MonoBehaviour
         Vector2 pozycja_gracza = new Vector2(player.transform.position.x, player.transform.position.y);
         Vector2 przesuniecie = pozycja_gracza - new Vector2(transform.position.x, transform.position.y);
         RaycastHit2D trafienie = Physics2D.Raycast(transform.position, przesuniecie, zasieg);
-        if (trafienie.collider.gameObject.tag == "Player")
-            return true;
+        if (trafienie.collider != null)
+        {
+            if (trafienie.collider.gameObject.tag == "Player")
+                return true;
+            else
+                return false;
+        }
         else
             return false;
     }
