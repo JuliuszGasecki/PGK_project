@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MarihuanaScript : MonoBehaviour {
+public class CocaScript : MonoBehaviour {
+
     Hero hero;
     DrugsTimer heroDrugTimer;
     private float angle = 0;
@@ -43,8 +44,8 @@ public class MarihuanaScript : MonoBehaviour {
         }
         if (playerOnTarget == true && Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
         {
-            heroDrugTimer.marihuanaTime += 30;
-            hero.poisoning += 5;
+            heroDrugTimer.cocaTime += 10;
+            hero.poisoning += 10;
             destroyObject();
             //OnMouseExit();
         }

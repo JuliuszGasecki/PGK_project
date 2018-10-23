@@ -9,6 +9,7 @@ public class ExtasyEffect : MonoBehaviour {
     public PostProcessingProfile extasyProfile;
     public PostProcessingProfile noDrugProfile;
     public PostProcessingProfile WeedProfile;
+    public PostProcessingProfile cocaProfile;
     private PostProcessingBehaviour effect;
     // Use this for initialization
     void Start () {
@@ -26,6 +27,11 @@ public class ExtasyEffect : MonoBehaviour {
         {
             GetComponent<PostProcessingBehaviour>().profile = WeedProfile;
         }
+        else if(hero.cocaFlag == true)
+        {
+            GetComponent<PostProcessingBehaviour>().profile = cocaProfile;
+        }
+
 
         else
             GetComponent<PostProcessingBehaviour>().profile = noDrugProfile;

@@ -18,6 +18,10 @@ public class DrugsTimer : MonoBehaviour {
     public float marihuanaTime = 0f;
     public bool marihuanaFlag = false;
 
+    public Slider cocaSlider;
+    public float cocaTime = 0f;
+    public bool cocaFlag = false;
+
     // Use this for initialization
     void Start () {
         hero = GetComponent<Hero>();
@@ -29,6 +33,7 @@ public class DrugsTimer : MonoBehaviour {
 	void Update () {
         checkExtasy();
         checkMarihuana();
+        checkCoca();
     }
 
     public void addExtasyTime()
@@ -57,6 +62,7 @@ public class DrugsTimer : MonoBehaviour {
     private void useExtasy()
     {
         hero.speed += 5;
+        
         heroW.addWithdrawalPoints(7);
     }
     private void resetExtasy()
@@ -102,6 +108,44 @@ public class DrugsTimer : MonoBehaviour {
         hero.speed -= 5;
         heroW.startWithdrawal();
         heroW.addWithdrawalPoints(10);
+    }
+
+    public void addCocaTime()
+    {
+        cocaTime += 10f;
+    }
+    private void checkCoca()
+    {
+        if (cocaTime > 0)
+        {
+            tookDrug = true;
+            cocaTime -= Time.fixedDeltaTime;
+            cocaSlider.value = cocaTime;
+            if (cocaFlag == false)
+            {
+                useCoca();
+            }
+            cocaFlag = true;
+        }
+        else if (cocaFlag == true)
+        {
+            resetMarihuana();
+            cocaFlag = false;
+        }
+    }
+
+    private void useCoca()
+    {
+        hero.speed += 7;
+        hero.attack += 10;
+        heroW.addWithdrawalPoints(7);
+
+    }
+    private void resetCoca()
+    {
+        hero.speed -= 7;
+        heroW.startWithdrawal();
+        heroW.addWithdrawalPoints(12);
     }
 
 }

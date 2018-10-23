@@ -8,7 +8,7 @@ public class Hero : MonoBehaviour
 {
     public int health;
     public float speed;
-    public int poisoning;
+    public float poisoning;
     public float drugWithdrawal;
     public float attack;
 
@@ -18,7 +18,7 @@ public class Hero : MonoBehaviour
 
     private float tempSpeed;
 
-    private int tempPoisoning;
+    private float tempPoisoning;
 
     private float tempDrugWithdrawal;
 
@@ -58,4 +58,5 @@ public class Hero : MonoBehaviour
             return true;
         return false;
     }
+
 }
