@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
     public int rate_extasy;
     public GameObject ganja; 
     public GameObject extasy;
+    public GameObject coca;
     private List<Vector3> punkty_powrotne;
     private float czas_pomiedzy_punktami;
 
@@ -191,6 +192,8 @@ public class Enemy : MonoBehaviour
                 Instantiate(ganja, transform.position, transform.rotation);
             if (Random.Range(0f, 3f) > 1)
                     Instantiate(extasy, transform.position, transform.rotation);
+            if (Random.Range(0f, 4f) > 3)
+                Instantiate(coca, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
     }

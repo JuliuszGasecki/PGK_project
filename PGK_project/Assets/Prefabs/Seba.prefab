@@ -74,7 +74,6 @@ MonoBehaviour:
   czas_ataku: 0
   bron: 0
   time: 0
-  spawn: {x: 0, y: 0, z: 0}
   bullet: {fileID: 0}
   statyczny: 0
   czas_ataku_wrecz: 0.1
@@ -84,6 +83,7 @@ MonoBehaviour:
   rate_extasy: 0
   ganja: {fileID: 1615165178999096, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
   extasy: {fileID: 1358745081234772, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+  coca: {fileID: 1748705115184964, guid: 908488864e60e4bdbbd0e08d60288b7f, type: 2}
 --- !u!212 &212256014939228106
 SpriteRenderer:
   m_ObjectHideFlags: 1
