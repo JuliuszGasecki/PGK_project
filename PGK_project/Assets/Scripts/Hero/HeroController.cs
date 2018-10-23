@@ -11,10 +11,13 @@ public class HeroController : MonoBehaviour
     private Vector2 directionHero;
     private Vector3 mousePosition;
     private Transform _myTransform;
+    private bool isWalking;
+    private Animator anim;
 
     // Use this for initialization
     void Start()
     {
+        anim = GetComponent<Animator>();
         setSetting();
     }
 
@@ -43,12 +46,17 @@ public class HeroController : MonoBehaviour
         Vector2 normalizedVector = direction.normalized;
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
+            anim.SetBool("isWalking", true);
             if (normalizedVector.y < 0)
                 directionHero = new Vector2(-Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             else
                 directionHero = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             directionHero.Normalize();
             transform.Translate(directionHero * Time.deltaTime * speed);
+        }
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+        {
+            anim.SetBool("isWalking", false);
         }
     }
 
