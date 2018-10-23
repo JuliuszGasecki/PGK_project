@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class Withdrawal : MonoBehaviour {
 
-    public Hero hero;
+    Hero hero;
     public Slider withdrawalSLider;
     public float drugWithdrawalMax = 20;
     public bool stopWithdrawalFlag = false;
 
 
     void Start () {
-        hero.drugWithdrawal = 10;
+        hero.GetComponent<Hero>();
+        hero.drugWithdrawal = 20;
 	}
 	
 	// Update is called once per frame
