@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class DrugsTimer : MonoBehaviour {
 
-    public Hero hero;
-    public Withdrawal heroW;
+    Hero hero;
+   Withdrawal heroW;
     public bool tookDrug = false;
 
 
@@ -20,6 +20,8 @@ public class DrugsTimer : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        hero.GetComponent<Hero>();
+        heroW.GetComponent<Withdrawal>();
 		
 	}
 	
