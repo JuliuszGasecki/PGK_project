@@ -20,8 +20,8 @@ public class DrugsTimer : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        hero.GetComponent<Hero>();
-        heroW.GetComponent<Withdrawal>();
+        hero = GetComponent<Hero>();
+        heroW  =GetComponent<Withdrawal>();
 		
 	}
 	

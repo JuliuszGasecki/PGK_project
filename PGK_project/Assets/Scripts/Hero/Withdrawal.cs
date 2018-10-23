@@ -12,7 +12,7 @@ public class Withdrawal : MonoBehaviour {
 
 
     void Start () {
-        hero.GetComponent<Hero>();
+        hero = GetComponent<Hero>();
         hero.drugWithdrawal = 20;
 	}
 	
