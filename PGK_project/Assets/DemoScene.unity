@@ -2230,11 +2230,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4754494108994420, guid: 04e4c79ba61fa442d9f8d905a8a63e66, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.86978865
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4754494108994420, guid: 04e4c79ba61fa442d9f8d905a8a63e66, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 13.322268
+      value: 10.9
       objectReference: {fileID: 0}
     - target: {fileID: 4754494108994420, guid: 04e4c79ba61fa442d9f8d905a8a63e66, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2900,11 +2900,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4011096475930900, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.5946169
+      value: -7.7
       objectReference: {fileID: 0}
     - target: {fileID: 4011096475930900, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 22.8824
+      value: 30.3
       objectReference: {fileID: 0}
     - target: {fileID: 4011096475930900, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6484,7 +6484,6 @@ MonoBehaviour:
   czas_ataku: 0
   bron: 0
   time: 0
-  spawn: {x: 0, y: 0, z: 0}
   bullet: {fileID: 0}
   statyczny: 0
   czas_ataku_wrecz: 0.2
