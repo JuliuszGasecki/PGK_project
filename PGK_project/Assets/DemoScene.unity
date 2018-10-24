@@ -8905,7 +8905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f58846f5b6c904c9ad67afc8f0230a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 0}
+  hero: {fileID: 1109299349}
   duration: 1.5
   cam: {fileID: 1433970146}
 --- !u!114 &1433970150
