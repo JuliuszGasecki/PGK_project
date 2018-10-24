@@ -46,7 +46,11 @@ public class HeroController : MonoBehaviour
         Vector2 normalizedVector = direction.normalized;
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
-            anim.SetBool("isWalking", true);
+            if (this.GetComponent<Hero>().canShoot)
+            {
+                anim.SetBool("isWalking", true);
+            }
+
             if (normalizedVector.y < 0)
                 directionHero = new Vector2(-Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             else
@@ -56,7 +60,11 @@ public class HeroController : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
         {
-            anim.SetBool("isWalking", false);
+            if (this.GetComponent<Hero>().canShoot)
+            {
+
+                anim.SetBool("isWalking", false);
+            }
         }
     }
 
