@@ -63,12 +63,12 @@ public class DrugsTimer : MonoBehaviour {
     {
         hero.speed += 5;
         
-        heroW.addWithdrawalPoints(7);
+        heroW.addWithdrawalPoints(10);
     }
     private void resetExtasy()
     {
         hero.speed -= 5;
-        heroW.addWithdrawalPoints(5);
+        heroW.addWithdrawalPoints(7);
     }
 
     public void addMarihuanaTime()
@@ -138,7 +138,7 @@ public class DrugsTimer : MonoBehaviour {
     {
         hero.speed += 7;
         hero.attack += 10;
-        heroW.addWithdrawalPoints(7);
+        heroW.addWithdrawalPoints(15);
 
     }
     private void resetCoca()

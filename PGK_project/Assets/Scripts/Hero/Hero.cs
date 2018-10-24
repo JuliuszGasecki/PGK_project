@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Hero : MonoBehaviour
 {
+    public Slider healthSlider;
     public int health;
     public float speed;
     public float poisoning;
@@ -40,7 +42,9 @@ public class Hero : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+        healthSlider.value = health;
 	    respawn();
+        
 	}
 
     void respawn()
