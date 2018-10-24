@@ -9,9 +9,10 @@ public class ChangeSprite : MonoBehaviour
     private string spriteKnife = "hero2";
     private SpriteRenderer spriteR;
     private bool isChange;
-    private float change_freeze = 0.5f;
+    private float change_freeze = 0.3f;
     private float timer;
     private CircleCollider2D collider;
+    private Animator anim;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class ChangeSprite : MonoBehaviour
         spriteR = gameObject.GetComponent<SpriteRenderer>();
         timer = Time.time;
         collider = this.gameObject.GetComponent<CircleCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class ChangeSprite : MonoBehaviour
             {
                 if (isChange)
                 {
+                    anim.enabled = false;
                     spriteR.sprite = Resources.Load<Sprite>(spriteKnife);
                     isChange = false;
                     this.GetComponent<Hero>().canShoot = false;
@@ -39,6 +42,7 @@ public class ChangeSprite : MonoBehaviour
                 }
                 else
                 {
+                    anim.enabled = true;
                     spriteR.sprite = Resources.Load<Sprite>(spriteWeapon);
                     isChange = true;
                     this.GetComponent<Hero>().canShoot = true;
@@ -46,6 +50,8 @@ public class ChangeSprite : MonoBehaviour
                     collider.radius = 7.01078f;
                 }
             }
+
+            timer = Time.time + change_freeze;
         }
     }
 }
