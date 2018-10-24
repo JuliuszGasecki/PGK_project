@@ -18,10 +18,10 @@ public class EndPoint : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.name == "EndPoint")
+        if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(0);
         }
