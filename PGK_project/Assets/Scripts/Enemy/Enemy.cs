@@ -188,12 +188,12 @@ public class Enemy : MonoBehaviour
         Debug.Log("zycie " + zycie);
         if (this.zycie < 0)
         {
-            if (Random.Range(0f,2f) > 1)
+            if (Random.Range(0f,4f) > 3)
                 Instantiate(ganja, transform.position, transform.rotation);
-            if (Random.Range(0f, 3f) > 1)
-                    Instantiate(extasy, transform.position, transform.rotation);
             if (Random.Range(0f, 4f) > 3)
-                Instantiate(coca, transform.position, transform.rotation);
+                    Instantiate(extasy, transform.position, transform.rotation);
+            if (Random.Range(0f, 6f) > 5)
+                    Instantiate(coca, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
     }
