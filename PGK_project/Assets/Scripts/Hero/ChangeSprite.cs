@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.UIElements;
 using UnityEngine;
 
 public class ChangeSprite : MonoBehaviour
@@ -12,6 +13,7 @@ public class ChangeSprite : MonoBehaviour
     private float change_freeze = 0.3f;
     private float timer;
     private CircleCollider2D collider;
+    private float circleColliderRadius;
     private Animator anim;
 
     void Start()
@@ -21,6 +23,7 @@ public class ChangeSprite : MonoBehaviour
         timer = Time.time;
         collider = this.gameObject.GetComponent<CircleCollider2D>();
         anim = GetComponent<Animator>();
+        circleColliderRadius = collider.radius;
     }
 
     // Update is called once per frame
@@ -47,7 +50,7 @@ public class ChangeSprite : MonoBehaviour
                     isChange = true;
                     this.GetComponent<Hero>().canShoot = true;
                     collider.offset = new Vector2(-1.065205f, -7.344338f);
-                    collider.radius = 7.01078f;
+                    collider.radius = circleColliderRadius;
                 }
             }
 
