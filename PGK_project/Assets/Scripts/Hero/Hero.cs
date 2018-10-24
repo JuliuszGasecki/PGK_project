@@ -47,6 +47,7 @@ public class Hero : MonoBehaviour
     {
         if (!isAlive())
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene(1);
         }
     }

@@ -7,7 +7,7 @@ public class Poisoning : MonoBehaviour {
 
     Hero hero;
     public Slider poisoninglSLider;
-    public float poisoningMax = 30;
+    public float poisoningMax;
     public bool poisoningFlag = false;
 
     // Use this for initialization

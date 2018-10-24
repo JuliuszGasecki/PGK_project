@@ -129,7 +129,7 @@ public class DrugsTimer : MonoBehaviour {
         }
         else if (cocaFlag == true)
         {
-            resetMarihuana();
+            resetCoca();
             cocaFlag = false;
         }
     }
