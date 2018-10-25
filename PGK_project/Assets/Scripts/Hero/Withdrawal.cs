@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Withdrawal : MonoBehaviour {
 
@@ -36,7 +37,8 @@ public class Withdrawal : MonoBehaviour {
     {
         if (hero.drugWithdrawal<=0)
         {
-            hero.health = 0;
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(2);
         }
     }
 

@@ -44,20 +44,67 @@ public class HeroController : MonoBehaviour
     void move()
     {
         Vector2 normalizedVector = direction.normalized;
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+       /* if (normalizedVector.y < 0)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+
+                if (this.GetComponent<Hero>().canShoot)
+                {
+                    anim.SetBool("isWalking", true);
+                }
+                this.transform.position -= new Vector3(0.0f, speed * Time.deltaTime, 0.0f);
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                if (this.GetComponent<Hero>().canShoot)
+                {
+                    anim.SetBool("isWalking", true);
+                }
+                this.transform.position += new Vector3(0.0f, speed * Time.deltaTime, 0.0f);
+            }
+        }
+        else*/
+        
+            if (Input.GetKey(KeyCode.W))
+            {
+
+                if (this.GetComponent<Hero>().canShoot)
+                {
+                    anim.SetBool("isWalking", true);
+                }
+                this.transform.position += new Vector3(0.0f, speed * Time.deltaTime, 0.0f);
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                if (this.GetComponent<Hero>().canShoot)
+                {
+                    anim.SetBool("isWalking", true);
+                }
+                this.transform.position -= new Vector3(0.0f, speed * Time.deltaTime, 0.0f);
+            }
+        
+        if (Input.GetKey(KeyCode.D))
         {
             if (this.GetComponent<Hero>().canShoot)
             {
                 anim.SetBool("isWalking", true);
             }
-
-            if (normalizedVector.y < 0)
-                directionHero = new Vector2(-Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-            else
-                directionHero = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-            directionHero.Normalize();
-            transform.Translate(directionHero * Time.deltaTime * speed);
+            this.transform.position += new Vector3(speed * Time.deltaTime, 0.0f, 0.0f);
         }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            if (this.GetComponent<Hero>().canShoot)
+            {
+                anim.SetBool("isWalking", true);
+            }
+            this.transform.position -= new Vector3(speed * Time.deltaTime, 0.0f, 0.0f);
+        }
+
+        
         if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
         {
             if (this.GetComponent<Hero>().canShoot)

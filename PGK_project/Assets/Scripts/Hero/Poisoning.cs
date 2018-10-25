@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Poisoning : MonoBehaviour {
@@ -35,7 +36,8 @@ public class Poisoning : MonoBehaviour {
     {
         if (hero.poisoning > poisoningMax)
         {
-            hero.health = 0;
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(3);
         }
     }
 
