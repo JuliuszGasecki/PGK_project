@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DeathScene.unity
     guid: 06370feeebf4f484cb8b36f31b1ddf82
+  - enabled: 1
+    path: Assets/Scenes/WithdrawalScene.unity
+    guid: 12fb3823cc614004589623e0943b3316
+  - enabled: 1
+    path: Assets/Scenes/PosionedScene.unity
+    guid: da6a1b800ec091c4ab4c5df5a9874ad4
   m_configObjects: {}
