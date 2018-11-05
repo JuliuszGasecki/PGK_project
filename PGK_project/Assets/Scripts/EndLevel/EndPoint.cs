@@ -24,7 +24,7 @@ public class EndPoint : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);              //bylo 0
         }
     }
 }

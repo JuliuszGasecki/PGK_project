@@ -194,6 +194,9 @@ public class Enemy : MonoBehaviour
                     Instantiate(extasy, transform.position, transform.rotation);
             if (Random.Range(0f, 6f) > 5)
                     Instantiate(coca, transform.position, transform.rotation);
+            ScoreCounter.scoreValue += 21;
+
+
             Destroy(this.gameObject);
         }
     }
