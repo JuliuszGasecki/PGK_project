@@ -20,7 +20,6 @@ public class Poisoning : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         poisoningEffect();
-        Debug.Log(hero.poisoning);
         poisonDeath();
         poisoninglSLider.value = hero.poisoning;
         

@@ -26,7 +26,6 @@ public class Hero : MonoBehaviour
 
     private float tempAttack;
     public bool canShoot { set; get; }
-
     // Use this for initialization
     void Start ()
     {
@@ -47,7 +46,7 @@ public class Hero : MonoBehaviour
         
 	}
 
-    void respawn()
+    public void respawn()
     {
         if (!isAlive())
         {
@@ -55,7 +54,7 @@ public class Hero : MonoBehaviour
             SceneManager.LoadScene(2);          //bylo 1
         }
     }
-    Boolean isAlive()
+    public Boolean isAlive()
     {
         if (health <= 0)
             return false;

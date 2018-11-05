@@ -12,10 +12,12 @@ public class HeroController : MonoBehaviour
     private Vector3 mousePosition;
     private Transform _myTransform;
     private Animator anim;
+    private Hero hero;
 
     // Use this for initialization
     void Start()
     {
+        hero = GetComponent<Hero>();
         anim = GetComponent<Animator>();
         setSetting();
     }
@@ -44,26 +46,31 @@ public class HeroController : MonoBehaviour
     {
         Vector2 normalizedVector = direction.normalized;
 
-
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        if (hero.isAlive())
         {
-            if (this.GetComponent<Hero>().canShoot)
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) ||
+                Input.GetKey(KeyCode.A))
             {
+                if (this.GetComponent<Hero>().canShoot)
+                {
 
-                anim.SetBool("isWalking", true);
+                    anim.SetBool("isWalking", true);
+                }
+
+                directionHero = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+                directionHero.Normalize();
+                transform.Translate(directionHero * Time.deltaTime * speed, Space.World);
             }
-            directionHero = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-            directionHero.Normalize();
-            transform.Translate(directionHero * Time.deltaTime * speed, Space.World);
-        }
 
 
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
-        {
-            if (this.GetComponent<Hero>().canShoot)
+            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D) ||
+                Input.GetKeyUp(KeyCode.A))
             {
+                if (this.GetComponent<Hero>().canShoot)
+                {
 
-                anim.SetBool("isWalking", false);
+                    anim.SetBool("isWalking", false);
+                }
             }
         }
     }

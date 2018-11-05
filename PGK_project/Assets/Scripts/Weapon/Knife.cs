@@ -12,13 +12,12 @@ public class Knife : MonoBehaviour
     {
         knife = GameObject.Find("knife");
         canShoot = hero.canShoot;
-        Debug.Log(canShoot);
         knife.SetActive(false);
     }
 
     void Attack()
     {
-        Debug.Log(canShoot);
+
         if (canShoot == false)
         {
             if (Input.GetMouseButtonDown(0))
@@ -36,7 +35,7 @@ public class Knife : MonoBehaviour
     void Update()
     {
         canShoot = hero.canShoot;
-        Debug.Log(canShoot);
+
         Attack();
     }
 

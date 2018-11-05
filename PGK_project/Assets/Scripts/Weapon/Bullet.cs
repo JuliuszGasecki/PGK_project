@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float bulletSpeed;
+    public float bulletSpeed { set; get; }
 
-    public int bulletDamage;
+    public int bulletDamage { set; get; }
 
 	// Use this for initialization
 	void Start ()

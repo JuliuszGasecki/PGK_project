@@ -185,7 +185,6 @@ public class Enemy : MonoBehaviour
 
     void sprawdz_czy_umarl()
     {
-        Debug.Log("zycie " + zycie);
         if (this.zycie < 0)
         {
             if (Random.Range(0f,4f) > 3)
