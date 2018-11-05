@@ -9,6 +9,7 @@ public class DrugsTimer : MonoBehaviour {
    Withdrawal heroW;
     public bool tookDrug = false;
 
+    List<DrugTemplate> active_drugs;
 
     public Slider extasySlider;
     public float extasyTime = 0f;
@@ -24,6 +25,7 @@ public class DrugsTimer : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        active_drugs = new List<DrugTemplate>();
         hero = GetComponent<Hero>();
         heroW  =GetComponent<Withdrawal>();
 		
@@ -34,7 +36,41 @@ public class DrugsTimer : MonoBehaviour {
         checkExtasy();
         checkMarihuana();
         checkCoca();
+        controllNarcotics();
     }
+    public void addNarcotic(DrugTemplate drug){
+        drug.destroyObject();
+        drug.setTimeOfUse(Time.time);
+        //add atributes
+        hero.speed += drug.speedBoost;
+        hero.attack += drug.attackBoost;
+        //
+        active_drugs.Add(drug);
+    }
+
+
+    public void removeNarcotic(DrugTemplate drug){
+        //remove atribtutes
+        hero.speed -= drug.speedBoost;
+        hero.attack -= drug.attackBoost;
+        //remova atributes
+        active_drugs.Remove(drug);
+    }
+
+    public void controllNarcotics(){
+        if (active_drugs.Count > 0)
+        {
+            for (int i = 0; i < active_drugs.Count; i++)
+            {
+                DrugTemplate temp = active_drugs[i];
+                if (Time.time - temp.getTimeOfUse() > temp.lifetime)
+                {
+                    removeNarcotic(temp);
+                }
+            }
+        }
+    }
+
 
     public void addExtasyTime()
     {

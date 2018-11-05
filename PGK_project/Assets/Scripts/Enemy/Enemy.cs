@@ -189,9 +189,9 @@ public class Enemy : MonoBehaviour
         {
             if (Random.Range(0f,4f) > 3)
                 Instantiate(ganja, transform.position, transform.rotation);
-            if (Random.Range(0f, 4f) > 3)
+            if (Random.Range(0f, 4f) < 1)
                     Instantiate(extasy, transform.position, transform.rotation);
-            if (Random.Range(0f, 6f) > 5)
+            if (Random.Range(0f, 6f) > 5 )
                     Instantiate(coca, transform.position, transform.rotation);
             ScoreCounter.scoreValue += 21;
 

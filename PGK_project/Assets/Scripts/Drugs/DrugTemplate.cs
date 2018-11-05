@@ -13,12 +13,19 @@ public class DrugTemplate : MonoBehaviour {
     public float lifeBoost;
     public float attackBoost;
     float timeofuse;
+    public float lifetime;
+    public float withdroval_points;
+
+    public bool flag_ifUsed{
+        set; get;
+    }
+    
 
 
     public void setTimeOfUse(float time){
         timeofuse = time;
     }
-    public void getTimeOfUse(float time)
+    public float getTimeOfUse()
     {
         return timeofuse;
     }
@@ -29,19 +36,20 @@ public class DrugTemplate : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        flag_ifUsed = false;
+    }
+    
+    // Update is called once per frame
+    void Update () {
         bounce();
-	}
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player"){
             hero = collision.GetComponent<Hero>();
             heroDrugTimer = collision.GetComponent<DrugsTimer>();
+            heroDrugTimer.addNarcotic(this);
         }
 
     }
@@ -54,7 +62,7 @@ public class DrugTemplate : MonoBehaviour {
         angle += 3.14f / 64f;
     }
 
-    void destroyObject()
+    public void destroyObject()
     {
         Destroy(gameObject);
     }
