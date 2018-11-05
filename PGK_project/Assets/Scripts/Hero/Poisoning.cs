@@ -37,7 +37,7 @@ public class Poisoning : MonoBehaviour {
         if (hero.poisoning > poisoningMax)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
     }
 

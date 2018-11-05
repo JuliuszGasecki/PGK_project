@@ -38,7 +38,7 @@ public class Withdrawal : MonoBehaviour {
         if (hero.drugWithdrawal<=0)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 
