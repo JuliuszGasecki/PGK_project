@@ -41,6 +41,7 @@ public class DrugsTimer : MonoBehaviour {
     public void addNarcotic(DrugTemplate drug){
         drug.destroyObject();
         drug.setTimeOfUse(Time.time);
+        heroW.addWithdrawalPoints(drug.withdroval_points);
         //add atributes
         hero.speed += drug.speedBoost;
         hero.attack += drug.attackBoost;

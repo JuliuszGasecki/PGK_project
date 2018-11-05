@@ -44,13 +44,18 @@ public class DrugTemplate : MonoBehaviour {
         bounce();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Player"){
+        if (collision.tag == "Player")
+        {
             hero = collision.GetComponent<Hero>();
             heroDrugTimer = collision.GetComponent<DrugsTimer>();
-            heroDrugTimer.addNarcotic(this);
+            if (Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
+            {
+                heroDrugTimer.addNarcotic(this);
+            }
         }
+        
 
     }
 
