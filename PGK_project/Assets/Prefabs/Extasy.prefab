@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4248721744030720}
   - component: {fileID: 212110576858382136}
-  - component: {fileID: 114864470201430106}
   - component: {fileID: 58367555651526080}
+  - component: {fileID: 114701102175358490}
   m_Layer: 0
   m_Name: Extasy
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1358745081234772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.64, y: 1.82, z: -1}
+  m_LocalPosition: {x: -15.720175, y: -9.692823, z: -1}
   m_LocalScale: {x: 0.27542, y: 0.27542, z: 0.27542}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,8 +56,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.105898336, y: -0.31177047}
   serializedVersion: 2
-  m_Radius: 0.9344576
---- !u!114 &114864470201430106
+  m_Radius: 2.5
+--- !u!114 &114701102175358490
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,11 +65,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1358745081234772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c771362ab140fc41bbc65839c6d07ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 309aadb43c23d47b9a96b8733ea2c932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 34414be5f06a3714a8740f5d9491f833, type: 3}
-  cursorMode: 1
+  nazwa: extasy
+  speedBoost: 5
+  lifeBoost: 0
+  attackBoost: 0
+  lifetime: 5
+  withdroval_points: 7
+  poison_points: 5
+  time_scale: 1
+  cursorTexture: {fileID: 0}
+  cursorMode: 0
   hotSpot: {x: 0, y: 0}
 --- !u!212 &212110576858382136
 SpriteRenderer:

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4084422778475396}
   - component: {fileID: 212122032080746226}
   - component: {fileID: 58661391079513782}
-  - component: {fileID: 114215683345448500}
+  - component: {fileID: 114302714907820980}
   m_Layer: 0
   m_Name: Coca
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1748705115184964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.9603, y: 7.3883, z: -1}
+  m_LocalPosition: {x: -14.028452, y: -9.743322, z: -1}
   m_LocalScale: {x: 0.3921467, y: 0.3921467, z: 0.3921467}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,8 +56,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.032837167, y: 0}
   serializedVersion: 2
-  m_Radius: 1.0993806
---- !u!114 &114215683345448500
+  m_Radius: 2
+--- !u!114 &114302714907820980
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,10 +65,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748705115184964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b03fc1ac23b53be4f865e5fdb636a8b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 309aadb43c23d47b9a96b8733ea2c932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 34414be5f06a3714a8740f5d9491f833, type: 3}
+  nazwa: coca
+  speedBoost: 7
+  lifeBoost: 0
+  attackBoost: 10
+  lifetime: 5
+  withdroval_points: 15
+  poison_points: 0
+  time_scale: 1
+  cursorTexture: {fileID: 0}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
 --- !u!212 &212122032080746226

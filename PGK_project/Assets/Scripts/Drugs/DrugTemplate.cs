@@ -16,6 +16,7 @@ public class DrugTemplate : MonoBehaviour {
     public float lifetime;
     public float withdroval_points;
     public float poison_points;
+    public float time_scale;
 
     public bool flag_ifUsed{
         set; get;

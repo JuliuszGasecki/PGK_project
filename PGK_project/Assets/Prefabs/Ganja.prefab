@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4588193341794718}
   - component: {fileID: 212843618938016746}
   - component: {fileID: 58266788570948766}
-  - component: {fileID: 114401654698123418}
+  - component: {fileID: 114646292254985648}
   m_Layer: 0
   m_Name: Ganja
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1615165178999096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.747, y: 24.035, z: -1}
+  m_LocalPosition: {x: -17.487646, y: -9.617074, z: -1}
   m_LocalScale: {x: 0.291205, y: 0.291205, z: 0.291205}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,8 +56,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
---- !u!114 &114401654698123418
+  m_Radius: 2.5
+--- !u!114 &114646292254985648
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,10 +65,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1615165178999096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9601f69c1075f2b499489be05e7c14ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 309aadb43c23d47b9a96b8733ea2c932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 34414be5f06a3714a8740f5d9491f833, type: 3}
+  nazwa: ganja
+  speedBoost: 5
+  lifeBoost: 0
+  attackBoost: 0
+  lifetime: 5
+  withdroval_points: 10
+  poison_points: 0
+  time_scale: 0.2
+  cursorTexture: {fileID: 0}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
 --- !u!212 &212843618938016746

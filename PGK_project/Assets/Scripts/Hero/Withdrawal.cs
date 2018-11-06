@@ -30,7 +30,7 @@ public class Withdrawal : MonoBehaviour {
 
     public void drugWithdrawal()
     {
-        hero.drugWithdrawal -= Time.fixedDeltaTime;
+        hero.drugWithdrawal -= Time.fixedDeltaTime * 0.75f;
     }
 
     private void deadByWithdrawal()

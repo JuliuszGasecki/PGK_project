@@ -33,12 +33,14 @@ public class DrugsTimer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        checkExtasy();
+        //checkExtasy();
         //checkMarihuana();
-        checkCoca();
+        //checkCoca();
         controllNarcotics();
     }
     public void addNarcotic(DrugTemplate drug){
+        if(Time.timeScale > drug.time_scale) //zeby zawsze najnizszy byl
+            Time.timeScale = drug.time_scale;
         zmien_flage_narkotyku(drug.nazwa,true);
         hero.poisoning += drug.poison_points;
         drug.setTimeOfUse(Time.time);
@@ -51,16 +53,18 @@ public class DrugsTimer : MonoBehaviour {
     }
 
 
-    public void zmien_flage_narkotyku(string nazwa_narkotyku,bool dziala){
-
-        if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; Debug.Log(nazwa_narkotyku + " " + marihuanaFlag.ToString()); }
-        if (nazwa_narkotyku == "coca") cocaFlag = dziala;
-        if (nazwa_narkotyku == "extasy") extasyFlag = dziala;
+    public void zmien_flage_narkotyku(string nazwa_narkotyku, bool dziala)
+    {
+        Debug.Log(nazwa_narkotyku);
+        if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; }
+        if (nazwa_narkotyku == "coca") { cocaFlag = dziala; }
+        if (nazwa_narkotyku == "extasy") { extasyFlag = dziala; }
        }
 
 
     public void removeNarcotic(DrugTemplate drug){
         //remove atribtutes
+        Time.timeScale = 1f;
         zmien_flage_narkotyku(drug.nazwa, false);
         hero.speed -= drug.speedBoost;
         hero.attack -= drug.attackBoost;
@@ -82,7 +86,7 @@ public class DrugsTimer : MonoBehaviour {
         }
     }
 
-
+    /*
     public void addExtasyTime()
     {
         extasyTime += 20f;
@@ -194,5 +198,5 @@ public class DrugsTimer : MonoBehaviour {
         heroW.startWithdrawal();
         heroW.addWithdrawalPoints(12);
     }
-
+*/
 }
