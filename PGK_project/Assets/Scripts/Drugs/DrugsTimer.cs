@@ -39,8 +39,10 @@ public class DrugsTimer : MonoBehaviour {
         controllNarcotics();
     }
     public void addNarcotic(DrugTemplate drug){
-        drug.destroyObject();
+        zmien_flage_narkotyku(drug.nazwa,true);
+        hero.poisoning += drug.poison_points;
         drug.setTimeOfUse(Time.time);
+        heroW.addWithdrawalPoints(drug.withdroval_points);
         //add atributes
         hero.speed += drug.speedBoost;
         hero.attack += drug.attackBoost;
@@ -49,8 +51,17 @@ public class DrugsTimer : MonoBehaviour {
     }
 
 
+    public void zmien_flage_narkotyku(string nazwa_narkotyku,bool dziala){
+
+        if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; Debug.Log(nazwa_narkotyku + dziala.ToString()); }
+        if (nazwa_narkotyku == "coca") cocaFlag = dziala;
+        if (nazwa_narkotyku == "extasy") extasyFlag = dziala;
+       }
+
+
     public void removeNarcotic(DrugTemplate drug){
         //remove atribtutes
+        zmien_flage_narkotyku(drug.nazwa, false);
         hero.speed -= drug.speedBoost;
         hero.attack -= drug.attackBoost;
         //remova atributes
