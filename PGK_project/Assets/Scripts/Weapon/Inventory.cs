@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 	    inventory = new List<IWeapon>();
+       // inventory.Add(GameObject.Find(M4));
     }
 	
 	// Update is called once per frame

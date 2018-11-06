@@ -11,8 +11,17 @@ public interface IShootable: IWeapon
 
     float fireRate { set; get; }
 
+    int magazineCapacity { set; get; }
+
+    int ammo { set; get; }
+
     void SetDamageBullet(GameObject bullet);
 
     void SetSpeedBullet(GameObject bullet);
 
+    void Shoot();
+
+    void Reload();
+
+    void UseWeapon();
 }

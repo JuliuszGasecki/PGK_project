@@ -13,6 +13,9 @@ public class M4 : MonoBehaviour, IShootable {
     public int damage { get; set; }
     public int ID { get; set; }
     public float speed { get; set; }
+    public int magazineCapacity { set; get; }
+    public int ammo { get; set; }
+    private int ammoInMagazine;
 
     void Start ()
     {
@@ -20,6 +23,9 @@ public class M4 : MonoBehaviour, IShootable {
         damage = 5;
         fireRate = 10f;
         speed = 20f;
+        magazineCapacity = 30;
+        ammo = 40;
+        ammoInMagazine = 0;
     }
 
     void Awake()
@@ -33,18 +39,51 @@ public class M4 : MonoBehaviour, IShootable {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire && this.GetComponent<Hero>().canShoot)
+        Reload();
+        UseWeapon();
+    }
+
+    public void Reload()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            timeUntilFire = Time.time + 1 / fireRate;
-            Shoot();
+            if (ammo > magazineCapacity)
+            {
+                ammoInMagazine = magazineCapacity;
+                ammo -= magazineCapacity;
+            }
+            else
+            {
+                ammoInMagazine = ammo;
+                ammo = 0;
+            }
         }
     }
 
-    void Shoot()
-    {   
-       GameObject bulletM4 = Instantiate(bullet, firePoint.position, firePoint.rotation);
-       SetDamageBullet(bulletM4);
-       SetSpeedBullet(bulletM4);
+
+
+    public void UseWeapon()
+    {
+        if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire && this.GetComponent<Hero>().canShoot)
+        {
+            if (ammoInMagazine > 0)
+            {
+                Shoot();
+                timeUntilFire = Time.time + 1 / fireRate;
+            }
+            else
+            {
+                //wyswietlkomunikat()
+            }
+        }
+    }
+
+    public void Shoot()
+    {    
+        GameObject bulletM4 = Instantiate(bullet, firePoint.position, firePoint.rotation);
+        SetDamageBullet(bulletM4);
+        SetSpeedBullet(bulletM4);
+        ammoInMagazine--;
     }
     public void SetDamageBullet(GameObject bullet)
     {
@@ -55,4 +94,5 @@ public class M4 : MonoBehaviour, IShootable {
     {
         bullet.GetComponent<Bullet>().bulletSpeed = speed;
     }
+
 }
