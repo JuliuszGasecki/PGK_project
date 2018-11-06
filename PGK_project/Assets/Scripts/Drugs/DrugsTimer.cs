@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class DrugsTimer : MonoBehaviour {
 
+
+
+    public bool onDrugs;
     Hero hero;
-   Withdrawal heroW;
+    Withdrawal heroW;
     public bool tookDrug = false;
 
     List<DrugTemplate> active_drugs;
@@ -25,6 +28,7 @@ public class DrugsTimer : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        onDrugs = false;
         active_drugs = new List<DrugTemplate>();
         hero = GetComponent<Hero>();
         heroW  =GetComponent<Withdrawal>();
@@ -33,22 +37,12 @@ public class DrugsTimer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //checkExtasy();
-        //checkMarihuana();
-        //checkCoca();
         controllNarcotics();
     }
     public void addNarcotic(DrugTemplate drug){
-        if(Time.timeScale > drug.time_scale) //zeby zawsze najnizszy byl
-            Time.timeScale = drug.time_scale;
-        zmien_flage_narkotyku(drug.nazwa,true);
-        hero.poisoning += drug.poison_points;
-        drug.setTimeOfUse(Time.time);
-        heroW.addWithdrawalPoints(drug.withdroval_points);
-        //add atributes
-        hero.speed += drug.speedBoost;
-        hero.attack += drug.attackBoost;
-        //
+        if (onDrugs != true)
+            onDrugs = true;
+        addEffect(drug);
         active_drugs.Add(drug);
     }
 
@@ -63,12 +57,7 @@ public class DrugsTimer : MonoBehaviour {
 
 
     public void removeNarcotic(DrugTemplate drug){
-        //remove atribtutes
-        Time.timeScale = 1f;
-        zmien_flage_narkotyku(drug.nazwa, false);
-        hero.speed -= drug.speedBoost;
-        hero.attack -= drug.attackBoost;
-        //remova atributes
+        removeEffect(drug);
         active_drugs.Remove(drug);
     }
 
@@ -84,8 +73,29 @@ public class DrugsTimer : MonoBehaviour {
                 }
             }
         }
+        else
+            onDrugs = false; // nie ma nic
     }
 
+    public void addEffect(DrugTemplate drug){
+
+        if (Time.timeScale > drug.time_scale) //zeby zawsze najnizszy byl
+            Time.timeScale = drug.time_scale;
+        zmien_flage_narkotyku(drug.nazwa, true);
+        hero.poisoning += drug.poison_points;
+        drug.setTimeOfUse(Time.time);
+        heroW.addWithdrawalPoints(drug.withdroval_points);
+        hero.speed += drug.speedBoost;
+        hero.attack += drug.attackBoost;
+    }
+
+    public void removeEffect(DrugTemplate drug)
+    {
+        Time.timeScale = 1f;
+        zmien_flage_narkotyku(drug.nazwa, false);
+        hero.speed -= drug.speedBoost;
+        hero.attack -= drug.attackBoost;
+    }
     /*
     public void addExtasyTime()
     {

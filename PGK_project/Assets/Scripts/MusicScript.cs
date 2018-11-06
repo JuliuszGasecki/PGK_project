@@ -22,7 +22,7 @@ public class MusicScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (hero.tookDrug == true)
+        if (hero.onDrugs == true)
         {
             if (startFlag == true)
             {
