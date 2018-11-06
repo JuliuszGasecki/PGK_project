@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DisplayWeaponIcon : MonoBehaviour
 {
-    private string weapon;
+    private IWeapon weapon;
     private Image image;
 
     private Sprite sprite;
@@ -17,7 +17,7 @@ public class DisplayWeaponIcon : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-	    weapon = GameObject.Find("Hero").GetComponent<Inventory>().GetUsingWeapon().Name;
+	    weapon = GameObject.Find("Hero").GetComponent<Inventory>().GetUsingWeapon();
 	    if (weapon == null)
 	    {
 	        image.enabled = false;
@@ -25,7 +25,7 @@ public class DisplayWeaponIcon : MonoBehaviour
 	    else
 	    {
             image.enabled = true;
-	        image.sprite = Resources.Load<Sprite>(weapon);
+	        image.sprite = Resources.Load<Sprite>(weapon.Name);
 	    }
 	}
 }
