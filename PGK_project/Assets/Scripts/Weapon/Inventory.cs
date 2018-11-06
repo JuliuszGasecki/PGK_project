@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
         KNIFE
     };
 
-    private List<IWeapon> inventory;
+    public List<IWeapon> inventory;
 	// Use this for initialization
 	void Start () {
 	    inventory = new List<IWeapon>();
@@ -93,5 +93,10 @@ public class Inventory : MonoBehaviour
     public List<IWeapon> GetInventory()
     {
         return inventory;
+    }
+
+    public IWeapon GetUsingWeapon()
+    {
+        return inventory.ElementAt(usingSlot);
     }
 }

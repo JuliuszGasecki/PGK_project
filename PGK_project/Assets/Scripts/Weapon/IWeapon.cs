@@ -12,4 +12,6 @@ public interface IWeapon
     void UseWeapon();
 
     bool CanUse { get; set; }
+
+    string DisplayToTextAmmo();
 }

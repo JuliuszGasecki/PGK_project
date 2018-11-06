@@ -101,4 +101,10 @@ public class M4 : MonoBehaviour, IShootable {
         bullet.GetComponent<Bullet>().bulletSpeed = speed;
     }
 
+    public string DisplayToTextAmmo()
+    {
+        string display = ammoInMagazine.ToString() + "/" + ammo.ToString();
+        return display;
+    }
+
 }

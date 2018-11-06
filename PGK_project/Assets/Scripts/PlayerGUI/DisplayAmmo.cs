@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class DisplayAmmo : MonoBehaviour {
@@ -13,8 +14,7 @@ public class DisplayAmmo : MonoBehaviour {
 	void Update ()
 	{
 
-	    text_ammo.text = GameObject.Find("Hero").GetComponent<M4>().ammoInMagazine.ToString() + "/" +
-	                     GameObject.Find("Hero").GetComponent<M4>().ammo.ToString();
+	    text_ammo.text = GameObject.Find("Hero").GetComponent<Inventory>().GetUsingWeapon().DisplayToTextAmmo();
 	}
 
 
