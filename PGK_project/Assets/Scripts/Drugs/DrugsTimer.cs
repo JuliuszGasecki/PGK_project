@@ -34,7 +34,7 @@ public class DrugsTimer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         checkExtasy();
-        checkMarihuana();
+        //checkMarihuana();
         checkCoca();
         controllNarcotics();
     }
@@ -53,7 +53,7 @@ public class DrugsTimer : MonoBehaviour {
 
     public void zmien_flage_narkotyku(string nazwa_narkotyku,bool dziala){
 
-        if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; Debug.Log(nazwa_narkotyku + dziala.ToString()); }
+        if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; Debug.Log(nazwa_narkotyku + " " + marihuanaFlag.ToString()); }
         if (nazwa_narkotyku == "coca") cocaFlag = dziala;
         if (nazwa_narkotyku == "extasy") extasyFlag = dziala;
        }
