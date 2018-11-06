@@ -25,11 +25,9 @@ public class Hero : MonoBehaviour
     private float tempDrugWithdrawal;
 
     private float tempAttack;
-    public bool canShoot { set; get; }
     // Use this for initialization
     void Start ()
     {
-        canShoot = true;
         this.transform.position = spawnPoint.position;
         tempHealth = health;
         tempSpeed = speed;

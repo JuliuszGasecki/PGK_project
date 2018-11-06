@@ -28,7 +28,7 @@ public class ChangeSprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer < Time.time)
+       /* if (timer < Time.time)
         {
             if (Input.GetKey(KeyCode.Space))
             {
@@ -54,7 +54,7 @@ public class ChangeSprite : MonoBehaviour
             }
 
             timer = Time.time + change_freeze;
-        }
+        }*/
     }
 }
     

@@ -16,6 +16,7 @@ public class M4 : MonoBehaviour, IShootable {
     public int magazineCapacity { set; get; }
     public int ammo { get; set; }
     public int ammoInMagazine { get; set; }
+    public bool CanUse { get; set; }
 
     void Start ()
     {
@@ -67,10 +68,9 @@ public class M4 : MonoBehaviour, IShootable {
     }
 
 
-
     public void UseWeapon()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire && this.GetComponent<Hero>().canShoot)
+        if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire && CanUse)
         {
             if (ammoInMagazine > 0)
             {

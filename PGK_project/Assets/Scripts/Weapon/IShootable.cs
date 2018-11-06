@@ -23,5 +23,5 @@ public interface IShootable: IWeapon
 
     void Reload();
 
-    void UseWeapon();
+    
 }

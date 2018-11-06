@@ -9,5 +9,7 @@ public interface IWeapon
         set;
         get;
     }
+    void UseWeapon();
 
+    bool CanUse { get; set; }
 }

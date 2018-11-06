@@ -11,7 +11,6 @@ public class Knife : MonoBehaviour
     void Start()
     {
         knife = GameObject.Find("knife");
-        canShoot = hero.canShoot;
         knife.SetActive(false);
     }
 
@@ -34,9 +33,9 @@ public class Knife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        canShoot = hero.canShoot;
 
-        Attack();
+
+        //Attack();
     }
 
 }
