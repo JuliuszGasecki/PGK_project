@@ -24,7 +24,7 @@ public class Inventory : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 	    inventory = new List<IWeapon>();
-        inventory.Add(this.gameObject.GetComponent<M4>());
+	    AddToList(this.gameObject.GetComponent<M4>());
         inventory.ElementAt(FIRSTELEMENT).CanUse = true;
 	}
 	
@@ -97,6 +97,11 @@ public class Inventory : MonoBehaviour
 
     public IWeapon GetUsingWeapon()
     {
-        return inventory.ElementAt(usingSlot);
+        if (inventory.Any())
+        {
+            return inventory.ElementAt(usingSlot);
+        }
+
+        return null;
     }
 }
