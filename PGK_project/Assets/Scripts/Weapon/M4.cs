@@ -45,19 +45,21 @@ public class M4 : MonoBehaviour, IShootable {
 
     public void Reload()
     {
+        int difference;
         if (Input.GetKeyDown(KeyCode.R))
         {
             if (ammo > 0)
             {
-                int differnce = magazineCapacity - ammoInMagazine;
-                ammoInMagazine = magazineCapacity;
-                if (differnce > ammo)
+                difference = magazineCapacity - ammoInMagazine;
+                if (difference > ammo)
                 {
+                    ammoInMagazine += ammo;
                     ammo = 0;
                 }
                 else
                 {
-                    ammo -= differnce;
+                    ammoInMagazine += difference;
+                    ammo -= difference;
                 }
             }
 
