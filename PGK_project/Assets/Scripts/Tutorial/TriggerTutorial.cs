@@ -11,15 +11,5 @@ public class TriggerTutorial : Tutorial {
         isCurrentTutorial = true;
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(!isCurrentTutorial)
-        {
-            return;
-        }
-        if(collision.gameObject.tag == "Player" )
-        {
-            TutorialManager.Instance.CompletedTutorial();
-        }
-    }
+    
 }
