@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class M4 : MonoBehaviour, IShootable {
+public class UMP45 : MonoBehaviour, IShootable {
 
 	// Use this for initialization
     private float timeUntilFire = 0;
@@ -18,15 +18,18 @@ public class M4 : MonoBehaviour, IShootable {
     public int ammoInMagazine { get; set; }
     public bool CanUse { get; set; }
 
+    public string Name { get; set; }
+
     void Start ()
     {
-        ID = 1;
+        ID = 2;
         damage = 5;
         fireRate = 10f;
         speed = 20f;
         magazineCapacity = 30;
         ammo = 40;
         ammoInMagazine = 0;
+        Name = "UMP45";
     }
 
     void Awake()

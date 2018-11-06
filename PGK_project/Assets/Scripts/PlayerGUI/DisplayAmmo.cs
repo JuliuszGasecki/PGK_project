@@ -19,7 +19,7 @@ public class DisplayAmmo : MonoBehaviour {
 	    weapon = GameObject.Find("Hero").GetComponent<Inventory>().GetUsingWeapon();
 	    if (weapon == null)
 	    {
-	        text_ammo.text = "EMPTY";
+	        text_ammo.text = "";
 	    }
 	    else
 	    {

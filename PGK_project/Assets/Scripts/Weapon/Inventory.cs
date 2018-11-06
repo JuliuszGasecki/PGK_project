@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
     {
         DEAGLE,
         M4,
-        MP5,
+        UMP45,
         SPAS12,
         KNIFE
     };
@@ -24,7 +24,7 @@ public class Inventory : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 	    inventory = new List<IWeapon>();
-	    AddToList(this.gameObject.GetComponent<M4>());
+	    AddToList(this.gameObject.GetComponent<UMP45>());
         inventory.ElementAt(FIRSTELEMENT).CanUse = true;
 	}
 	
