@@ -11,6 +11,7 @@ public class TutorialCollider : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             TutorialManager.Instance.CompletedTutorial();
+            Destroy(this);
         }
     }
 }
