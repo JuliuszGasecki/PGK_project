@@ -6156,7 +6156,8 @@ MonoBehaviour:
   lifeBoost: 20
   attackBoost: 20
   lifetime: 10
-  withdroval_points: 0
+  withdroval_points: 10
+  poison_points: 10
   cursorTexture: {fileID: 0}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
@@ -11112,11 +11113,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4588193341794718, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.2186735
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4588193341794718, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.5706973
+      value: 9.28
       objectReference: {fileID: 0}
     - target: {fileID: 4588193341794718, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11145,6 +11146,11 @@ Prefab:
     - target: {fileID: 1615165178999096, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
       propertyPath: m_Name
       value: cipeczka
+      objectReference: {fileID: 0}
+    - target: {fileID: 58266788570948766, guid: c14844a78ee3344e08dd0576aeb7e352,
+        type: 2}
+      propertyPath: m_Radius
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114401654698123418, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
