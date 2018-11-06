@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
+    bool alive;
     public int zycie;
     public int atak;
     public float speed;
@@ -31,6 +32,7 @@ public class Enemy : MonoBehaviour
     public GameObject coca;
     private List<Vector3> punkty_powrotne;
     private float czas_pomiedzy_punktami;
+    public Sprite dead_enemy;
 
 
     void zrob_punkt(Vector3 miejsce){
@@ -61,6 +63,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        alive = true;
         rotacja_orginalna = transform.rotation.eulerAngles;
         punkty_powrotne = new List<Vector3>();
         czas_pomiedzy_punktami = 0.2f;
@@ -80,42 +83,44 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        sprawdz_czy_umarl();
-
-        if (znaleziono_gracza())
+        if (alive)
         {
-            obroc_do_playera();
-            if (statyczny)
+            sprawdz_czy_umarl();
+
+            if (znaleziono_gracza())
             {
-                if (time_tracker_strzalu < Time.time)
+                obroc_do_playera();
+                if (statyczny)
                 {
-                    strzel();
-                    time_tracker_strzalu = Time.time + czas_ataku;
+                    if (time_tracker_strzalu < Time.time)
+                    {
+                        strzel();
+                        time_tracker_strzalu = Time.time + czas_ataku;
+                    }
+                }
+                else
+                {
+                    porusz_w_strone_gracza();
+                    if (time_tracker_powrotu < Time.time)
+                    {
+                        Debug.Log("cooo");
+                        zrob_punkt(transform.position);
+                        time_tracker_powrotu = Time.time + czas_na_powrot;
+                        Debug.Log(punkty_powrotne.Count);
+                    }
+                    if (time_tracker_gonga < Time.time)
+                    {
+                        if (atak_wrecz())
+                            time_tracker_gonga = Time.time + czas_ataku_wrecz;
+                    }
                 }
             }
             else
             {
-                porusz_w_strone_gracza();
-                if (time_tracker_powrotu < Time.time)
-                {
-                    Debug.Log("cooo");
-                    zrob_punkt(transform.position);
-                    time_tracker_powrotu = Time.time + czas_na_powrot;
-                    Debug.Log(punkty_powrotne.Count);
-                }
-                if (time_tracker_gonga < Time.time)
-                {
-                    if (atak_wrecz())
-                        time_tracker_gonga = Time.time + czas_ataku_wrecz;
-                }
-            }
-        }
-        else
-        {
-            if (time_tracker_powrotu + czas_na_powrot < Time.time)
-                wracaj_po_punkcie();
+                if (time_tracker_powrotu + czas_na_powrot < Time.time)
+                    wracaj_po_punkcie();
 
+            }
         }
     }
 
@@ -185,18 +190,35 @@ public class Enemy : MonoBehaviour
 
     void sprawdz_czy_umarl()
     {
-        if (this.zycie < 0)
+        if (this.zycie < 0 && alive == true)
         {
-            if (Random.Range(0f,4f) > 3)
-                Instantiate(ganja, transform.position, transform.rotation);
-            if (Random.Range(0f, 4f) < 1)
-                    Instantiate(extasy, transform.position, transform.rotation);
-            if (Random.Range(0f, 6f) > 5 )
-                    Instantiate(coca, transform.position, transform.rotation);
+            wypadanie_narkotykow();
             ScoreCounter.scoreValue += 21;
 
+            this.GetComponent<SpriteRenderer>().sprite = dead_enemy;
+            this.GetComponent<CircleCollider2D>().enabled = false;
+            gameObject.GetComponent<Transform>().localScale = new Vector3(0.35f, 0.35f, 1f);
+            alive = false;
+            //Destroy(this.gameObject);
+        }
+    }
 
-            Destroy(this.gameObject);
+    public void wypadanie_narkotykow(){
+        bool wypadl_narkotyk = false;
+        if (Random.Range(0f, 4f) > 3 && wypadl_narkotyk == false)
+        {
+            Instantiate(ganja, transform.position, transform.rotation);
+            wypadl_narkotyk = true;
+        }
+        if (Random.Range(0f, 4f) < 1 && wypadl_narkotyk == false)
+        {
+            Instantiate(extasy, transform.position, transform.rotation);
+            wypadl_narkotyk = true;
+        }
+        if (Random.Range(0f, 6f) > 5 && wypadl_narkotyk == false)
+        {
+            Instantiate(coca, transform.position, transform.rotation);
+            wypadl_narkotyk = true;
         }
     }
 
