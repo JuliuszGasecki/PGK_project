@@ -15,6 +15,7 @@ public class DrugTemplate : MonoBehaviour {
     float timeofuse;
     public float lifetime;
     public float withdroval_points;
+    public float poison_points;
 
     public bool flag_ifUsed{
         set; get;
@@ -52,6 +53,7 @@ public class DrugTemplate : MonoBehaviour {
             heroDrugTimer = collision.GetComponent<DrugsTimer>();
             if (Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
             {
+                destroyObject();
                 heroDrugTimer.addNarcotic(this);
             }
         }
