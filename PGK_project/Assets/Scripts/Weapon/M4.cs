@@ -15,7 +15,7 @@ public class M4 : MonoBehaviour, IShootable {
     public float speed { get; set; }
     public int magazineCapacity { set; get; }
     public int ammo { get; set; }
-    private int ammoInMagazine;
+    public int ammoInMagazine { get; set; }
 
     void Start ()
     {
