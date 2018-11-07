@@ -2893,6 +2893,85 @@ MonoBehaviour:
     do \u015Bmietnika. Tam cz\u0119sto zostawiaj\u0105 prochy dla klient\xF3w unikaj\u0105cych
     kontaktu..."
   mapBlocker: {fileID: 0}
+--- !u!1001 &451875068
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61777033949148854, guid: 4e9e271fce056f647bb6d477eae3deac,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159911324685628, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+      propertyPath: m_Name
+      value: DEAGLE (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &451875069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1159911324685628, guid: 4e9e271fce056f647bb6d477eae3deac,
+    type: 2}
+  m_PrefabInternal: {fileID: 451875068}
+--- !u!114 &451875070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451875069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561dce8afd0678e46b4e8fbf108f6909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &453439321
 GameObject:
   m_ObjectHideFlags: 0
@@ -6614,7 +6693,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.79, y: 0.07}

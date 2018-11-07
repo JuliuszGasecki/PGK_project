@@ -56,29 +56,58 @@ public class BounceAndAdd : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
-                if (_isWeapon)
-                    inv.GetInventory().Add(weapon);
+                if (_isWeapon && !inv.IsAdded(weapon.ID))
+                    inv.AddToList(weapon);
+                else if (_isWeapon)
+                {
+                    AddAmmoInsteadOf();
+                }
                 destroyObject();
             }
         }
     }
 
+    private void AddAmmoInsteadOf()
+    {
+        if (name.Equals(_weaponNames[0]))
+        {
+            inv.deagleAmmo += 3;
+        }
+        else if (name.Equals(_weaponNames[1]))
+        {
+            inv.rifleAmmo += 20;
+        }
+        else if(name.Equals(_weaponNames[2]))
+        {
+            inv.rifleAmmo += 20;
+        }
+        else if(name.Equals(_weaponNames[4]))
+        {
+            inv.shotgunAmmo += 5;
+        }
+    }
+
+    private void AddAmmo()
+    {
+        if (name.Equals(_ammoNames[0]))
+        {
+            inv.rifleAmmo += 20;
+        }
+        else if (name.Equals(_ammoNames[1]))
+        {
+            inv.shotgunAmmo += 5;
+        }
+        else if (name.Equals(_ammoNames[2]))
+        {
+            inv.deagleAmmo += 3;
+        }
+    }
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && _isAmmo)
         {
-            if (name.Equals(_ammoNames[0]))
-            {
-                inv.rifleAmmo += 20;
-            }
-            if (name.Equals(_ammoNames[1]))
-            {
-                inv.rifleAmmo += 5;
-            }
-            if (name.Equals(_ammoNames[2]))
-            {
-                inv.rifleAmmo += 3;
-            }
+            AddAmmo();
             destroyObject();
         }
     }

@@ -117,4 +117,12 @@ public class Inventory : MonoBehaviour
         }
         return null;
     }
+
+    public bool IsAdded(int id)
+    {
+        for (int i = 0; i < inventory.Count; i++)
+            if (inventory[i].ID == id)
+                return true;
+        return false;
+    }
 }
