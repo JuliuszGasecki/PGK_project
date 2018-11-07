@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     int stateHUNT = 0;
     int statePATH = 1;
     int currentState;
+    bool go_forwad; // to jest po to ze jak masz sciezke 123 to zeby wracal 321
     public List<Transform> pathPoints;
     int targetpathPoint;
     bool alive;
@@ -43,6 +44,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        go_forwad = true;
         currentState = statePATH;
         targetpathPoint = 0;
         // pathPoints = new List<Transform>();
@@ -121,9 +123,19 @@ public class Enemy : MonoBehaviour
             Vector3 droga = pathPoints[targetpathPoint].position - gameObject.transform.position;
             if (droga.magnitude < 1f)
             {
-                targetpathPoint++;
+                if (go_forwad)
+                    targetpathPoint++;
+                else
+                    targetpathPoint--;
+                if(targetpathPoint < 0){
+                    targetpathPoint = 1;
+                    go_forwad = true;
+                }
                 if (targetpathPoint > pathPoints.Count - 1)
-                    targetpathPoint = 0;
+                {
+                    targetpathPoint = pathPoints.Count - 2;
+                    go_forwad = false;
+                }
             }
             gameObject.transform.position += new Vector3(droga.normalized.x,droga.normalized.y,0f) * Time.deltaTime * speed/2;
         }
