@@ -37,11 +37,10 @@ public class BounceAndAdd : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.K))
             {
                 inv.GetInventory().Add(weapon);
+
                 destroyObject();
             }
         }
-
-
     }
 
     private void destroyObject()

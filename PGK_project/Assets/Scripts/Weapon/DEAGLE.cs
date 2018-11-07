@@ -18,7 +18,6 @@ public class DEAGLE : MonoBehaviour, IShootable
     public int ammo { get; set; }
     public int ammoInMagazine { get; set; }
     public bool CanUse { get; set; }
-
     public string Name { get; set; }
 
     void Start()

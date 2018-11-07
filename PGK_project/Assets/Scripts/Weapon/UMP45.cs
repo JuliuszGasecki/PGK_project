@@ -50,7 +50,8 @@ public class UMP45 : MonoBehaviour, IShootable {
     public void Reload()
     {
         int difference;
-        if (Input.GetKeyDown(KeyCode.R) && CanUse)
+        if (Input.GetKeyDown(KeyCode.R) 
+        )
         {
             if (ammo > 0)
             {
