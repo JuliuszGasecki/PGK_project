@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
+
+    public List<Transform> pathPoints;
+    int targetpathPoint;
     bool alive;
     public int zycie;
     public int atak;
@@ -35,34 +38,11 @@ public class Enemy : MonoBehaviour
     public Sprite dead_enemy;
 
 
-    void zrob_punkt(Vector3 miejsce){
-        punkty_powrotne.Add(miejsce);
-    }
-    void usun_ostatni(){
-        if(punkty_powrotne.Count >=1)
-            punkty_powrotne.RemoveAt(punkty_powrotne.Count - 1);
-    }
-
-    void wracaj_po_punkcie(){
-        if (punkty_powrotne.Count > 0)
-        {
-            Vector3 last_point = punkty_powrotne[punkty_powrotne.Count - 1];
-
-            Vector3 wypadkowy_wektor = last_point - this.transform.position;
-            if (wypadkowy_wektor.magnitude > 0.1f)
-            {
-                this.transform.position += kierunek(wypadkowy_wektor) * Time.deltaTime * speed;
-            }
-            else
-                usun_ostatni();
-        }
-        else
-            wracaj_na_spawn();
-    }
-
 
     void Start()
     {
+        targetpathPoint = 0;
+        // pathPoints = new List<Transform>();
         alive = true;
         rotacja_orginalna = transform.rotation.eulerAngles;
         punkty_powrotne = new List<Vector3>();
@@ -86,7 +66,6 @@ public class Enemy : MonoBehaviour
         if (alive)
         {
             sprawdz_czy_umarl();
-
             if (znaleziono_gracza())
             {
                 obroc_do_playera();
@@ -103,7 +82,7 @@ public class Enemy : MonoBehaviour
                     porusz_w_strone_gracza();
                     if (time_tracker_powrotu < Time.time)
                     {
-                        Debug.Log("cooo");
+
                         zrob_punkt(transform.position);
                         time_tracker_powrotu = Time.time + czas_na_powrot;
                         Debug.Log(punkty_powrotne.Count);
@@ -117,19 +96,57 @@ public class Enemy : MonoBehaviour
             }
             else
             {
+                chodzenie_po_sciezce();
                 if (time_tracker_powrotu + czas_na_powrot < Time.time)
-                    wracaj_po_punkcie();
+                  wracaj_po_punkcie();
+
 
             }
         }
     }
 
-    void odbij_od_sciany()
-    {
-
-                   
-              
+    void chodzenie_po_sciezce(){
+        if (pathPoints.Count > 0){
+            Vector3 droga = pathPoints[targetpathPoint].position - gameObject.transform.position;
+            if (droga.magnitude < 1f)
+            {
+                targetpathPoint++;
+                if (targetpathPoint > pathPoints.Count - 1)
+                    targetpathPoint = 0;
+            }
+            gameObject.transform.position += new Vector3(droga.normalized.x,droga.normalized.y,0f) * Time.deltaTime * speed;
+        }
     }
+
+    void zrob_punkt(Vector3 miejsce)
+    {
+        punkty_powrotne.Add(miejsce);
+    }
+    void usun_ostatni()
+    {
+        if (punkty_powrotne.Count >= 1)
+            punkty_powrotne.RemoveAt(punkty_powrotne.Count - 1);
+    }
+
+    void wracaj_po_punkcie()
+    {
+        if (punkty_powrotne.Count > 0)
+        {
+            Vector3 last_point = punkty_powrotne[punkty_powrotne.Count - 1];
+
+            Vector3 wypadkowy_wektor = last_point - this.transform.position;
+            if (wypadkowy_wektor.magnitude > 0.1f)
+            {
+                this.transform.position += kierunek(wypadkowy_wektor) * Time.deltaTime * speed;
+            }
+            else
+                usun_ostatni();
+        }
+        else
+            wracaj_na_spawn();
+    }
+
+
     void wracaj_na_spawn()
     {
         Vector3 elo = spawn - this.transform.position;
