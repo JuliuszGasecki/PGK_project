@@ -7,14 +7,14 @@ public class BounceAndAdd : MonoBehaviour {
     private float angle = 0;
     private Hero hero;
 
-    private DEAGLE deagle;
+    private IWeapon weapon;
 
     private Inventory inv;    
     // Use this for initialization
     void Start ()
     {
-        inv = GameObject.Find("Hero").GetComponent<Inventory>();
-        deagle = this.gameObject.GetComponent<DEAGLE>();
+        inv = GameObject.Find("Inventory").GetComponent<Inventory>();
+        weapon = GameObject.Find("Inventory").GetComponent<DEAGLE>();
     }
 	
 	// Update is called once per frame
@@ -34,11 +34,9 @@ public class BounceAndAdd : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            hero = collision.GetComponent<Hero>();
-            deagle = collision.GetComponent<DEAGLE>();
             if (Input.GetKeyDown(KeyCode.K))
             {
-                inv.AddToList(deagle);
+                inv.GetInventory().Add(weapon);
                 destroyObject();
             }
         }

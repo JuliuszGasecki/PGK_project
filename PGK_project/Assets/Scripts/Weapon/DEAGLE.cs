@@ -51,7 +51,7 @@ public class DEAGLE : MonoBehaviour, IShootable
     public void Reload()
     {
         int difference;
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && CanUse)
         {
             if (ammo > 0)
             {
@@ -90,9 +90,9 @@ public class DEAGLE : MonoBehaviour, IShootable
 
     public void Shoot()
     {
-       // GameObject bulletD = Instantiate(bullet, firePoint.position, firePoint.rotation);
-       // SetDamageBullet(bulletD);
-       // SetSpeedBullet(bulletD);
+        GameObject bulletD = Instantiate(bullet, firePoint.position, firePoint.rotation);
+        SetDamageBullet(bulletD);
+        SetSpeedBullet(bulletD);
         ammoInMagazine--;
     }
     public void SetDamageBullet(GameObject bullet)

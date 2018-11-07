@@ -17,8 +17,8 @@ public class DisplayWeaponIcon : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-	    weapon = GameObject.Find("Hero").GetComponent<Inventory>().GetUsingWeapon();
-	    if (weapon == null)
+	    weapon = GameObject.Find("Inventory").GetComponent<Inventory>().GetUsingWeapon();
+        if (weapon == null)
 	    {
 	        image.enabled = false;
 	    }

@@ -16,7 +16,7 @@ public class DisplayAmmo : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-	    weapon = GameObject.Find("Hero").GetComponent<Inventory>().GetUsingWeapon();
+	    weapon = GameObject.Find("Inventory").GetComponent<Inventory>().GetUsingWeapon();
 	    if (weapon == null)
 	    {
 	        text_ammo.text = "";
