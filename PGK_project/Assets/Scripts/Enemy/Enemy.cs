@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
     private List<Vector3> punkty_powrotne;
     private float czas_pomiedzy_punktami;
     public Sprite dead_enemy;
-
+    public GameObject weapon;
 
 
     void Start()
@@ -237,6 +237,7 @@ public class Enemy : MonoBehaviour
     {
         if (this.zycie < 0 && alive == true)
         {
+            wypadanie_broni();
             wypadanie_narkotykow();
             ScoreCounter.scoreValue += 21;
 
@@ -248,7 +249,15 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void wypadanie_narkotykow(){
+    public void wypadanie_broni()
+    {
+       float x = Random.Range(-0.2f, 0.2f);
+        float y = Random.Range(-0.2f, 0.2f);
+        Vector3 placment_bron = new Vector3(0f + x , 0f + y, 1f);
+        if(weapon != null)
+            Instantiate(weapon, transform.position  + placment_bron, transform.rotation);
+    }
+        public void wypadanie_narkotykow(){
         bool wypadl_narkotyk = false;
         if (Random.Range(0f, 4f) > 3 && wypadl_narkotyk == false)
         {
