@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
-
+    int stateHUNT = 0;
+    int statePATH = 1;
+    int currentState;
     public List<Transform> pathPoints;
     int targetpathPoint;
     bool alive;
@@ -41,6 +43,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        currentState = statePATH;
         targetpathPoint = 0;
         // pathPoints = new List<Transform>();
         alive = true;
@@ -66,42 +69,50 @@ public class Enemy : MonoBehaviour
         if (alive)
         {
             sprawdz_czy_umarl();
-            if (znaleziono_gracza())
-            {
-                obroc_do_playera();
-                if (statyczny)
+
+                if (znaleziono_gracza())
                 {
-                    if (time_tracker_strzalu < Time.time)
+                 
+                    obroc_do_playera();
+                    if (statyczny)
                     {
-                        strzel();
-                        time_tracker_strzalu = Time.time + czas_ataku;
+                        if (time_tracker_strzalu < Time.time)
+                        {
+                            strzel();
+                            time_tracker_strzalu = Time.time + czas_ataku;
+                        }
+                    }
+                    else
+                    {
+                        porusz_w_strone_gracza();
+                        if (time_tracker_powrotu < Time.time)
+                        {
+
+                            zrob_punkt(transform.position);
+                            time_tracker_powrotu = Time.time + czas_na_powrot;
+                            Debug.Log(punkty_powrotne.Count);
+                        }
+                        if (time_tracker_gonga < Time.time)
+                        {
+                            if (atak_wrecz())
+                                time_tracker_gonga = Time.time + czas_ataku_wrecz;
+                        }
                     }
                 }
                 else
                 {
-                    porusz_w_strone_gracza();
-                    if (time_tracker_powrotu < Time.time)
-                    {
-
-                        zrob_punkt(transform.position);
-                        time_tracker_powrotu = Time.time + czas_na_powrot;
-                        Debug.Log(punkty_powrotne.Count);
-                    }
-                    if (time_tracker_gonga < Time.time)
-                    {
-                        if (atak_wrecz())
-                            time_tracker_gonga = Time.time + czas_ataku_wrecz;
-                    }
+                    if (time_tracker_powrotu + czas_na_powrot < Time.time)
+                {
+                    if(punkty_powrotne.Count > 1)
+                         wracaj_po_punkcie();
+                    else
+                        chodzenie_po_sciezce();
                 }
             }
-            else
-            {
-                chodzenie_po_sciezce();
-                if (time_tracker_powrotu + czas_na_powrot < Time.time)
-                  wracaj_po_punkcie();
 
 
-            }
+            
+
         }
     }
 
@@ -114,7 +125,7 @@ public class Enemy : MonoBehaviour
                 if (targetpathPoint > pathPoints.Count - 1)
                     targetpathPoint = 0;
             }
-            gameObject.transform.position += new Vector3(droga.normalized.x,droga.normalized.y,0f) * Time.deltaTime * speed;
+            gameObject.transform.position += new Vector3(droga.normalized.x,droga.normalized.y,0f) * Time.deltaTime * speed/2;
         }
     }
 
@@ -151,9 +162,14 @@ public class Enemy : MonoBehaviour
     {
         Vector3 elo = spawn - this.transform.position;
         if (elo.magnitude > 0.1f)
+        {
             this.transform.position += kierunek(elo) * Time.deltaTime * speed;
+        }
         else
+        {
             this.transform.rotation = Quaternion.Euler(rotacja_orginalna);
+            currentState = statePATH;
+        }
     }
     void porusz_w_strone_gracza()
     {
