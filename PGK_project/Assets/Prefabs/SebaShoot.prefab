@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1464732924925886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62.514984, y: 10.197495, z: -1}
+  m_LocalPosition: {x: -0.69758797, y: 13.644663, z: -1}
   m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
   m_Children:
   - {fileID: 4801477692207094}
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1982b64bf846b4c1d9d657bc2b2b0bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathPoints: []
   zycie: 7
   atak: 0
   speed: 5
