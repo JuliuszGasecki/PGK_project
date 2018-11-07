@@ -38,29 +38,33 @@ public class Inventory : MonoBehaviour
     private void SetWeaponActivity(int avoid)
     {
         for (int i = 0; i < inventory.Count; i++)
-        {
-            if (i == avoid) inventory.ElementAt(i).CanUse = true;
-                inventory.ElementAt(i).CanUse = false;
+        { 
+            if (i == avoid)
+            {
+                inventory.ElementAt(i).CanUse = true;
+                continue;
+            }
+            inventory.ElementAt(i).CanUse = false;
         }
     }
 
     private void UseWeapon()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0) && inventory.Count >= 1)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && inventory.Count >= 1)
         {
             usingSlot = 0;
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(FIRSTELEMENT).UseWeapon();
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1) && inventory.Count >= 2)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && inventory.Count >= 2)
         {
             usingSlot = 1;
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(SECONDELEMENT).UseWeapon();
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && inventory.Count == 3)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && inventory.Count == 3)
         {
             usingSlot = 2;
             SetWeaponActivity(usingSlot);
@@ -74,6 +78,9 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
            inventory.RemoveAt(usingSlot);
+            usingSlot--;
+            if (usingSlot < 0)
+                usingSlot = 0;
         }
     }
 
@@ -101,7 +108,6 @@ public class Inventory : MonoBehaviour
         {
             return inventory.ElementAt(usingSlot);
         }
-
         return null;
     }
 }
