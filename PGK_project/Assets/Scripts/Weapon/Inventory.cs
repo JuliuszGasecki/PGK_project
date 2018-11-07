@@ -11,6 +11,9 @@ public class Inventory : MonoBehaviour
     private const int THIRDELEMENT = 2;
     private const int INVENTORYCAPACITY = 3;
     private int usingSlot = 0;
+    public int rifleAmmo { set; get; }
+    public int shotgunAmmo { set; get; }
+    public int deagleAmmo { set; get; }
     private enum _weaponsID
     {
         DEAGLE,
@@ -22,8 +25,12 @@ public class Inventory : MonoBehaviour
 
     public List<IWeapon> inventory;
 	// Use this for initialization
-	void Start () {
-	    inventory = new List<IWeapon>();
+	void Start ()
+	{
+	    rifleAmmo = 30;
+	    shotgunAmmo = 15;
+	    deagleAmmo = 10;
+        inventory = new List<IWeapon>();
 	    AddToList(this.gameObject.GetComponent<UMP45>());
         inventory.ElementAt(FIRSTELEMENT).CanUse = true;
 	}
