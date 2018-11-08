@@ -7,7 +7,7 @@ public class ChangeSprite : MonoBehaviour
 
     private string spriteWeapon = "hero_weapon";
     private string spriteKnife = "hero2";
-    private SpriteRenderer spriteR;
+   // private SpriteRenderer spriteR;
     private bool isChange;
     private float change_freeze = 0.3f;
     private float timer;
@@ -18,7 +18,7 @@ public class ChangeSprite : MonoBehaviour
     void Start()
     {
         isChange = true;
-        spriteR = gameObject.GetComponent<SpriteRenderer>();
+       // spriteR = gameObject.GetComponent<SpriteRenderer>();
         timer = Time.time;
         collider = this.gameObject.GetComponent<CircleCollider2D>();
         anim = GetComponent<Animator>();

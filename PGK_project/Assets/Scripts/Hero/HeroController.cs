@@ -54,7 +54,7 @@ public class HeroController : MonoBehaviour
                 Input.GetKey(KeyCode.A))
             {
 
-                anim.SetBool("isWalking", true);
+                  anim.SetBool("isWalking", true);
 
                 directionHero = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
                 directionHero.Normalize();
@@ -66,9 +66,9 @@ public class HeroController : MonoBehaviour
                 Input.GetKeyUp(KeyCode.A))
             {
 
-
-                    anim.SetBool("isWalking", false);
-
+                
+                  anim.SetBool("isWalking", false);
+                
             }
         }
     }
