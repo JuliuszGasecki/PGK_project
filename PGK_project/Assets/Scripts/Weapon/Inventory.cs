@@ -40,6 +40,7 @@ public class Inventory : MonoBehaviour
 	{
 	    UseWeapon();
 	    RemoveFromInventory();
+	    //Debug.Log(deagleAmmo);
 	}
 
     private void SetWeaponActivity(int avoid)
@@ -82,7 +83,7 @@ public class Inventory : MonoBehaviour
 
     private void RemoveFromInventory()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G) && inventory.Any())
         {
            inventory.RemoveAt(usingSlot);
             usingSlot--;

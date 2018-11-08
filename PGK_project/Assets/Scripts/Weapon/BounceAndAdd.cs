@@ -13,28 +13,29 @@ public class BounceAndAdd : MonoBehaviour {
     private bool _isAmmo;
     private Inventory inv;
 
-    private string[] _weaponNames = {"DEAGLE", "UMP45", "M4", "M9", "SPAS"};
+    private string[] _weaponNames = { "DEAGLE", "UMP45", "M4", "M9", "SPAS"};
 
     private string[] _ammoNames = {"RifleAmmo", "ShotgunAmmo", "DeagleAmmo"};
+
+    private string nameW;
     // Use this for initialization
     void Start ()
     {
         inv = GameObject.Find("Inventory").GetComponent<Inventory>();
         var downloadStrings = this.gameObject.name.Split(new [] { ' ' }, 2);
-        string name = downloadStrings[0];
-        if (_weaponNames.Contains(name))
+        nameW = downloadStrings[0];
+        if (_weaponNames.Contains(nameW))
         {
             _isWeapon = true;
-            weapon = GameObject.Find("Inventory").GetComponent(name) as IWeapon;
+            weapon = GameObject.Find("Inventory").GetComponent(nameW) as IWeapon;
             _isAmmo = false;
         }
 
-        else if (_ammoNames.Contains(name))
+        else if (_ammoNames.Contains(nameW))
         {
             _isWeapon = false;
             _isAmmo = true;
         }
-        Debug.Log(_isAmmo);
     }
 	
 	// Update is called once per frame
@@ -54,14 +55,12 @@ public class BounceAndAdd : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.K) && _isWeapon)
             {
-                if (_isWeapon && !inv.IsAdded(weapon.ID))
-                    inv.AddToList(weapon);
-                else if (_isWeapon)
-                {
+                if (inv.IsAdded(weapon.ID))
                     AddAmmoInsteadOf();
-                }
+                else
+                    inv.AddToList(weapon);
                 destroyObject();
             }
         }
@@ -69,35 +68,42 @@ public class BounceAndAdd : MonoBehaviour {
 
     private void AddAmmoInsteadOf()
     {
-        if (name.Equals(_weaponNames[0]))
+        Debug.Log(nameW);
+        Debug.Log(_weaponNames[0]);
+        if (nameW.Equals(_weaponNames[0]))
         {
             inv.deagleAmmo += 3;
+            Debug.Log("xDDDDd");
+            return;
         }
-        else if (name.Equals(_weaponNames[1]))
+        if (nameW.Equals(_weaponNames[1]))
         {
             inv.rifleAmmo += 20;
+            return;
         }
-        else if(name.Equals(_weaponNames[2]))
+        if(nameW.Equals(_weaponNames[2]))
         {
             inv.rifleAmmo += 20;
+            return;
         }
-        else if(name.Equals(_weaponNames[4]))
+        if(nameW.Equals(_weaponNames[4]))
         {
             inv.shotgunAmmo += 5;
+            return;
         }
     }
 
     private void AddAmmo()
     {
-        if (name.Equals(_ammoNames[0]))
+        if (nameW.Equals(_ammoNames[0]))
         {
             inv.rifleAmmo += 20;
         }
-        else if (name.Equals(_ammoNames[1]))
+        else if (nameW.Equals(_ammoNames[1]))
         {
             inv.shotgunAmmo += 5;
         }
-        else if (name.Equals(_ammoNames[2]))
+        else if (nameW.Equals(_ammoNames[2]))
         {
             inv.deagleAmmo += 3;
         }

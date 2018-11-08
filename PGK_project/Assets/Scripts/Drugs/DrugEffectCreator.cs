@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DrugEffectCreator : MonoBehaviour
 {
-    public GameObject heraEffect;
+    public GameObject efect;
     private bool isQuitting = false;
     void OnApplicationQuit()
     {
@@ -14,7 +14,7 @@ public class DrugEffectCreator : MonoBehaviour
     {
         if (!isQuitting)
         {
-            Instantiate(heraEffect);
+            Instantiate(efect);
         }
         
     }

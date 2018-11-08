@@ -19,7 +19,11 @@ public class Heroina : MonoBehaviour {
         if (dt.heroineFlag)
             heroieEffect();
         else
+        {
+            Debug.Log("Usunięto efekt");
             Destroy(gameObject);
+        }
+            
     }
 
     private void heroieEffect()
