@@ -26,6 +26,7 @@ public class DrugsTimer : MonoBehaviour {
     public float cocaTime = 0f;
     public bool cocaFlag = false;
 
+    public bool heroineFlag = false;
     // Use this for initialization
     void Start () {
         onDrugs = false;
@@ -53,6 +54,7 @@ public class DrugsTimer : MonoBehaviour {
         if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; }
         if (nazwa_narkotyku == "coca") { cocaFlag = dziala; }
         if (nazwa_narkotyku == "extasy") { extasyFlag = dziala; }
+        if (nazwa_narkotyku == "hera") { heroineFlag = dziala; }
        }
 
 
