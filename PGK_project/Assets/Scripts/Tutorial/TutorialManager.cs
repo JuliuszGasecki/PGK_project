@@ -11,6 +11,7 @@ public class TutorialManager : MonoBehaviour {
     public Image teacher;
     public Sprite teacherSprite;
     public string finishTutorial;
+    Withdrawal hero;
 
     private static TutorialManager instance;
     public static TutorialManager Instance
@@ -29,9 +30,11 @@ public class TutorialManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        hero = GameObject.Find("Hero").GetComponent<Withdrawal>();
         teacher.enabled = true;
         teacher.sprite = teacherSprite;
         SetNextTutorial(0);
+        hero.stopWithdrawal();
 	}
 	
 	// Update is called once per frame
@@ -65,6 +68,7 @@ public class TutorialManager : MonoBehaviour {
         tutorialText.text = finishTutorial;
         teacher.enabled = false;
         tutorialText.enabled = false;
+        hero.startWithdrawal();
     }
 
 

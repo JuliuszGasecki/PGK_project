@@ -59,5 +59,4 @@ public class Withdrawal : MonoBehaviour {
     {
         stopWithdrawalFlag = false;
     }
-
 }
