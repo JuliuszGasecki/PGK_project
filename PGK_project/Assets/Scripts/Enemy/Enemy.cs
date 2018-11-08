@@ -253,7 +253,7 @@ public class Enemy : MonoBehaviour
     {
        float x = Random.Range(-0.2f, 0.2f);
         float y = Random.Range(-0.2f, 0.2f);
-        Vector3 placment_bron = new Vector3(0f + x , 0f + y, 1f);
+        Vector3 placment_bron = new Vector3(0f + x , 0f + y, 0f);
         if(weapon != null)
             Instantiate(weapon, transform.position  + placment_bron, transform.rotation);
     }
