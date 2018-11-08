@@ -24,7 +24,7 @@ public class Withdrawal : MonoBehaviour {
             drugWithdrawal();
         }
         
-        deadByWithdrawal();
+      //  deadByWithdrawal();
         withdrawalSLider.value = hero.drugWithdrawal;
     }
 
@@ -33,14 +33,14 @@ public class Withdrawal : MonoBehaviour {
         hero.drugWithdrawal -= Time.fixedDeltaTime * 0.75f;
     }
 
-    private void deadByWithdrawal()
+  /*  private void deadByWithdrawal()
     {
         if (hero.drugWithdrawal<=0)
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(3);
         }
-    }
+    }*/
 
     public void addWithdrawalPoints(float w)
     {

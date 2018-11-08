@@ -20,7 +20,7 @@ public class DeathScene : MonoBehaviour
 
     void Update()
     {
-        if (hero.isAlive() == false)
+        if (hero.isAlive() == false || hero.drugWithdrawal <= 0 || hero.poisoning > 40)
         {
             spriteR.sprite = Resources.Load<Sprite>(deadHero);
             Pause();

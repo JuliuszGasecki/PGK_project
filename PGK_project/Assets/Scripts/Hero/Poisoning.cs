@@ -20,7 +20,7 @@ public class Poisoning : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         poisoningEffect();
-        poisonDeath();
+        //poisonDeath();
         poisoninglSLider.value = hero.poisoning;
         
     }
@@ -31,13 +31,13 @@ public class Poisoning : MonoBehaviour {
         hero.poisoning -= Time.fixedDeltaTime;
     }
 
-    private void poisonDeath()
+    /*private void poisonDeath()
     {
         if (hero.poisoning > poisoningMax)
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(4);
         }
-    }
+    }*/
 
 }

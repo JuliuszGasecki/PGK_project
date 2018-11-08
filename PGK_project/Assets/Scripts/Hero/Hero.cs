@@ -55,9 +55,9 @@ public class Hero : MonoBehaviour
     }
     public Boolean isAlive()
     {
-        if (health <= 0)
+        if (health <= 0 || drugWithdrawal <= 0 || poisoning > 40)
             return false;
-        if (health > 0)
+        if (health > 0 && drugWithdrawal > 0 && poisoning <= 40)
             return true;
         return false;
     }
