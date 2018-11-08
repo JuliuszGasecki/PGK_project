@@ -5,6 +5,8 @@ using UnityEngine;
 public class AlcoholEffect : MonoBehaviour {
     Hero hero;
     DrugsTimer dt;
+    Camera cam;
+    private float angle = 0;
     int previousStateHero = 20;
 
 
@@ -12,21 +14,26 @@ public class AlcoholEffect : MonoBehaviour {
     {
         hero = GameObject.Find("Hero").GetComponent<Hero>();
         dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         previousStateHero = hero.health;
     }
 
     // Update is called once per frame
     void Update () {
-        if(!dt.vodkaFlag)
+        cam.GetComponent<CameraController>().MoveSpeed = 1;
+        if (!dt.vodkaFlag)
         {
-            alcoholEffect();
+            lifeEffect();
             Destroy(gameObject);
         }
-		
-	}
 
-    void alcoholEffect()
-    {
-        hero.health -= this.gameObject.GetComponent<DrugTemplate>().lifeBoost + (hero.health - previousStateHero);
     }
+
+    void lifeEffect()
+    {
+        cam.GetComponent<CameraController>().MoveSpeed = 100;
+        hero.health -=
+            20 + (hero.health - previousStateHero);
+    }
+    
 }

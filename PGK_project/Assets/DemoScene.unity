@@ -5108,7 +5108,6 @@ GameObject:
   - component: {fileID: 711144352}
   - component: {fileID: 711144351}
   - component: {fileID: 711144354}
-  - component: {fileID: 711144350}
   m_Layer: 0
   m_Name: hera
   m_TagString: Untagged
@@ -5116,18 +5115,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &711144350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 711144349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12caea9567591464db3a59e60f3cfa7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  efect: {fileID: 0}
 --- !u!58 &711144351
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5214,6 +5201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nazwa: hera
+  drugEffect: {fileID: 1124119196918758, guid: 2322c9b702129c84595d88ca5b06d22b, type: 2}
   speedBoost: 2
   lifeBoost: 0
   attackBoost: 4
@@ -7180,6 +7168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nazwa: ganja
+  drugEffect: {fileID: 0}
   speedBoost: 20
   lifeBoost: 0
   attackBoost: 20
@@ -12119,7 +12108,6 @@ GameObject:
   - component: {fileID: 1596410954}
   - component: {fileID: 1596410952}
   - component: {fileID: 1596410953}
-  - component: {fileID: 1596410956}
   m_Layer: 0
   m_Name: vodka
   m_TagString: Untagged
@@ -12139,7 +12127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nazwa: vodka
-  speedBoost: -5
+  drugEffect: {fileID: 1924654920332970, guid: 6c5e7afa73674474ba25ea6efa41f245, type: 2}
+  speedBoost: 1
   lifeBoost: 20
   attackBoost: 0
   lifetime: 10
@@ -12223,18 +12212,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1596410956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1596410951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12caea9567591464db3a59e60f3cfa7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  efect: {fileID: 1924654920332970, guid: 6c5e7afa73674474ba25ea6efa41f245, type: 2}
 --- !u!1 &1606133479
 GameObject:
   m_ObjectHideFlags: 0
@@ -13438,6 +13415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nazwa: ganja
+  drugEffect: {fileID: 0}
   speedBoost: 20
   lifeBoost: 0
   attackBoost: 20

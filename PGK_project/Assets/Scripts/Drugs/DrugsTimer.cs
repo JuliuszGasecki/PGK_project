@@ -40,7 +40,7 @@ public class DrugsTimer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         controllNarcotics();
-        Debug.Log(hero.health);
+        Debug.Log("Zycko " + hero.health);
     }
     public void addNarcotic(DrugTemplate drug){
         if (onDrugs != true)

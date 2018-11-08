@@ -6,6 +6,7 @@ public class DrugTemplate : MonoBehaviour {
 
     public string nazwa;
     Hero hero;
+    public GameObject drugEffect;
     DrugsTimer heroDrugTimer;
     private float angle = 0;
     float time = 0;
@@ -54,6 +55,8 @@ public class DrugTemplate : MonoBehaviour {
             heroDrugTimer = collision.GetComponent<DrugsTimer>();
             if (Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
             {
+                if (drugEffect != null)
+                    Instantiate(drugEffect);
                 destroyObject();
                 heroDrugTimer.addNarcotic(this);
             }
@@ -66,7 +69,7 @@ public class DrugTemplate : MonoBehaviour {
     private void bounce()
     {
         float lastY = transform.position.y;
-        transform.position = new Vector3(transform.position.x, lastY + Mathf.Sin(angle) / 80, transform.position.z);
+        transform.position = new Vector2(transform.position.x, lastY + Mathf.Sin(angle) / 80);
         angle += 3.14f / 64f;
     }
 
