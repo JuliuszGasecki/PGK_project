@@ -16,4 +16,6 @@ public interface IWeapon
     string DisplayToTextAmmo();
 
     string Name { get; set; }
+
+    void DeafultAmmo();
 }

@@ -28,7 +28,7 @@ public class UMP45 : MonoBehaviour, IShootable {
         speed = 20f;
         magazineCapacity = 30;
         ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
-        ammoInMagazine = 0;
+        ammoInMagazine = magazineCapacity;
         Name = "UMP45";
     }
 
@@ -114,5 +114,10 @@ public class UMP45 : MonoBehaviour, IShootable {
     public void UpdateAmmo()
     {
         ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
+    }
+
+    public void DeafultAmmo()
+    {
+        ammoInMagazine = magazineCapacity;
     }
 }

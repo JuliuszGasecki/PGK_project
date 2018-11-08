@@ -28,7 +28,7 @@ public class DEAGLE : MonoBehaviour, IShootable
         speed = 20f;
         magazineCapacity = 7;
         ammo = this.gameObject.GetComponent<Inventory>().deagleAmmo; 
-        ammoInMagazine = 0;
+        ammoInMagazine = magazineCapacity;
         Name = "DEAGLE";
     }
 
@@ -114,5 +114,10 @@ public class DEAGLE : MonoBehaviour, IShootable
     public void UpdateAmmo()
     {
         ammo = this.gameObject.GetComponent<Inventory>().deagleAmmo;
+    }
+
+    public void DeafultAmmo()
+    {
+        ammoInMagazine = magazineCapacity;
     }
 }

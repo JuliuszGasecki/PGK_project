@@ -85,7 +85,8 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G) && inventory.Any())
         {
-           inventory.RemoveAt(usingSlot);
+            inventory.ElementAt(usingSlot).DeafultAmmo();
+            inventory.RemoveAt(usingSlot);
             usingSlot--;
             if (usingSlot < 0)
                 usingSlot = 0;
