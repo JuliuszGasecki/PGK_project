@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UMP45 : MonoBehaviour, IShootable {
+public class SPAS : MonoBehaviour, IShootable
+{
 
-	// Use this for initialization
+    // Use this for initialization
     private float timeUntilFire = 0;
     Transform firePoint;
     public GameObject bullet;
     public GameObject GunShot;
+    public GameObject ReloadSound;
     public float fireRate { get; set; }
     public int damage { get; set; }
     public int ID { get; set; }
@@ -20,16 +22,16 @@ public class UMP45 : MonoBehaviour, IShootable {
 
     public string Name { get; set; }
 
-    void Start ()
+    void Start()
     {
-        ID = 2;
-        damage = 3;
-        fireRate = 0.1f;
+        ID = 3;
+        damage = 10;
+        fireRate = 0.7f;
         speed = 20f;
-        magazineCapacity = 30;
-        ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
+        magazineCapacity = 9;
+        ammo = this.gameObject.GetComponent<Inventory>().shotgunAmmo;
         ammoInMagazine = magazineCapacity;
-        Name = "UMP45";
+        Name = "SPAS";
     }
 
     void Awake()
@@ -40,8 +42,8 @@ public class UMP45 : MonoBehaviour, IShootable {
             Debug.LogError("No FirePoint!");
         }
     }
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+    void Update()
     {
         Reload();
         UseWeapon();
@@ -51,20 +53,21 @@ public class UMP45 : MonoBehaviour, IShootable {
     public void Reload()
     {
         int difference;
-        if (Input.GetKeyDown(KeyCode.R) && CanUse)      
+        if (Input.GetKeyDown(KeyCode.R) && CanUse)
         {
+            GameObject gunShot = Instantiate(ReloadSound, this.transform.position, this.transform.rotation) as GameObject;
             if (ammo > 0)
             {
                 difference = magazineCapacity - ammoInMagazine;
                 if (difference > ammo)
                 {
                     ammoInMagazine += ammo;
-                    this.gameObject.GetComponent<Inventory>().rifleAmmo = 0;
+                    this.gameObject.GetComponent<Inventory>().shotgunAmmo = 0;
                 }
                 else
                 {
                     ammoInMagazine += difference;
-                    this.gameObject.GetComponent<Inventory>().rifleAmmo -= difference;
+                    this.gameObject.GetComponent<Inventory>().shotgunAmmo -= difference;
                 }
             }
 
@@ -90,11 +93,17 @@ public class UMP45 : MonoBehaviour, IShootable {
     }
 
     public void Shoot()
-    {    
-        GameObject bulletM4 = Instantiate(bullet, firePoint.position, firePoint.rotation);
-        SetDamageBullet(bulletM4);
-        SetSpeedBullet(bulletM4);
-        ammoInMagazine--;
+    {
+        GameObject bullet1 = Instantiate(bullet, firePoint.position, firePoint.rotation);
+        SetDamageBullet(bullet1);
+        SetSpeedBullet(bullet1);
+        GameObject bullet2 = Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0,0,15));
+        SetDamageBullet(bullet2);
+        SetSpeedBullet(bullet2);
+        GameObject bullet3 = Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, -15));
+        SetDamageBullet(bullet3);
+        SetSpeedBullet(bullet3);
+        ammoInMagazine -=3;
     }
     public void SetDamageBullet(GameObject bullet)
     {
@@ -114,7 +123,7 @@ public class UMP45 : MonoBehaviour, IShootable {
 
     public void UpdateAmmo()
     {
-        ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
+        ammo = this.gameObject.GetComponent<Inventory>().shotgunAmmo;
     }
 
     public void DeafultAmmo()

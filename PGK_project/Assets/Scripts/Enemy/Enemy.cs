@@ -278,7 +278,9 @@ public class Enemy : MonoBehaviour
 
     void strzel()
     {
-        Instantiate(bullet, fire_point.position, fire_point.rotation);
+        GameObject bulletE = Instantiate(bullet, fire_point.position, fire_point.rotation);
+        bulletE.GetComponent<Bullet>().bulletDamage = 2;
+        bulletE.GetComponent<Bullet>().bulletSpeed = 20f;
     }
 
     bool atak_wrecz()

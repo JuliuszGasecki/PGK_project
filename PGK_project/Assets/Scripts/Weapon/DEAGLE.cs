@@ -9,7 +9,7 @@ public class DEAGLE : MonoBehaviour, IShootable
     private float timeUntilFire = 0;
     Transform firePoint;
     public GameObject bullet;
-
+    public GameObject GunShot;
     public float fireRate { get; set; }
     public int damage { get; set; }
     public int ID { get; set; }
@@ -24,7 +24,7 @@ public class DEAGLE : MonoBehaviour, IShootable
     {
         ID = 0;
         damage = 10;
-        fireRate = 10f;
+        fireRate = 1f;
         speed = 20f;
         magazineCapacity = 7;
         ammo = this.gameObject.GetComponent<Inventory>().deagleAmmo; 
@@ -78,8 +78,9 @@ public class DEAGLE : MonoBehaviour, IShootable
         {
             if (ammoInMagazine > 0)
             {
+                GameObject gunShot = Instantiate(GunShot, this.transform.position, this.transform.rotation) as GameObject;
                 Shoot();
-                timeUntilFire = Time.time + 1 / fireRate;
+                timeUntilFire = Time.time + fireRate;
             }
             else
             {
