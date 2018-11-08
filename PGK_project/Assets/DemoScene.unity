@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18102155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2, y: 12.19, z: -1}
+  m_LocalPosition: {x: -1.12, y: 12.19, z: -1}
   m_LocalScale: {x: 1, y: 4.7375, z: 1}
   m_Children: []
   m_Father: {fileID: 748126208}
@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollided: 0
+  heroBlock: {fileID: 752251804}
 --- !u!61 &18102158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1443,6 +1444,60 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c9c3bd48b287e242ab8f09fe6daaf19, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &211785288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211785289}
+  - component: {fileID: 211785290}
+  m_Layer: 0
+  m_Name: BlockTut1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &211785289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 211785288}
+  m_LocalRotation: {x: -0, y: -0, z: 0.3489122, w: 0.9371555}
+  m_LocalPosition: {x: -0.29, y: 7.3, z: 0}
+  m_LocalScale: {x: 5.5, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 304854644}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.842003}
+--- !u!61 &211785290
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 211785288}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &218855863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,6 +1808,7 @@ MonoBehaviour:
     WSAD aby sie porusza\u0107. Rucham myszki obracasz kamer\u0119. Poka\u017C mi
     czy jeste\u015B w stanie przej\u015B\u0107 pare krok\xF3w..."
   mapBlocker: {fileID: 0}
+  heroBlock: {fileID: 1502013632}
   Keys:
   - w
   - s
@@ -2150,6 +2206,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1199598812}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &304854643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 304854644}
+  m_Layer: 0
+  m_Name: TutorialHeroBlockers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &304854644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304854643}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.33539945, y: 4.3703537, z: 0.087890625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1502013633}
+  - {fileID: 211785289}
+  - {fileID: 415934300}
+  - {fileID: 752251805}
+  m_Father: {fileID: 959814096}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &312381275
 GameObject:
@@ -2907,6 +2995,60 @@ Transform:
   m_Father: {fileID: 1695874796}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -87.607}
+--- !u!1 &415934299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415934300}
+  - component: {fileID: 415934301}
+  m_Layer: 0
+  m_Name: BlockTut1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &415934300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415934299}
+  m_LocalRotation: {x: -0, y: -0, z: 0.010319695, w: 0.9999468}
+  m_LocalPosition: {x: -0.89, y: 12.55, z: 0}
+  m_LocalScale: {x: 12.35355, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 304854644}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.1830001}
+--- !u!61 &415934301
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415934299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &419954617
 Prefab:
   m_ObjectHideFlags: 0
@@ -2995,6 +3137,7 @@ MonoBehaviour:
     do \u015Bmietnika. Tam cz\u0119sto zostawiaj\u0105 prochy dla klient\xF3w unikaj\u0105cych
     kontaktu..."
   mapBlocker: {fileID: 0}
+  heroBlock: {fileID: 0}
 --- !u!1001 &451875068
 Prefab:
   m_ObjectHideFlags: 0
@@ -5530,6 +5673,7 @@ MonoBehaviour:
   Explanation: "Dobra teraz kliknij prawy przycisk myszy jak staniesz na narkotyku.
     Jak to zrobisz to p\xF3jd\u017A do pokoju po lewo."
   mapBlocker: {fileID: 0}
+  heroBlock: {fileID: 0}
 --- !u!1 &748489132
 GameObject:
   m_ObjectHideFlags: 0
@@ -5584,6 +5728,60 @@ Transform:
   m_Father: {fileID: 1199598812}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &752251804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 752251805}
+  - component: {fileID: 752251806}
+  m_Layer: 0
+  m_Name: BlockTut1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &752251805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752251804}
+  m_LocalRotation: {x: -0, y: -0, z: 0.70553523, w: 0.70867485}
+  m_LocalPosition: {x: -11.09, y: 7.35, z: 0}
+  m_LocalScale: {x: 5.5, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 304854644}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.746}
+--- !u!61 &752251806
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752251804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &775458838
 Prefab:
   m_ObjectHideFlags: 0
@@ -6416,7 +6614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &959814095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6447,6 +6645,7 @@ Transform:
   - {fileID: 450628389}
   - {fileID: 748126208}
   - {fileID: 2096555157}
+  - {fileID: 304854644}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6770,6 +6969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollided: 0
+  heroBlock: {fileID: 211785288}
 --- !u!1 &973150499
 GameObject:
   m_ObjectHideFlags: 0
@@ -11703,6 +11903,60 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1482355785}
   m_CullTransparentMesh: 0
+--- !u!1 &1502013632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1502013633}
+  - component: {fileID: 1502013634}
+  m_Layer: 0
+  m_Name: BlockTut1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1502013633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502013632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.46, z: 0}
+  m_LocalScale: {x: 5.5, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 304854644}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1502013634
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502013632}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1513658285
 GameObject:
   m_ObjectHideFlags: 0
@@ -12688,6 +12942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollided: 0
+  heroBlock: {fileID: 415934299}
 --- !u!61 &1620873442
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15407,6 +15662,7 @@ MonoBehaviour:
   Explanation: "Urzyj LPM \u017Ceby strzeli\u0107. Po zastrzeleniu wroga zbierz z
     niego amunicje. Tylko zanim to zrobisz prze\u0142aduj za pomoc\u0105 R"
   mapBlocker: {fileID: 0}
+  heroBlock: {fileID: 0}
 --- !u!1 &2117411950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1612563018897442, guid: 88ac73eeaa908468c80a3c39ba1edd52,

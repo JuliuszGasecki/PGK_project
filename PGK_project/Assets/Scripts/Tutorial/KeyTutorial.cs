@@ -20,6 +20,7 @@ public class KeyTutorial : Tutorial {
         if(Keys.Count ==0)
         {
             TutorialManager.Instance.CompletedTutorial();
+            Destroy(heroBlock);
         }
     }
 }

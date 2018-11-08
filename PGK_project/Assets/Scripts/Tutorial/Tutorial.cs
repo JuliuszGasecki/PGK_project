@@ -9,6 +9,7 @@ public class Tutorial : MonoBehaviour {
     [TextArea (3,10)]
     public string Explanation;
     public GameObject mapBlocker;
+    public GameObject heroBlock;
 
     private void Awake()
     {
