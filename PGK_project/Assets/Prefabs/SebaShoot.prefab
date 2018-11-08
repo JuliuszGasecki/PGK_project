@@ -115,6 +115,7 @@ MonoBehaviour:
   extasy: {fileID: 1358745081234772, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
   coca: {fileID: 1748705115184964, guid: 908488864e60e4bdbbd0e08d60288b7f, type: 2}
   dead_enemy: {fileID: 21300000, guid: d27df3b9f3b88be4a9a0ce51cd7e50aa, type: 3}
+  weapon: {fileID: 1159911324685628, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
 --- !u!212 &212831357969355858
 SpriteRenderer:
   m_ObjectHideFlags: 1
