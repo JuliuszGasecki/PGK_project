@@ -10,7 +10,7 @@ public class DrugTemplate : MonoBehaviour {
     private float angle = 0;
     float time = 0;
     public float speedBoost;
-    public float lifeBoost;
+    public int lifeBoost;
     public float attackBoost;
     float timeofuse;
     public float lifetime;

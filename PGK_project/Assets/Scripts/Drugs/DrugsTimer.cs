@@ -27,6 +27,7 @@ public class DrugsTimer : MonoBehaviour {
     public bool cocaFlag = false;
 
     public bool heroineFlag = false;
+    public bool vodkaFlag = false;
     // Use this for initialization
     void Start () {
         onDrugs = false;
@@ -39,6 +40,7 @@ public class DrugsTimer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         controllNarcotics();
+        Debug.Log(hero.health);
     }
     public void addNarcotic(DrugTemplate drug){
         if (onDrugs != true)
@@ -55,6 +57,7 @@ public class DrugsTimer : MonoBehaviour {
         if (nazwa_narkotyku == "coca") { cocaFlag = dziala; }
         if (nazwa_narkotyku == "extasy") { extasyFlag = dziala; }
         if (nazwa_narkotyku == "hera") { heroineFlag = dziala; }
+        if (nazwa_narkotyku == "vodka") { vodkaFlag = dziala; }
        }
 
 
@@ -89,6 +92,7 @@ public class DrugsTimer : MonoBehaviour {
         heroW.addWithdrawalPoints(drug.withdroval_points);
         hero.speed += drug.speedBoost;
         hero.attack += drug.attackBoost;
+        hero.health += drug.lifeBoost;
     }
 
     public void removeEffect(DrugTemplate drug)
