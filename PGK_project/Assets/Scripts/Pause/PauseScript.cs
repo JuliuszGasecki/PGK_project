@@ -9,6 +9,12 @@ public class PauseScript : MonoBehaviour {
     public bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public float temp;
+    private Inventory inv;
+
+    void Start()
+    {
+        inv = GameObject.Find("Inventory").GetComponent<Inventory>();
+    }
 
 	void Update () {
         if (Input.GetKeyUp(KeyCode.Escape))
@@ -33,10 +39,12 @@ public class PauseScript : MonoBehaviour {
         Time.timeScale = 0f;
         Time.fixedDeltaTime = 0f;
         GameIsPaused = true;
+        inv.GetUsingWeapon().CanUse = false;
     }
 
     public void Resume()
     {
+        inv.GetUsingWeapon().CanUse = true;
         pauseMenuUI.SetActive(false);
         Time.fixedDeltaTime = temp;
         Time.timeScale = 1f;

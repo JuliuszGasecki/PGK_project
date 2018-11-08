@@ -33,6 +33,7 @@ public class Inventory : MonoBehaviour
         inventory = new List<IWeapon>();
 	    AddToList(this.gameObject.GetComponent<UMP45>());
         inventory.ElementAt(FIRSTELEMENT).CanUse = true;
+	    usingSlot = 0;
 	}
 	
 	// Update is called once per frame

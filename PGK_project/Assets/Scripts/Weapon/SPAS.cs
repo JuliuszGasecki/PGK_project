@@ -54,10 +54,10 @@ public class SPAS : MonoBehaviour, IShootable
     {
         int difference;
         if (Input.GetKeyDown(KeyCode.R) && CanUse)
-        {
-            GameObject gunShot = Instantiate(ReloadSound, this.transform.position, this.transform.rotation) as GameObject;
+        {         
             if (ammo > 0)
             {
+                GameObject gunShot = Instantiate(ReloadSound, this.transform.position, this.transform.rotation) as GameObject;
                 difference = magazineCapacity - ammoInMagazine;
                 if (difference > ammo)
                 {
@@ -97,10 +97,10 @@ public class SPAS : MonoBehaviour, IShootable
         GameObject bullet1 = Instantiate(bullet, firePoint.position, firePoint.rotation);
         SetDamageBullet(bullet1);
         SetSpeedBullet(bullet1);
-        GameObject bullet2 = Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0,0,15));
+        GameObject bullet2 = Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0,0,25));
         SetDamageBullet(bullet2);
         SetSpeedBullet(bullet2);
-        GameObject bullet3 = Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, -15));
+        GameObject bullet3 = Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, -25));
         SetDamageBullet(bullet3);
         SetSpeedBullet(bullet3);
         ammoInMagazine -=3;
