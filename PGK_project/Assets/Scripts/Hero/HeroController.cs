@@ -34,12 +34,14 @@ public class HeroController : MonoBehaviour
     void faceMouse()
     {
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (hero.isAlive())
+        {
+            direction = new Vector2(
+                mousePosition.x - _myTransform.position.x,
+                mousePosition.y - _myTransform.position.y);
 
-        direction = new Vector2(
-            mousePosition.x - _myTransform.position.x,
-            mousePosition.y - _myTransform.position.y);
-
-        transform.up = direction;
+            transform.up = direction;
+        }
     }
 
     void move()

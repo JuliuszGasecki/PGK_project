@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ReturnButton : MonoBehaviour {
-    public void Return(int level)
+    public void Return()
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(1);
     }
 }

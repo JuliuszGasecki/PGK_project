@@ -92,7 +92,7 @@ public class Enemy : MonoBehaviour
 
                             zrob_punkt(transform.position);
                             time_tracker_powrotu = Time.time + czas_na_powrot;
-                            Debug.Log(punkty_powrotne.Count);
+
                         }
                         if (time_tracker_gonga < Time.time)
                         {

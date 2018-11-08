@@ -28,6 +28,7 @@ public class Hero : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        Time.timeScale = 1f;
         this.transform.position = spawnPoint.position;
         tempHealth = health;
         tempSpeed = speed;
@@ -40,7 +41,7 @@ public class Hero : MonoBehaviour
 	void Update ()
 	{
         healthSlider.value = health;
-	    respawn();
+	   // respawn();
         
 	}
 
