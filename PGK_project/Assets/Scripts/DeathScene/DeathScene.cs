@@ -26,6 +26,7 @@ public class DeathScene : MonoBehaviour
         {
             anim.enabled = false;
             spriteR.sprite = Resources.Load<Sprite>(deadHero);
+            transform.localScale = new Vector3(0.22f, 0.22f, 0.22f);
             Pause();
         }
     }
