@@ -97,7 +97,7 @@ public class BounceAndAdd : MonoBehaviour {
     {
         if (nameW.Equals(_ammoNames[0]))
         {
-            inv.rifleAmmo += 20;
+            inv.rifleAmmo += 150;
         }
         else if (nameW.Equals(_ammoNames[1]))
         {
