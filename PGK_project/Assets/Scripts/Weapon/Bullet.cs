@@ -29,7 +29,8 @@ public class Bullet : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().zycie -= bulletDamage;
             
         }
-        Destroy(gameObject);
+        if(collision.gameObject.tag != "Ammo")
+            Destroy(gameObject);
     }
 
 }
