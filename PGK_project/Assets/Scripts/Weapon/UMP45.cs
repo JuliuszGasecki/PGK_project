@@ -9,6 +9,7 @@ public class UMP45 : MonoBehaviour, IShootable {
     Transform firePoint;
     public GameObject bullet;
     public GameObject GunShot;
+    public GameObject WeaponSplash;
     public float fireRate { get; set; }
     public int damage { get; set; }
     public int ID { get; set; }
@@ -90,7 +91,8 @@ public class UMP45 : MonoBehaviour, IShootable {
     }
 
     public void Shoot()
-    {    
+    {
+        Instantiate(WeaponSplash, firePoint.position, Quaternion.identity);
         GameObject bulletM4 = Instantiate(bullet, firePoint.position, firePoint.rotation);
         SetDamageBullet(bulletM4);
         SetSpeedBullet(bulletM4);

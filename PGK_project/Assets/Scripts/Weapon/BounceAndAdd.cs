@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -22,8 +23,10 @@ public class BounceAndAdd : MonoBehaviour {
     void Start ()
     {
         inv = GameObject.Find("Inventory").GetComponent<Inventory>();
-        var downloadStrings = this.gameObject.name.Split(new [] { ' ' }, 2);
+        var downloadStrings = this.gameObject.name.Split(new [] { '(' }, 2);
         nameW = downloadStrings[0];
+        nameW.Replace(" ", String.Empty);
+        Debug.Log(nameW);
         if (_weaponNames.Contains(nameW))
         {
             _isWeapon = true;

@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed { set; get; }
 
     public int bulletDamage { set; get; }
+    public GameObject BulletSplash;
+    public GameObject BloodSplash;
 
 	// Use this for initialization
 	void Start ()
@@ -21,15 +23,23 @@ public class Bullet : MonoBehaviour
 	}
     void OnCollisionEnter2D(Collision2D collision)
     {
-
-        if(collision.gameObject.tag == "Player"){
+        var tag = collision.gameObject.tag;
+        if(tag == "Player"){
             collision.gameObject.GetComponent<Hero>().health -= bulletDamage;
+            //Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity);
         }
-        if(collision.gameObject.tag == "Enemy"){
+        if(tag == "Enemy"){
             collision.gameObject.GetComponent<Enemy>().zycie -= bulletDamage;
-            
+            Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity);
         }
-        if(collision.gameObject.tag != "Ammo")
+
+        if (tag != "Ammo")
+        {
+            if (tag != "Player" && tag != "Enemy")
+            {
+                Instantiate(BulletSplash, this.transform.position, Quaternion.identity);
+            }
+        }
             Destroy(gameObject);
     }
 

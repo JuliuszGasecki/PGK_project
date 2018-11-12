@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1480845407829184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.9918466, y: -3.7625968, z: -1}
+  m_LocalPosition: {x: 1.425, y: -1.123, z: -1}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
@@ -115,10 +115,10 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.08
+  m_Time: 0.05
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.1
+    widthMultiplier: 0.08
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -191,6 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d24867a0849e364faf1531556550c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BulletSplash: {fileID: 1136611520242774, guid: 0a53947c1808ae6438a4d64448b82c4d,
+    type: 2}
+  BloodSplash: {fileID: 1280616174678190, guid: a7d2a37ebb1a66148b937422057f5990,
+    type: 2}
 --- !u!212 &212134768686056866
 SpriteRenderer:
   m_ObjectHideFlags: 1
