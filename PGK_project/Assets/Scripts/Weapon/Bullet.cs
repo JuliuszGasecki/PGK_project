@@ -26,11 +26,11 @@ public class Bullet : MonoBehaviour
         var tag = collision.gameObject.tag;
         if(tag == "Player"){
             collision.gameObject.GetComponent<Hero>().health -= bulletDamage;
-            //Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity);
+            Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity);
         }
         if(tag == "Enemy"){
             collision.gameObject.GetComponent<Enemy>().zycie -= bulletDamage;
-            Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity);
+            Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity * Quaternion.Euler(0, 0, 180));
         }
 
         if (tag != "Ammo")
