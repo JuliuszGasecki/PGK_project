@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114701102175358490}
   m_Layer: 0
   m_Name: Extasy
-  m_TagString: Untagged
+  m_TagString: Stimulants
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nazwa: extasy
+  drugEffect: {fileID: 0}
   speedBoost: 5
   lifeBoost: 0
   attackBoost: 0

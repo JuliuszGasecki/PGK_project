@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - Enemy
   - Ammo
+  - Weapon
+  - Stimulants
   layers:
   - Default
   - TransparentFX

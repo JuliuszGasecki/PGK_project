@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61303577790399416}
   m_Layer: 0
   m_Name: SPAS
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
