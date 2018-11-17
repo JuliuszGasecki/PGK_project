@@ -15,7 +15,7 @@ public class EndPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +25,7 @@ public class EndPoint : MonoBehaviour
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(1);              //bylo 0
+
         }
     }
 }

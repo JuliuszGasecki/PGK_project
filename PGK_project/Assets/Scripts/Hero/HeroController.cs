@@ -74,7 +74,7 @@ public class HeroController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         speed = this.GetComponent<Hero>().speed;
         faceMouse();
