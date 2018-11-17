@@ -240,6 +240,7 @@ public class Enemy : MonoBehaviour
             wypadanie_broni();
             wypadanie_narkotykow();
             ScoreCounter.scoreValue += 21;
+            KilledStat.killedValue += 1;
 
             this.GetComponent<SpriteRenderer>().sprite = dead_enemy;
             this.GetComponent<CircleCollider2D>().enabled = false;
