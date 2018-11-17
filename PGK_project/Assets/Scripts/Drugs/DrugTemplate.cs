@@ -49,7 +49,7 @@ public class DrugTemplate : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && this.gameObject.tag == "Stimulants")
         {
             hero = collision.GetComponent<Hero>();
             heroDrugTimer = collision.GetComponent<DrugsTimer>();

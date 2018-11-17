@@ -18,7 +18,8 @@ public class Chest : MonoBehaviour
     private float newX = -1.0f;
     private float newY = 0.0f;
     private float height = 2.0f;
-
+    private SpriteRenderer spriteR;
+    private string ClosedChestSprite = "Chest/openedChest";
     private bool IsEmpty;
     // Use this for initialization
     void Start()
@@ -27,6 +28,7 @@ public class Chest : MonoBehaviour
         start = new Vector2(this.transform.position.x, this.transform.position.y);
         endPoint = new Vector2(start.x + newX, start.y + newY);
         middlePoint = start + (endPoint - start) / 2 + Vector2.up * height;
+        spriteR = gameObject.GetComponent<SpriteRenderer>();      
     }
 
     // Update is called once per frame
@@ -36,6 +38,7 @@ public class Chest : MonoBehaviour
         {
             if (count < 1.0f)
             {
+                spriteR.sprite = Resources.Load<Sprite>(ClosedChestSprite);
                 count += speed * Time.deltaTime;
                 Vector2 m1 = Vector2.Lerp(start, middlePoint, count);
                 Vector2 m2 = Vector2.Lerp(middlePoint, endPoint, count);
@@ -49,10 +52,11 @@ public class Chest : MonoBehaviour
     {
         if (CanOpen && !IsEmpty)
         {
+            
             IsEmpty = true;
             _myItem = Instantiate(Weapon, this.transform.position, Quaternion.identity) as GameObject;
-           // item.transform.position += new Vector3(-0.2f, 0.2f, 0.0f);
-   
+            // item.transform.position += new Vector3(-0.2f, 0.2f, 0.0f);
+          
         }
 
     }
@@ -62,6 +66,7 @@ public class Chest : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             CanOpen = true;
+            GameObject.Find("Inventory").GetComponent<Inventory>().GetUsingWeapon().CanUse = false;
         }
     }
 
@@ -70,6 +75,7 @@ public class Chest : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             CanOpen = false;
+            GameObject.Find("Inventory").GetComponent<Inventory>().GetUsingWeapon().CanUse = true;
         }
 
     }
