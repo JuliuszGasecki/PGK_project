@@ -40,10 +40,12 @@ public class Enemy : MonoBehaviour
     private float czas_pomiedzy_punktami;
     public Sprite dead_enemy;
     public GameObject weapon;
+    private Animator anim;
 
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         go_forwad = true;
         currentState = statePATH;
         targetpathPoint = 0;
@@ -74,7 +76,8 @@ public class Enemy : MonoBehaviour
 
                 if (znaleziono_gracza())
                 {
-                 
+
+                    anim.SetBool("isWalking", true);
                     obroc_do_playera();
                     if (statyczny)
                     {
@@ -103,6 +106,7 @@ public class Enemy : MonoBehaviour
                 }
                 else
                 {
+                    anim.SetBool("isWalking", false);
                     if (time_tracker_powrotu + czas_na_powrot < Time.time)
                 {
                     if(punkty_powrotne.Count > 1)

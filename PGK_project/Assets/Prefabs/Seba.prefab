@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1982b64bf846b4c1d9d657bc2b2b0bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathPoints: []
   zycie: 5
   atak: 0
   speed: 5
@@ -85,6 +86,7 @@ MonoBehaviour:
   extasy: {fileID: 1358745081234772, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
   coca: {fileID: 1748705115184964, guid: 908488864e60e4bdbbd0e08d60288b7f, type: 2}
   dead_enemy: {fileID: 21300000, guid: d27df3b9f3b88be4a9a0ce51cd7e50aa, type: 3}
+  weapon: {fileID: 0}
 --- !u!212 &212256014939228106
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -120,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d3a6bbcd3b372874a888a8b719a83399, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5cece8cd9a9926644add0120f1884e31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
