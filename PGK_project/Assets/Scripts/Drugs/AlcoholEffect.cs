@@ -16,7 +16,6 @@ public class AlcoholEffect : MonoBehaviour {
         dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         previousStateHero = hero.health;
-        DrugsStat.drugsValue ++;
         DrugsStat.drugsAlcoValue++;
     }
 

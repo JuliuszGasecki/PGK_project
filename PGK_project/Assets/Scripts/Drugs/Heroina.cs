@@ -13,8 +13,6 @@ public class Heroina : MonoBehaviour {
         hero = GameObject.Find("Hero").GetComponent<Hero>();
         dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
         previousStateHero = hero.health;
-
-        DrugsStat.drugsValue++;
         DrugsStat.drugsHeraValue++;
     }
     private void Update()

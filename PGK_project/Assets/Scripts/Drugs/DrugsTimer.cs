@@ -34,7 +34,6 @@ public class DrugsTimer : MonoBehaviour {
         active_drugs = new List<DrugTemplate>();
         hero = GetComponent<Hero>();
         heroW  =GetComponent<Withdrawal>();
-		
 	}
 	
 	// Update is called once per frame
@@ -87,6 +86,7 @@ public class DrugsTimer : MonoBehaviour {
         if (Time.timeScale > drug.time_scale) //zeby zawsze najnizszy byl
             Time.timeScale = drug.time_scale;
         zmien_flage_narkotyku(drug.nazwa, true);
+        addPoints(drug);
         hero.poisoning += drug.poison_points;
         drug.setTimeOfUse(Time.time);
         heroW.addWithdrawalPoints(drug.withdroval_points);
@@ -101,5 +101,13 @@ public class DrugsTimer : MonoBehaviour {
         zmien_flage_narkotyku(drug.nazwa, false);
         hero.speed -= drug.speedBoost;
         hero.attack -= drug.attackBoost;
+    }
+
+    public void addPoints(DrugTemplate drug)
+    {
+        DrugsStat.drugsValue++;
+        if (drug.nazwa == "ganja") DrugsStat.drugsMariValue++;
+        if (drug.nazwa == "coca") DrugsStat.drugsCocaValue++;
+        if (drug.nazwa == "extasy") DrugsStat.drugsExtasyValue++;
     }
 }

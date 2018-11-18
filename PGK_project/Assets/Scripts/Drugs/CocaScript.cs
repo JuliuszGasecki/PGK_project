@@ -47,8 +47,6 @@ public class CocaScript : MonoBehaviour {
             heroDrugTimer.cocaTime += 10;
             hero.poisoning += 10;
             destroyObject();
-            DrugsStat.drugsValue ++;
-            DrugsStat.drugsCocaValue++;
             //OnMouseExit();
         }
     }
