@@ -25,7 +25,7 @@ public class DisplayWeaponIcon : MonoBehaviour
 	    else
 	    {
             image.enabled = true;
-	        image.sprite = Resources.Load<Sprite>(weapon.Name);
+	        image.sprite = Resources.Load<Sprite>("Weapons/" + weapon.Name);
 	    }
 	}
 }

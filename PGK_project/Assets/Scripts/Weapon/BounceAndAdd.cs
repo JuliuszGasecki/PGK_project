@@ -28,7 +28,6 @@ public class BounceAndAdd : MonoBehaviour {
         nameW = nameW.Replace(" ", string.Empty);
         if (_weaponNames.Contains(nameW))
         {
-            Debug.Log("OMG");
             _isWeapon = true;
             weapon = GameObject.Find("Inventory").GetComponent(nameW) as IWeapon;
             _isAmmo = false;
