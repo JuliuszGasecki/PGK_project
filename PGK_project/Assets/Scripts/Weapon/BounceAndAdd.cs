@@ -25,9 +25,10 @@ public class BounceAndAdd : MonoBehaviour {
         inv = GameObject.Find("Inventory").GetComponent<Inventory>();
         var downloadStrings = this.gameObject.name.Split(new [] { '(' }, 2);
         nameW = downloadStrings[0];
-        nameW.Replace(" ", String.Empty);
+        nameW = nameW.Replace(" ", string.Empty);
         if (_weaponNames.Contains(nameW))
         {
+            Debug.Log("OMG");
             _isWeapon = true;
             weapon = GameObject.Find("Inventory").GetComponent(nameW) as IWeapon;
             _isAmmo = false;
@@ -57,6 +58,7 @@ public class BounceAndAdd : MonoBehaviour {
     {
         if (collision.tag == "Player" )
         {
+            
             if (Input.GetKeyDown(KeyCode.E) && _isWeapon)
             {
                 if (inv.IsAdded(weapon.ID))

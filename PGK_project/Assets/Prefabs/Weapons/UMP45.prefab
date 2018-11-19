@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61796721702734834}
   - component: {fileID: 114405272729615184}
   - component: {fileID: 96361108031050942}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UMP45
   m_TagString: Weapon
   m_Icon: {fileID: 0}

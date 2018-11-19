@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212956400592679140}
   - component: {fileID: 114309682931619450}
   - component: {fileID: 61303577790399416}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SPAS
   m_TagString: Weapon
   m_Icon: {fileID: 0}
