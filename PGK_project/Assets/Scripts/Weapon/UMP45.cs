@@ -10,6 +10,7 @@ public class UMP45 : MonoBehaviour, IShootable {
     public GameObject bullet;
     public GameObject GunShot;
     public GameObject WeaponSplash;
+    public GameObject Shells;
     public float fireRate { get; set; }
     public int damage { get; set; }
     public int ID { get; set; }
@@ -79,7 +80,10 @@ public class UMP45 : MonoBehaviour, IShootable {
         {
             if (ammoInMagazine > 0)
             {
-                GameObject gunShot = Instantiate(GunShot, this.transform.position, this.transform.rotation) as GameObject;
+                Instantiate(GunShot, this.transform.position, this.transform.rotation);
+                Instantiate(Shells,
+                    new Vector3(firePoint.position.x, firePoint.position.y - 0.3f, firePoint.position.z),
+                    this.transform.rotation *Quaternion.Euler(0, 90, 0));
                 Shoot();
                 timeUntilFire = Time.time + fireRate;
             }
