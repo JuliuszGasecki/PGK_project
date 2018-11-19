@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-       // anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         go_forwad = true;
         currentState = statePATH;
         targetpathPoint = 0;
@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour
                 if (znaleziono_gracza())
                 {
 
-                    //anim.SetBool("isWalking", true);
+                    anim.SetBool("isWalking", true);
                     obroc_do_playera();
                     if (statyczny)
                     {
@@ -106,7 +106,7 @@ public class Enemy : MonoBehaviour
                 }
                 else
                 {
-                    //anim.SetBool("isWalking", false);
+                    anim.SetBool("isWalking", false);
                     if (time_tracker_powrotu + czas_na_powrot < Time.time)
                 {
                     if(punkty_powrotne.Count > 1)
@@ -250,6 +250,7 @@ public class Enemy : MonoBehaviour
             this.GetComponent<CircleCollider2D>().enabled = false;
             gameObject.GetComponent<Transform>().localScale = new Vector3(0.35f, 0.35f, 1f);
             alive = false;
+            anim.enabled = false;
             //Destroy(this.gameObject);
         }
     }

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212831357969355858}
   - component: {fileID: 58347651126594584}
   - component: {fileID: 114860290883295128}
+  - component: {fileID: 95559491723029654}
   m_Layer: 2
   m_Name: SebaShoot
   m_TagString: Enemy
@@ -51,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1464732924925886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.69758797, y: 13.644663, z: -1}
+  m_LocalPosition: {x: -8.56438, y: 11.636925, z: -1}
   m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
   m_Children:
   - {fileID: 4801477692207094}
@@ -86,6 +87,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 10
+--- !u!95 &95559491723029654
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1464732924925886}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81a9f2da9e8bcaf4d9b283a3cc04aa39, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114860290883295128
 MonoBehaviour:
   m_ObjectHideFlags: 1
