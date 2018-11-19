@@ -10,24 +10,25 @@ public class Chest : MonoBehaviour
     public GameObject Weapon;
     private bool CanOpen;
     private GameObject _myItem;
-    private Vector2 start;
-    private Vector2 endPoint;
-    private Vector2 middlePoint;
+    private Vector3 start;
+    private Vector3 endPoint;
+    private Vector3 middlePoint;
     private float count = 0.0f;
     private float speed = 2.0f;
     private float newX = -1.0f;
     private float newY = 0.0f;
     private float height = 2.0f;
     private SpriteRenderer spriteR;
-    private string ClosedChestSprite = "Chest/openedChest";
+    private float timeUntilDisableTrail = 0;
+    private string OpenedChestSprite = "Chest/openedChest";
     private bool IsEmpty;
     // Use this for initialization
     void Start()
     {
         name = this.gameObject.name;
-        start = new Vector2(this.transform.position.x, this.transform.position.y);
-        endPoint = new Vector2(start.x + newX, start.y + newY);
-        middlePoint = start + (endPoint - start) / 2 + Vector2.up * height;
+        start = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+        endPoint = new Vector3(start.x + newX, start.y + newY, this.transform.position.z);
+        middlePoint = start + (endPoint - start) / 2 + Vector3.up * height;
         spriteR = gameObject.GetComponent<SpriteRenderer>();      
     }
 
@@ -38,11 +39,16 @@ public class Chest : MonoBehaviour
         {
             if (count < 1.0f)
             {
-                spriteR.sprite = Resources.Load<Sprite>(ClosedChestSprite);
+                spriteR.sprite = Resources.Load<Sprite>(OpenedChestSprite);
                 count += speed * Time.deltaTime;
-                Vector2 m1 = Vector2.Lerp(start, middlePoint, count);
-                Vector2 m2 = Vector2.Lerp(middlePoint, endPoint, count);
-                _myItem.transform.position = Vector2.Lerp(m1, m2, count);
+                Vector3 m1 = Vector3.Lerp(start, middlePoint, count);
+                Vector3 m2 = Vector3.Lerp(middlePoint, endPoint, count);
+                _myItem.transform.position = Vector3.Lerp(m1, m2, count);
+                timeUntilDisableTrail = Time.time + 0.5f;
+            }
+            else if (Time.time > timeUntilDisableTrail)
+            {
+                _myItem.GetComponent<TrailRenderer>().enabled = false;
             }
         }
     }
@@ -55,8 +61,9 @@ public class Chest : MonoBehaviour
             
             IsEmpty = true;
             _myItem = Instantiate(Weapon, this.transform.position, Quaternion.identity) as GameObject;
+            _myItem.GetComponent<TrailRenderer>().enabled = true;
             // item.transform.position += new Vector3(-0.2f, 0.2f, 0.0f);
-          
+
         }
 
     }
