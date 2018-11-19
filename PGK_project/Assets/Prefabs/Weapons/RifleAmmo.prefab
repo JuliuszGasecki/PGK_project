@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4335845889452170}
   - component: {fileID: 212312635766732950}
   - component: {fileID: 61494323545445040}
-  - component: {fileID: 114391946664293894}
+  - component: {fileID: 114134795240514762}
   m_Layer: 0
   m_Name: RifleAmmo
-  m_TagString: Untagged
+  m_TagString: Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.85, y: 0}
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.09, y: 2.88}
   m_EdgeRadius: 0
---- !u!114 &114391946664293894
+--- !u!114 &114134795240514762
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

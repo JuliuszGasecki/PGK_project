@@ -55,7 +55,7 @@ public class BounceAndAdd : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && this.gameObject.tag == "Weapon")
+        if (collision.tag == "Player" )
         {
             if (Input.GetKeyDown(KeyCode.E) && _isWeapon)
             {
@@ -65,17 +65,20 @@ public class BounceAndAdd : MonoBehaviour {
                     inv.AddToList(weapon);
                 destroyObject();
             }
+            else if (_isAmmo)
+            {
+                AddAmmo();
+                destroyObject();
+            }
         }
     }
 
     private void AddAmmoInsteadOf()
     {
-        Debug.Log(nameW);
-        Debug.Log(_weaponNames[0]);
+
         if (nameW.Equals(_weaponNames[0]))
         {
             inv.deagleAmmo += 3;
-            Debug.Log("xDDDDd");
             return;
         }
         if (nameW.Equals(_weaponNames[1]))
@@ -111,14 +114,15 @@ public class BounceAndAdd : MonoBehaviour {
         }
     }
     
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && _isAmmo)
         {
+            Debug.Log("xDDDDDDDDDD");
             AddAmmo();
             destroyObject();
         }
-    }
+    }*/
 
     private void destroyObject()
     {
