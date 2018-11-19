@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EndPoint : MonoBehaviour
 {
-
+    public GameObject panel;
     // Use this for initialization
     void Start()
     {
@@ -23,9 +23,8 @@ public class EndPoint : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(1);              //bylo 0
-
+            panel.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }

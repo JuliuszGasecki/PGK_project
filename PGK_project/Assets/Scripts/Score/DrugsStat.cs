@@ -18,6 +18,6 @@ public class DrugsStat : MonoBehaviour {
 	
 
 	void Update () {
-        drugs.text = "" + drugsValue + "\n" + drugsHeraValue + "\n" + drugsCocaValue+ "\n" + drugsMariValue+ "\n" + drugsAlcoValue+"\n"+ drugsExtasyValue;
+        drugs.text = "" + drugsValue + "\n\n" + drugsHeraValue + "\n" + drugsCocaValue+ "\n" + drugsMariValue+ "\n" + drugsAlcoValue+"\n"+ drugsExtasyValue;
 	}
 }
