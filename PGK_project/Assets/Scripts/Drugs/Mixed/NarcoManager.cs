@@ -6,11 +6,20 @@ using UnityEngine.UI;
 public class NarcoManager : MonoBehaviour {
 
     DrugsTimer dt;
+    //Alkohol i heroina
     public GameObject alcoHera;
     bool alcoHeraFlag = false;
     bool alcoHeraIsInUse = false;
-    public Image image;
     public Sprite alcHer;
+
+    //Heroina i kokaina
+    public GameObject cocoHera;
+    bool cocoHeraFlag = false;
+    bool cocoHeraIsInUse = false;
+    public Sprite cocHer;
+
+    public Image image;
+
     float time = 0;
 
     // Use this for initialization
@@ -36,6 +45,14 @@ public class NarcoManager : MonoBehaviour {
             image.enabled = true;
             Instantiate(alcoHera);
         }
+        if (cocoHeraFlag == true && cocoHeraIsInUse == false)
+        {
+            cocoHeraIsInUse = true;
+            time = 0;
+            image.sprite = cocHer;
+            image.enabled = true;
+            Instantiate(cocoHera);
+        }
     }
 
     private void checkMix()
@@ -49,11 +66,24 @@ public class NarcoManager : MonoBehaviour {
             alcoHeraFlag = false;      
         }
 
+        //Koko hera 
+        if(dt.heroineFlag == true && dt.cocaFlag == true)
+        {
+            cocoHeraFlag = true;
+        }
+        else
+        {
+            cocoHeraFlag = false;
+        }
+
     }
 
     public void turnOffTheImage(float time)
     {
-        if (time > 1.2f)
+        float stop = 1.2f;
+        if (image.sprite == cocHer)
+            stop = 2f;
+        if (time > stop)
             image.enabled = false;
     }
 
