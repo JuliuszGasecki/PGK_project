@@ -13,7 +13,7 @@ public class DrugsTimer : MonoBehaviour {
     public bool tookDrug = false;
 
     List<DrugTemplate> active_drugs;
-
+    
     public Slider extasySlider;
     public float extasyTime = 0f;
     public bool extasyFlag = false;
@@ -39,13 +39,26 @@ public class DrugsTimer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         controllNarcotics();
+        drawSliders();
 
     }
     public void addNarcotic(DrugTemplate drug){
         if (onDrugs != true)
             onDrugs = true;
-        addEffect(drug);
-        active_drugs.Add(drug);
+
+        if(!active_drugs.Contains(drug))
+        {
+            addEffect(drug);
+            active_drugs.Add(drug);
+        }
+        else
+        {
+            int i = active_drugs.FindIndex(a => a.name == drug.name);
+            active_drugs[i].addTimeofuse(4);
+        }
+
+        
+
     }
 
 
@@ -63,22 +76,27 @@ public class DrugsTimer : MonoBehaviour {
     public void removeNarcotic(DrugTemplate drug){
         removeEffect(drug);
         active_drugs.Remove(drug);
+       
     }
 
     public void controllNarcotics(){
-        if (active_drugs.Count > 0)
-        {
-            for (int i = 0; i < active_drugs.Count; i++)
-            {
-                DrugTemplate temp = active_drugs[i];
-                if (Time.time - temp.getTimeOfUse() > temp.lifetime)
-                {
-                    removeNarcotic(temp);
-                }
-            }
-        }
-        else
-            onDrugs = false; // nie ma nic
+          if (active_drugs.Count > 0)
+          {
+              for (int i = 0; i < active_drugs.Count; i++)
+              {
+                  float temp = active_drugs[i].lifetime - Time.fixedDeltaTime;
+                //active_drugs[i].timeLeft = Time.time - temp.getTimeOfUse();
+                active_drugs[i].lifetime -= Time.fixedDeltaTime;
+                if (temp <= 0)
+                  {
+                      removeNarcotic(active_drugs[i]);
+                  }
+                  
+              }
+          }
+          else
+              onDrugs = false; // nie ma nic
+
     }
 
     public void addEffect(DrugTemplate drug){
@@ -88,7 +106,7 @@ public class DrugsTimer : MonoBehaviour {
         zmien_flage_narkotyku(drug.nazwa, true);
         addPoints(drug);
         hero.poisoning += drug.poison_points;
-        drug.setTimeOfUse(Time.time);
+        //drug.setTimeOfUse(Time.time);
         heroW.addWithdrawalPoints(drug.withdroval_points);
         hero.speed += drug.speedBoost;
         hero.attack += drug.attackBoost;
@@ -109,5 +127,18 @@ public class DrugsTimer : MonoBehaviour {
         if (drug.nazwa == "ganja") DrugsStat.drugsMariValue++;
         if (drug.nazwa == "coca") DrugsStat.drugsCocaValue++;
         if (drug.nazwa == "extasy") DrugsStat.drugsExtasyValue++;
+    }
+
+    public void drawSliders()
+    {
+        foreach(DrugTemplate dt in active_drugs)
+            {
+        if (dt.nazwa == "ganja") { marihuanaSlider.value = dt.lifetime; }
+        if (dt.nazwa == "coca") {  }
+        if (dt.nazwa == "extasy") { extasySlider.value = dt.lifetime; }
+        if (dt.nazwa == "hera") {  }
+        if (dt.nazwa == "vodka") {  }
+        }
+        
     }
 }

@@ -18,6 +18,7 @@ public class DrugTemplate : MonoBehaviour {
     public float withdroval_points;
     public float poison_points;
     public float time_scale;
+    public float timeLeft;
 
     public bool flag_ifUsed{
         set; get;
@@ -27,7 +28,13 @@ public class DrugTemplate : MonoBehaviour {
 
     public void setTimeOfUse(float time){
         timeofuse = time;
+        timeLeft = lifetime - timeofuse;
     }
+    public void addTimeofuse(float time)
+    {
+        timeofuse += time;
+    }
+
     public float getTimeOfUse()
     {
         return timeofuse;
