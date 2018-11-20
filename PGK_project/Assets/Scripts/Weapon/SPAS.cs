@@ -58,7 +58,7 @@ public class SPAS : MonoBehaviour, IShootable
         {         
             if (ammo > 0)
             {
-                GameObject gunShot = Instantiate(ReloadSound, this.transform.position, this.transform.rotation) as GameObject;
+                Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
                 difference = magazineCapacity - ammoInMagazine;
                 if (difference > ammo)
                 {

@@ -11,6 +11,9 @@ public class M4 : MonoBehaviour, IShootable
     public GameObject bullet;
     public GameObject GunShot;
     public GameObject WeaponSplash;
+    public GameObject Shells;
+    public GameObject ReloadSound;
+    private GameObject _reloadSoundCopy;
     public float fireRate { get; set; }
     public int damage { get; set; }
     public int ID { get; set; }
@@ -57,6 +60,7 @@ public class M4 : MonoBehaviour, IShootable
         {
             if (ammo > 0)
             {
+                _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
                 difference = magazineCapacity - ammoInMagazine;
                 if (difference > ammo)
                 {
@@ -78,9 +82,9 @@ public class M4 : MonoBehaviour, IShootable
     {
         if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire && CanUse)
         {
-            if (ammoInMagazine > 0)
+            if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
-                GameObject gunShot = Instantiate(GunShot, this.transform.position, this.transform.rotation) as GameObject;
+                Instantiate(GunShot, this.transform.position, this.transform.rotation);
                 Shoot();
                 timeUntilFire = Time.time + fireRate;
             }
@@ -95,6 +99,9 @@ public class M4 : MonoBehaviour, IShootable
     {
         Instantiate(WeaponSplash, firePoint.position, Quaternion.identity);
         GameObject bulletM4 = Instantiate(bullet, firePoint.position, firePoint.rotation);
+        Instantiate(Shells,
+            new Vector3(firePoint.position.x, firePoint.position.y - 0.3f, firePoint.position.z),
+            this.transform.rotation * Quaternion.Euler(0, 90, 0));
         SetDamageBullet(bulletM4);
         SetSpeedBullet(bulletM4);
         ammoInMagazine--;

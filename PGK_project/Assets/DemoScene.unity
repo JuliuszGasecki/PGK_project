@@ -6715,7 +6715,7 @@ GameObject:
   - component: {fileID: 946202522}
   - component: {fileID: 946202521}
   m_Layer: 5
-  m_Name: Text
+  m_Name: DisplayAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6729,15 +6729,15 @@ RectTransform:
   m_GameObject: {fileID: 946202519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4609333, y: 2.2221634, z: 2.2221634}
+  m_LocalScale: {x: 1.01431, y: 2.1280327, z: 2.1280327}
   m_Children: []
   m_Father: {fileID: 382261419}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -114, y: 70}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -86.81, y: 49.7}
+  m_SizeDelta: {x: 150.51, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &946202521
 MonoBehaviour:
@@ -6771,16 +6771,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
-    m_FontStyle: 0
+    m_FontSize: 25
+    m_FontStyle: 2
     m_BestFit: 1
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 0
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: omg
 --- !u!222 &946202523
@@ -8294,6 +8294,9 @@ MonoBehaviour:
   bullet: {fileID: 1480845407829184, guid: 690c2227dd2a1fa42b8dd03d17081a7c, type: 2}
   GunShot: {fileID: 1354585600671296, guid: 1fd692301a5f6164b8bd92e90f4140e5, type: 2}
   WeaponSplash: {fileID: 1000954921514026, guid: 387860d2f7d62ac4aa8338b1bdc5d18b,
+    type: 2}
+  Shells: {fileID: 1701343263260830, guid: c6fe66772f2fb88428270f31ecc0dfdf, type: 2}
+  ReloadSound: {fileID: 1578313814201554, guid: 64d58098f826fbe45b1a8efe61f6e760,
     type: 2}
 --- !u!1 &1116077126
 GameObject:
@@ -12696,8 +12699,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -354.4, y: 98.3}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -300.51, y: 76}
+  m_SizeDelta: {x: 104.27, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1632396495
 MonoBehaviour:

@@ -25,6 +25,8 @@ public class DisplayWeaponIcon : MonoBehaviour
 	    else
 	    {
             image.enabled = true;
+	        image.type = Image.Type.Filled;
+	        image.fillMethod = Image.FillMethod.Radial360;
 	        image.sprite = Resources.Load<Sprite>("Weapons/" + weapon.Name);
 	    }
 	}
