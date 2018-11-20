@@ -53,7 +53,7 @@ public class NarcoManager : MonoBehaviour {
 
     public void turnOffTheImage(float time)
     {
-        if (time > 0.8f)
+        if (time > 1.2f)
             image.enabled = false;
     }
 
