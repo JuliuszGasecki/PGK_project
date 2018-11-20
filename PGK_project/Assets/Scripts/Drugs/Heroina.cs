@@ -33,9 +33,9 @@ public class Heroina : MonoBehaviour {
     {
         if(hero.health < previousStateHero)
         {
-            int random = Random.Range(1, 3);
+            int random = Random.Range(1, 4);
             Debug.Log("lol" + random);
-            if(random%2 == 0)
+            if(random == 3)
             {
                 hero.health += (previousStateHero - hero.health);
             }

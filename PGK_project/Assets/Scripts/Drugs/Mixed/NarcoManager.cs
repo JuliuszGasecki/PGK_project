@@ -85,9 +85,10 @@ public class NarcoManager : MonoBehaviour {
         {
             image.enabled = false;
         }
-        float stop = 1.2f;
+        float stop = 1f;
         if (image.sprite == cocHer)
             stop = 2f;
+        Debug.Log(time);
         if (time > stop)
             image.enabled = false;
     }

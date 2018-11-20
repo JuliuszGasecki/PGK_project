@@ -8028,6 +8028,11 @@ Prefab:
       propertyPath: lifetime
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 212110576858382136, guid: 64c240b9379d5438ab7e0ea38339f059,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
   m_IsPrefabAsset: 0
@@ -15635,6 +15640,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4084422778475396, guid: 908488864e60e4bdbbd0e08d60288b7f, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212122032080746226, guid: 908488864e60e4bdbbd0e08d60288b7f,
+        type: 2}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

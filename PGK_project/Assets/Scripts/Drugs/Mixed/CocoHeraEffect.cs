@@ -30,7 +30,7 @@ public class CocoHeraEffect : MonoBehaviour {
 
     private void effectPoison()
     {
-        int temp = Random.Range(1, 3);
+        int temp = Random.Range(1, 4);
         Debug.Log(temp);
         if(temp == 2)
         {
