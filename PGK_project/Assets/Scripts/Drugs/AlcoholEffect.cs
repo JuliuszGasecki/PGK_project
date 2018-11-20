@@ -21,7 +21,7 @@ public class AlcoholEffect : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        cam.GetComponent<CameraController>().MoveSpeed = 1;
+        cam.GetComponent<CameraController>().MoveSpeed = 10;
         if (!dt.vodkaFlag)
         {
             lifeEffect();

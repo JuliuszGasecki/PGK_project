@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AlcoHeraEffect : MonoBehaviour {
 
@@ -18,7 +19,7 @@ public class AlcoHeraEffect : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(dt.vodkaFlag == false || dt.heroineFlag == false)
+        if (dt.vodkaFlag == false || dt.heroineFlag == false)
         {
             Destroy(gameObject);
         }
@@ -32,4 +33,6 @@ public class AlcoHeraEffect : MonoBehaviour {
                 hero.health += (previousStateHero - hero.health);
         }
     }
+
+    
 }
