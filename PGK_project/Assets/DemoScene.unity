@@ -965,6 +965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13de0aced6bca7445b912854e7bd12aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathScene: {fileID: 1682873682}
   alcoHera: {fileID: 1177366017326304, guid: 70ba54ec936de7a4f83c5bbc9b2f29c4, type: 2}
   alcHer: {fileID: 21300000, guid: d6b6f55b49e435e429da59bda2bc0822, type: 3}
   cocoHera: {fileID: 1504666914970706, guid: 6bb9d7b34980fba4199929d82554bcfc, type: 2}

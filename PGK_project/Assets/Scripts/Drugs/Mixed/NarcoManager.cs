@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class NarcoManager : MonoBehaviour {
 
+    public GameObject deathScene;
     DrugsTimer dt;
     //Alkohol i heroina
     public GameObject alcoHera;
@@ -24,7 +25,7 @@ public class NarcoManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
+        dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
     }
 	
 	// Update is called once per frame
@@ -80,6 +81,10 @@ public class NarcoManager : MonoBehaviour {
 
     public void turnOffTheImage(float time)
     {
+        if(deathScene.active == true)
+        {
+            image.enabled = false;
+        }
         float stop = 1.2f;
         if (image.sprite == cocHer)
             stop = 2f;

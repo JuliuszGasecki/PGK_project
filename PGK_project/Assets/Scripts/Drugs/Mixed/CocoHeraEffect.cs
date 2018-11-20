@@ -23,16 +23,18 @@ public class CocoHeraEffect : MonoBehaviour {
         if (dt.cocaFlag == false || dt.heroineFlag == false)
         {
             hero.speed += 7;
-            hero.health += 7;
+            hero.health += 10;
             Destroy(gameObject);
         }
     }
 
     private void effectPoison()
     {
-        if(Random.Range(1,4) == 2)
+        int temp = Random.Range(1, 3);
+        Debug.Log(temp);
+        if(temp == 2)
         {
-            hero.drugWithdrawal += 20;
+            hero.poisoning += 40;
         }
         hero.speed -= 5;
         hero.health -= 5;
