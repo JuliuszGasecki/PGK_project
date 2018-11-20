@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelTest : MonoBehaviour {
 
-    public void nextLevelButton()
+    public void nextLevelButton(string name)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(name);
     }
 
 }
