@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SettingsBackButton : MonoBehaviour {
 
-    public void BackButton(int level)
+    public void BackButton(string name)
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(name);
     }
 }

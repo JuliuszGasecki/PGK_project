@@ -22,6 +22,8 @@ public class MusicScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        audioSource.volume = SettingsManager.sliderValue;
+
         if (hero.onDrugs == true)
         {
             if (startFlag == true)

@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 8390877}
   - component: {fileID: 8390876}
   - component: {fileID: 8390875}
+  - component: {fileID: 8390881}
   m_Layer: 0
   m_Name: Button (1)
   m_TagString: Untagged
@@ -250,7 +251,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8390879}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8390881}
+        m_MethodName: SettingsOpen
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SettingsScene
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &8390879
@@ -287,6 +299,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 8390873}
   m_CullTransparentMesh: 0
+--- !u!114 &8390881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 8390873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518c79bf03bea76448fe8b96e54831ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &210974591
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,8 +1019,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1322066303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: -0.33435, z: 22.6}
-  m_LocalScale: {x: 0.42007652, y: 0.42007652, z: 0.42007652}
+  m_LocalPosition: {x: -0.246, y: 0.373, z: 22.6}
+  m_LocalScale: {x: 0.5913753, y: 0.46589303, z: 0.42007652}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1

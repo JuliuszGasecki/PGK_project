@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SettingsButton : MonoBehaviour {
 
-    public void SettingsOpen(int level)
+    public void SettingsOpen(string name)
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(name);
     }
 }
