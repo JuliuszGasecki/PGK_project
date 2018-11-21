@@ -11,6 +11,8 @@ public class UMP45 : MonoBehaviour, IShootable {
     public GameObject GunShot;
     public GameObject WeaponSplash;
     public GameObject Shells;
+    public GameObject ReloadSound;
+    private GameObject _reloadSoundCopy;
     public float fireRate { get; set; }
     public int damage { get; set; }
     public int ID { get; set; }
@@ -55,8 +57,9 @@ public class UMP45 : MonoBehaviour, IShootable {
         int difference;
         if (Input.GetKeyDown(KeyCode.R) && CanUse)      
         {
-            if (ammo > 0)
+            if (ammo > 0 && ammoInMagazine != magazineCapacity)
             {
+                _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
                 difference = magazineCapacity - ammoInMagazine;
                 if (difference > ammo)
                 {
@@ -78,7 +81,7 @@ public class UMP45 : MonoBehaviour, IShootable {
     {
         if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire && CanUse)
         {
-            if (ammoInMagazine > 0)
+            if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
                 Instantiate(GunShot, this.transform.position, this.transform.rotation);
                 Instantiate(Shells,

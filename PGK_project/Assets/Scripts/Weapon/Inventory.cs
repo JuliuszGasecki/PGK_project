@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     private const int SECONDELEMENT = 1;
     private const int THIRDELEMENT = 2;
     private const int INVENTORYCAPACITY = 3;
+    private Animator _heroAnimatior;
     private int usingSlot = 0;
     public int rifleAmmo { set; get; }
     public int shotgunAmmo { set; get; }
@@ -27,13 +28,14 @@ public class Inventory : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+	    _heroAnimatior = GameObject.Find("Hero").GetComponent<Animator>();
 	    rifleAmmo = 30;
 	    shotgunAmmo = 15;
 	    deagleAmmo = 10;
         inventory = new List<IWeapon>();
-	    AddToList(this.gameObject.GetComponent<UMP45>());
+	    AddToList(this.gameObject.GetComponent<DEAGLE>());
         inventory.ElementAt(FIRSTELEMENT).CanUse = true;
-	    usingSlot = 0;
+        usingSlot = 0;
 	}
 	
 	// Update is called once per frame
@@ -60,7 +62,7 @@ public class Inventory : MonoBehaviour
     private void UseWeapon()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1) && inventory.Count >= 1)
-        {
+        {  
             usingSlot = 0;
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(FIRSTELEMENT).UseWeapon();
@@ -96,7 +98,7 @@ public class Inventory : MonoBehaviour
 
     public bool AddToList(IWeapon weapon)
     {
-        if (Enum.IsDefined(typeof(_weaponsID), weapon.ID))
+        if (Enum.IsDefined(typeof(_weaponsID), weapon.ID) && inventory.Count <= INVENTORYCAPACITY)
         {
             inventory.Add(weapon);
             return true;

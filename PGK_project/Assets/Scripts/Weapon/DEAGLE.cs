@@ -10,6 +10,10 @@ public class DEAGLE : MonoBehaviour, IShootable
     Transform firePoint;
     public GameObject bullet;
     public GameObject GunShot;
+    public GameObject WeaponSplash;
+    public GameObject Shells;
+    public GameObject ReloadSound;
+    private GameObject _reloadSoundCopy;
     public float fireRate { get; set; }
     public int damage { get; set; }
     public int ID { get; set; }
@@ -53,8 +57,9 @@ public class DEAGLE : MonoBehaviour, IShootable
         int difference;
         if (Input.GetKeyDown(KeyCode.R) && CanUse)
         {
-            if (ammo > 0)
+            if (ammo > 0 && ammoInMagazine != magazineCapacity)
             {
+                _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
                 difference = magazineCapacity - ammoInMagazine;
                 if (difference > ammo)
                 {
@@ -76,9 +81,12 @@ public class DEAGLE : MonoBehaviour, IShootable
     {
         if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire && CanUse)
         {
-            if (ammoInMagazine > 0)
+            if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
-                GameObject gunShot = Instantiate(GunShot, this.transform.position, this.transform.rotation) as GameObject;
+                Instantiate(GunShot, this.transform.position, this.transform.rotation);
+                Instantiate(Shells,
+                    new Vector3(firePoint.position.x, firePoint.position.y - 0.3f, firePoint.position.z),
+                    this.transform.rotation * Quaternion.Euler(0, 90, 0));
                 Shoot();
                 timeUntilFire = Time.time + fireRate;
             }
@@ -91,6 +99,7 @@ public class DEAGLE : MonoBehaviour, IShootable
 
     public void Shoot()
     {
+        Instantiate(WeaponSplash, firePoint.position, Quaternion.identity);
         GameObject bulletD = Instantiate(bullet, firePoint.position, firePoint.rotation);
         SetDamageBullet(bulletD);
         SetSpeedBullet(bulletD);

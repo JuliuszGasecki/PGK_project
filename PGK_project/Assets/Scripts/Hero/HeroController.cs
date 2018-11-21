@@ -64,11 +64,8 @@ public class HeroController : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D) ||
                 Input.GetKeyUp(KeyCode.A))
-            {
-
-                
-                  anim.SetBool("isWalking", false);
-                
+            {                
+                  anim.SetBool("isWalking", false);              
             }
         }
     }

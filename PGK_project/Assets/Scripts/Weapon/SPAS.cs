@@ -56,7 +56,7 @@ public class SPAS : MonoBehaviour, IShootable
         int difference;
         if (Input.GetKeyDown(KeyCode.R) && CanUse)
         {         
-            if (ammo > 0)
+            if (ammo > 0 && ammoInMagazine != magazineCapacity)
             {
                 Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
                 difference = magazineCapacity - ammoInMagazine;
