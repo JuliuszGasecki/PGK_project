@@ -83,8 +83,24 @@ public class DrugsTimer : MonoBehaviour {
     public void removeNarcotic(DrugTemplate drug){
         removeEffect(drug);
         active_drugs.Remove(drug);
-       
+        Debug.Log("Usunieto " + drug.nazwa);
     }
+    public void removeNarcotic(string drugName)
+    {
+        if (active_drugs.Count > 0)
+        {
+            for (int i = 0; i < active_drugs.Count; i++)
+            {
+                if (active_drugs[i].nazwa == drugName)
+                {
+                    removeNarcotic(active_drugs[i]);
+                    break;
+                }
+
+            }
+        }
+    }
+
 
     public void controllNarcotics(){
           if (active_drugs.Count > 0)

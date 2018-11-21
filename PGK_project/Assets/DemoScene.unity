@@ -933,6 +933,8 @@ MonoBehaviour:
   alcHer: {fileID: 21300000, guid: d6b6f55b49e435e429da59bda2bc0822, type: 3}
   cocoHera: {fileID: 1504666914970706, guid: 6bb9d7b34980fba4199929d82554bcfc, type: 2}
   cocHer: {fileID: 21300000, guid: fec1ee36474083847ad8a6c9edfb32f8, type: 3}
+  alcoSpeed: {fileID: 1574351898281576, guid: e5ccf7599ccfabc4d950fc99d696d204, type: 2}
+  alcSpe: {fileID: 21300000, guid: df39365f790dfa74db53eac17672c8ea, type: 3}
   image: {fileID: 82130986}
 --- !u!4 &136472930
 Transform:
@@ -14223,7 +14225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nazwa: ganja
   drugEffect: {fileID: 0}
-  speedBoost: 20
+  speedBoost: 4
   lifeBoost: 0
   attackBoost: 20
   lifetime: 10

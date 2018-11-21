@@ -19,6 +19,12 @@ public class NarcoManager : MonoBehaviour {
     bool cocoHeraIsInUse = false;
     public Sprite cocHer;
 
+    //Alkohol i kokaina/MDMA
+    public GameObject alcoSpeed;
+    bool alcoSpeedFlag = false;
+    bool alcoSpeedIsInUse = false;
+    public Sprite alcSpe;
+
     public Image image;
 
     float time = 0;
@@ -53,6 +59,14 @@ public class NarcoManager : MonoBehaviour {
             image.enabled = true;
             Instantiate(cocoHera);
         }
+        if (alcoSpeedFlag == true && alcoSpeedIsInUse == false)
+        {
+            alcoSpeedIsInUse = true;
+            time = Time.time;
+            image.sprite = alcSpe;
+            image.enabled = true;
+            Instantiate(alcoSpeed);
+        }
     }
 
     private void checkMix()
@@ -74,6 +88,16 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             cocoHeraFlag = false;
+        }
+
+        //Speed alco 
+        if ((dt.vodkaFlag == true && dt.cocaFlag == true) || (dt.vodkaFlag == true && dt.extasyFlag == true))
+        {
+            alcoSpeedFlag = true;
+        }
+        else
+        {
+            alcoSpeedFlag = false;
         }
 
     }
