@@ -19,7 +19,7 @@ public class DrugTemplate : MonoBehaviour {
     public float poison_points;
     public float time_scale;
     public float timeLeft;
-
+    public bool shuffleDone = false;
     public bool flag_ifUsed{
         set; get;
     }
@@ -47,6 +47,8 @@ public class DrugTemplate : MonoBehaviour {
     // Use this for initialization
     void Start () {
         flag_ifUsed = false;
+        if (this.nazwa == "mocarz")
+            shuffleValues();
     }
     
     // Update is called once per frame
@@ -62,14 +64,13 @@ public class DrugTemplate : MonoBehaviour {
             heroDrugTimer = collision.GetComponent<DrugsTimer>();
             if (Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
             {
+
                 if (drugEffect != null)
                     Instantiate(drugEffect);
                 destroyObject();
                 heroDrugTimer.addNarcotic(this);
             }
         }
-        
-
     }
 
 
@@ -83,5 +84,18 @@ public class DrugTemplate : MonoBehaviour {
     public void destroyObject()
     {
         Destroy(gameObject);
+    }
+
+    public void shuffleValues()
+    {
+        speedBoost = Random.Range(1, 10);
+        lifeBoost = Random.Range(-3, 10);
+        attackBoost = Random.Range(0.1f, 1.0f);
+        lifetime = Random.Range(3, 5);
+        withdroval_points = Random.Range(3, 20);
+        poison_points = Random.Range(0, 5);
+        time_scale = Random.Range(0.1f, 1.0f);
+        timeLeft = 0;
+        timeofuse = 1 ;
     }
 }
