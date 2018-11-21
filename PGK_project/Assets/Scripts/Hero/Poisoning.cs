@@ -10,11 +10,13 @@ public class Poisoning : MonoBehaviour {
     public Slider poisoninglSLider;
     public float poisoningMax;
     public bool poisoningFlag = false;
+    float time;
 
     // Use this for initialization
     void Start () {
         hero = GetComponent<Hero>();
         hero.poisoning = 0;
+        time = Time.time;
     }
 	
 	// Update is called once per frame
@@ -22,13 +24,13 @@ public class Poisoning : MonoBehaviour {
         poisoningEffect();
         //poisonDeath();
         poisoninglSLider.value = hero.poisoning;
-        
+        time = Time.time;
     }
 
     public void poisoningEffect()
     {
         if(hero.poisoning > 0)
-        hero.poisoning -= Time.fixedDeltaTime;
+        hero.poisoning -= (Time.time - time) * 1.2f;
     }
 
     /*private void poisonDeath()
