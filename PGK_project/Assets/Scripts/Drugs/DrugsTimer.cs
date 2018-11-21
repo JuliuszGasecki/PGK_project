@@ -11,7 +11,7 @@ public class DrugsTimer : MonoBehaviour {
     Hero hero;
     Withdrawal heroW;
     public bool tookDrug = false;
-
+    float time;
     List<DrugTemplate> active_drugs;
     
     public Slider extasySlider;
@@ -36,12 +36,15 @@ public class DrugsTimer : MonoBehaviour {
         active_drugs = new List<DrugTemplate>();
         hero = GetComponent<Hero>();
         heroW  =GetComponent<Withdrawal>();
-	}
+        time = Time.time;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
         controllNarcotics();
         drawSliders();
+        time = Time.time;
 
     }
     public void addNarcotic(DrugTemplate drug){
@@ -88,9 +91,9 @@ public class DrugsTimer : MonoBehaviour {
           {
               for (int i = 0; i < active_drugs.Count; i++)
               {
-                  float temp = active_drugs[i].lifetime - Time.fixedDeltaTime;
+                  float temp = active_drugs[i].lifetime - (Time.time - time)*1.3f;
                 //active_drugs[i].timeLeft = Time.time - temp.getTimeOfUse();
-                active_drugs[i].lifetime -= Time.fixedDeltaTime;
+                active_drugs[i].lifetime -= (Time.time - time) * 1.3f;
                 if (temp <= 0)
                   {
                       removeNarcotic(active_drugs[i]);
@@ -119,7 +122,10 @@ public class DrugsTimer : MonoBehaviour {
 
     public void removeEffect(DrugTemplate drug)
     {
-        Time.timeScale = 1f;
+        if (drug.nazwa == "ganja")
+        {
+            Time.timeScale = 1f;
+        }    
         zmien_flage_narkotyku(drug.nazwa, false);
         hero.speed -= drug.speedBoost;
         hero.attack -= drug.attackBoost;
@@ -138,7 +144,7 @@ public class DrugsTimer : MonoBehaviour {
         foreach(DrugTemplate dt in active_drugs)
             {
         if (dt.nazwa == "ganja") { marihuanaSlider.value = dt.lifetime; }
-        if (dt.nazwa == "coca") {  }
+        if (dt.nazwa == "coca") { cocaSlider.value = dt.lifetime; }
         if (dt.nazwa == "extasy") { extasySlider.value = dt.lifetime; }
         if (dt.nazwa == "hera") {  }
         if (dt.nazwa == "vodka") {  }

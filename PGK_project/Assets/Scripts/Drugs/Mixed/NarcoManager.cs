@@ -30,7 +30,6 @@ public class NarcoManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        time += Time.fixedDeltaTime;
         turnOffTheImage(time);
         checkMix();
         pushMix();
@@ -41,7 +40,7 @@ public class NarcoManager : MonoBehaviour {
         if(alcoHeraFlag == true && alcoHeraIsInUse == false)
         {
             alcoHeraIsInUse = true;
-            time = 0;
+            time = Time.time;
             image.sprite = alcHer;
             image.enabled = true;
             Instantiate(alcoHera);
@@ -49,7 +48,7 @@ public class NarcoManager : MonoBehaviour {
         if (cocoHeraFlag == true && cocoHeraIsInUse == false)
         {
             cocoHeraIsInUse = true;
-            time = 0;
+            time = Time.time;
             image.sprite = cocHer;
             image.enabled = true;
             Instantiate(cocoHera);
@@ -88,8 +87,7 @@ public class NarcoManager : MonoBehaviour {
         float stop = 1f;
         if (image.sprite == cocHer)
             stop = 2f;
-        Debug.Log(time);
-        if (time > stop)
+        if (Time.time - time > stop)
             image.enabled = false;
     }
 

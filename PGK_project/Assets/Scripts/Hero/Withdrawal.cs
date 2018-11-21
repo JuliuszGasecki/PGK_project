@@ -10,11 +10,13 @@ public class Withdrawal : MonoBehaviour {
     public Slider withdrawalSLider;
     public float drugWithdrawalMax = 20;
     public bool stopWithdrawalFlag = false;
+    float time;
 
 
     void Start () {
         hero = GetComponent<Hero>();
         hero.drugWithdrawal = 20;
+        time = Time.time;
 	}
 	
 	// Update is called once per frame
@@ -26,11 +28,12 @@ public class Withdrawal : MonoBehaviour {
         
       //  deadByWithdrawal();
         withdrawalSLider.value = hero.drugWithdrawal;
+        time = Time.time;
     }
 
     public void drugWithdrawal()
     {
-        hero.drugWithdrawal -= Time.fixedDeltaTime * 0.75f;
+        hero.drugWithdrawal -= (Time.time - time) * 1.2f;
     }
 
   /*  private void deadByWithdrawal()
