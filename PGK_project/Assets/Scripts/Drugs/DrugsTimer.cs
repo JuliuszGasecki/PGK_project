@@ -29,6 +29,7 @@ public class DrugsTimer : MonoBehaviour {
     public bool heroineFlag = false;
     public bool vodkaFlag = false;
     public bool mocarzFlag = false;
+    public bool lsdFlag = false;
     // Use this for initialization
     void Start () {
         onDrugs = false;
@@ -70,9 +71,10 @@ public class DrugsTimer : MonoBehaviour {
         if (nazwa_narkotyku == "hera") { heroineFlag = dziala; }
         if (nazwa_narkotyku == "vodka") { vodkaFlag = dziala; }
         if (nazwa_narkotyku == "mocarz") { mocarzFlag = dziala; }
+        if (nazwa_narkotyku == "lsd") { lsdFlag = dziala; }
 
-        
-       }
+
+    }
 
 
     public void removeNarcotic(DrugTemplate drug){

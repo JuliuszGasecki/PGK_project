@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MocarzEffect : MonoBehaviour {
-
+public class LsdEffect : MonoBehaviour {
 
     Hero hero;
     DrugsTimer dt;
@@ -14,17 +13,16 @@ public class MocarzEffect : MonoBehaviour {
         hero = GameObject.Find("Hero").GetComponent<Hero>();
         dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
-        //DrugsStat.drugsMocarzValue++;
+       // DrugsStat.drugsLsdValue++;
     }
 
     // Update is called once per frame
     void Update()
     {
         cam.GetComponent<CameraController>().MoveSpeed = 10;
-        if (!dt.mocarzFlag)
+        if (!dt.lsdFlag)
         {
             Destroy(gameObject);
         }
     }
-
 }
