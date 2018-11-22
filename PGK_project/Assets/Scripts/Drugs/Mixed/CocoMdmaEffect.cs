@@ -20,5 +20,9 @@ public class CocoMdmaEffect : MonoBehaviour {
         {
             hc.flash();
         }
-	}
+        if (dt.cocaFlag == false || dt.extasyFlag == false)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

@@ -937,6 +937,8 @@ MonoBehaviour:
   alcSpe: {fileID: 21300000, guid: df39365f790dfa74db53eac17672c8ea, type: 3}
   cocoMary: {fileID: 1938010663000474, guid: 996369946fcc8a44599365dcf1cbe6d3, type: 2}
   cocMar: {fileID: 21300000, guid: 489b8da138a785946b2e3e15ec3eb1b4, type: 3}
+  cocoMDMA: {fileID: 1438509950758554, guid: 63d2fd53790894e40b137b4e79bacdb2, type: 2}
+  cocMda: {fileID: 21300000, guid: 5bd54b22f7133454ea694836fb5f3bfc, type: 3}
   image: {fileID: 82130986}
 --- !u!4 &136472930
 Transform:
@@ -12493,46 +12495,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1568172325}
   m_CullTransparentMesh: 0
---- !u!1 &1579520465
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1579520467}
-  - component: {fileID: 1579520466}
-  m_Layer: 0
-  m_Name: CocoMdmaEffect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1579520466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1579520465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27671de923ef90942810d6a62829345d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1579520467
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1579520465}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5900875, y: 1.5593716, z: -1.03125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 44
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1580525722
 Prefab:
   m_ObjectHideFlags: 0

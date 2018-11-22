@@ -31,6 +31,12 @@ public class NarcoManager : MonoBehaviour {
     bool cocoMaryIsInUse = false;
     public Sprite cocMar;
 
+    //Koka + MDMA
+    public GameObject cocoMDMA;
+    bool cocoMDMAFlag = false;
+    bool cocoMDMAIsInUse = false;
+    public Sprite cocMda;
+
     public Image image;
 
     float time = 0;
@@ -81,6 +87,14 @@ public class NarcoManager : MonoBehaviour {
             image.enabled = true;
             Instantiate(cocoMary);
         }
+        if (cocoMDMAFlag == true && cocoMDMAIsInUse == false)
+        {
+            cocoMDMAIsInUse = true;
+            time = Time.time;
+            image.sprite = cocMda;
+            image.enabled = true;
+            Instantiate(cocoMDMA);
+        }
     }
 
     private void checkMix()
@@ -122,6 +136,15 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             cocoMaryFlag = false;
+        }
+        //Coco MDMA
+        if (dt.extasyFlag == true && dt.cocaFlag == true)
+        {
+            cocoMDMAFlag = true;
+        }
+        else
+        {
+            cocoMDMAFlag = false;
         }
 
     }
