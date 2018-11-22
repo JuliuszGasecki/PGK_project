@@ -21,11 +21,13 @@ public class UMP45 : MonoBehaviour, IShootable {
     public int ammo { get; set; }
     public int ammoInMagazine { get; set; }
     public bool CanUse { get; set; }
+    private Animator anim;
 
     public string Name { get; set; }
 
     void Start ()
     {
+        anim = GameObject.Find("Hero").GetComponent<Animator>();
         ID = 2;
         damage = 3;
         fireRate = 0.1f;
@@ -57,8 +59,10 @@ public class UMP45 : MonoBehaviour, IShootable {
         int difference;
         if (Input.GetKeyDown(KeyCode.R) && CanUse)      
         {
+            anim.SetBool("loading", true);
             if (ammo > 0 && ammoInMagazine != magazineCapacity)
             {
+                //anim.SetBool("loading", true);
                 _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
                 difference = magazineCapacity - ammoInMagazine;
                 if (difference > ammo)
@@ -72,7 +76,10 @@ public class UMP45 : MonoBehaviour, IShootable {
                     this.gameObject.GetComponent<Inventory>().rifleAmmo -= difference;
                 }
             }
-
+        }
+        if (Input.GetKeyUp(KeyCode.R) && CanUse)
+        {
+            anim.SetBool("loading", false);
         }
     }
 

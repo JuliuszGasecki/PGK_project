@@ -23,9 +23,11 @@ public class DEAGLE : MonoBehaviour, IShootable
     public int ammoInMagazine { get; set; }
     public bool CanUse { get; set; }
     public string Name { get; set; }
+    private Animator anim;
 
     void Start()
     {
+        anim = GameObject.Find("Hero").GetComponent<Animator>();
         ID = 0;
         damage = 10;
         fireRate = 1f;
@@ -57,6 +59,7 @@ public class DEAGLE : MonoBehaviour, IShootable
         int difference;
         if (Input.GetKeyDown(KeyCode.R) && CanUse)
         {
+            anim.SetBool("loading", true);
             if (ammo > 0 && ammoInMagazine != magazineCapacity)
             {
                 _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
@@ -72,7 +75,10 @@ public class DEAGLE : MonoBehaviour, IShootable
                     this.gameObject.GetComponent<Inventory>().deagleAmmo -= difference;
                 }
             }
-
+        }
+        if (Input.GetKeyUp(KeyCode.R) && CanUse)
+        {
+            anim.SetBool("loading", false);
         }
     }
 

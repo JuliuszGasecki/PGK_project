@@ -28,7 +28,8 @@ public class Inventory : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	    _heroAnimatior = GameObject.Find("Hero").GetComponent<Animator>();
+        //_heroAnimatior = GetComponent<Animator>();
+        _heroAnimatior = GameObject.Find("Hero").GetComponent<Animator>();
 	    rifleAmmo = 30;
 	    shotgunAmmo = 15;
 	    deagleAmmo = 10;
@@ -62,7 +63,9 @@ public class Inventory : MonoBehaviour
     private void UseWeapon()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1) && inventory.Count >= 1)
-        {  
+        {
+            _heroAnimatior.SetInteger("weaponID", 1);
+            _heroAnimatior.SetBool("changingWeapon", true);
             usingSlot = 0;
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(FIRSTELEMENT).UseWeapon();
@@ -70,6 +73,8 @@ public class Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && inventory.Count >= 2)
         {
+            _heroAnimatior.SetInteger("weaponID", 2);
+            _heroAnimatior.SetBool("changingWeapon", true);
             usingSlot = 1;
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(SECONDELEMENT).UseWeapon();
@@ -77,6 +82,8 @@ public class Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && inventory.Count == 3)
         {
+            _heroAnimatior.SetInteger("weaponID", 3);
+            _heroAnimatior.SetBool("changingWeapon", true);
             usingSlot = 2;
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(THIRDELEMENT).UseWeapon();
@@ -88,6 +95,8 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G) && inventory.Any())
         {
+            _heroAnimatior.SetInteger("weaponID", 1);
+            _heroAnimatior.SetBool("changingWeapon", true);
             inventory.ElementAt(usingSlot).DeafultAmmo();
             inventory.RemoveAt(usingSlot);
             usingSlot--;
