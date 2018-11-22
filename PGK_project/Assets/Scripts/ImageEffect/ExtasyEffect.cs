@@ -12,6 +12,12 @@ public class ExtasyEffect : MonoBehaviour {
     public PostProcessingProfile cocaProfile;
     public PostProcessingProfile alcoProfile;
     public PostProcessingProfile heraProfile;
+    public PostProcessingProfile lsdProfile;
+    public PostProcessingProfile heraAlcoProfile;
+    public PostProcessingProfile heraCocaProfile;
+    public PostProcessingProfile cocaMaryProfile;
+    public PostProcessingProfile cocaMdmaProfile;
+    
     private PostProcessingBehaviour effect;
     // Use this for initialization
     void Start () {
@@ -21,7 +27,28 @@ public class ExtasyEffect : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(hero.vodkaFlag)
+        if (hero.lsdFlag)
+        {
+            GetComponent<PostProcessingBehaviour>().profile = lsdProfile;
+        }
+        else if (hero.vodkaFlag && hero.heroineFlag)
+        {
+            GetComponent<PostProcessingBehaviour>().profile = heraAlcoProfile;
+        }
+        else if (hero.heroineFlag && hero.cocaFlag)
+        {
+            GetComponent<PostProcessingBehaviour>().profile = heraCocaProfile;
+        }
+        else if (hero.cocaFlag && hero.marihuanaFlag)
+        {
+            GetComponent<PostProcessingBehaviour>().profile = cocaMaryProfile;
+        }
+        else if (hero.cocaFlag && hero.extasyFlag)
+        {
+            GetComponent<PostProcessingBehaviour>().profile = cocaMdmaProfile;
+        }
+
+        else if (hero.vodkaFlag)
         {
             GetComponent<PostProcessingBehaviour>().profile = alcoProfile;
         }
