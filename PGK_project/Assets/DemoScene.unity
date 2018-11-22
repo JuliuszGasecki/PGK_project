@@ -935,6 +935,8 @@ MonoBehaviour:
   cocHer: {fileID: 21300000, guid: fec1ee36474083847ad8a6c9edfb32f8, type: 3}
   alcoSpeed: {fileID: 1574351898281576, guid: e5ccf7599ccfabc4d950fc99d696d204, type: 2}
   alcSpe: {fileID: 21300000, guid: df39365f790dfa74db53eac17672c8ea, type: 3}
+  cocoMary: {fileID: 1938010663000474, guid: 996369946fcc8a44599365dcf1cbe6d3, type: 2}
+  cocMar: {fileID: 21300000, guid: 489b8da138a785946b2e3e15ec3eb1b4, type: 3}
   image: {fileID: 82130986}
 --- !u!4 &136472930
 Transform:
@@ -6047,6 +6049,11 @@ Prefab:
       propertyPath: m_Name
       value: Lucek (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 212749787079550884, guid: 88ac73eeaa908468c80a3c39ba1edd52,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
   m_IsPrefabAsset: 0
@@ -8495,7 +8502,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4588193341794718, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.115234375
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4588193341794718, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
       propertyPath: m_LocalRotation.x
@@ -8534,6 +8541,11 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212843618938016746, guid: c14844a78ee3344e08dd0576aeb7e352,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114401654698123418, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}

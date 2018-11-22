@@ -25,6 +25,12 @@ public class NarcoManager : MonoBehaviour {
     bool alcoSpeedIsInUse = false;
     public Sprite alcSpe;
 
+    //Koka + Mary
+    public GameObject cocoMary;
+    bool cocoMaryFlag = false;
+    bool cocoMaryIsInUse = false;
+    public Sprite cocMar;
+
     public Image image;
 
     float time = 0;
@@ -67,6 +73,14 @@ public class NarcoManager : MonoBehaviour {
             image.enabled = true;
             Instantiate(alcoSpeed);
         }
+        if (cocoMaryFlag == true && cocoMaryIsInUse == false)
+        {
+            cocoMaryIsInUse = true;
+            time = Time.time;
+            image.sprite = cocMar;
+            image.enabled = true;
+            Instantiate(cocoMary);
+        }
     }
 
     private void checkMix()
@@ -98,6 +112,16 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             alcoSpeedFlag = false;
+        }
+
+        //Coco Mary
+        if (dt.marihuanaFlag== true && dt.cocaFlag == true)
+        {
+            cocoMaryFlag = true;
+        }
+        else
+        {
+            cocoMaryFlag = false;
         }
 
     }
