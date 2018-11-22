@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class BackToMenu : MonoBehaviour {
 
-    public void Back(int level)
+    public void Back()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene("test");
     }
 }
