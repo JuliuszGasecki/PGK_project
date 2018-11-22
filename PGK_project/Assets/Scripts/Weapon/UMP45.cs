@@ -48,10 +48,22 @@ public class UMP45 : MonoBehaviour, IShootable {
     }
 	// Update is called once per frame
 	void Update ()
-    {
+	{
+	    AutoReloading();
         Reload();
         UseWeapon();
         UpdateAmmo();
+    }
+
+    public void AutoReloading()
+    {
+        if (ammoInMagazine == 0 && CanUse && ammo > 0)
+        {
+            _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
+            int difference = magazineCapacity - ammoInMagazine;
+            ammoInMagazine += difference;
+            this.gameObject.GetComponent<Inventory>().deagleAmmo -= difference;
+        }
     }
 
     public void Reload()

@@ -89,6 +89,26 @@ public class Inventory : MonoBehaviour
             inventory.ElementAt(THIRDELEMENT).UseWeapon();
             return;
         }
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            usingSlot++;
+            if (usingSlot > 2 || usingSlot > inventory.Count-1)
+                usingSlot = 0;
+            SetWeaponActivity(usingSlot);
+            inventory.ElementAt(usingSlot).UseWeapon();
+            return;
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            usingSlot--;
+            if (usingSlot < 0)
+                usingSlot = inventory.Count - 1;
+            SetWeaponActivity(usingSlot);
+            inventory.ElementAt(usingSlot).UseWeapon();
+            return;
+        }
     }
 
     private void RemoveFromInventory()

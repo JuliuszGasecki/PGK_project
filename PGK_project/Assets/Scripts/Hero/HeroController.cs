@@ -15,6 +15,7 @@ public class HeroController : MonoBehaviour
     private Hero hero;
     public GameObject FlashEffect1;
     public GameObject FlashEffect2;
+    private Rigidbody2D _heroRigidbody2D;
 
     // Use this for initialization
     void Start()
@@ -22,6 +23,7 @@ public class HeroController : MonoBehaviour
         hero = GetComponent<Hero>();
         anim = GetComponent<Animator>();
         setSetting();
+        _heroRigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
     }
 
     void setSetting()
@@ -46,6 +48,16 @@ public class HeroController : MonoBehaviour
         }
     }
 
+   /* void PlayAnimation()
+    {
+        if (_heroRigidbody2D.velocity.magnitude > 0)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+            anim.SetBool("isWalking", false);
+    }*/
+
     void move()
     {
         Vector2 normalizedVector = direction.normalized;
@@ -56,7 +68,7 @@ public class HeroController : MonoBehaviour
                 Input.GetKey(KeyCode.A))
             {
 
-                  anim.SetBool("isWalking", true);
+                 anim.SetBool("isWalking", true);
 
                 directionHero = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
                 directionHero.Normalize();
@@ -64,7 +76,7 @@ public class HeroController : MonoBehaviour
             }
 
 
-            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D) ||
+           if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D) ||
                 Input.GetKeyUp(KeyCode.A))
             {                
                   anim.SetBool("isWalking", false);              
@@ -87,5 +99,6 @@ public class HeroController : MonoBehaviour
         speed = this.GetComponent<Hero>().speed;
         faceMouse();
         move();
+      //  PlayAnimation();
     }
 }

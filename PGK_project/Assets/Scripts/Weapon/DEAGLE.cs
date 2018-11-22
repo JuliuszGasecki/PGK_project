@@ -30,7 +30,7 @@ public class DEAGLE : MonoBehaviour, IShootable
         anim = GameObject.Find("Hero").GetComponent<Animator>();
         ID = 0;
         damage = 10;
-        fireRate = 1f;
+        fireRate = 0.7f;
         speed = 20f;
         magazineCapacity = 7;
         ammo = this.gameObject.GetComponent<Inventory>().deagleAmmo; 
@@ -49,6 +49,7 @@ public class DEAGLE : MonoBehaviour, IShootable
     // Update is called once per frame
     void Update()
     {
+        AutoReloading();
         Reload();
         UseWeapon();
         UpdateAmmo();
@@ -56,15 +57,13 @@ public class DEAGLE : MonoBehaviour, IShootable
 
     public void Reload()
     {
-        int difference;
-        if (Input.GetKeyDown(KeyCode.R) && CanUse)
-        {
-            
+        if (Input.GetKeyDown(KeyCode.R) &&  CanUse)
+        {          
             if (ammo > 0 && ammoInMagazine != magazineCapacity)
             {
                 _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
                 anim.SetBool("loading", true);
-                difference = magazineCapacity - ammoInMagazine;
+                var difference = magazineCapacity - ammoInMagazine;
                 if (difference > ammo)
                 {
                     ammoInMagazine += ammo;
@@ -82,7 +81,16 @@ public class DEAGLE : MonoBehaviour, IShootable
             anim.SetBool("loading", false);
         }
     }
-
+    public void AutoReloading()
+    {
+        if (ammoInMagazine == 0 && CanUse && ammo > 0)
+        {
+            _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
+            int difference = magazineCapacity - ammoInMagazine;
+            ammoInMagazine += difference;
+            this.gameObject.GetComponent<Inventory>().deagleAmmo -= difference;
+        }
+    }
 
     public void UseWeapon()
     {
