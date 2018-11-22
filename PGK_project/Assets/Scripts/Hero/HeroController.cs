@@ -70,6 +70,11 @@ public class HeroController : MonoBehaviour
         }
     }
 
+    public void flash()
+    {
+        transform.position = new Vector3(transform.position.x + directionHero[0] *5 , transform.position.y + directionHero[1] *5, transform.position.z);
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
