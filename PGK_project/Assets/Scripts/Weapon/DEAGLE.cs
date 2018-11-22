@@ -59,10 +59,11 @@ public class DEAGLE : MonoBehaviour, IShootable
         int difference;
         if (Input.GetKeyDown(KeyCode.R) && CanUse)
         {
-            anim.SetBool("loading", true);
+            
             if (ammo > 0 && ammoInMagazine != magazineCapacity)
             {
                 _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
+                anim.SetBool("loading", true);
                 difference = magazineCapacity - ammoInMagazine;
                 if (difference > ammo)
                 {
