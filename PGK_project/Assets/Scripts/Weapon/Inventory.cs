@@ -63,28 +63,28 @@ public class Inventory : MonoBehaviour
     private void UseWeapon()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1) && inventory.Count >= 1)
-        {
-            _heroAnimatior.SetInteger("weaponID", 1);
-            _heroAnimatior.SetBool("changingWeapon", true);
+        {          
             usingSlot = 0;
+            _heroAnimatior.SetInteger("weaponID", inventory.ElementAt(FIRSTELEMENT).ID);
+            _heroAnimatior.SetBool("changingWeapon", true);
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(FIRSTELEMENT).UseWeapon();
             return;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && inventory.Count >= 2)
         {
-            _heroAnimatior.SetInteger("weaponID", 2);
-            _heroAnimatior.SetBool("changingWeapon", true);
             usingSlot = 1;
+            _heroAnimatior.SetInteger("weaponID", inventory.ElementAt(SECONDELEMENT).ID);
+            _heroAnimatior.SetBool("changingWeapon", true);
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(SECONDELEMENT).UseWeapon();
             return;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && inventory.Count == 3)
-        {
-            _heroAnimatior.SetInteger("weaponID", 3);
-            _heroAnimatior.SetBool("changingWeapon", true);
+        {            
             usingSlot = 2;
+            _heroAnimatior.SetInteger("weaponID", inventory.ElementAt(THIRDELEMENT).ID);
+            _heroAnimatior.SetBool("changingWeapon", true);
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(THIRDELEMENT).UseWeapon();
             return;
@@ -94,14 +94,14 @@ public class Inventory : MonoBehaviour
     private void RemoveFromInventory()
     {
         if (Input.GetKeyDown(KeyCode.G) && inventory.Any())
-        {
-            _heroAnimatior.SetInteger("weaponID", 1);
-            _heroAnimatior.SetBool("changingWeapon", true);
+        {           
             inventory.ElementAt(usingSlot).DeafultAmmo();
             inventory.RemoveAt(usingSlot);
             usingSlot--;
             if (usingSlot < 0)
                 usingSlot = 0;
+            _heroAnimatior.SetInteger("weaponID", inventory.ElementAt(usingSlot).ID);
+            _heroAnimatior.SetBool("changingWeapon", true);
         }
     }
 
