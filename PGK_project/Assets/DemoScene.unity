@@ -11780,6 +11780,18 @@ Prefab:
       value: 
       objectReference: {fileID: 1455056903788092, guid: af5de20f4755489419029c3c4877587f,
         type: 2}
+    - target: {fileID: 114030780523705966, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: FlashEffect1
+      value: 
+      objectReference: {fileID: 1468591365502620, guid: 9e7ecdde48a8db94bb337c282d6ce0b8,
+        type: 2}
+    - target: {fileID: 114030780523705966, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: FlashEffect2
+      value: 
+      objectReference: {fileID: 1271650352100938, guid: e7cd98a91c062ad419c62ee84e526cb9,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e83121cfd1454a43a2601311e563632, type: 2}
   m_IsPrefabAsset: 0

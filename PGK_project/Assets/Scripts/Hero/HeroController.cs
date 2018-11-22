@@ -13,6 +13,8 @@ public class HeroController : MonoBehaviour
     private Transform _myTransform;
     private Animator anim;
     private Hero hero;
+    public GameObject FlashEffect1;
+    public GameObject FlashEffect2;
 
     // Use this for initialization
     void Start()
@@ -72,7 +74,11 @@ public class HeroController : MonoBehaviour
 
     public void flash()
     {
+        Instantiate(FlashEffect2, this.gameObject.transform.position, Quaternion.identity);
+        Instantiate(FlashEffect1, this.gameObject.transform.position, Quaternion.identity);
+        
         transform.position = new Vector3(transform.position.x + directionHero[0] *5 , transform.position.y + directionHero[1] *5, transform.position.z);
+        
     }
 
     // Update is called once per frame
