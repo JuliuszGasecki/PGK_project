@@ -10,6 +10,11 @@ public class PlayMap : MonoBehaviour {
         SceneManager.LoadScene("DemoScene");
     }
 
+    public void playLoadingScreen()
+    {
+        SceneManager.LoadScene("LoadingScreen");
+    }
+
     public void playMapHome()
     {
         SceneManager.LoadScene("Home");
