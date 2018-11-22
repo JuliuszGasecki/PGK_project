@@ -41,7 +41,6 @@ public class ExtasyScript : MonoBehaviour {
         }
         if (playerOnTarget == true  && Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
         {
-            heroDrugTimer.extasyTime += 7;
             hero.poisoning += 14;
             destroyObject();
             //OnMouseExit();

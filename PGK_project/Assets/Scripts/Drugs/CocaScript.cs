@@ -44,7 +44,6 @@ public class CocaScript : MonoBehaviour {
         }
         if (playerOnTarget == true && Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
         {
-            heroDrugTimer.cocaTime += 10;
             hero.poisoning += 10;
             destroyObject();
             //OnMouseExit();

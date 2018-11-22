@@ -13,17 +13,22 @@ public class DrugsTimer : MonoBehaviour {
     public bool tookDrug = false;
     float time;
     List<DrugTemplate> active_drugs;
-    
-    public Slider extasySlider;
-    public float extasyTime = 0f;
+    Dictionary<string, GameObject> sliders;
+    private float max = 15;
+
+    public GameObject extasySlider;
+    public GameObject cocaSlider;
+    public GameObject marihuanaSlider;
+    public GameObject heroinSlider;
+    public GameObject vodkaSlider;
+    public GameObject lsdSlider;
+    public GameObject mocarzSlider;
+
+
     public bool extasyFlag = false;
 
-    public Slider marihuanaSlider;
-    public float marihuanaTime = 0f;
     public bool marihuanaFlag = false;
 
-    public Slider cocaSlider;
-    public float cocaTime = 0f;
     public bool cocaFlag = false;
 
     public bool heroineFlag = false;
@@ -31,14 +36,27 @@ public class DrugsTimer : MonoBehaviour {
     public bool mocarzFlag = false;
     public bool lsdFlag = false;
     // Use this for initialization
-    void Start () {
+    void Start() {
         onDrugs = false;
         active_drugs = new List<DrugTemplate>();
         hero = GetComponent<Hero>();
-        heroW  =GetComponent<Withdrawal>();
+        heroW = GetComponent<Withdrawal>();
         time = Time.time;
-
+        sliders = createSliders();
     }
+
+    Dictionary<string, GameObject> createSliders()
+        {
+        Dictionary<string, GameObject> temp = new Dictionary<string, GameObject>();
+        temp.Add("extasy", extasySlider);
+        temp.Add("coca", cocaSlider);
+        temp.Add("ganja", marihuanaSlider);
+        temp.Add("hera", heroinSlider);
+        temp.Add("vodka", vodkaSlider);
+        temp.Add("mocarz", mocarzSlider);
+        temp.Add("lsd", lsdSlider);
+        return temp;
+        }
 	
 	// Update is called once per frame
 	void Update () {
@@ -68,21 +86,20 @@ public class DrugsTimer : MonoBehaviour {
     public void zmien_flage_narkotyku(string nazwa_narkotyku, bool dziala)
     {
         Debug.Log(nazwa_narkotyku);
-        if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; }
-        if (nazwa_narkotyku == "coca") { cocaFlag = dziala; }
-        if (nazwa_narkotyku == "extasy") { extasyFlag = dziala; }
-        if (nazwa_narkotyku == "hera") { heroineFlag = dziala; }
-        if (nazwa_narkotyku == "vodka") { vodkaFlag = dziala; }
-        if (nazwa_narkotyku == "mocarz") { mocarzFlag = dziala; }
-        if (nazwa_narkotyku == "lsd") { lsdFlag = dziala; }
-
-
+        if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
+        if (nazwa_narkotyku == "coca") { cocaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
+        if (nazwa_narkotyku == "extasy") { extasyFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
+        if (nazwa_narkotyku == "hera") { heroineFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
+        if (nazwa_narkotyku == "vodka") { vodkaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
+        if (nazwa_narkotyku == "mocarz") { mocarzFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
+        if (nazwa_narkotyku == "lsd") { lsdFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
     }
 
 
     public void removeNarcotic(DrugTemplate drug){
         removeEffect(drug);
         active_drugs.Remove(drug);
+        sliders[drug.nazwa].SetActive(false);
         Debug.Log("Usunieto " + drug.nazwa);
     }
     public void removeNarcotic(string drugName)
@@ -159,11 +176,13 @@ public class DrugsTimer : MonoBehaviour {
     {
         foreach(DrugTemplate dt in active_drugs)
             {
-        if (dt.nazwa == "ganja") { marihuanaSlider.value = dt.lifetime; }
-        if (dt.nazwa == "coca") { cocaSlider.value = dt.lifetime; }
-        if (dt.nazwa == "extasy") { extasySlider.value = dt.lifetime; }
-        if (dt.nazwa == "hera") {  }
-        if (dt.nazwa == "vodka") {  }
+        if (dt.nazwa == "ganja") { marihuanaSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
+        if (dt.nazwa == "coca") { cocaSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
+        if (dt.nazwa == "extasy") {extasySlider.GetComponent<Image>().fillAmount = dt.lifetime/max; }
+        if (dt.nazwa == "hera") { heroinSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
+        if (dt.nazwa == "vodka") { vodkaSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
+        if (dt.nazwa == "mocarz") { mocarzSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
+        if (dt.nazwa == "lsd") { lsdSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
         }
         
     }

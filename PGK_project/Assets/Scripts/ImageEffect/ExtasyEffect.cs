@@ -27,7 +27,7 @@ public class ExtasyEffect : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (hero.lsdFlag)
+        if (hero.lsdFlag == true)
         {
             GetComponent<PostProcessingBehaviour>().profile = lsdProfile;
         }
