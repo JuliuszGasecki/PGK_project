@@ -90,7 +90,7 @@ public class Inventory : MonoBehaviour
             return;
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && inventory.Any())
         {
             usingSlot++;
             if (usingSlot > 2 || usingSlot > inventory.Count-1)
@@ -100,7 +100,7 @@ public class Inventory : MonoBehaviour
             return;
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f && inventory.Any())
         {
             usingSlot--;
             if (usingSlot < 0)
@@ -120,8 +120,8 @@ public class Inventory : MonoBehaviour
             usingSlot--;
             if (usingSlot < 0)
                 usingSlot = 0;
-            _heroAnimatior.SetInteger("weaponID", inventory.ElementAt(usingSlot).ID);
-            _heroAnimatior.SetBool("changingWeapon", true);
+            //_heroAnimatior.SetInteger("weaponID", inventory.ElementAt(usingSlot).ID);
+            //_heroAnimatior.SetBool("changingWeapon", true);
         }
     }
 
