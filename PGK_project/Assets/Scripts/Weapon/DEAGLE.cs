@@ -50,12 +50,12 @@ public class DEAGLE : MonoBehaviour, IShootable
     void Update()
     {
         AutoReloading();
-        Reload();
+      //  Reload();
         UseWeapon();
         UpdateAmmo();
     }
 
-    public void Reload()
+   /* public void Reload()
     {
         if (Input.GetKeyDown(KeyCode.R) &&  CanUse)
         {          
@@ -80,15 +80,23 @@ public class DEAGLE : MonoBehaviour, IShootable
         {
             anim.SetBool("loading", false);
         }
-    }
+    }*/
     public void AutoReloading()
     {
-        if (ammoInMagazine == 0 && CanUse && ammo > 0)
+        if ((ammoInMagazine == 0 || Input.GetKeyDown(KeyCode.R) ) && CanUse && ammo > 0 && ammoInMagazine != magazineCapacity)
         {
             _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
-            int difference = magazineCapacity - ammoInMagazine;
-            ammoInMagazine += difference;
-            this.gameObject.GetComponent<Inventory>().deagleAmmo -= difference;
+            var difference = magazineCapacity - ammoInMagazine;
+            if (difference > ammo)
+            {
+                ammoInMagazine += ammo;
+                this.gameObject.GetComponent<Inventory>().deagleAmmo = 0;
+            }
+            else
+            {
+                ammoInMagazine += difference;
+                this.gameObject.GetComponent<Inventory>().deagleAmmo -= difference;
+            }
         }
     }
 
@@ -114,7 +122,9 @@ public class DEAGLE : MonoBehaviour, IShootable
 
     public void Shoot()
     {
-        Instantiate(WeaponSplash, firePoint.position, Quaternion.identity);
+        GameObject _weaponSplash = Instantiate(WeaponSplash, firePoint.position, Quaternion.identity) as GameObject;
+        _weaponSplash.transform.parent = GameObject.Find("Hero").transform;
+        _weaponSplash.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         GameObject bulletD = Instantiate(bullet, firePoint.position, firePoint.rotation);
         SetDamageBullet(bulletD);
         SetSpeedBullet(bulletD);

@@ -12804,6 +12804,12 @@ Prefab:
       propertyPath: mocarzSlider
       value: 
       objectReference: {fileID: 1251119940}
+    - target: {fileID: 114627219578278010, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: BloodSplash
+      value: 
+      objectReference: {fileID: 1280616174678190, guid: a7d2a37ebb1a66148b937422057f5990,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e83121cfd1454a43a2601311e563632, type: 2}
   m_IsPrefabAsset: 0

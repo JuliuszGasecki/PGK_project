@@ -50,23 +50,31 @@ public class UMP45 : MonoBehaviour, IShootable {
 	void Update ()
 	{
 	    AutoReloading();
-        Reload();
+        //Reload();
         UseWeapon();
         UpdateAmmo();
     }
 
     public void AutoReloading()
     {
-        if (ammoInMagazine == 0 && CanUse && ammo > 0)
+        if ((ammoInMagazine == 0 || Input.GetKeyDown(KeyCode.R)) && CanUse && ammo > 0 && ammoInMagazine != magazineCapacity)
         {
             _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
-            int difference = magazineCapacity - ammoInMagazine;
-            ammoInMagazine += difference;
-            this.gameObject.GetComponent<Inventory>().deagleAmmo -= difference;
+            var difference = magazineCapacity - ammoInMagazine;
+            if (difference > ammo)
+            {
+                ammoInMagazine += ammo;
+                this.gameObject.GetComponent<Inventory>().rifleAmmo = 0;
+            }
+            else
+            {
+                ammoInMagazine += difference;
+                this.gameObject.GetComponent<Inventory>().rifleAmmo -= difference;
+            }
         }
     }
 
-    public void Reload()
+    /*public void Reload()
     {
         int difference;
         if (Input.GetKeyDown(KeyCode.R) && CanUse)      
@@ -93,7 +101,7 @@ public class UMP45 : MonoBehaviour, IShootable {
         {
             anim.SetBool("loading", false);
         }
-    }
+    }*/
 
 
     public void UseWeapon()

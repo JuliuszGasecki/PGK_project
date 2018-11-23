@@ -13,7 +13,6 @@ public class Hero : MonoBehaviour
     public float poisoning;
     public float drugWithdrawal;
     public float attack;
-
     public Transform spawnPoint;
 
     private int tempHealth;
@@ -61,5 +60,6 @@ public class Hero : MonoBehaviour
             return true;
         return false;
     }
-	//test
+
+    //test
 }

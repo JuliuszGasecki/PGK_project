@@ -21,7 +21,7 @@ public interface IShootable: IWeapon
 
     void Shoot();
 
-    void Reload();
+    void AutoReloading();
 
     void UpdateAmmo();
 }

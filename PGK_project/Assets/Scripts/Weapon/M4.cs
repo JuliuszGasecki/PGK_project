@@ -48,12 +48,31 @@ public class M4 : MonoBehaviour, IShootable
     // Update is called once per frame
     void Update()
     {
-        Reload();
+        AutoReloading();
         UseWeapon();
         UpdateAmmo();
     }
 
-    public void Reload()
+    public void AutoReloading()
+    {
+        if ((ammoInMagazine == 0 || Input.GetKeyDown(KeyCode.R)) && CanUse && ammo > 0 && ammoInMagazine != magazineCapacity)
+        {
+            _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
+            var difference = magazineCapacity - ammoInMagazine;
+            if (difference > ammo)
+            {
+                ammoInMagazine += ammo;
+                this.gameObject.GetComponent<Inventory>().rifleAmmo = 0;
+            }
+            else
+            {
+                ammoInMagazine += difference;
+                this.gameObject.GetComponent<Inventory>().rifleAmmo -= difference;
+            }
+        }
+    }
+
+    /*public void Reload()
     {
         int difference;
         if (Input.GetKeyDown(KeyCode.R) && CanUse)
@@ -75,7 +94,7 @@ public class M4 : MonoBehaviour, IShootable
             }
 
         }
-    }
+    }*/
 
 
     public void UseWeapon()

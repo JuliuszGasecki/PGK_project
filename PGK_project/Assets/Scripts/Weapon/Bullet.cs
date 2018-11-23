@@ -24,11 +24,16 @@ public class Bullet : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         var tag = collision.gameObject.tag;
-        if(tag == "Player"){
-            collision.gameObject.GetComponent<Hero>().health -= bulletDamage;
-            Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity);
-        }
-        if(tag == "Enemy"){
+            if (tag == "Player")
+            {
+                Debug.Log("xDDD");
+                collision.gameObject.GetComponent<Hero>().health -= bulletDamage;
+                 GameObject _blood = Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity) as GameObject;
+                _blood.transform.parent = GameObject.Find("Hero").transform;
+                _blood.transform.localScale = new Vector3(0.22f, 0.22f, 0.22f);
+            }
+        
+        if (tag == "Enemy"){
             collision.gameObject.GetComponent<Enemy>().zycie -= bulletDamage;
             Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity * Quaternion.Euler(0, 0, 180));
         }
