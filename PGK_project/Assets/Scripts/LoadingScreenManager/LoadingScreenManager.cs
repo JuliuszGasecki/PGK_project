@@ -15,7 +15,7 @@ public class LoadingScreenManager : MonoBehaviour {
 
     void Update()
     {
-        if(Time.time - time > 2)
+        if(Time.time - time > 4)
         {
             SceneManager.LoadScene("Home");
         }
