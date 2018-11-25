@@ -22,9 +22,11 @@ public class SPAS : MonoBehaviour, IShootable
     public bool CanUse { get; set; }
 
     public string Name { get; set; }
+    private Animator anim;
 
     void Start()
     {
+        anim = GameObject.Find("Hero").GetComponent<Animator>();
         ID = 3;
         damage = 10;
         fireRate = 0.7f;

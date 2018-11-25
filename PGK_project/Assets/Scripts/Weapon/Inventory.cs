@@ -62,7 +62,7 @@ public class Inventory : MonoBehaviour
 
     private void UseWeapon()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && inventory.Count >= 1)
+        /*if (Input.GetKeyDown(KeyCode.Alpha1) && inventory.Count >= 1)
         {          
             usingSlot = 0;
             _heroAnimatior.SetInteger("weaponID", inventory.ElementAt(FIRSTELEMENT).ID);
@@ -88,7 +88,7 @@ public class Inventory : MonoBehaviour
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(THIRDELEMENT).UseWeapon();
             return;
-        }
+        }*/
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f && inventory.Any())
         {
@@ -97,6 +97,8 @@ public class Inventory : MonoBehaviour
                 usingSlot = 0;
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(usingSlot).UseWeapon();
+            _heroAnimatior.SetBool("changingWeapon", true);
+            _heroAnimatior.SetInteger("weaponID", usingSlot);
             return;
         }
 
@@ -107,6 +109,8 @@ public class Inventory : MonoBehaviour
                 usingSlot = inventory.Count - 1;
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(usingSlot).UseWeapon();
+            _heroAnimatior.SetBool("changingWeapon", true);
+            _heroAnimatior.SetInteger("weaponID", usingSlot);
             return;
         }
     }
@@ -120,8 +124,8 @@ public class Inventory : MonoBehaviour
             usingSlot--;
             if (usingSlot < 0)
                 usingSlot = 0;
-            //_heroAnimatior.SetInteger("weaponID", inventory.ElementAt(usingSlot).ID);
-            //_heroAnimatior.SetBool("changingWeapon", true);
+            _heroAnimatior.SetBool("changingWeapon", true);
+            _heroAnimatior.SetInteger("weaponID", usingSlot);
         }
     }
 

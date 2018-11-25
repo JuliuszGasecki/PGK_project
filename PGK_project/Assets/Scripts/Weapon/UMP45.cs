@@ -65,12 +65,15 @@ public class UMP45 : MonoBehaviour, IShootable {
             {
                 ammoInMagazine += ammo;
                 this.gameObject.GetComponent<Inventory>().rifleAmmo = 0;
+                //anim.SetBool("loading", true);
             }
             else
             {
                 ammoInMagazine += difference;
                 this.gameObject.GetComponent<Inventory>().rifleAmmo -= difference;
+                //anim.SetBool("loading", true);
             }
+            //anim.SetBool("loading", false);
         }
     }
 

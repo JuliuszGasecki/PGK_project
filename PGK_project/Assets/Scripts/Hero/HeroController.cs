@@ -67,20 +67,18 @@ public class HeroController : MonoBehaviour
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) ||
                 Input.GetKey(KeyCode.A))
             {
-
-                 anim.SetBool("isWalking", true);
-
                 directionHero = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
                 directionHero.Normalize();
                 transform.Translate(directionHero * Time.deltaTime * speed, Space.World);
+                anim.SetBool("isWalking", true);
             }
 
 
            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D) ||
                 Input.GetKeyUp(KeyCode.A))
-            {                
-                  anim.SetBool("isWalking", false);              
-            }
+           {                
+                anim.SetBool("isWalking", false);              
+           }
         }
     }
 
