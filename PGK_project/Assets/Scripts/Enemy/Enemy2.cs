@@ -44,6 +44,7 @@ public class Enemy2 : MonoBehaviour {
     private float time_tracker_come_back_to_path;
     public float speed_boost_when_low_hp;
     public int speed_boost_limit;
+    public int random_multiplayer;
 
 
     //*****
@@ -73,6 +74,57 @@ public class Enemy2 : MonoBehaviour {
     public List<Vector3> path;
 
     private Vector3 last_seen_player;
+
+    private float avoid_bullets_timer;
+    public float avoid_bullets_time;
+    private Vector3 avoid_bullets_movement;
+
+
+
+    void avoid_bullets(float distance,ref Vector3 direction){ //avoid bullets
+        obroc_do_playera();
+        Vector3 left = this.transform.position - player.transform.position;
+        Vector3 right = this.transform.position - player.transform.position;
+        left.x = left.x * -1f;
+        right.y = right.y * -1f;
+        Vector2 random2 = Random.insideUnitSphere;
+        Vector3 random_multplayer = new Vector3(random2.x, random2.y, 0f);
+        if (Random.value > 0.5f){
+            if(check_if_we_can_move_to_direction((left.normalized + random_multplayer )* distance, distance)){
+                direction = (left.normalized + random_multplayer) * distance * Time.deltaTime;
+            }
+            else{
+                if((check_if_we_can_move_to_direction((right.normalized + random_multplayer) * distance, distance))){
+                    direction = (right.normalized + random_multplayer)* distance * Time.deltaTime;
+                }
+            }
+        }
+        else{
+            if (check_if_we_can_move_to_direction((right.normalized + random_multplayer) * distance, distance)){
+                direction  = (right.normalized + random_multplayer)*distance * Time.deltaTime;
+            }
+            else
+            {
+                if (check_if_we_can_move_to_direction((left.normalized + random_multplayer) * distance,distance))
+                {
+                    direction  = (left.normalized + random_multplayer)*distance * Time.deltaTime;
+                }
+            }
+        }
+        
+    }
+
+    bool check_if_we_can_move_to_direction(Vector3 new_position,float distance){
+        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, new_position,distance);
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.collider.tag);
+            return false;
+        }
+        else
+            return true;
+    }
+
 
     void speed_boost(){
         if(life < speed_boost_limit)
@@ -128,6 +180,7 @@ public class Enemy2 : MonoBehaviour {
 
     void Start()
     {
+        Random random = new Random();
         if (generate_the_path(200))
             Debug.Log("jest sciezka");
         if (GameObject.FindWithTag("Player")) { player = GameObject.FindWithTag("Player"); }
@@ -158,6 +211,10 @@ public class Enemy2 : MonoBehaviour {
         time_tracker_shoot = Time.time;
         generate_the_path(50);
         time_tracker_punch = Time.time;
+        avoid_bullets_timer = Time.time;
+        if (isStatic)
+            aItarget.target = null;
+        avoid_bullets_movement = new Vector3(0,0,0);
     }
 
 
@@ -173,7 +230,14 @@ public class Enemy2 : MonoBehaviour {
 
                     if (znaleziono_gracza())
                     {
-                        guide.transform.position = player.transform.position;
+                        Vector3 oddanie = this.transform.position - player.transform.position;
+                        if (oddanie.magnitude > 1)
+                        {
+                            Vector2 random = Random.insideUnitSphere;
+                            guide.transform.position = player.transform.position + new Vector3(random.x, random.y, 0) * random_multiplayer;
+                        }
+                        else
+                            guide.transform.position = player.transform.position;
                         obroc_do_playera();
                         atak_wrecz();
                         anim.SetBool("isWalking", true);
@@ -181,6 +245,7 @@ public class Enemy2 : MonoBehaviour {
                     }
                     else
                     {
+
                         guide.transform.position = last_seen_player;
                         Debug.Log(last_seen_player.ToString());
                         if (this.transform.position == last_seen_player)
@@ -193,13 +258,46 @@ public class Enemy2 : MonoBehaviour {
                 }
                 else
                 {
+                    this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -1);
+
                     if (znaleziono_gracza())
                     {
+                        if (Time.time - avoid_bullets_timer > avoid_bullets_time)
+                        {
+                            avoid_bullets(3f, ref avoid_bullets_movement);
+                            avoid_bullets_timer = Time.time;
+                            avoid_bullets_movement.z = 0;
+                        }
+
+
+                        if (check_if_point_is_correct(this.transform.position, this.transform.position + avoid_bullets_movement, 3f))
+                        {
+                            avoid_bullets_movement.z = 0;
+                            this.transform.position += avoid_bullets_movement;
+                        }
+                        else
+                        {
+                            avoid_bullets(3f, ref avoid_bullets_movement);
+                            avoid_bullets_timer = Time.time;
+                        }
+
                         obroc_do_playera();
                         if (Time.time - time_tracker_shoot > shoot_time)
                         {
                             strzel();
                             time_tracker_shoot = Time.time;
+                        }
+
+                    }
+                    else{ //nie znaleziono playera wracaj na spawn
+                        Vector3 path_to_spawn = spawn - this.transform.position;
+                        if(path_to_spawn.magnitude < 0.5f){
+                            aItarget.target = null;
+                        }
+                        else{
+                            guide.transform.position = spawn;
+                            guide.transform.rotation = spawn_rotation;
+                            aItarget.target = guide.transform;
                         }
                     }
                 }
