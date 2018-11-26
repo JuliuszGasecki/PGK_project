@@ -110,7 +110,7 @@ public class Inventory : MonoBehaviour
         }*/
         #endregion
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f && inventory.Any())
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f && inventory.Any())
         {
             usingSlot++;
             //if (usingSlot > 2 || usingSlot > inventory.Count-1)
@@ -136,19 +136,19 @@ public class Inventory : MonoBehaviour
             return;
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f && inventory.Any())
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && inventory.Any())
         {
             usingSlot--;
             if (usingSlot < 0)
             {
                 usingSlot = inventory.Count - 1;
             }
-            secondWeaponPosition = usingSlot - 1;
+            secondWeaponPosition--;
             if (secondWeaponPosition < 0)
             {
                 secondWeaponPosition = inventory.Count - 1;
             }
-            thirdWeaponPosition = secondWeaponPosition - 1;
+            thirdWeaponPosition--;
             if (thirdWeaponPosition < 0)
             {
                 thirdWeaponPosition = inventory.Count - 1;
@@ -166,12 +166,16 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G) && inventory.Any())
         {           
             inventory.ElementAt(usingSlot).DeafultAmmo();
+            inventory.ElementAt(usingSlot).CanUse = false;
             inventory.RemoveAt(usingSlot);
             usingSlot--;
             if (usingSlot < 0)
             {
                 usingSlot = 0;
             }
+            secondWeaponPosition--;
+            thirdWeaponPosition--;
+            SetWeaponActivity(usingSlot);
             _heroAnimatior.SetBool("changingWeapon", true);
             _heroAnimatior.SetInteger("weaponID", usingSlot);
         }
@@ -198,8 +202,12 @@ public class Inventory : MonoBehaviour
     public bool AddToList(IWeapon weapon)
     {
         if (Enum.IsDefined(typeof(_weaponsID), weapon.ID) && inventory.Count <= INVENTORYCAPACITY)
-        {
+        {           
             inventory.Add(weapon);
+            if (inventory.Count == 1)
+            {
+                SetWeaponActivity(0);
+            }
             return true;
         }
         else
