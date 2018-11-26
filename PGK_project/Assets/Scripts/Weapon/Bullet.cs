@@ -34,7 +34,6 @@ public class Bullet : MonoBehaviour
             }
         
         if (tag == "Enemy"){
-            collision.gameObject.GetComponent<Enemy>().zycie -= bulletDamage;
             Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity * Quaternion.Euler(0, 0, 180));
         }
 
