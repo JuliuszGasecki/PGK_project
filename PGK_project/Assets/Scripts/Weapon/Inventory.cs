@@ -11,7 +11,9 @@ public class Inventory : MonoBehaviour
     private const int THIRDELEMENT = 2;
     private const int INVENTORYCAPACITY = 3;
     private Animator _heroAnimatior;
-    private int usingSlot = 0;
+    private int usingSlot;
+    private int secondWeaponPosition;
+    private int thirdWeaponPosition;
     public int rifleAmmo { set; get; }
     public int shotgunAmmo { set; get; }
     public int deagleAmmo { set; get; }
@@ -25,6 +27,10 @@ public class Inventory : MonoBehaviour
     };
 
     public List<IWeapon> inventory;
+
+    public IWeapon SecondWeapon = null;
+
+    public IWeapon ThirdWeapon = null;
 	// Use this for initialization
 	void Start ()
 	{
@@ -37,6 +43,9 @@ public class Inventory : MonoBehaviour
 	    AddToList(this.gameObject.GetComponent<DEAGLE>());
         inventory.ElementAt(FIRSTELEMENT).CanUse = true;
         usingSlot = 0;
+	    secondWeaponPosition = usingSlot + 1;
+	    thirdWeaponPosition = usingSlot + 2;
+
 	}
 	
 	// Update is called once per frame
@@ -44,6 +53,15 @@ public class Inventory : MonoBehaviour
 	{
 	    UseWeapon();
 	    RemoveFromInventory();
+	    if (IsSecondWeapon())
+	    {
+	        SecondWeapon = inventory.ElementAt(secondWeaponPosition);
+        }
+
+	    if (IsThirdWeapon())
+	    {
+	        ThirdWeapon = inventory.ElementAt(thirdWeaponPosition);
+	    }
 	    //Debug.Log(deagleAmmo);
 	}
 
@@ -62,6 +80,7 @@ public class Inventory : MonoBehaviour
 
     private void UseWeapon()
     {
+        #region Com
         /*if (Input.GetKeyDown(KeyCode.Alpha1) && inventory.Count >= 1)
         {          
             usingSlot = 0;
@@ -89,12 +108,27 @@ public class Inventory : MonoBehaviour
             inventory.ElementAt(THIRDELEMENT).UseWeapon();
             return;
         }*/
+        #endregion
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f && inventory.Any())
         {
             usingSlot++;
-            if (usingSlot > 2 || usingSlot > inventory.Count-1)
+            //if (usingSlot > 2 || usingSlot > inventory.Count-1)
+            if (usingSlot > inventory.Count - 1)
+            {
                 usingSlot = 0;
+            }
+            secondWeaponPosition = usingSlot + 1;
+            if (secondWeaponPosition > inventory.Count -1)
+            {
+                secondWeaponPosition = 0;
+            }
+
+            thirdWeaponPosition = secondWeaponPosition + 1;
+            if (thirdWeaponPosition > inventory.Count - 1)
+            {
+                thirdWeaponPosition = 0;
+            }
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(usingSlot).UseWeapon();
             _heroAnimatior.SetBool("changingWeapon", true);
@@ -106,7 +140,19 @@ public class Inventory : MonoBehaviour
         {
             usingSlot--;
             if (usingSlot < 0)
+            {
                 usingSlot = inventory.Count - 1;
+            }
+            secondWeaponPosition = usingSlot - 1;
+            if (secondWeaponPosition < 0)
+            {
+                secondWeaponPosition = inventory.Count - 1;
+            }
+            thirdWeaponPosition = secondWeaponPosition - 1;
+            if (thirdWeaponPosition < 0)
+            {
+                thirdWeaponPosition = inventory.Count - 1;
+            }
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(usingSlot).UseWeapon();
             _heroAnimatior.SetBool("changingWeapon", true);
@@ -123,10 +169,30 @@ public class Inventory : MonoBehaviour
             inventory.RemoveAt(usingSlot);
             usingSlot--;
             if (usingSlot < 0)
+            {
                 usingSlot = 0;
+            }
             _heroAnimatior.SetBool("changingWeapon", true);
             _heroAnimatior.SetInteger("weaponID", usingSlot);
         }
+    }
+    public bool IsSecondWeapon()
+    {
+        if (inventory.Count >= 2)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool IsThirdWeapon()
+    {
+        if (inventory.Count == INVENTORYCAPACITY)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public bool AddToList(IWeapon weapon)
