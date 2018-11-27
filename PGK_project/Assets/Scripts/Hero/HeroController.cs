@@ -87,7 +87,7 @@ public class HeroController : MonoBehaviour
         Instantiate(FlashEffect2, this.gameObject.transform.position, Quaternion.identity);
         Instantiate(FlashEffect1, this.gameObject.transform.position, Quaternion.identity);
         
-        transform.position = new Vector3(transform.position.x + directionHero[0] *3.5f , transform.position.y + directionHero[1] *5 * 3.5f, transform.position.z);
+        transform.position = new Vector3(transform.position.x + directionHero[0] *2.5f , transform.position.y + directionHero[1]  * 2.5f, transform.position.z);
         
     }
 
