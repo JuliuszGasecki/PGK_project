@@ -13298,10 +13298,8 @@ GameObject:
   - component: {fileID: 1473176135}
   - component: {fileID: 1473176134}
   - component: {fileID: 1109299349}
-  - component: {fileID: 1473176133}
   - component: {fileID: 1473176132}
   - component: {fileID: 1473176131}
-  - component: {fileID: 1473176130}
   - component: {fileID: 1473176129}
   - component: {fileID: 1473176128}
   m_Layer: 0
@@ -13344,19 +13342,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1473176130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114738429863380280, guid: 9e83121cfd1454a43a2601311e563632,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1473176127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfe0479bec558744da0e4c301b6f43b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hero: {fileID: 1473176134}
 --- !u!114 &1473176131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13387,18 +13372,6 @@ MonoBehaviour:
   withdrawalSLider: {fileID: 137527430}
   drugWithdrawalMax: 30
   stopWithdrawalFlag: 0
---- !u!114 &1473176133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114860730771760608, guid: 9e83121cfd1454a43a2601311e563632,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1473176127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da083b8547542fe45a8330d1edd67fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1473176134
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
         var tag = collision.gameObject.tag;
             if (tag == "Player")
             {
-                Debug.Log("xDDD");
+
                 collision.gameObject.GetComponent<Hero>().health -= bulletDamage;
                  GameObject _blood = Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity) as GameObject;
                 _blood.transform.parent = GameObject.Find("Hero").transform;
@@ -34,7 +34,9 @@ public class Bullet : MonoBehaviour
             }
         
         if (tag == "Enemy"){
-            Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, Quaternion.identity * Quaternion.Euler(0, 0, 180));
+            GameObject _blood = Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, this.gameObject.transform.rotation );
+            _blood.transform.parent = GameObject.Find(collision.gameObject.name).transform;
+            _blood.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
         }
 
         if (tag != "Ammo")

@@ -104,9 +104,6 @@ public class SPAS : MonoBehaviour, IShootable
             if (ammoInMagazine > 0)
             {
                 Instantiate(GunShot, this.transform.position, this.transform.rotation);
-                Instantiate(Shells,
-                    new Vector3(firePoint.position.x, firePoint.position.y - 0.3f, firePoint.position.z),
-                    this.transform.rotation * Quaternion.Euler(0, 90, 0));
                 Shoot();
                 timeUntilFire = Time.time + fireRate;
             }
@@ -122,12 +119,15 @@ public class SPAS : MonoBehaviour, IShootable
         GameObject bullet1 = Instantiate(bullet, new Vector3(firePoint.position.x - 0.1f, firePoint.position.y + 0.15f, firePoint.position.z), firePoint.rotation);
         SetDamageBullet(bullet1);
         SetSpeedBullet(bullet1);
-        GameObject bullet2 = Instantiate(bullet, new Vector3(firePoint.position.x - 0.1f, firePoint.position.y + 0.15f, firePoint.position.z), firePoint.rotation * Quaternion.Euler(0,0,25));
+        GameObject bullet2 = Instantiate(bullet, new Vector3(firePoint.position.x - 0.25f, firePoint.position.y + 0.15f, firePoint.position.z), firePoint.rotation * Quaternion.Euler(0,0,25));
         SetDamageBullet(bullet2);
         SetSpeedBullet(bullet2);
-        GameObject bullet3 = Instantiate(bullet, new Vector3(firePoint.position.x - 0.1f, firePoint.position.y + 0.15f, firePoint.position.z), firePoint.rotation * Quaternion.Euler(0, 0, -25));
+        GameObject bullet3 = Instantiate(bullet, new Vector3(firePoint.position.x, firePoint.position.y + 0.15f, firePoint.position.z), firePoint.rotation * Quaternion.Euler(0, 0, -25));
         SetDamageBullet(bullet3);
         SetSpeedBullet(bullet3);
+        Instantiate(Shells,
+            new Vector3(firePoint.position.x, firePoint.position.y - 0.3f, firePoint.position.z),
+            this.transform.rotation * Quaternion.Euler(0, 90, 0));
         ammoInMagazine -=3;
     }
     public void SetDamageBullet(GameObject bullet)
