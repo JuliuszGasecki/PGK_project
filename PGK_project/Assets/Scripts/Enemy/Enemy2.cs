@@ -78,6 +78,7 @@ public class Enemy2 : MonoBehaviour {
     private float avoid_bullets_timer;
     public float avoid_bullets_time;
     private Vector3 avoid_bullets_movement;
+    public float sensivity_of_enemys;
 
 
 
@@ -264,20 +265,20 @@ public class Enemy2 : MonoBehaviour {
                     {
                         if (Time.time - avoid_bullets_timer > avoid_bullets_time)
                         {
-                            avoid_bullets(3f, ref avoid_bullets_movement);
+                            avoid_bullets(sensivity_of_enemys, ref avoid_bullets_movement);
                             avoid_bullets_timer = Time.time;
                             avoid_bullets_movement.z = 0;
                         }
 
 
-                        if (check_if_point_is_correct(this.transform.position, this.transform.position + avoid_bullets_movement, 3f))
+                        if (check_if_point_is_correct(this.transform.position, this.transform.position + avoid_bullets_movement, sensivity_of_enemys))
                         {
                             avoid_bullets_movement.z = 0;
                             this.transform.position += avoid_bullets_movement;
                         }
                         else
                         {
-                            avoid_bullets(3f, ref avoid_bullets_movement);
+                            avoid_bullets(sensivity_of_enemys, ref avoid_bullets_movement);
                             avoid_bullets_timer = Time.time;
                         }
 
