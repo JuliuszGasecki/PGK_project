@@ -66,12 +66,14 @@ public class Enemy2 : MonoBehaviour {
     private GameObject guide;
     public GameObject publicGuide;
 
+
     //******
 
     public bool generate_path;
     public float length_of_the_path;
     public int number_of_break_points;
     public List<Vector3> path;
+    private int indexOfCurrentPath;
 
     private Vector3 last_seen_player;
 
@@ -81,6 +83,27 @@ public class Enemy2 : MonoBehaviour {
     public float sensivity_of_enemys;
 
 
+    int give_the_closest_point_on_the_path(){
+        int index = 0;
+        Vector3 pathPoint = new Vector3(0, 0, 0);
+        float magnitude = 999999;
+        for (int i = 0; i < path.Count;i++){
+            Vector3 nan = this.transform.position - path[i];
+            if(magnitude > nan.magnitude){
+                index = i;
+                pathPoint = path[i];
+            }
+        }
+        return index;
+    }
+
+    void go_along_path(){
+        guide.transform.position = path[indexOfCurrentPath];
+        Vector3 distance = this.transform.position - path[indexOfCurrentPath];
+        if(distance.magnitude < 0.5f){
+            indexOfCurrentPath = indexOfCurrentPath % path.Count;
+        }
+    }
 
     void avoid_bullets(float distance,ref Vector3 direction){ //avoid bullets
         obroc_do_playera();
@@ -181,6 +204,7 @@ public class Enemy2 : MonoBehaviour {
 
     void Start()
     {
+        indexOfCurrentPath = 0;
         Random random = new Random();
         if (generate_the_path(200))
             Debug.Log("jest sciezka");
