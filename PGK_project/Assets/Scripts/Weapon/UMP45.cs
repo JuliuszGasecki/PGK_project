@@ -129,8 +129,8 @@ public class UMP45 : MonoBehaviour, IShootable {
 
     public void Shoot()
     {
-        Instantiate(WeaponSplash, firePoint.position, Quaternion.identity);
-        GameObject bulletM4 = Instantiate(bullet, firePoint.position, firePoint.rotation);
+        Instantiate(WeaponSplash, new Vector3(firePoint.position.x - 0.1f, firePoint.position.y + 0.15f, firePoint.position.z), Quaternion.identity);
+        GameObject bulletM4 = Instantiate(bullet, new Vector3(firePoint.position.x - 0.1f, firePoint.position.y + 0.15f, firePoint.position.z), firePoint.rotation);
         SetDamageBullet(bulletM4);
         SetSpeedBullet(bulletM4);
         ammoInMagazine--;

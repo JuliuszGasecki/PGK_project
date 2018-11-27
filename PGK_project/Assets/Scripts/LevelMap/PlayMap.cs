@@ -8,6 +8,8 @@ public class PlayMap : MonoBehaviour {
     public void playMapDemo()
     {
         SceneManager.LoadScene("DemoScene");
+        Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
+        inv.GetUsingWeapon().CanUse = false;
     }
 
     public void playLoadingScreen()
@@ -18,5 +20,7 @@ public class PlayMap : MonoBehaviour {
     public void playMapHome()
     {
         SceneManager.LoadScene("Home");
+        Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
+        inv.GetUsingWeapon().CanUse = false;
     }
 }
