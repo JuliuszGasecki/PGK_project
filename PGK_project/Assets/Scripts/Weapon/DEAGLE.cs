@@ -93,7 +93,7 @@ public class DEAGLE : MonoBehaviour, IShootable
             if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
                 Direction();
-                
+                Instantiate(GunShot, this.transform.position, this.transform.rotation);
                 if (direction.y < 0)
                 {
                     Instantiate(Shells,

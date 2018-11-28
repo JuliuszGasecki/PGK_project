@@ -555,107 +555,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &246393092
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1602154394428400, guid: 9e83121cfd1454a43a2601311e563632,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 246393093}
-  - component: {fileID: 246393097}
-  - component: {fileID: 246393096}
-  - component: {fileID: 246393095}
-  - component: {fileID: 246393094}
-  m_Layer: 0
-  m_Name: Inventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &246393093
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4945793687859220, guid: 9e83121cfd1454a43a2601311e563632,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 246393092}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 336773538}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &246393094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114870152575117114, guid: 9e83121cfd1454a43a2601311e563632,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 246393092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a115ff2e736e90346b030a34513e5b4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 1480845407829184, guid: 690c2227dd2a1fa42b8dd03d17081a7c, type: 2}
-  GunShot: {fileID: 1264682018087934, guid: 592d66b7b201b374ba64d8fa0b5ef2e2, type: 2}
-  ReloadSound: {fileID: 1446797221484728, guid: 5a0f8a271ca85ea438709bcd2e43ff61,
-    type: 2}
-  Shells: {fileID: 1749256368845602, guid: 4f073ebbe56cb7f4b9b59dec8d0ef1e9, type: 2}
---- !u!114 &246393095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114487867912486546, guid: 9e83121cfd1454a43a2601311e563632,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 246393092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cf7dfc92055cf043953b06ec0a8aea7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 1480845407829184, guid: 690c2227dd2a1fa42b8dd03d17081a7c, type: 2}
-  GunShot: {fileID: 1116669351342634, guid: 585175d4a6086884097a3ef5ac5d2351, type: 2}
-  WeaponSplash: {fileID: 1000954921514026, guid: 387860d2f7d62ac4aa8338b1bdc5d18b,
-    type: 2}
-  Shells: {fileID: 1701343263260830, guid: c6fe66772f2fb88428270f31ecc0dfdf, type: 2}
-  ReloadSound: {fileID: 1455056903788092, guid: af5de20f4755489419029c3c4877587f,
-    type: 2}
---- !u!114 &246393096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114394540774341458, guid: 9e83121cfd1454a43a2601311e563632,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 246393092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17e578d9f10db58469a0d6ce5c57e4e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 1480845407829184, guid: 690c2227dd2a1fa42b8dd03d17081a7c, type: 2}
-  GunShot: {fileID: 1927187379152786, guid: 58980f6a6c79baa43a2993fef2dafcac, type: 2}
-  WeaponSplash: {fileID: 1000954921514026, guid: 387860d2f7d62ac4aa8338b1bdc5d18b,
-    type: 2}
-  Shells: {fileID: 1701343263260830, guid: c6fe66772f2fb88428270f31ecc0dfdf, type: 2}
-  ReloadSound: {fileID: 1532474330107968, guid: 4c412bfb65bcf8747bc426f4e7f9a003,
-    type: 2}
---- !u!114 &246393097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114176237977184536, guid: 9e83121cfd1454a43a2601311e563632,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 246393092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5bada924234ee45af18e92f2899a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &259594602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4662670003345560, guid: 5a592dff96c4ed7408acfacfdf8cb6e1,
@@ -819,8 +718,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.04, y: -5.68, z: 0}
   m_LocalScale: {x: 0.08500284, y: 0.07916368, z: 0.09572391}
-  m_Children:
-  - {fileID: 246393093}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
