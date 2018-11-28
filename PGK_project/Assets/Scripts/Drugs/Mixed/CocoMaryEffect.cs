@@ -22,7 +22,7 @@ public class CocoMaryEffect : MonoBehaviour {
             if(dt.marihuanaFlag == false)
                 Time.timeScale = 1f;
             else
-                Time.timeScale = 0.4f;
+                Time.timeScale = 0.6f;
             hero.speed -= 20;
             Destroy(gameObject);
         }

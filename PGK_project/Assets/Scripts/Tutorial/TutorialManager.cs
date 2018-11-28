@@ -69,6 +69,7 @@ public class TutorialManager : MonoBehaviour {
         teacher.enabled = false;
         tutorialText.enabled = false;
         hero.startWithdrawal();
+        Destroy(gameObject);
     }
 
 
