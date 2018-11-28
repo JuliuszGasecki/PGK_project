@@ -235,7 +235,6 @@ public class Enemy2 : MonoBehaviour {
         aIPath.maxSpeed = this.speed;
         time_tracker_shoot = Time.time;
         generate_the_path(50);
-        time_tracker_punch = Time.time;
         avoid_bullets_timer = Time.time;
         if (isStatic)
             aItarget.target = null;
@@ -247,12 +246,12 @@ public class Enemy2 : MonoBehaviour {
     {
         if (alive)
         {
+
             if (!sprawdz_czy_umarl())
             {
                 speed_boost();
                 if (!isStatic)
                 {
-
                     if (znaleziono_gracza())
                     {
                         Vector3 oddanie = this.transform.position - player.transform.position;
@@ -262,7 +261,9 @@ public class Enemy2 : MonoBehaviour {
                             guide.transform.position = player.transform.position + new Vector3(random.x, random.y, 0) * random_multiplayer;
                         }
                         else
+                        {
                             guide.transform.position = player.transform.position;
+                        }
                         obroc_do_playera();
                         atak_wrecz();
                         anim.SetBool("isWalking", true);
@@ -272,7 +273,7 @@ public class Enemy2 : MonoBehaviour {
                     {
 
                         guide.transform.position = last_seen_player;
-                        Debug.Log(last_seen_player.ToString());
+//                        Debug.Log(last_seen_player.ToString());
                         if (this.transform.position == last_seen_player)
                         {
                             last_seen_player = spawn;
@@ -280,6 +281,7 @@ public class Enemy2 : MonoBehaviour {
                         }
                         anim.SetBool("isWalking", false);
                     }
+
                 }
                 else
                 {
@@ -441,11 +443,15 @@ public class Enemy2 : MonoBehaviour {
 
     void atak_wrecz()
     {
-        if (in_range_of_punch_attack && Time.time - time_tracker_punch > time_of_attack_punch)
-        { 
+        if (in_range_of_punch_attack && Time.time - time_tracker_punch > time_beetwen_punch_attack)
+        {
+            Vector3 pizda = player.transform.position - this.transform.position;
 
-            player.GetComponent<Hero>().health--;
-            time_tracker_punch = Time.time;
+                player.GetComponent<Hero>().health -= 5;
+                time_tracker_punch = Time.time;
+          
+            Debug.Log(pizda.magnitude);
+
         }
        
 
