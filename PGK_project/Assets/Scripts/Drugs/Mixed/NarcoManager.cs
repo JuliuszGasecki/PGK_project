@@ -158,6 +158,10 @@ public class NarcoManager : MonoBehaviour {
         float stop = 1f;
         if (image.sprite == cocHer)
             stop = 2f;
+        if(Time.timeScale < 1.0f)
+        {
+            stop = 0.3f;
+        }
         if (Time.time - time > stop)
             image.enabled = false;
     }
