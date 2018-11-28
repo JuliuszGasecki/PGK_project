@@ -52,7 +52,6 @@ public class Inventory : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    PeacefulMode();
         UseWeapon();
 	    if (IsSecondWeapon())
 	    {
@@ -164,14 +163,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void PeacefulMode()
-    {
-        Scene m_Scene = SceneManager.GetActiveScene();
-        if (m_Scene.name == "Home")
-        {
-            inventory.Clear();
-        }
-    }
     private void RemoveFromInventory()
     {
         if (Input.GetKeyDown(KeyCode.G) && inventory.Any())

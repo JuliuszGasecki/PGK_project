@@ -41,19 +41,18 @@ public class SPAS : MonoBehaviour, IShootable
     void Awake()
     {
         firePoint = transform.Find("FirePoint2");
-        if (firePoint == null)
-        {
-            Debug.LogError("No FirePoint2!");
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        AutoReloading();
-        //Reload();
-        UseWeapon();
-        UpdateAmmo();
+        if (firePoint != null)
+        {
+            AutoReloading();
+            //Reload();
+            UseWeapon();
+            UpdateAmmo();
+        }
     }
 
     /*public void Reload()
