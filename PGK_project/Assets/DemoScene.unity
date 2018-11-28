@@ -851,6 +851,11 @@ Prefab:
       propertyPath: avoid_bullets_time
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: life
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
   m_IsPrefabAsset: 0
@@ -4564,6 +4569,11 @@ Prefab:
       propertyPath: m_Name
       value: SebaShoot2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: life
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
   m_IsPrefabAsset: 0
@@ -5739,6 +5749,11 @@ Prefab:
     - target: {fileID: 4693323431390946, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 153.49901
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: life
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -8441,7 +8456,7 @@ Prefab:
     - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
         type: 2}
       propertyPath: life
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -14574,7 +14589,7 @@ Prefab:
     - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
         type: 2}
       propertyPath: life
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -16646,6 +16661,11 @@ Prefab:
     - target: {fileID: 1474930441896188, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
       propertyPath: m_Name
       value: SebaShoot2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: life
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
