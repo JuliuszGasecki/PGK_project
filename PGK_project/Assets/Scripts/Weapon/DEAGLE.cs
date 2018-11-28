@@ -24,14 +24,17 @@ public class DEAGLE : MonoBehaviour, IShootable
     public bool CanUse { get; set; }
     public string Name { get; set; }
     private Animator anim;
+    private Vector2 direction;
+    private Vector3 mousePosition;
+
 
     void Start()
     {
         anim = GameObject.Find("Hero").GetComponent<Animator>();
         ID = 0;
         damage = 10;
-        fireRate = 0.7f;
-        speed = 20f;
+        fireRate = 0.6f;
+        speed = 25f;
         magazineCapacity = 7;
         ammo = this.gameObject.GetComponent<Inventory>().deagleAmmo; 
         ammoInMagazine = magazineCapacity;
@@ -55,32 +58,15 @@ public class DEAGLE : MonoBehaviour, IShootable
         UpdateAmmo();
     }
 
-   /* public void Reload()
+    void Direction()
     {
-        if (Input.GetKeyDown(KeyCode.R) &&  CanUse)
-        {          
-            if (ammo > 0 && ammoInMagazine != magazineCapacity)
-            {
-                _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
-                anim.SetBool("loading", true);
-                var difference = magazineCapacity - ammoInMagazine;
-                if (difference > ammo)
-                {
-                    ammoInMagazine += ammo;
-                    this.gameObject.GetComponent<Inventory>().deagleAmmo = 0;
-                }
-                else
-                {
-                    ammoInMagazine += difference;
-                    this.gameObject.GetComponent<Inventory>().deagleAmmo -= difference;
-                }
-            }
-        }
-        if (Input.GetKeyUp(KeyCode.R) && CanUse)
-        {
-            anim.SetBool("loading", false);
-        }
-    }*/
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        direction = new Vector2(
+            mousePosition.x - transform.position.x,
+            mousePosition.y - transform.position.y);
+        direction.Normalize();
+    }
     public void AutoReloading()
     {
         if ((ammoInMagazine == 0 || Input.GetKeyDown(KeyCode.R) ) && CanUse && ammo > 0 && ammoInMagazine != magazineCapacity)
@@ -106,10 +92,20 @@ public class DEAGLE : MonoBehaviour, IShootable
         {
             if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
-                Instantiate(GunShot, this.transform.position, this.transform.rotation);
-                Instantiate(Shells,
-                    new Vector3(firePoint.position.x, firePoint.position.y - 0.3f, firePoint.position.z),
-                    this.transform.rotation * Quaternion.Euler(0, 90, 0));
+                Direction();
+                
+                if (direction.y < 0)
+                {
+                    Instantiate(Shells,
+                        new Vector3(firePoint.position.x, firePoint.position.y + 0.30f, firePoint.position.z),
+                        this.transform.rotation * Quaternion.Euler(0, 90, 0));
+                }
+                else
+                {
+                    Instantiate(Shells,
+                        new Vector3(firePoint.position.x, firePoint.position.y - 0.30f, firePoint.position.z),
+                        this.transform.rotation * Quaternion.Euler(0, 90, 0));
+                }
                 Shoot();
                 timeUntilFire = Time.time + fireRate;
             }

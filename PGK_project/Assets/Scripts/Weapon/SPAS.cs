@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SPAS : MonoBehaviour, IShootable
 {
-
     // Use this for initialization
     private float timeUntilFire = 0;
     Transform firePoint;
@@ -23,6 +22,8 @@ public class SPAS : MonoBehaviour, IShootable
 
     public string Name { get; set; }
     private Animator anim;
+    private Vector2 direction;
+    private Vector3 mousePosition;
 
     void Start()
     {
@@ -39,12 +40,13 @@ public class SPAS : MonoBehaviour, IShootable
 
     void Awake()
     {
-        firePoint = transform.Find("FirePoint");
+        firePoint = transform.Find("FirePoint2");
         if (firePoint == null)
         {
-            Debug.LogError("No FirePoint!");
+            Debug.LogError("No FirePoint2!");
         }
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -80,7 +82,8 @@ public class SPAS : MonoBehaviour, IShootable
 
     public void AutoReloading()
     {
-        if ((ammoInMagazine == 0 || Input.GetKeyDown(KeyCode.R)) && CanUse && ammo > 0 && ammoInMagazine != magazineCapacity)
+        if ((ammoInMagazine == 0 || Input.GetKeyDown(KeyCode.R)) && CanUse && ammo > 0 &&
+            ammoInMagazine != magazineCapacity)
         {
             Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
             var difference = magazineCapacity - ammoInMagazine;
@@ -97,13 +100,40 @@ public class SPAS : MonoBehaviour, IShootable
         }
     }
 
+
+    void Direction()
+    {
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        direction = new Vector2(
+            mousePosition.x - transform.position.x,
+            mousePosition.y - transform.position.y);
+        direction.Normalize();
+    }
+
     public void UseWeapon()
     {
         if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire && CanUse)
         {
             if (ammoInMagazine > 0)
             {
+                Direction();
                 Instantiate(GunShot, this.transform.position, this.transform.rotation);
+                if (direction.y < 0)
+                {
+                    Instantiate(Shells,
+                        new Vector3(firePoint.position.x, firePoint.position.y + 0.45f,
+                            firePoint.position.z),
+                        this.transform.rotation * Quaternion.Euler(0, 90, 0));
+                }
+                else
+                {
+                    Instantiate(Shells,
+                        new Vector3(firePoint.position.x, firePoint.position.y - 0.45f,
+                            firePoint.position.z),
+                        this.transform.rotation * Quaternion.Euler(0, 90, 0));
+                }
+
                 Shoot();
                 timeUntilFire = Time.time + fireRate;
             }
@@ -116,20 +146,40 @@ public class SPAS : MonoBehaviour, IShootable
 
     public void Shoot()
     {
-        GameObject bullet1 = Instantiate(bullet, new Vector3(firePoint.position.x - 0.1f, firePoint.position.y + 0.15f, firePoint.position.z), firePoint.rotation);
+        GameObject bullet1 = Instantiate(bullet,
+            new Vector3(firePoint.position.x, firePoint.position.y, firePoint.position.z), firePoint.rotation);
         SetDamageBullet(bullet1);
         SetSpeedBullet(bullet1);
-        GameObject bullet2 = Instantiate(bullet, new Vector3(firePoint.position.x - 0.25f, firePoint.position.y + 0.15f, firePoint.position.z), firePoint.rotation * Quaternion.Euler(0,0,25));
-        SetDamageBullet(bullet2);
-        SetSpeedBullet(bullet2);
-        GameObject bullet3 = Instantiate(bullet, new Vector3(firePoint.position.x, firePoint.position.y + 0.15f, firePoint.position.z), firePoint.rotation * Quaternion.Euler(0, 0, -25));
-        SetDamageBullet(bullet3);
-        SetSpeedBullet(bullet3);
-        Instantiate(Shells,
-            new Vector3(firePoint.position.x, firePoint.position.y - 0.3f, firePoint.position.z),
-            this.transform.rotation * Quaternion.Euler(0, 90, 0));
-        ammoInMagazine -=3;
+        if (direction.y < 0)
+        {
+            GameObject bullet2 = Instantiate(bullet,
+                new Vector3(firePoint.position.x - 0.15f, firePoint.position.y, firePoint.position.z),
+                firePoint.rotation * Quaternion.Euler(0, 0, -7));
+            SetDamageBullet(bullet2);
+            SetSpeedBullet(bullet2);
+            GameObject bullet3 = Instantiate(bullet,
+                new Vector3(firePoint.position.x + 0.15f, firePoint.position.y, firePoint.position.z),
+                firePoint.rotation * Quaternion.Euler(0, 0, 7));
+            SetDamageBullet(bullet3);
+            SetSpeedBullet(bullet3);
+        }
+        else
+        {
+            GameObject bullet2 = Instantiate(bullet,
+                new Vector3(firePoint.position.x + 0.15f, firePoint.position.y, firePoint.position.z),
+                firePoint.rotation * Quaternion.Euler(0, 0, -7));
+            SetDamageBullet(bullet2);
+            SetSpeedBullet(bullet2);
+            GameObject bullet3 = Instantiate(bullet,
+                new Vector3(firePoint.position.x - 0.15f, firePoint.position.y, firePoint.position.z),
+                firePoint.rotation * Quaternion.Euler(0, 0, 7));
+            SetDamageBullet(bullet3);
+            SetSpeedBullet(bullet3);
+        }
+
+        ammoInMagazine -= 3;
     }
+
     public void SetDamageBullet(GameObject bullet)
     {
         bullet.GetComponent<Bullet>().bulletDamage = damage;

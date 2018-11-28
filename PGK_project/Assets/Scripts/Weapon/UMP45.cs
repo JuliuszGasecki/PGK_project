@@ -22,6 +22,8 @@ public class UMP45 : MonoBehaviour, IShootable {
     public int ammoInMagazine { get; set; }
     public bool CanUse { get; set; }
     private Animator anim;
+    private Vector2 direction;
+    private Vector3 mousePosition;
 
     public string Name { get; set; }
 
@@ -31,7 +33,7 @@ public class UMP45 : MonoBehaviour, IShootable {
         ID = 2;
         damage = 3;
         fireRate = 0.1f;
-        speed = 20f;
+        speed = 25f;
         magazineCapacity = 30;
         ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
         ammoInMagazine = magazineCapacity;
@@ -40,10 +42,10 @@ public class UMP45 : MonoBehaviour, IShootable {
 
     void Awake()
     {
-        firePoint = transform.Find("FirePoint");
+        firePoint = transform.Find("FirePoint2");
         if (firePoint == null)
         {
-            Debug.LogError("No FirePoint!");
+            Debug.LogError("No FirePoint2!");
         }
     }
 	// Update is called once per frame
@@ -77,35 +79,15 @@ public class UMP45 : MonoBehaviour, IShootable {
         }
     }
 
-    /*public void Reload()
+    void Direction()
     {
-        int difference;
-        if (Input.GetKeyDown(KeyCode.R) && CanUse)      
-        {
-            anim.SetBool("loading", true);
-            if (ammo > 0 && ammoInMagazine != magazineCapacity)
-            {
-                //anim.SetBool("loading", true);
-                _reloadSoundCopy = Instantiate(ReloadSound, this.transform.position, this.transform.rotation);
-                difference = magazineCapacity - ammoInMagazine;
-                if (difference > ammo)
-                {
-                    ammoInMagazine += ammo;
-                    this.gameObject.GetComponent<Inventory>().rifleAmmo = 0;
-                }
-                else
-                {
-                    ammoInMagazine += difference;
-                    this.gameObject.GetComponent<Inventory>().rifleAmmo -= difference;
-                }
-            }
-        }
-        if (Input.GetKeyUp(KeyCode.R) && CanUse)
-        {
-            anim.SetBool("loading", false);
-        }
-    }*/
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+        direction = new Vector2(
+            mousePosition.x - transform.position.x,
+            mousePosition.y - transform.position.y);
+        direction.Normalize();
+    }
 
     public void UseWeapon()
     {
@@ -113,10 +95,21 @@ public class UMP45 : MonoBehaviour, IShootable {
         {
             if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
+                Direction();
                 Instantiate(GunShot, this.transform.position, this.transform.rotation);
-                Instantiate(Shells,
-                    new Vector3(firePoint.position.x, firePoint.position.y - 0.3f, firePoint.position.z),
-                    this.transform.rotation *Quaternion.Euler(0, 90, 0));
+                if (direction.y < 0)
+                {
+                    Instantiate(Shells,
+                        new Vector3(firePoint.position.x, firePoint.position.y + 0.35f, firePoint.position.z),
+                        this.transform.rotation * Quaternion.Euler(0, 90, 0));
+                }
+                else
+                {
+                    Instantiate(Shells,
+                        new Vector3(firePoint.position.x, firePoint.position.y - 0.35f, firePoint.position.z),
+                        this.transform.rotation * Quaternion.Euler(0, 90, 0));
+                }
+
                 Shoot();
                 timeUntilFire = Time.time + fireRate;
             }
@@ -129,8 +122,10 @@ public class UMP45 : MonoBehaviour, IShootable {
 
     public void Shoot()
     {
-        Instantiate(WeaponSplash, new Vector3(firePoint.position.x - 0.1f, firePoint.position.y + 0.15f, firePoint.position.z), Quaternion.identity);
-        GameObject bulletM4 = Instantiate(bullet, new Vector3(firePoint.position.x - 0.1f, firePoint.position.y + 0.15f, firePoint.position.z), firePoint.rotation);
+        GameObject _weaponSplash = Instantiate(WeaponSplash, firePoint.position, Quaternion.identity);
+        _weaponSplash.transform.parent = GameObject.Find("Hero").transform;
+        _weaponSplash.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        GameObject bulletM4 = Instantiate(bullet, new Vector3(firePoint.position.x, firePoint.position.y, firePoint.position.z), firePoint.rotation);
         SetDamageBullet(bulletM4);
         SetSpeedBullet(bulletM4);
         ammoInMagazine--;

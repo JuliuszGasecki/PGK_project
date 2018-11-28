@@ -52,16 +52,17 @@ public class Inventory : MonoBehaviour
 	void Update ()
 	{
 	    UseWeapon();
-	    RemoveFromInventory();
 	    if (IsSecondWeapon())
 	    {
 	        SecondWeapon = inventory.ElementAt(secondWeaponPosition);
-        }
+	    }
 
 	    if (IsThirdWeapon())
 	    {
 	        ThirdWeapon = inventory.ElementAt(thirdWeaponPosition);
 	    }
+        RemoveFromInventory();
+	   
 	    //Debug.Log(deagleAmmo);
 	}
 
@@ -174,7 +175,15 @@ public class Inventory : MonoBehaviour
                 usingSlot = 0;
             }
             secondWeaponPosition--;
+            if (secondWeaponPosition < 0)
+            {
+                secondWeaponPosition = inventory.Count - 1;
+            }
             thirdWeaponPosition--;
+            if (thirdWeaponPosition < 0)
+            {
+                thirdWeaponPosition = inventory.Count - 1;
+            }
             SetWeaponActivity(usingSlot);
             _heroAnimatior.SetBool("changingWeapon", true);
             _heroAnimatior.SetInteger("weaponID", usingSlot);
