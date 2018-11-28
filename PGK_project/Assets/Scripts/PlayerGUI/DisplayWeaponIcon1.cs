@@ -19,6 +19,7 @@ public class DisplayWeaponIcon1 : MonoBehaviour {
 	    weapon = GameObject.Find("Inventory").GetComponent<Inventory>();
         if (weapon.IsSecondWeapon() && weapon.SecondWeapon != null)
 	    {
+            
 	        image.enabled = true;
 	        image.type = Image.Type.Filled;
 	        image.fillMethod = Image.FillMethod.Radial360;

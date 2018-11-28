@@ -175,15 +175,15 @@ public class Inventory : MonoBehaviour
             {
                 usingSlot = 0;
             }
-            secondWeaponPosition--;
-            if (secondWeaponPosition < 0)
+            secondWeaponPosition= usingSlot + 1;
+            if (secondWeaponPosition > inventory.Count - 1)
             {
-                secondWeaponPosition = inventory.Count - 1;
+                secondWeaponPosition = 0;
             }
-            thirdWeaponPosition--;
-            if (thirdWeaponPosition < 0)
+            thirdWeaponPosition = usingSlot + 2;
+            if (thirdWeaponPosition > inventory.Count - 1)
             {
-                thirdWeaponPosition = inventory.Count - 1;
+                thirdWeaponPosition = 0;
             }
             SetWeaponActivity(usingSlot);
             _heroAnimatior.SetBool("changingWeapon", true);
@@ -217,6 +217,16 @@ public class Inventory : MonoBehaviour
             if (inventory.Count == 1)
             {
                 SetWeaponActivity(0);
+            }
+            secondWeaponPosition = usingSlot + 1;
+            if (secondWeaponPosition > inventory.Count - 1)
+            {
+                secondWeaponPosition = 0;
+            }
+            thirdWeaponPosition = usingSlot + 2;
+            if (thirdWeaponPosition > inventory.Count - 1)
+            {
+                thirdWeaponPosition = 0;
             }
             return true;
         }
