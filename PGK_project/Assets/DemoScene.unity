@@ -14519,6 +14519,16 @@ Prefab:
       propertyPath: m_Name
       value: SebaShoot2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: sensivity_of_enemys
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: avoid_bullets_time
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
   m_IsPrefabAsset: 0
