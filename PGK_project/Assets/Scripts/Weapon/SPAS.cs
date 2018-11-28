@@ -145,37 +145,39 @@ public class SPAS : MonoBehaviour, IShootable
 
     public void Shoot()
     {
+        float x = 0.0f;
+        float y = 0.0f;
+        if (direction.y < 0)
+        {
+            x = 0.15f;
+        }
+        else
+        {
+            x = -0.15f;
+        }
+
+        if (direction.x < 0)
+        {
+            y = -0.15f;
+        }
+        else
+        {
+            y = 0.15f;
+        }
         GameObject bullet1 = Instantiate(bullet,
             new Vector3(firePoint.position.x, firePoint.position.y, firePoint.position.z), firePoint.rotation);
         SetDamageBullet(bullet1);
         SetSpeedBullet(bullet1);
-        if (direction.y < 0)
-        {
-            GameObject bullet2 = Instantiate(bullet,
-                new Vector3(firePoint.position.x - 0.15f, firePoint.position.y, firePoint.position.z),
-                firePoint.rotation * Quaternion.Euler(0, 0, -7));
-            SetDamageBullet(bullet2);
-            SetSpeedBullet(bullet2);
-            GameObject bullet3 = Instantiate(bullet,
-                new Vector3(firePoint.position.x + 0.15f, firePoint.position.y, firePoint.position.z),
-                firePoint.rotation * Quaternion.Euler(0, 0, 7));
-            SetDamageBullet(bullet3);
-            SetSpeedBullet(bullet3);
-        }
-        else
-        {
-            GameObject bullet2 = Instantiate(bullet,
-                new Vector3(firePoint.position.x + 0.15f, firePoint.position.y, firePoint.position.z),
-                firePoint.rotation * Quaternion.Euler(0, 0, -7));
-            SetDamageBullet(bullet2);
-            SetSpeedBullet(bullet2);
-            GameObject bullet3 = Instantiate(bullet,
-                new Vector3(firePoint.position.x - 0.15f, firePoint.position.y, firePoint.position.z),
-                firePoint.rotation * Quaternion.Euler(0, 0, 7));
-            SetDamageBullet(bullet3);
-            SetSpeedBullet(bullet3);
-        }
-
+        GameObject bullet2 = Instantiate(bullet,
+            new Vector3(firePoint.position.x - x, firePoint.position.y - y, firePoint.position.z),
+            firePoint.rotation * Quaternion.Euler(0, 0, -7));
+        SetDamageBullet(bullet2);
+        SetSpeedBullet(bullet2);
+        GameObject bullet3 = Instantiate(bullet,
+            new Vector3(firePoint.position.x + x, firePoint.position.y + y, firePoint.position.z),
+            firePoint.rotation * Quaternion.Euler(0, 0, 7));
+        SetDamageBullet(bullet3);
+        SetSpeedBullet(bullet3);
         ammoInMagazine -= 3;
     }
 
