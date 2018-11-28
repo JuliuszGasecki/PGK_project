@@ -14,6 +14,7 @@ public class Enemy2 : MonoBehaviour {
     public float speed;
     public float time_of_attack_punch;
     public int weapon_number;
+    public int beast_mode_barrier;
 
     //*****
 
@@ -56,6 +57,9 @@ public class Enemy2 : MonoBehaviour {
     public GameObject ganja;
     public GameObject extasy;
     public GameObject coca;
+    public GameObject lsd;
+    public GameObject mocarz;
+    public GameObject vodka;
 
     //*****
 
@@ -64,7 +68,6 @@ public class Enemy2 : MonoBehaviour {
     private AIDestinationSetter aItarget;
     private AIPath aIPath;
     private GameObject guide;
-    public GameObject publicGuide;
 
 
     //******
@@ -375,6 +378,7 @@ public class Enemy2 : MonoBehaviour {
         }
         if (collision.gameObject.tag == "Bullet")
         {
+            beastMode();
             life -= 1;
             last_seen_player = player.transform.position;
             if (life < 0)
@@ -432,13 +436,34 @@ public class Enemy2 : MonoBehaviour {
             Instantiate(coca, transform.position, transform.rotation);
             wypadl_narkotyk = true;
         }
-    }
+        if (Random.Range(0f, 6f) > 4 && wypadl_narkotyk == false)
+        {
+            Instantiate(mocarz, transform.position, transform.rotation);
+            wypadl_narkotyk = true;
+        }
+        if (Random.Range(0f, 6f) > 3 && wypadl_narkotyk == false)
+        {
+            Instantiate(vodka, transform.position, transform.rotation);
+            wypadl_narkotyk = true;
+        }
+}
 
     void strzel()
     {
-        GameObject bulletE = Instantiate(bullet, fire_point.position, fire_point.rotation);
-        bulletE.GetComponent<Bullet>().bulletDamage = 2;
-        bulletE.GetComponent<Bullet>().bulletSpeed = 20f;
+        if (bullet != null)
+        {
+            GameObject bulletE = Instantiate(bullet, fire_point.position, fire_point.rotation);
+            bulletE.GetComponent<Bullet>().bulletDamage = 2;
+            bulletE.GetComponent<Bullet>().bulletSpeed = 20f;
+        }
+    }
+    void beastMode(){
+        if(life < beast_mode_barrier)
+        {
+            this.isStatic = false;
+            this.speed *= 2;
+
+        }
     }
 
     void atak_wrecz()
@@ -453,9 +478,6 @@ public class Enemy2 : MonoBehaviour {
             Debug.Log(pizda.magnitude);
 
         }
-       
-
-
     }
 
 

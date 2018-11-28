@@ -199,6 +199,7 @@ MonoBehaviour:
   speed: 10
   time_of_attack_punch: 3
   weapon_number: 2
+  beast_mode_barrier: 0
   bullet: {fileID: 1480845407829184, guid: 690c2227dd2a1fa42b8dd03d17081a7c, type: 2}
   dead_enemy: {fileID: 21300000, guid: d27df3b9f3b88be4a9a0ce51cd7e50aa, type: 3}
   weapon: {fileID: 1890842009543662, guid: 05f082f7410651a4090bd7888ed02227, type: 2}
@@ -212,10 +213,12 @@ MonoBehaviour:
   random_multiplayer: 21
   rate_ganja: 2
   rate_extasy: 2
-  ganja: {fileID: 0}
+  ganja: {fileID: 1491364834663088, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
   extasy: {fileID: 1087529228664276, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
   coca: {fileID: 1145168873686994, guid: 908488864e60e4bdbbd0e08d60288b7f, type: 2}
-  publicGuide: {fileID: 0}
+  lsd: {fileID: 1151467287755436, guid: 392b2700754c952448fa3c9c03711b39, type: 2}
+  mocarz: {fileID: 1240035729088234, guid: c01829830c845ad4dacda7472f4d3739, type: 2}
+  vodka: {fileID: 1497568687984880, guid: 1b1b0ed7d3cbe384692c66aa6f29edeb, type: 2}
   generate_path: 0
   length_of_the_path: 0
   number_of_break_points: 0

@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 212435066415921390}
   - component: {fileID: 58944246058893154}
   - component: {fileID: 95876057045616856}
-  - component: {fileID: 114613127240654082}
-  - component: {fileID: 114032229372640444}
-  - component: {fileID: 114664788735044684}
   - component: {fileID: 114851783224810156}
+  - component: {fileID: 114664788735044684}
+  - component: {fileID: 114032229372640444}
+  - component: {fileID: 114613127240654082}
   m_Layer: 2
   m_Name: Seba2
   m_TagString: Enemy
@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1408730255097146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.403642, y: 22.727915, z: -1}
+  m_LocalPosition: {x: -1.8105209, y: 12.715617, z: -1}
   m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,7 +60,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 11
 --- !u!95 &95876057045616856
 Animator:
   serializedVersion: 3
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 6.5
+  radius: 4
   height: 0.01
   repathRate: 0.5
   canSearch: 1
@@ -109,10 +109,10 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 1
   pickNextWaypointDist: 0.1
-  endReachedDistance: 1
+  endReachedDistance: 0
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
+  whenCloseToDestination: 1
   constrainInsideGraph: 0
 --- !u!114 &114613127240654082
 MonoBehaviour:
@@ -125,34 +125,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6eb28df6325e48ac825e4fc5cd46bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 5
+  life: 3
   attack: 10
-  speed: 10
+  speed: 5
   time_of_attack_punch: 1
   weapon_number: 2
+  beast_mode_barrier: 0
   bullet: {fileID: 1480845407829184, guid: 690c2227dd2a1fa42b8dd03d17081a7c, type: 2}
   dead_enemy: {fileID: 21300000, guid: d27df3b9f3b88be4a9a0ce51cd7e50aa, type: 3}
   weapon: {fileID: 1159911324685628, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
   isStatic: 0
   time_beetwen_punch_attack: 0.5
   range_of_enemy: 30
-  shoot_time: 0
+  shoot_time: 0.2
   time_to_come_back_to_path: 2
   speed_boost_when_low_hp: 0
   speed_boost_limit: 0
-  random_multiplayer: 4
+  random_multiplayer: 0
   rate_ganja: 2
   rate_extasy: 2
-  ganja: {fileID: 0}
-  extasy: {fileID: 0}
-  coca: {fileID: 0}
-  publicGuide: {fileID: 0}
+  ganja: {fileID: 1491364834663088, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
+  extasy: {fileID: 1087529228664276, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+  coca: {fileID: 1145168873686994, guid: 908488864e60e4bdbbd0e08d60288b7f, type: 2}
+  lsd: {fileID: 1151467287755436, guid: 392b2700754c952448fa3c9c03711b39, type: 2}
+  mocarz: {fileID: 1240035729088234, guid: c01829830c845ad4dacda7472f4d3739, type: 2}
+  vodka: {fileID: 1497568687984880, guid: 1b1b0ed7d3cbe384692c66aa6f29edeb, type: 2}
   generate_path: 1
   length_of_the_path: 5
   number_of_break_points: 2
   path: []
   avoid_bullets_time: 0.1
-  sensivity_of_enemys: 3
+  sensivity_of_enemys: 0
 --- !u!114 &114664788735044684
 MonoBehaviour:
   m_ObjectHideFlags: 1

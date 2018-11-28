@@ -20,9 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4011096475930900}
   - component: {fileID: 212749787079550884}
-  - component: {fileID: 114261098086988976}
   - component: {fileID: 58488765946651008}
   - component: {fileID: 95722826185537692}
+  - component: {fileID: 114059084961580288}
+  - component: {fileID: 114901876868659348}
+  - component: {fileID: 114313506679607712}
+  - component: {fileID: 114097511179937914}
   m_Layer: 2
   m_Name: Lucek
   m_TagString: Enemy
@@ -37,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1612563018897442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3107586, y: 30.517208, z: -1}
+  m_LocalPosition: {x: -2.5240104, y: 8.402988, z: -1}
   m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +60,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 10.124999
+  m_Radius: 11
 --- !u!95 &95722826185537692
 Animator:
   serializedVersion: 3
@@ -76,7 +79,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114261098086988976
+--- !u!114 &114059084961580288
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,28 +87,115 @@ MonoBehaviour:
   m_GameObject: {fileID: 1612563018897442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1982b64bf846b4c1d9d657bc2b2b0bc2, type: 3}
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathPoints: []
-  zycie: 7
-  atak: 0
+  version: 1
+  target: {fileID: 0}
+--- !u!114 &114097511179937914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612563018897442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6eb28df6325e48ac825e4fc5cd46bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 2
+  attack: 10
   speed: 5
-  czas_ataku: 0
-  bron: 0
-  time: 0
-  bullet: {fileID: 0}
-  statyczny: 0
-  czas_ataku_wrecz: 0.1
-  zasieg: 10
-  czas_na_powrot: 0
-  rate_ganja: 0
-  rate_extasy: 0
-  ganja: {fileID: 1615165178999096, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
-  extasy: {fileID: 1358745081234772, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
-  coca: {fileID: 1748705115184964, guid: 908488864e60e4bdbbd0e08d60288b7f, type: 2}
+  time_of_attack_punch: 1
+  weapon_number: 2
+  beast_mode_barrier: 0
+  bullet: {fileID: 1480845407829184, guid: 690c2227dd2a1fa42b8dd03d17081a7c, type: 2}
   dead_enemy: {fileID: 21300000, guid: 593d795b157b77d41aa0e2d80da0cc20, type: 3}
-  weapon: {fileID: 0}
+  weapon: {fileID: 1159911324685628, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
+  isStatic: 0
+  time_beetwen_punch_attack: 0.5
+  range_of_enemy: 30
+  shoot_time: 0.2
+  time_to_come_back_to_path: 2
+  speed_boost_when_low_hp: 0
+  speed_boost_limit: 0
+  random_multiplayer: 0
+  rate_ganja: 2
+  rate_extasy: 2
+  ganja: {fileID: 1491364834663088, guid: c14844a78ee3344e08dd0576aeb7e352, type: 2}
+  extasy: {fileID: 1087529228664276, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+  coca: {fileID: 1145168873686994, guid: 908488864e60e4bdbbd0e08d60288b7f, type: 2}
+  lsd: {fileID: 1151467287755436, guid: 392b2700754c952448fa3c9c03711b39, type: 2}
+  mocarz: {fileID: 1240035729088234, guid: c01829830c845ad4dacda7472f4d3739, type: 2}
+  vodka: {fileID: 1497568687984880, guid: 1b1b0ed7d3cbe384692c66aa6f29edeb, type: 2}
+  generate_path: 1
+  length_of_the_path: 5
+  number_of_break_points: 2
+  path: []
+  avoid_bullets_time: 0.1
+  sensivity_of_enemys: 0
+--- !u!114 &114313506679607712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612563018897442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radius: 4
+  height: 0.01
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 5
+  gravity: {x: 0, y: 0, z: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  orientation: 1
+  enableRotation: 1
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: -2.5
+  rotationSpeed: 360
+  slowdownDistance: 1
+  pickNextWaypointDist: 0.1
+  endReachedDistance: 0
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 1
+  constrainInsideGraph: 0
+--- !u!114 &114901876868659348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612563018897442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
 --- !u!212 &212749787079550884
 SpriteRenderer:
   m_ObjectHideFlags: 1
