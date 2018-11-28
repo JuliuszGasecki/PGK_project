@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class Inventory : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    UseWeapon();
+        UseWeapon();
 	    if (IsSecondWeapon())
 	    {
 	        SecondWeapon = inventory.ElementAt(secondWeaponPosition);

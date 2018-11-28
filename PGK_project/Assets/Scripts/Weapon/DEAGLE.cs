@@ -44,18 +44,18 @@ public class DEAGLE : MonoBehaviour, IShootable
     void Awake()
     {
         firePoint = transform.Find("FirePoint");
-        if (firePoint == null)
-        {
-            Debug.LogError("No FirePoint!");
-        }
+
     }
     // Update is called once per frame
     void Update()
     {
-        AutoReloading();
-      //  Reload();
-        UseWeapon();
-        UpdateAmmo();
+        if (firePoint != null)
+        {
+            AutoReloading();
+            //  Reload();
+            UseWeapon();
+            UpdateAmmo();
+        }
     }
 
     void Direction()
@@ -93,7 +93,7 @@ public class DEAGLE : MonoBehaviour, IShootable
             if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
                 Direction();
-                
+                Instantiate(GunShot, this.transform.position, this.transform.rotation);
                 if (direction.y < 0)
                 {
                     Instantiate(Shells,

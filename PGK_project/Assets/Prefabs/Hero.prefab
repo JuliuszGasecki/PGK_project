@@ -77,10 +77,8 @@ GameObject:
   - component: {fileID: 58380595389322982}
   - component: {fileID: 114627219578278010}
   - component: {fileID: 114792516658807452}
-  - component: {fileID: 114860730771760608}
   - component: {fileID: 114593011644353940}
   - component: {fileID: 114056851517876558}
-  - component: {fileID: 114738429863380280}
   - component: {fileID: 95546675160957098}
   - component: {fileID: 114897969677343790}
   m_Layer: 0
@@ -234,6 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5dcbb316f20e3a4e9aeb577c2a6554c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlashEffect1: {fileID: 0}
+  FlashEffect2: {fileID: 0}
 --- !u!114 &114056851517876558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -272,6 +272,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1480845407829184, guid: 690c2227dd2a1fa42b8dd03d17081a7c, type: 2}
   GunShot: {fileID: 1927187379152786, guid: 58980f6a6c79baa43a2993fef2dafcac, type: 2}
+  WeaponSplash: {fileID: 0}
+  Shells: {fileID: 0}
+  ReloadSound: {fileID: 0}
 --- !u!114 &114487867912486546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -285,6 +288,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1480845407829184, guid: 690c2227dd2a1fa42b8dd03d17081a7c, type: 2}
   GunShot: {fileID: 1116669351342634, guid: 585175d4a6086884097a3ef5ac5d2351, type: 2}
+  WeaponSplash: {fileID: 0}
+  Shells: {fileID: 0}
+  ReloadSound: {fileID: 0}
 --- !u!114 &114593011644353940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -328,18 +334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982244a8e43f7e1489505ea0ecdad07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114738429863380280
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1947799448747012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfe0479bec558744da0e4c301b6f43b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hero: {fileID: 114627219578278010}
 --- !u!114 &114792516658807452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,27 +348,19 @@ MonoBehaviour:
   onDrugs: 0
   tookDrug: 0
   extasySlider: {fileID: 0}
-  extasyTime: 0
-  extasyFlag: 0
-  marihuanaSlider: {fileID: 0}
-  marihuanaTime: 0
-  marihuanaFlag: 0
   cocaSlider: {fileID: 0}
-  cocaTime: 0
+  marihuanaSlider: {fileID: 0}
+  heroinSlider: {fileID: 0}
+  vodkaSlider: {fileID: 0}
+  lsdSlider: {fileID: 0}
+  mocarzSlider: {fileID: 0}
+  extasyFlag: 0
+  marihuanaFlag: 0
   cocaFlag: 0
   heroineFlag: 0
   vodkaFlag: 0
---- !u!114 &114860730771760608
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1947799448747012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da083b8547542fe45a8330d1edd67fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  mocarzFlag: 0
+  lsdFlag: 0
 --- !u!114 &114870152575117114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,6 +376,7 @@ MonoBehaviour:
   GunShot: {fileID: 1264682018087934, guid: 592d66b7b201b374ba64d8fa0b5ef2e2, type: 2}
   ReloadSound: {fileID: 1446797221484728, guid: 5a0f8a271ca85ea438709bcd2e43ff61,
     type: 2}
+  Shells: {fileID: 0}
 --- !u!114 &114897969677343790
 MonoBehaviour:
   m_ObjectHideFlags: 1
