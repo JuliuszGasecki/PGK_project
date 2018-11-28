@@ -214,20 +214,30 @@ public class Inventory : MonoBehaviour
         if (Enum.IsDefined(typeof(_weaponsID), weapon.ID) && inventory.Count <= INVENTORYCAPACITY)
         {           
             inventory.Add(weapon);
+            Debug.Log(usingSlot);
             if (inventory.Count == 1)
             {
                 SetWeaponActivity(0);
             }
-            secondWeaponPosition = usingSlot + 1;
-            if (secondWeaponPosition > inventory.Count - 1)
+
+            if (inventory.Count == 2)
             {
-                secondWeaponPosition = 0;
+                secondWeaponPosition = 1;
+                if (secondWeaponPosition > inventory.Count - 1)
+                {
+                    secondWeaponPosition = 0;
+                }
             }
-            thirdWeaponPosition = usingSlot + 2;
-            if (thirdWeaponPosition > inventory.Count - 1)
+
+            if (inventory.Count == 3)
             {
-                thirdWeaponPosition = 0;
+                thirdWeaponPosition = 2;
+                if (thirdWeaponPosition > inventory.Count - 1)
+                {
+                    thirdWeaponPosition = 0;
+                }
             }
+
             return true;
         }
         else
