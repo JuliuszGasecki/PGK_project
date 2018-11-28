@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -51,7 +52,8 @@ public class Inventory : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    UseWeapon();
+	    PeacefulMode();
+        UseWeapon();
 	    if (IsSecondWeapon())
 	    {
 	        SecondWeapon = inventory.ElementAt(secondWeaponPosition);
@@ -162,6 +164,14 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    private void PeacefulMode()
+    {
+        Scene m_Scene = SceneManager.GetActiveScene();
+        if (m_Scene.name == "Home")
+        {
+            inventory.Clear();
+        }
+    }
     private void RemoveFromInventory()
     {
         if (Input.GetKeyDown(KeyCode.G) && inventory.Any())

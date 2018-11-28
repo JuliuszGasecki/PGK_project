@@ -18,8 +18,6 @@ public class LoadingScreenManager : MonoBehaviour {
         if(Time.time - time > 4)
         {
             SceneManager.LoadScene("Home");
-            Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
-            inv.GetUsingWeapon().CanUse = false;
         }
     }
 
