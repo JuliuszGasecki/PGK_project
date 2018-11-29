@@ -759,6 +759,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 95.93101
       objectReference: {fileID: 0}
+    - target: {fileID: 114097511179937914, guid: 88ac73eeaa908468c80a3c39ba1edd52,
+        type: 2}
+      propertyPath: punch_attack
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
   m_IsPrefabAsset: 0
@@ -3132,6 +3137,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -74.563
       objectReference: {fileID: 0}
+    - target: {fileID: 114097511179937914, guid: 88ac73eeaa908468c80a3c39ba1edd52,
+        type: 2}
+      propertyPath: punch_attack
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
   m_IsPrefabAsset: 0
@@ -3252,6 +3262,11 @@ Prefab:
     - target: {fileID: 1408730255097146, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
       propertyPath: m_Name
       value: Seba2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114613127240654082, guid: 8c89c7c1a716e40058ddb1ac037351ff,
+        type: 2}
+      propertyPath: punch_attack
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
@@ -4029,6 +4044,11 @@ Prefab:
         type: 2}
       propertyPath: shoot_time
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: life
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -5750,7 +5770,7 @@ Prefab:
     - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
         type: 2}
       propertyPath: life
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
         type: 2}
@@ -6146,7 +6166,7 @@ Prefab:
     - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
         type: 2}
       propertyPath: life
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -6721,6 +6741,11 @@ Prefab:
       propertyPath: m_Name
       value: Seba2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114613127240654082, guid: 8c89c7c1a716e40058ddb1ac037351ff,
+        type: 2}
+      propertyPath: punch_attack
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
   m_IsPrefabAsset: 0
@@ -7132,6 +7157,11 @@ Prefab:
       propertyPath: m_Name
       value: Seba2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114613127240654082, guid: 8c89c7c1a716e40058ddb1ac037351ff,
+        type: 2}
+      propertyPath: punch_attack
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
   m_IsPrefabAsset: 0
@@ -7228,6 +7258,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
+    - target: {fileID: 114613127240654082, guid: 8c89c7c1a716e40058ddb1ac037351ff,
+        type: 2}
+      propertyPath: punch_attack
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
   m_IsPrefabAsset: 0
@@ -7285,7 +7320,7 @@ Prefab:
     - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
         type: 2}
       propertyPath: life
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
         type: 2}
@@ -12404,6 +12439,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -87.508
       objectReference: {fileID: 0}
+    - target: {fileID: 114613127240654082, guid: 8c89c7c1a716e40058ddb1ac037351ff,
+        type: 2}
+      propertyPath: punch_attack
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
   m_IsPrefabAsset: 0
@@ -14170,6 +14210,11 @@ Prefab:
     - target: {fileID: 1408730255097146, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
       propertyPath: m_Name
       value: Seba2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114613127240654082, guid: 8c89c7c1a716e40058ddb1ac037351ff,
+        type: 2}
+      propertyPath: punch_attack
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
@@ -17573,6 +17618,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -149.688
       objectReference: {fileID: 0}
+    - target: {fileID: 114097511179937914, guid: 88ac73eeaa908468c80a3c39ba1edd52,
+        type: 2}
+      propertyPath: punch_attack
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
   m_IsPrefabAsset: 0
@@ -19558,6 +19608,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 93.26601
       objectReference: {fileID: 0}
+    - target: {fileID: 114613127240654082, guid: 8c89c7c1a716e40058ddb1ac037351ff,
+        type: 2}
+      propertyPath: punch_attack
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
   m_IsPrefabAsset: 0
@@ -20015,6 +20070,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 65.631004
       objectReference: {fileID: 0}
+    - target: {fileID: 114097511179937914, guid: 88ac73eeaa908468c80a3c39ba1edd52,
+        type: 2}
+      propertyPath: punch_attack
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
   m_IsPrefabAsset: 0
@@ -20272,6 +20332,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -192.344
       objectReference: {fileID: 0}
+    - target: {fileID: 114097511179937914, guid: 88ac73eeaa908468c80a3c39ba1edd52,
+        type: 2}
+      propertyPath: punch_attack
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
   m_IsPrefabAsset: 0
@@ -20326,7 +20391,7 @@ Prefab:
     - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
         type: 2}
       propertyPath: life
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
         type: 2}

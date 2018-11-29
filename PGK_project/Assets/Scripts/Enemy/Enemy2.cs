@@ -11,6 +11,7 @@ public class Enemy2 : MonoBehaviour {
     private bool alive;
     public int life;
     public int attack;
+    public int punch_attack;
     public float speed;
     public float time_of_attack_punch;
     public int weapon_number;
@@ -472,7 +473,7 @@ public class Enemy2 : MonoBehaviour {
         {
             Vector3 pizda = player.transform.position - this.transform.position;
 
-                player.GetComponent<Hero>().health -= 5;
+                player.GetComponent<Hero>().health -= punch_attack;
                 time_tracker_punch = Time.time;
           
             Debug.Log(pizda.magnitude);
