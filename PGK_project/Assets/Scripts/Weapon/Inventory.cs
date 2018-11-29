@@ -41,13 +41,14 @@ public class Inventory : MonoBehaviour
 	    shotgunAmmo = 15;
 	    deagleAmmo = 10;
         inventory = new List<IWeapon>();
-	    AddToList(this.gameObject.GetComponent<UMP45>());
+	    AddToList(this.gameObject.GetComponent<DEAGLE>());
         inventory.ElementAt(FIRSTELEMENT).CanUse = true;
         usingSlot = 0;
 	    secondWeaponPosition = usingSlot + 1;
 	    thirdWeaponPosition = usingSlot + 2;
-
-	}
+	    _heroAnimatior.SetBool("changingWeapon", true);
+	    _heroAnimatior.SetInteger("weaponID", usingSlot);
+    }
 	
 	// Update is called once per frame
 	void Update ()
