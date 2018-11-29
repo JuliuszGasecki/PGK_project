@@ -27,6 +27,7 @@ public class DeathScene : MonoBehaviour
             anim.enabled = false;
             spriteR.sprite = Resources.Load<Sprite>(deadHero);
             transform.localScale = new Vector3(0.22f, 0.22f, 0.22f);
+            GameObject.Find("Inventory").GetComponent<Inventory>().GetUsingWeapon().CanUse = false;
             Pause();
         }
     }
@@ -36,6 +37,6 @@ public class DeathScene : MonoBehaviour
         temp = Time.fixedDeltaTime;
         deathScene.SetActive(true);
         Time.timeScale = 0f;
-        Time.fixedDeltaTime = 0f;
+       // Time.fixedDeltaTime = 0f;
     }
 }

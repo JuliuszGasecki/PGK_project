@@ -16,6 +16,8 @@ public class ReturnButton : MonoBehaviour {
         DrugsStat.drugsValue = 0;
         KilledStat.killedValue = 0;
         ScoreCounter.scoreValue = 0;        //na deathscene widac pkt, po wcisnieciu return zerujemy
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+       // Time.fixedDeltaTime = GameObject.Find("Hero").GetComponent<DeathScene>().temp;
     }
 }
