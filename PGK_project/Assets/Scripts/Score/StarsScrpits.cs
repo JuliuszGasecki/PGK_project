@@ -18,7 +18,7 @@ public class StarsScrpits : MonoBehaviour {
         calcuulate();
         if(totalPoints < 5)
         {
-            nextLevel.SetActive(false);
+            //nextLevel.SetActive(false);
         }
         else if(totalPoints >=5 && totalPoints <10)
         {

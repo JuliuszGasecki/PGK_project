@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ReturnButton : MonoBehaviour {
     public void Return()
     {
+        Time.timeScale = 1.0f;
         DrugsStat.drugsAlcoValue = 0;
         DrugsStat.drugsCocaValue = 0;
         DrugsStat.drugsExtasyValue = 0;
