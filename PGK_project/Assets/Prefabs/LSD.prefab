@@ -111,7 +111,7 @@ MonoBehaviour:
   nazwa: lsd
   drugEffect: {fileID: 1685568087233246, guid: bcb4f1368bc24f94e836485609f4d231, type: 2}
   speedBoost: 0
-  lifeBoost: -5
+  lifeBoost: 3
   attackBoost: 0
   lifetime: 10
   withdroval_points: 10
