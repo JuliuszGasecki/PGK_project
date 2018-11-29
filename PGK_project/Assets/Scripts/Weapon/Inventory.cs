@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour
 	    shotgunAmmo = 15;
 	    deagleAmmo = 10;
         inventory = new List<IWeapon>();
-	    AddToList(this.gameObject.GetComponent<DEAGLE>());
+	    AddToList(this.gameObject.GetComponent<UMP45>());
         inventory.ElementAt(FIRSTELEMENT).CanUse = true;
         usingSlot = 0;
 	    secondWeaponPosition = usingSlot + 1;
