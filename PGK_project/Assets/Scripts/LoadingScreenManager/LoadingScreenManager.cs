@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class LoadingScreenManager : MonoBehaviour {
 
     private float time;
+    public static string nameScene = "Home";
 
     void Start()
     {
@@ -17,7 +18,8 @@ public class LoadingScreenManager : MonoBehaviour {
     {
         if(Time.time - time > 4)
         {
-            SceneManager.LoadScene("Home");
+            SceneManager.LoadScene(nameScene);
+           // SceneManager.LoadScene("home");
         }
     }
 
