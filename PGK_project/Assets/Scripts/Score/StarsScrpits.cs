@@ -9,6 +9,7 @@ public class StarsScrpits : MonoBehaviour {
     public GameObject star2;
     public GameObject star3;
     public GameObject nextLevel;
+    public GameObject tryAgainText;
     void Start () {
 		
 	}
@@ -18,7 +19,8 @@ public class StarsScrpits : MonoBehaviour {
         calcuulate();
         if(totalPoints < 5)
         {
-            //nextLevel.SetActive(false);
+            nextLevel.SetActive(false);
+            tryAgainText.SetActive(true);
         }
         else if(totalPoints >=5 && totalPoints <10)
         {

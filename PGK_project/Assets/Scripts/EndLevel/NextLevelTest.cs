@@ -7,8 +7,8 @@ public class NextLevelTest : MonoBehaviour {
 
     public void nextLevelButton(string name)
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(name);
+        Time.timeScale = 1f;
     }
 
 }
