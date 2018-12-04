@@ -13082,6 +13082,10 @@ MonoBehaviour:
   halfDead: {fileID: 385787375}
   lordOftheTime: {fileID: 1638361280}
   noAlcohol: {fileID: 487389620}
+  flag1: 0
+  flag2: 0
+  flag3: 0
+  flag4: 0
 --- !u!1 &1391141644
 GameObject:
   m_ObjectHideFlags: 0
@@ -17827,7 +17831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35.67, y: 35.13}
+  m_AnchoredPosition: {x: -35.46, y: 35.44}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.97573745, y: 0.07412128}
 --- !u!1 &1809595588

@@ -16,7 +16,8 @@ public class StarsScrpits : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        calcuulate();
+        Debug.Log("PUNKTYYYYYYYYYYYY:              " + totalPoints);
+        totalPoints = DrugsStat.calculate();
         if(totalPoints < 5)
         {
             nextLevel.SetActive(false);
@@ -25,30 +26,26 @@ public class StarsScrpits : MonoBehaviour {
         else if(totalPoints >=5 && totalPoints <10)
         {
             star1.SetActive(true);
+            nextLevel.SetActive(true);
+            tryAgainText.SetActive(false);
+
         }
         else if(totalPoints >= 10 && totalPoints < 15)
         {
             star1.SetActive(true);
             star2.SetActive(true);
+            nextLevel.SetActive(true);
+            tryAgainText.SetActive(false);
         }
         else if (totalPoints >= 15)
         {
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(true);
+            nextLevel.SetActive(true);
+            tryAgainText.SetActive(false);
         }
 
 
-    }
-
-    public void calcuulate()
-    {
-        totalPoints = DrugsStat.drugsAlcoValue
-            + DrugsStat.drugsCocaValue
-            + DrugsStat.drugsExtasyValue
-            + (DrugsStat.drugsHeraValue * 3.2f)
-            + (DrugsStat.drugsMariValue * 1.5f)
-            + DrugsStat.drugsValue
-            + (KilledStat.killedValue * 0.1f);
     }
 }

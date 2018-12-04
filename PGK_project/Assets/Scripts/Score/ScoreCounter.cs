@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour {
 
-    public static int scoreValue = 0;
+    public static float scoreValue = 0;
     Text score;
 	void Start () {
         score = GetComponent<Text>();
@@ -13,6 +13,7 @@ public class ScoreCounter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        scoreValue = DrugsStat.calculate();
         score.text = "Score: " + scoreValue;
 	}
 }
