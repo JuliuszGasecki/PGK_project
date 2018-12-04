@@ -6,12 +6,14 @@ public class CreateDialogue : MonoBehaviour {
     public GameObject Dialogue;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (collision.tag == "Player")
+        if (Dialogue != null)
         {
-            Dialogue.SetActive(true);
-            gameObject.GetComponent<CreateDialogue>().enabled = false;
-            
+            if (collision.tag == "Player")
+            {
+                Dialogue.SetActive(true);
+                gameObject.GetComponent<CreateDialogue>().enabled = false;
+
+            }
         }
     }
 }
