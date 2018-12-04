@@ -1,25 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StarsScrpits : MonoBehaviour {
-    public Timer timer;
     public float totalPoints = 0;
     public GameObject star1;
     public GameObject star2;
     public GameObject star3;
     public GameObject nextLevel;
     public GameObject tryAgainText;
+    public Text scoreForPanel;
     void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         Debug.Log("PUNKTYYYYYYYYYYYY:              " + totalPoints);
         totalPoints = DrugsStat.calculate();
-        if(totalPoints < 5)
-        {
+        totalPoints = totalPoints * DrugsStat.wspolczynnikRundy / Timer.time;           //wspolczynnik rundy
+        scoreForPanel.text = "        " + (int)totalPoints;
+        if (totalPoints < 5)
+        {  
             nextLevel.SetActive(false);
             tryAgainText.SetActive(true);
         }
@@ -28,7 +33,6 @@ public class StarsScrpits : MonoBehaviour {
             star1.SetActive(true);
             nextLevel.SetActive(true);
             tryAgainText.SetActive(false);
-
         }
         else if(totalPoints >= 10 && totalPoints < 15)
         {
@@ -45,7 +49,5 @@ public class StarsScrpits : MonoBehaviour {
             nextLevel.SetActive(true);
             tryAgainText.SetActive(false);
         }
-
-
     }
 }

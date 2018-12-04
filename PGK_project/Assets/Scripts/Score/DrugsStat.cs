@@ -20,6 +20,7 @@ public class DrugsStat : MonoBehaviour {
     public static int drugsComboNoAlcohol = 0;
 
     public static int level = 0;
+    public static int wspolczynnikRundy = 40;
 
     public static float totalPoints = 0;
     Text drugs; 
@@ -55,17 +56,19 @@ public class DrugsStat : MonoBehaviour {
     {
         killed = KilledStat.killedValue;
         totalPoints = drugsAlcoValue
-         + (float)Math.Pow(1.3, drugsCocaValue)-1
+         + (float)Math.Pow(1.3, drugsCocaValue) - 1
         + drugsExtasyValue
         + (drugsHeraValue * 3.2f)
         + (drugsMariValue * 1.5f)
         + drugsValue
         + (killed * 2.7f)
-        + drugsComboFlash
+         + (float)Math.Pow(2.3, drugsComboFlash) - 1
         + (drugsCombowhatDoesntKillYou * 3.4f)
         - (drugsComboHalfDead * 2.0f)
-        + (drugsComboLordOftheTime * 5.1f)
-        + (drugsComboNoAlcohol);
+        + (drugsComboLordOftheTime * 8.7f)
+        + (drugsComboNoAlcohol * 2.0f);
+
+        Math.Round(totalPoints, 2);
 
         return totalPoints;
     }

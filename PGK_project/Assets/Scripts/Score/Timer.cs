@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour {
     public float t;
     public string minutes;
     public string seconds;
+    public static float time;
 
 
     void Start()
@@ -20,11 +21,12 @@ public class Timer : MonoBehaviour {
 
     void Update()
     {
+        time = Time.time - startTime;
         t = Time.time - startTime;
 
         minutes = ((int)t / 60).ToString();
         seconds = (t % 60).ToString("f2");
-
+        Debug.Log("CZASSSSSSSSSS:               " + time);
         timer.text = minutes + ":" + seconds;
         timerStat.text = minutes + ":" + seconds;
     }

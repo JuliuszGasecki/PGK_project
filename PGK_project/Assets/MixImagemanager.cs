@@ -11,7 +11,7 @@ public class MixImagemanager : MonoBehaviour {
     public GameObject halfDead;
     public GameObject lordOftheTime;
     public GameObject noAlcohol;
-    public bool flag1 = false, flag2 = false, flag3 = false, flag4 = false;
+    public bool flag1 = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false;
     // Use this for initialization
     void Start () {
         dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
@@ -82,11 +82,16 @@ public class MixImagemanager : MonoBehaviour {
         if (dt.marihuanaFlag && dt.cocaFlag)
         {
             lordOftheTime.SetActive(true);
-            DrugsStat.drugsComboLordOftheTime++;
+            if (!flag5)
+            {
+                flag5 = true;
+                DrugsStat.drugsComboLordOftheTime++;
+            }
         }
         else
         {
             lordOftheTime.SetActive(false);
+            flag5 = false;
         }
     }
 }
