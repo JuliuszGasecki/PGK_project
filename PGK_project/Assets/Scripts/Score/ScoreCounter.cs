@@ -7,7 +7,6 @@ public class ScoreCounter : MonoBehaviour {
 
     public static float scoreValue = 0;
     Text score;
-    Text scoreForPanel;
     void Start () {
         score = GetComponent<Text>();
 	}
@@ -16,7 +15,6 @@ public class ScoreCounter : MonoBehaviour {
 	void Update () {
         scoreValue = DrugsStat.calculate();
         score.text = "Score: " + scoreValue;
-        scoreForPanel.text = ""+scoreValue;
 
     }
 }
