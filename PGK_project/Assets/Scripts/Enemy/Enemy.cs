@@ -108,17 +108,13 @@ public class Enemy : MonoBehaviour
                 {
                     anim.SetBool("isWalking", false);
                     if (time_tracker_powrotu + czas_na_powrot < Time.time)
-                {
+                    {
                     if(punkty_powrotne.Count > 1)
                          wracaj_po_punkcie();
                     else
                         chodzenie_po_sciezce();
+                    }
                 }
-            }
-
-
-            
-
         }
     }
 

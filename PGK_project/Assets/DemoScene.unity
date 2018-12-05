@@ -3291,11 +3291,6 @@ Prefab:
       propertyPath: m_Name
       value: Seba2 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114613127240654082, guid: 8c89c7c1a716e40058ddb1ac037351ff,
-        type: 2}
-      propertyPath: punch_attack
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
   m_IsPrefabAsset: 0
@@ -7173,11 +7168,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: 114613127240654082, guid: 8c89c7c1a716e40058ddb1ac037351ff,
-        type: 2}
-      propertyPath: punch_attack
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c89c7c1a716e40058ddb1ac037351ff, type: 2}
   m_IsPrefabAsset: 0
@@ -8811,16 +8801,6 @@ Prefab:
     - target: {fileID: 1474930441896188, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
       propertyPath: m_Name
       value: SebaShoot2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
-        type: 2}
-      propertyPath: life
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
-        type: 2}
-      propertyPath: shoot_time
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -10501,6 +10481,10 @@ Prefab:
     - target: {fileID: 4754494108994420, guid: 04e4c79ba61fa442d9f8d905a8a63e66, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -88.837006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073517977491140, guid: 04e4c79ba61fa442d9f8d905a8a63e66, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04e4c79ba61fa442d9f8d905a8a63e66, type: 2}
@@ -13806,6 +13790,10 @@ Prefab:
     - target: {fileID: 1073517977491140, guid: 04e4c79ba61fa442d9f8d905a8a63e66, type: 2}
       propertyPath: m_Name
       value: Seba (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073517977491140, guid: 04e4c79ba61fa442d9f8d905a8a63e66, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04e4c79ba61fa442d9f8d905a8a63e66, type: 2}
@@ -18265,15 +18253,6 @@ Prefab:
     - target: {fileID: 1612563018897442, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
       propertyPath: m_Name
       value: Lucek (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4011096475930900, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -149.688
-      objectReference: {fileID: 0}
-    - target: {fileID: 114097511179937914, guid: 88ac73eeaa908468c80a3c39ba1edd52,
-        type: 2}
-      propertyPath: punch_attack
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ac73eeaa908468c80a3c39ba1edd52, type: 2}

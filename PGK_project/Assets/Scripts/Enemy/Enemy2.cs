@@ -86,6 +86,7 @@ public class Enemy2 : MonoBehaviour {
     private Vector3 avoid_bullets_movement;
     public float sensivity_of_enemys;
 
+    DrugsTimer hero;
 
     int give_the_closest_point_on_the_path(){
         int index = 0;
@@ -208,6 +209,7 @@ public class Enemy2 : MonoBehaviour {
 
     void Start()
     {
+        hero = GameObject.Find("Hero").GetComponent<DrugsTimer>();
         indexOfCurrentPath = 0;
         Random random = new Random();
         if (generate_the_path(200))
@@ -271,7 +273,7 @@ public class Enemy2 : MonoBehaviour {
                         obroc_do_playera();
                         atak_wrecz();
                         anim.SetBool("isWalking", true);
-
+                      
                     }
                     else
                     {
@@ -333,8 +335,16 @@ public class Enemy2 : MonoBehaviour {
                     }
                 }
             }
-        }
 
+            if (hero.lsdFlag == true)
+            {
+                anim.SetTrigger("activeLSD");
+            }
+            else if (hero.lsdFlag == false)
+            {
+                anim.SetTrigger("removeLSD");
+            }
+        }
     }
 
 
