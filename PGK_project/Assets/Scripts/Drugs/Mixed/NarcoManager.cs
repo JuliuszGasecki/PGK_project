@@ -105,7 +105,8 @@ public class NarcoManager : MonoBehaviour {
             
         else
         {
-            alcoHeraFlag = false;      
+            alcoHeraFlag = false;
+            alcoHeraIsInUse = false;
         }
 
         //Koko hera 
@@ -116,6 +117,7 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             cocoHeraFlag = false;
+            cocoHeraIsInUse = false;
         }
 
         //Speed alco 
@@ -126,6 +128,7 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             alcoSpeedFlag = false;
+            alcoSpeedIsInUse = false;
         }
 
         //Coco Mary
@@ -136,6 +139,7 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             cocoMaryFlag = false;
+            cocoMaryIsInUse = false;
         }
         //Coco MDMA
         if (dt.extasyFlag == true && dt.cocaFlag == true)
@@ -145,6 +149,7 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             cocoMDMAFlag = false;
+            cocoMDMAIsInUse = false;
         }
 
     }

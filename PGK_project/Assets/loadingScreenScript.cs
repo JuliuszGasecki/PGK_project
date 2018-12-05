@@ -29,11 +29,11 @@ public class loadingScreenScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(Time.time - time);
-        if(Time.time - time <= 0.3f && effect.profile != extasyProfile)
+        //Debug.Log(Time.time - time);
+        if(Time.time - time <= 0.3f)
         {
             GetComponent<PostProcessingBehaviour>().profile = extasyProfile;
-        }else if(Time.time - time <= 0.5f && effect.profile != WeedProfile)
+        }else if(Time.time - time <= 0.5f)
         {
             GetComponent<PostProcessingBehaviour>().profile = WeedProfile;
         }
