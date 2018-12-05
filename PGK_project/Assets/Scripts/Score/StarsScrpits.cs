@@ -19,7 +19,7 @@ public class StarsScrpits : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        Debug.Log("PUNKTYYYYYYYYYYYY:              " + totalPoints);
+        //Debug.Log("PUNKTYYYYYYYYYYYY:              " + totalPoints);
         totalPoints = DrugsStat.calculate();
         totalPoints = totalPoints * DrugsStat.wspolczynnikRundy / Timer.time;           //wspolczynnik rundy
         scoreForPanel.text = "        " + (int)totalPoints;
