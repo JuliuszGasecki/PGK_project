@@ -117,21 +117,7 @@ public class Inventory : MonoBehaviour
         {
             usingSlot++;
             //if (usingSlot > 2 || usingSlot > inventory.Count-1)
-            if (usingSlot > inventory.Count - 1)
-            {
-                usingSlot = 0;
-            }
-            secondWeaponPosition = usingSlot + 1;
-            if (secondWeaponPosition > inventory.Count -1)
-            {
-                secondWeaponPosition = 0;
-            }
-
-            thirdWeaponPosition = secondWeaponPosition + 1;
-            if (thirdWeaponPosition > inventory.Count - 1)
-            {
-                thirdWeaponPosition = 0;
-            }
+            CheckUpperLimit();
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(usingSlot).UseWeapon();
             _heroAnimatior.SetBool("changingWeapon", true);
@@ -142,25 +128,49 @@ public class Inventory : MonoBehaviour
         if (Input.GetAxis("Mouse ScrollWheel") > 0f && inventory.Any())
         {
             usingSlot--;
-            if (usingSlot < 0)
-            {
-                usingSlot = inventory.Count - 1;
-            }
-            secondWeaponPosition--;
-            if (secondWeaponPosition < 0)
-            {
-                secondWeaponPosition = inventory.Count - 1;
-            }
-            thirdWeaponPosition--;
-            if (thirdWeaponPosition < 0)
-            {
-                thirdWeaponPosition = inventory.Count - 1;
-            }
+            CheckLowerLimit();
             SetWeaponActivity(usingSlot);
             inventory.ElementAt(usingSlot).UseWeapon();
             _heroAnimatior.SetBool("changingWeapon", true);
             _heroAnimatior.SetInteger("weaponID", usingSlot);
             return;
+        }
+    }
+
+    private void CheckUpperLimit()
+    {
+        if (usingSlot > inventory.Count - 1)
+        {
+            usingSlot = 0;
+        }
+        secondWeaponPosition = usingSlot + 1;
+        if (secondWeaponPosition > inventory.Count - 1)
+        {
+            secondWeaponPosition = 0;
+        }
+
+        thirdWeaponPosition = secondWeaponPosition + 1;
+        if (thirdWeaponPosition > inventory.Count - 1)
+        {
+            thirdWeaponPosition = 0;
+        }
+    }
+
+    private void CheckLowerLimit()
+    {
+        if (usingSlot < 0)
+        {
+            usingSlot = inventory.Count - 1;
+        }
+        secondWeaponPosition--;
+        if (secondWeaponPosition < 0)
+        {
+            secondWeaponPosition = inventory.Count - 1;
+        }
+        thirdWeaponPosition--;
+        if (thirdWeaponPosition < 0)
+        {
+            thirdWeaponPosition = inventory.Count - 1;
         }
     }
 

@@ -58,6 +58,7 @@ public class NarcoManager : MonoBehaviour {
         if(alcoHeraFlag == true && alcoHeraIsInUse == false)
         {
             alcoHeraIsInUse = true;
+            GlobalDrugsVariables.alcoHeraOnceTaken = true;
             time = Time.time;
             image.sprite = alcHer;
             image.enabled = true;
@@ -66,6 +67,8 @@ public class NarcoManager : MonoBehaviour {
         if (cocoHeraFlag == true && cocoHeraIsInUse == false)
         {
             cocoHeraIsInUse = true;
+            GlobalDrugsVariables.cocoHeraOnceTaken = true;
+            Debug.Log(GlobalDrugsVariables.cocoHeraOnceTaken);
             time = Time.time;
             image.sprite = cocHer;
             image.enabled = true;
@@ -74,6 +77,7 @@ public class NarcoManager : MonoBehaviour {
         if (alcoSpeedFlag == true && alcoSpeedIsInUse == false)
         {
             alcoSpeedIsInUse = true;
+            GlobalDrugsVariables.alcoSpeedOnceTaken = true;
             time = Time.time;
             image.sprite = alcSpe;
             image.enabled = true;
@@ -82,6 +86,7 @@ public class NarcoManager : MonoBehaviour {
         if (cocoMaryFlag == true && cocoMaryIsInUse == false)
         {
             cocoMaryIsInUse = true;
+            GlobalDrugsVariables.cocoMaryOnceTaken = true;
             time = Time.time;
             image.sprite = cocMar;
             image.enabled = true;
@@ -90,6 +95,7 @@ public class NarcoManager : MonoBehaviour {
         if (cocoMDMAFlag == true && cocoMDMAIsInUse == false)
         {
             cocoMDMAIsInUse = true;
+            GlobalDrugsVariables.cocoMDMAOnceTaken = true;
             time = Time.time;
             image.sprite = cocMda;
             image.enabled = true;
@@ -105,7 +111,8 @@ public class NarcoManager : MonoBehaviour {
             
         else
         {
-            alcoHeraFlag = false;      
+            alcoHeraFlag = false;
+            alcoHeraIsInUse = false;
         }
 
         //Koko hera 
@@ -116,6 +123,7 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             cocoHeraFlag = false;
+            cocoHeraIsInUse = false;
         }
 
         //Speed alco 
@@ -126,6 +134,7 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             alcoSpeedFlag = false;
+            alcoSpeedIsInUse = false;
         }
 
         //Coco Mary
@@ -136,6 +145,7 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             cocoMaryFlag = false;
+            cocoMaryIsInUse = false;
         }
         //Coco MDMA
         if (dt.extasyFlag == true && dt.cocaFlag == true)
@@ -145,6 +155,7 @@ public class NarcoManager : MonoBehaviour {
         else
         {
             cocoMDMAFlag = false;
+            cocoMDMAIsInUse = false;
         }
 
     }
