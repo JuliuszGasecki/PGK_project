@@ -35,23 +35,28 @@ public class PauseScript : MonoBehaviour {
 
     public void Pause()
     {
-        if (SceneManager.GetActiveScene().name != "Home")
-            inv = GameObject.Find("Inventory").GetComponent<Inventory>();
+        
         temp = Time.fixedDeltaTime;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
        // Time.fixedDeltaTime = 0f;
         GameIsPaused = true;
-        if (inv.GetUsingWeapon() != null)
-            inv.GetUsingWeapon().CanUse = false;
+        if (SceneManager.GetActiveScene().name != "Home")
+        {
+            inv = GameObject.Find("Inventory").GetComponent<Inventory>();
+            if (inv.GetUsingWeapon() != null)
+                inv.GetUsingWeapon().CanUse = false;
+        }
     }
 
     public void Resume()
     {
         if (SceneManager.GetActiveScene().name != "Home")
+        {
             inv = GameObject.Find("Inventory").GetComponent<Inventory>();
-        if (inv.GetUsingWeapon() != null)
-            inv.GetUsingWeapon().CanUse = true;
+            if (inv.GetUsingWeapon() != null)
+                inv.GetUsingWeapon().CanUse = true;
+        }
         pauseMenuUI.SetActive(false);
        // Time.fixedDeltaTime = temp;
         Time.timeScale = 1f;

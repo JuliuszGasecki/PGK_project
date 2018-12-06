@@ -70,7 +70,7 @@ public class DrugsTimer : MonoBehaviour {
 
     }
     public void addNarcotic(DrugTemplate drug){
-        //achievementsControll.addDrugAchievements(drug.nazwa);//to jest do kontrolli achievementow
+        achievementsControll.addDrugAchievements(drug.nazwa);//to jest do kontrolli achievementow
         if (onDrugs != true)
             onDrugs = true;
 
@@ -90,7 +90,7 @@ public class DrugsTimer : MonoBehaviour {
 
     public void zmien_flage_narkotyku(string nazwa_narkotyku, bool dziala)
     {
-        Debug.Log(nazwa_narkotyku);
+        //Debug.Log(nazwa_narkotyku);
         if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
         if (nazwa_narkotyku == "coca") { cocaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
         if (nazwa_narkotyku == "extasy") { extasyFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
@@ -105,7 +105,7 @@ public class DrugsTimer : MonoBehaviour {
         removeEffect(drug);
         active_drugs.Remove(drug);
         sliders[drug.nazwa].SetActive(false);
-        Debug.Log("Usunieto " + drug.nazwa);
+        //Debug.Log("Usunieto " + drug.nazwa);
     }
     public void removeNarcotic(string drugName)
     {

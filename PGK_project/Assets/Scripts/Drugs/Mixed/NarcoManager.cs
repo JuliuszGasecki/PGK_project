@@ -68,7 +68,7 @@ public class NarcoManager : MonoBehaviour {
         {
             cocoHeraIsInUse = true;
             GlobalDrugsVariables.cocoHeraOnceTaken = true;
-            Debug.Log(GlobalDrugsVariables.cocoHeraOnceTaken);
+            //Debug.Log(GlobalDrugsVariables.cocoHeraOnceTaken);
             time = Time.time;
             image.sprite = cocHer;
             image.enabled = true;

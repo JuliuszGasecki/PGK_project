@@ -31,7 +31,7 @@ public class CocoHeraEffect : MonoBehaviour {
     private void effectPoison()
     {
         int temp = Random.Range(1, 4);
-        Debug.Log(temp);
+        //Debug.Log(temp);
         if(temp == 2)
         {
             hero.poisoning += 40;

@@ -9,8 +9,8 @@ public class PlayMap : MonoBehaviour {
     {
         LoadingScreenManager.nameScene = "DemoScene";
         SceneManager.LoadScene("LoadingScreen");
-        Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
-        inv.GetUsingWeapon().CanUse = false;
+       // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
+        //inv.GetUsingWeapon().CanUse = false;
     }
 
     public void playLoadingScreen()
@@ -22,7 +22,7 @@ public class PlayMap : MonoBehaviour {
     {
         LoadingScreenManager.nameScene = "Home";
         SceneManager.LoadScene("LoadingScreen");
-        Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
-        inv.GetUsingWeapon().CanUse = false;
+       // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
+        //inv.GetUsingWeapon().CanUse = false;
     }
 }

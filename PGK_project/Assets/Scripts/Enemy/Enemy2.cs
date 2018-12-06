@@ -219,7 +219,7 @@ public class Enemy2 : MonoBehaviour {
         indexOfCurrentPath = 0;
         Random random = new Random();
         if (generate_the_path(200))
-            Debug.Log("jest sciezka");
+            //Debug.Log("jest sciezka");
         if (GameObject.FindWithTag("Player")) { player = GameObject.FindWithTag("Player"); }
         if (this.transform.Find("FirePoint")) { fire_point = this.transform.Find("FirePoint"); }
         enemy = this.GetComponent<Rigidbody2D>();
