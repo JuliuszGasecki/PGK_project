@@ -171,18 +171,14 @@ public class SPAS : MonoBehaviour, IShootable
         {
             y = 0.15f;
         }
-        GameObject bullet1 = Instantiate(bullet,
-            new Vector3(firePoint.position.x, firePoint.position.y, firePoint.position.z), firePoint.rotation);
+
+        GameObject bullet1 = Instantiate(bullet,firePoint.position, firePoint.rotation);
         SetDamageBullet(bullet1);
         SetSpeedBullet(bullet1);
-        GameObject bullet2 = Instantiate(bullet,
-            new Vector3(firePoint.position.x - x, firePoint.position.y - y, firePoint.position.z),
-            firePoint.rotation * Quaternion.Euler(0, 0, -7));
+        GameObject bullet2 = Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, -15));
         SetDamageBullet(bullet2);
         SetSpeedBullet(bullet2);
-        GameObject bullet3 = Instantiate(bullet,
-            new Vector3(firePoint.position.x + x, firePoint.position.y + y, firePoint.position.z),
-            firePoint.rotation * Quaternion.Euler(0, 0, 7));
+        GameObject bullet3 = Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, 15));
         SetDamageBullet(bullet3);
         SetSpeedBullet(bullet3);
         ammoInMagazine -= 3;
