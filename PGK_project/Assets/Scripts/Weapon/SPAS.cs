@@ -5,6 +5,8 @@ using UnityEngine;
 public class SPAS : MonoBehaviour, IShootable
 {
     // Use this for initialization
+    public float timeToResetAlert;
+    private float timerToResetAlert;
     private float timeUntilFire = 0;
     Transform firePoint;
     public GameObject bullet;
@@ -19,6 +21,7 @@ public class SPAS : MonoBehaviour, IShootable
     public int ammo { get; set; }
     public int ammoInMagazine { get; set; }
     public bool CanUse { get; set; }
+    public bool alert { set; get; }
 
     public string Name { get; set; }
     private Animator anim;
@@ -36,6 +39,7 @@ public class SPAS : MonoBehaviour, IShootable
         ammo = this.gameObject.GetComponent<Inventory>().shotgunAmmo;
         ammoInMagazine = magazineCapacity;
         Name = "SPAS";
+        alert = false;
     }
 
     void Awake()
@@ -46,6 +50,8 @@ public class SPAS : MonoBehaviour, IShootable
     // Update is called once per frame
     void Update()
     {
+        if (Time.time - timerToResetAlert > timeToResetAlert)
+            alert = false;
         if (firePoint != null)
         {
             AutoReloading();
@@ -116,6 +122,7 @@ public class SPAS : MonoBehaviour, IShootable
         {
             if (ammoInMagazine > 0)
             {
+                alert = true;
                 Direction();
                 Instantiate(GunShot, this.transform.position, this.transform.rotation);
                 if (direction.y < 0)

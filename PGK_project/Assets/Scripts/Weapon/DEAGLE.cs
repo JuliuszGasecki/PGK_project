@@ -6,6 +6,8 @@ public class DEAGLE : MonoBehaviour, IShootable
 {
 
     // Use this for initialization
+    public float timeToResetAlert;
+    private float timerToResetAlert;
     private float timeUntilFire = 0;
     Transform firePoint;
     public GameObject bullet;
@@ -23,6 +25,7 @@ public class DEAGLE : MonoBehaviour, IShootable
     public int ammoInMagazine { get; set; }
     public bool CanUse { get; set; }
     public string Name { get; set; }
+    public bool alert { set; get; }
     private Animator anim;
     private Vector2 direction;
     private Vector3 mousePosition;
@@ -39,6 +42,8 @@ public class DEAGLE : MonoBehaviour, IShootable
         ammo = this.gameObject.GetComponent<Inventory>().deagleAmmo; 
         ammoInMagazine = magazineCapacity;
         Name = "DEAGLE";
+        alert = false;
+        timerToResetAlert = Time.time;
     }
 
     void Awake()
@@ -49,6 +54,8 @@ public class DEAGLE : MonoBehaviour, IShootable
     // Update is called once per frame
     void Update()
     {
+        if (Time.time - timerToResetAlert > timeToResetAlert)
+            alert = false;
         if (firePoint != null)
         {
             AutoReloading();
@@ -92,6 +99,8 @@ public class DEAGLE : MonoBehaviour, IShootable
         {
             if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
+                alert = true;
+                timerToResetAlert = Time.time;
                 Direction();
                 Instantiate(GunShot, this.transform.position, this.transform.rotation);
                 if (direction.y < 0)

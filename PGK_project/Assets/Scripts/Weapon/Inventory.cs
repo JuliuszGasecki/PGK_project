@@ -215,7 +215,7 @@ public class Inventory : MonoBehaviour
         if (Enum.IsDefined(typeof(_weaponsID), weapon.ID) && inventory.Count <= INVENTORYCAPACITY)
         {           
             inventory.Add(weapon);
-            Debug.Log(usingSlot);
+//            Debug.Log(usingSlot);
             if (inventory.Count == 1)
             {
                 SetWeaponActivity(0);
@@ -267,5 +267,12 @@ public class Inventory : MonoBehaviour
             if (inventory[i].ID == id)
                 return true;
         return false;
+    }
+    public bool isAlert()
+    {
+        if (inventory.Exists((obj) => obj.alert == true))
+           return true;
+        return false;
+
     }
 }

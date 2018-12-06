@@ -7,6 +7,7 @@ using Pathfinding;
 public class Enemy2 : MonoBehaviour {
 
     //***** zmienne ogol
+    public bool show_rotation;
 
     private bool alive;
     public int life;
@@ -87,6 +88,10 @@ public class Enemy2 : MonoBehaviour {
     public float sensivity_of_enemys;
 
 
+    void print_angle(Vector3 point){
+
+    }
+
     int give_the_closest_point_on_the_path(){
         int index = 0;
         Vector3 pathPoint = new Vector3(0, 0, 0);
@@ -111,6 +116,7 @@ public class Enemy2 : MonoBehaviour {
 
     void avoid_bullets(float distance,ref Vector3 direction){ //avoid bullets
         obroc_do_playera();
+
         Vector3 left = this.transform.position - player.transform.position;
         Vector3 right = this.transform.position - player.transform.position;
         left.x = left.x * -1f;
@@ -146,7 +152,7 @@ public class Enemy2 : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Raycast(this.transform.position, new_position,distance);
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.tag);
+//            Debug.Log(hit.collider.tag);
             return false;
         }
         else
@@ -180,7 +186,7 @@ public class Enemy2 : MonoBehaviour {
                     path.Add(new_point);
                     number_of_try = number_of_break_points;
                 }
-                Debug.Log(number_of_try);
+//                Debug.Log(number_of_try);
             }
             if (numPoints < 0)
                 return false;
@@ -199,7 +205,7 @@ public class Enemy2 : MonoBehaviour {
         RaycastHit2D ray = Physics2D.Raycast(old_point, new_point, magnitude + 0.1f);
         if (ray.collider != null)
         {
-            Debug.Log(ray.collider.ToString());
+//            Debug.Log(ray.collider.ToString());
             return false;
         }
         else
@@ -256,8 +262,9 @@ public class Enemy2 : MonoBehaviour {
                 speed_boost();
                 if (!isStatic)
                 {
-                    if (znaleziono_gracza())
+                    if (znaleziono_gracza() || alert_mode())
                     {
+
                         Vector3 oddanie = this.transform.position - player.transform.position;
                         if (oddanie.magnitude > 1)
                         {
@@ -268,67 +275,85 @@ public class Enemy2 : MonoBehaviour {
                         {
                             guide.transform.position = player.transform.position;
                         }
-                        obroc_do_playera();
+                        //obroc_do_playera();
+
                         atak_wrecz();
                         anim.SetBool("isWalking", true);
 
                     }
                     else
                     {
+                        //if (!alert_mode())
+                        //{
+                            guide.transform.position = last_seen_player;
+                            //                        Debug.Log(last_seen_player.ToString());
 
-                        guide.transform.position = last_seen_player;
-//                        Debug.Log(last_seen_player.ToString());
-                        if (this.transform.position == last_seen_player)
-                        {
-                            last_seen_player = spawn;
-                            guide.transform.rotation = spawn_rotation;
+                            if (this.transform.position == last_seen_player)
+                            {
+                                last_seen_player = spawn;
+                                //guide.transform.rotation = spawn_rotation;
+                            }
+                        if( Vector3.Distance(this.transform.position,spawn) > 0.5)
+                            {
+                                obroc_do_punktu(last_seen_player);
+                             
+                            }
+                            anim.SetBool("isWalking", false);
                         }
-                        anim.SetBool("isWalking", false);
-                    }
+                    //}
 
                 }
                 else
                 {
                     this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -1);
+                    Vector2 upX = new Vector2(player.transform.up.x, player.transform.up.y);
+                    Vector2 upC = new Vector2(this.transform.up.x, this.transform.up.y);
 
-                    if (znaleziono_gracza())
+                     if (znaleziono_gracza())
                     {
-                        if (Time.time - avoid_bullets_timer > avoid_bullets_time)
+                        if (Mathf.Abs(Vector2.SignedAngle(upC, upX)) > 90)
                         {
-                            avoid_bullets(sensivity_of_enemys, ref avoid_bullets_movement);
-                            avoid_bullets_timer = Time.time;
-                            avoid_bullets_movement.z = 0;
-                        }
+                            if (Time.time - avoid_bullets_timer > avoid_bullets_time)
+                            {
+                                avoid_bullets(sensivity_of_enemys, ref avoid_bullets_movement);
+                                avoid_bullets_timer = Time.time;
+                                avoid_bullets_movement.z = 0;
+                            }
 
 
-                        if (check_if_point_is_correct(this.transform.position, this.transform.position + avoid_bullets_movement, sensivity_of_enemys))
-                        {
-                            avoid_bullets_movement.z = 0;
-                            this.transform.position += avoid_bullets_movement;
-                        }
-                        else
-                        {
-                            avoid_bullets(sensivity_of_enemys, ref avoid_bullets_movement);
-                            avoid_bullets_timer = Time.time;
-                        }
+                            if (check_if_point_is_correct(this.transform.position, this.transform.position + avoid_bullets_movement, sensivity_of_enemys))
+                            {
+                                avoid_bullets_movement.z = 0;
+                                this.transform.position += avoid_bullets_movement;
+                            }
+                            else
+                            {
+                                avoid_bullets(sensivity_of_enemys, ref avoid_bullets_movement);
+                                avoid_bullets_timer = Time.time;
+                            }
 
-                        obroc_do_playera();
-                        if (Time.time - time_tracker_shoot > shoot_time)
-                        {
-                            strzel();
-                            time_tracker_shoot = Time.time;
+                            if (Time.time - time_tracker_shoot - Random.Range(0f, 0.4f) > shoot_time)
+                            {
+                                strzel();
+                                time_tracker_shoot = Time.time;
+                            }
                         }
 
                     }
                     else{ //nie znaleziono playera wracaj na spawn
-                        Vector3 path_to_spawn = spawn - this.transform.position;
-                        if(path_to_spawn.magnitude < 0.5f){
-                            aItarget.target = null;
-                        }
-                        else{
-                            guide.transform.position = spawn;
-                            guide.transform.rotation = spawn_rotation;
-                            aItarget.target = guide.transform;
+                        if (!alert_mode())
+                        {
+                            Vector3 path_to_spawn = spawn - this.transform.position;
+                            if (path_to_spawn.magnitude < 0.5f)
+                            {
+                                aItarget.target = null;
+                            }
+                            else
+                            {
+                                guide.transform.position = spawn;
+                                guide.transform.rotation = spawn_rotation;
+                                aItarget.target = guide.transform;
+                            }
                         }
                     }
                 }
@@ -338,10 +363,19 @@ public class Enemy2 : MonoBehaviour {
     }
 
 
+    bool alert_mode(){
+        Vector2 pozycja_gracza = new Vector2(player.transform.position.x, player.transform.position.y);
 
+        if (player.transform.Find("Inventory").GetComponent<Inventory>().isAlert() && Vector2.Distance(pozycja_gracza,this.transform.position) < 20)
+        {
+            return true;
+        }
+        return false;
+    }
 
     bool znaleziono_gracza()
     {
+        Vector2 upC = new Vector2(this.transform.up.x, this.transform.up.y);
         Vector2 pozycja_gracza = new Vector2(player.transform.position.x, player.transform.position.y);
         Vector2 przesuniecie = pozycja_gracza - new Vector2(transform.position.x, transform.position.y);
         RaycastHit2D trafienie = Physics2D.Raycast(transform.position, przesuniecie, range_of_enemy);
@@ -349,6 +383,21 @@ public class Enemy2 : MonoBehaviour {
         {
             if (trafienie.collider.gameObject.tag == "Player")
             {
+                if (Mathf.Abs(Vector2.SignedAngle(upC, przesuniecie)) < (90 + Random.Range(0, 10)))
+                {
+                    obroc_do_playera();
+
+                }
+                if (player.transform.Find("Inventory").GetComponent<Inventory>().isAlert())
+                {
+                    if (Vector2.Distance(pozycja_gracza, this.transform.position) < 10)
+                    {
+                        obroc_do_playera();
+                       
+
+                    }
+                }
+
                 last_seen_player = trafienie.collider.gameObject.transform.position;
                 return true;
             }
@@ -476,7 +525,7 @@ public class Enemy2 : MonoBehaviour {
                 player.GetComponent<Hero>().health -= punch_attack;
                 time_tracker_punch = Time.time;
           
-            Debug.Log(pizda.magnitude);
+           // Debug.Log(pizda.magnitude);
 
         }
     }
@@ -486,7 +535,15 @@ public class Enemy2 : MonoBehaviour {
     void obroc_do_playera()
     {
         Vector2 gracz = new Vector2(player.transform.position.x, player.transform.position.y);
-        Vector2 wrog = new Vector2(this.transform.position.x, this.transform.position.y);
+        Vector2 wrog = new Vector2(this.transform.position.x + Random.Range(0,1f), this.transform.position.y + Random.Range(0, 1f));
+        Vector2 result = new Vector2(gracz.x - wrog.x, gracz.y - wrog.y);
+        this.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, -1 * Vector2.SignedAngle(result, Vector2.up)));
+
+    }
+    void obroc_do_punktu(Vector3 point)
+    {
+        Vector2 gracz = new Vector2(point.x, point.y);
+        Vector2 wrog = new Vector2(this.transform.position.x + Random.Range(0, 1f), this.transform.position.y + Random.Range(0, 1f));
         Vector2 result = new Vector2(gracz.x - wrog.x, gracz.y - wrog.y);
         this.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, -1 * Vector2.SignedAngle(result, Vector2.up)));
 

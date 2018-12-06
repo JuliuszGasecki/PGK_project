@@ -18,4 +18,6 @@ public interface IWeapon
     string Name { get; set; }
 
     void DeafultAmmo();
+
+    bool alert { set; get; } //to dla enemy
 }

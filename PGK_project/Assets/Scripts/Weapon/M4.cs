@@ -6,6 +6,8 @@ public class M4 : MonoBehaviour, IShootable
 {
 
     // Use this for initialization
+    public float timeToResetAlert;
+    private float timerToResetAlert;
     private float timeUntilFire = 0;
     Transform firePoint;
     public GameObject bullet;
@@ -19,6 +21,7 @@ public class M4 : MonoBehaviour, IShootable
     public int ID { get; set; }
     public float speed { get; set; }
     public int magazineCapacity { set; get; }
+    public bool alert { set; get; }
     public int ammo { get; set; }
     public int ammoInMagazine { get; set; }
     public bool CanUse { get; set; }
@@ -35,6 +38,7 @@ public class M4 : MonoBehaviour, IShootable
         ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
         ammoInMagazine = magazineCapacity;
         Name = "M4";
+        alert = false;
     }
 
     void Awake()
@@ -48,6 +52,8 @@ public class M4 : MonoBehaviour, IShootable
     // Update is called once per frame
     void Update()
     {
+        if (Time.time - timerToResetAlert > timeToResetAlert)
+            alert = false;
         AutoReloading();
         UseWeapon();
         UpdateAmmo();
@@ -103,6 +109,7 @@ public class M4 : MonoBehaviour, IShootable
         {
             if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
+                alert = true;
                 Instantiate(GunShot, this.transform.position, this.transform.rotation);
                 Shoot();
                 timeUntilFire = Time.time + fireRate;

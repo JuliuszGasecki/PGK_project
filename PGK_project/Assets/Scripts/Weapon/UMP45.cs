@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class UMP45 : MonoBehaviour, IShootable {
 
-	// Use this for initialization
+    // Use this for initialization
+    public float timeToResetAlert;
+    private float timerToResetAlert;
     private float timeUntilFire = 0;
     Transform firePoint;
     public GameObject bullet;
@@ -24,6 +26,7 @@ public class UMP45 : MonoBehaviour, IShootable {
     private Animator anim;
     private Vector2 direction;
     private Vector3 mousePosition;
+    public bool alert { set; get; }
 
     public string Name { get; set; }
 
@@ -38,6 +41,7 @@ public class UMP45 : MonoBehaviour, IShootable {
         ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
         ammoInMagazine = magazineCapacity;
         Name = "UMP45";
+        alert = false;
     }
 
     void Awake()
@@ -48,7 +52,9 @@ public class UMP45 : MonoBehaviour, IShootable {
 	// Update is called once per frame
 	void Update ()
 	{
-	    if (firePoint != null)
+        if (Time.time - timerToResetAlert > timeToResetAlert)
+            alert = false;
+        if (firePoint != null)
 	    {
 	        AutoReloading();
 	        //Reload();
@@ -97,6 +103,7 @@ public class UMP45 : MonoBehaviour, IShootable {
             {
                 Direction();
                 Instantiate(GunShot, this.transform.position, this.transform.rotation);
+                alert = true;
                 if (direction.y < 0)
                 {
                     Instantiate(Shells,
