@@ -24,6 +24,8 @@ public class DrugsTimer : MonoBehaviour {
     public GameObject lsdSlider;
     public GameObject mocarzSlider;
 
+    public AchievementsControllScript achievementsControll;
+
 
     public bool extasyFlag = false;
 
@@ -43,6 +45,8 @@ public class DrugsTimer : MonoBehaviour {
         heroW = GetComponent<Withdrawal>();
         time = Time.time;
         sliders = createSliders();
+        //achievementsControll = 
+        achievementsControll = hero.GetComponent<AchievementsControllScript>();//.GetComponent<AchievementsControllScript>())
     }
 
     Dictionary<string, GameObject> createSliders()
@@ -66,6 +70,7 @@ public class DrugsTimer : MonoBehaviour {
 
     }
     public void addNarcotic(DrugTemplate drug){
+        achievementsControll.addDrugAchievements(drug.nazwa);//to jest do kontrolli achievementow
         if (onDrugs != true)
             onDrugs = true;
 
