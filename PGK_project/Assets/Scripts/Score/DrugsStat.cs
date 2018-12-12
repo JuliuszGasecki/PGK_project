@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,8 +24,11 @@ public class DrugsStat : MonoBehaviour {
     public static int wspolczynnikRundy = 40;
 
     public static float totalPoints = 0;
-    Text drugs; 
-	void Start () {
+    Text drugs;
+
+    public static Dictionary<int, int> comboKilled = new Dictionary<int, int>();
+
+    void Start () {
         drugs = GetComponent<Text>();
 	}
 	
@@ -50,6 +54,8 @@ public class DrugsStat : MonoBehaviour {
         KilledStat.killedValue = 0;
         ScoreCounter.scoreValue = 0;
         totalPoints = 0;
+        comboKilled.Clear();
+        KilledStat.killedTimeList.Clear();
     }
 
     public static float calculate()
@@ -71,5 +77,54 @@ public class DrugsStat : MonoBehaviour {
         Math.Round(totalPoints, 2);
 
         return totalPoints;
+    }
+
+    public Dictionary<int, int> getKilledCombo()
+    {
+        int numberOfCombo = 0;
+        int result = 1;
+        if (KilledStat.killedTimeList.Count == 0)
+        {
+            comboKilled.Add(0, 0);
+            return comboKilled;
+        }
+        else
+        {
+
+            float time1 = KilledStat.killedTimeList[0];
+            foreach (var item in KilledStat.killedTimeList)
+            {
+                if(item - time1 != 0 && item - time1 <=5)
+                {
+                    result++;
+                }
+                else
+                {
+                    if(result != 1)
+                    {
+                        numberOfCombo++;
+                        comboKilled.Add(numberOfCombo, result);
+                        result = 1;
+                    }
+                    time1 = item;
+                }
+            }
+            numberOfCombo++;
+            comboKilled.Add(numberOfCombo, result);
+            return comboKilled;
+        }
+    }
+
+    public int getPointsBonusCombo(Dictionary<int, int> combo)
+    {
+        return combo.Keys.Max() * 5;
+    }
+    public float getComboMultiplier(Dictionary<int, int> combo, float result)
+    {
+        foreach (var item in combo.Keys)
+        {
+            result *= combo[item] * 0.65f;
+        }
+        return result + this.getPointsBonusCombo(combo);
     }
 }

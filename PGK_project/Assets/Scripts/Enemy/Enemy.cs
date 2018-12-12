@@ -241,7 +241,7 @@ public class Enemy : MonoBehaviour
             wypadanie_narkotykow();
             ScoreCounter.scoreValue += 21;
             KilledStat.killedValue += 1;
-
+            KilledStat.killedTimeList.Add(Time.time);
             this.GetComponent<SpriteRenderer>().sprite = dead_enemy;
             this.GetComponent<CircleCollider2D>().enabled = false;
             gameObject.GetComponent<Transform>().localScale = new Vector3(0.35f, 0.35f, 1f);

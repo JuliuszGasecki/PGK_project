@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndPoint : MonoBehaviour
 {
     public GameObject panel;
+    public static bool done = false;
     // Use this for initialization
     void Start()
     {
@@ -23,6 +24,7 @@ public class EndPoint : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            done = true;
             panel.SetActive(true);
             Time.timeScale = 0f;
         }

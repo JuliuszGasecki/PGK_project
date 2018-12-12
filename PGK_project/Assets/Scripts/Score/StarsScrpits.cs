@@ -12,16 +12,27 @@ public class StarsScrpits : MonoBehaviour {
     public GameObject nextLevel;
     public GameObject tryAgainText;
     public Text scoreForPanel;
+    DrugsStat ds;
+    bool dox = true;
     void Start () {
-		
+        ds = new DrugsStat();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        //Debug.Log("PUNKTYYYYYYYYYYYY:              " + totalPoints);
-        totalPoints = DrugsStat.calculate();
-        totalPoints = totalPoints * DrugsStat.wspolczynnikRundy / Timer.time;           //wspolczynnik rundy
+       // Debug.Log("PUNKTYYYYYYYYYYYY:              " + totalPoints);
+        if (dox)
+        {
+            totalPoints = DrugsStat.calculate();
+            totalPoints = totalPoints * DrugsStat.wspolczynnikRundy / Timer.time;           //wspolczynnik rundy
+        }
+        if(EndPoint.done == true)
+        {
+            EndPoint.done = false;
+            dox = false;
+            totalPoints = ds.getComboMultiplier(ds.getKilledCombo(), totalPoints);
+        }
         scoreForPanel.text = "        " + (int)totalPoints;
         if (totalPoints < 5)
         {  
