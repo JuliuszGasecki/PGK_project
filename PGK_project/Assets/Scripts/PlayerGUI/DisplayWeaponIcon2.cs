@@ -31,5 +31,9 @@ public class DisplayWeaponIcon2 : MonoBehaviour
         {
             image.enabled = false;
         }
+        else if (Time.timeScale == 0f)          //usun icon w summaryPanel
+        {
+            image.enabled = false;
+        }
     }
 }

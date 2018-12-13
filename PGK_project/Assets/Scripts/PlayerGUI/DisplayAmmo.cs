@@ -17,7 +17,7 @@ public class DisplayAmmo : MonoBehaviour {
 	void Update ()
 	{
 	    weapon = GameObject.Find("Inventory").GetComponent<Inventory>().GetUsingWeapon();
-	    if (weapon == null)
+	    if (weapon == null || Time.timeScale == 0f)
 	    {
 	        text_ammo.text = "";
 	    }

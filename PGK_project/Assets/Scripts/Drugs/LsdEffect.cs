@@ -13,7 +13,7 @@ public class LsdEffect : MonoBehaviour {
         hero = GameObject.Find("Hero").GetComponent<Hero>();
         dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
-       // DrugsStat.drugsLsdValue++;
+        DrugsStat.drugsLSDValue++;
     }
 
     // Update is called once per frame

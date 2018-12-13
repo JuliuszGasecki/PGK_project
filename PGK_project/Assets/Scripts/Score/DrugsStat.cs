@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class DrugsStat : MonoBehaviour {
 
@@ -14,6 +15,8 @@ public class DrugsStat : MonoBehaviour {
     public static int drugsMariValue = 0;
     public static int drugsAlcoValue = 0;
     public static int drugsExtasyValue = 0;
+    public static int drugsLSDValue = 0;
+    public static int drugsMocarzValue = 0;
     public static int drugsComboFlash = 0;
     public static int drugsCombowhatDoesntKillYou = 0;
     public static int drugsComboHalfDead = 0;
@@ -24,17 +27,19 @@ public class DrugsStat : MonoBehaviour {
     public static int wspolczynnikRundy = 40;
 
     public static float totalPoints = 0;
-    Text drugs;
+    public Text drugs1;
+    public Text drugs2;
 
     public static Dictionary<int, int> comboKilled = new Dictionary<int, int>();
 
-    void Start () {
-        drugs = GetComponent<Text>();
-	}
+    void Start ()
+    {
+    }
 	
 
 	void Update () {
-        drugs.text = "" + drugsValue + "\n\n" + drugsHeraValue + "\n" + drugsCocaValue+ "\n" + drugsMariValue+ "\n" + drugsAlcoValue+"\n"+ drugsExtasyValue;
+        drugs1.text = "" + drugsValue + "\n\n" + drugsHeraValue + "\n" + drugsCocaValue+ "\n" + drugsMariValue+ "\n" + drugsAlcoValue+"\n"+ drugsExtasyValue;
+        drugs2.text = "\n\n" + drugsLSDValue + "\n" + drugsMocarzValue + "\n" + "..." + "\n";
         killed = KilledStat.killedValue;
     }
 
@@ -60,6 +65,7 @@ public class DrugsStat : MonoBehaviour {
 
     public static float calculate()
     {
+
         killed = KilledStat.killedValue;
         totalPoints = drugsAlcoValue
          + (float)Math.Pow(1.3, drugsCocaValue) - 1
@@ -72,7 +78,9 @@ public class DrugsStat : MonoBehaviour {
         + (drugsCombowhatDoesntKillYou * 3.4f)
         - (drugsComboHalfDead * 2.0f)
         + (drugsComboLordOftheTime * 8.7f)
-        + (drugsComboNoAlcohol * 2.0f);
+        + (drugsComboNoAlcohol * 2.0f)
+        + drugsLSDValue
+        + (drugsMocarzValue * (1.5f));
 
         Math.Round(totalPoints, 2);
 

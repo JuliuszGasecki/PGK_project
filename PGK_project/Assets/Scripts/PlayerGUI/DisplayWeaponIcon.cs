@@ -24,8 +24,12 @@ public class DisplayWeaponIcon : MonoBehaviour
         if (weapon.GetUsingWeapon() == null)
 	    {
 	        image.enabled = false;
-	    }
-	    else
+        }
+        else if (Time.timeScale == 0f)          //usun icon w summaryPanel
+        {
+            image.enabled = false;
+        }
+        else
 	    {
             image.enabled = true;
 	        image.type = Image.Type.Filled;
