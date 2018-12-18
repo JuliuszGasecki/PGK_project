@@ -70,6 +70,7 @@ public class DrugsTimer : MonoBehaviour {
 
     }
     public void addNarcotic(DrugTemplate drug){
+        tookDrug = true;
         achievementsControll.addDrugAchievements(drug.nazwa);//to jest do kontrolli achievementow
         if (onDrugs != true)
             onDrugs = true;
