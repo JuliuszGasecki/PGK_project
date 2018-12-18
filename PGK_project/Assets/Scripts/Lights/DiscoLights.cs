@@ -25,7 +25,7 @@ public class DiscoLights : MonoBehaviour {
     {
         float r = Mathf.Sin(colorChangeRatio * Time.time)/ColorSeed;
         float b = Mathf.Cos(colorChangeRatio * Time.time + 3) / ColorSeed;
-        spriteRenderer.color = new Vector4(r, 0, b, 0.5f);
+        spriteRenderer.color = new Vector4(r, 0, b, 0.0f);
     }
 
 
