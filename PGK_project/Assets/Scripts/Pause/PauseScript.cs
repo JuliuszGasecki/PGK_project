@@ -41,6 +41,7 @@ public class PauseScript : MonoBehaviour {
         Time.timeScale = 0f;
        // Time.fixedDeltaTime = 0f;
         GameIsPaused = true;
+
         if (SceneManager.GetActiveScene().name != "Home")
         {
             inv = GameObject.Find("Inventory").GetComponent<Inventory>();

@@ -25,12 +25,12 @@ public class DrugsStat : MonoBehaviour {
 
     public static int level = 0;
     public static int wspolczynnikRundy = 40;
-
     public static float totalPoints = 0;
     public Text drugs1;
     public Text drugs2;
 
     public static Dictionary<int, int> comboKilled = new Dictionary<int, int>();
+    public static List<int> openedLvls = new List<int>();
 
     void Start ()
     {
@@ -41,6 +41,10 @@ public class DrugsStat : MonoBehaviour {
         drugs1.text = "" + drugsValue + "\n\n" + drugsHeraValue + "\n" + drugsCocaValue+ "\n" + drugsMariValue+ "\n" + drugsAlcoValue+"\n"+ drugsExtasyValue;
         drugs2.text = "\n\n" + drugsLSDValue + "\n" + drugsMocarzValue + "\n" + "..." + "\n";
         killed = KilledStat.killedValue;
+        foreach (var item in openedLvls)
+        {
+            Debug.Log("OPENED: " + item.ToString());
+        }
     }
 
     public static void AllStatsReset()
@@ -52,6 +56,8 @@ public class DrugsStat : MonoBehaviour {
         drugsAlcoValue = 0;
         drugsExtasyValue = 0;
         drugsComboFlash = 0;
+        drugsLSDValue = 0;
+        drugsMocarzValue = 0;
         drugsCombowhatDoesntKillYou = 0;
         drugsComboHalfDead = 0;
         drugsComboLordOftheTime = 0;
@@ -131,7 +137,8 @@ public class DrugsStat : MonoBehaviour {
     {
         foreach (var item in combo.Keys)
         {
-            result *= combo[item] * 0.65f;
+            if(combo[item] != 0)
+                result *= combo[item] * 0.65f;
         }
         return result + this.getPointsBonusCombo(combo);
     }

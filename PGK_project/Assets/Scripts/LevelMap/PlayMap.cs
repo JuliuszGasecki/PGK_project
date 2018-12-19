@@ -7,10 +7,14 @@ public class PlayMap : MonoBehaviour {
 
     public void playMapDemo()
     {
-        LoadingScreenManager.nameScene = "DemoScene";
-        SceneManager.LoadScene("LoadingScreen");
-       // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
-        //inv.GetUsingWeapon().CanUse = false;
+        if (DrugsStat.openedLvls.Contains(0))
+        {
+            DrugsStat.level = 0;
+            LoadingScreenManager.nameScene = "DemoScene";
+            SceneManager.LoadScene("LoadingScreen");
+            // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
+            //inv.GetUsingWeapon().CanUse = false;
+        }
     }
 
     public void playLoadingScreen()
@@ -20,9 +24,13 @@ public class PlayMap : MonoBehaviour {
 
     public void playMapHome()
     {
-        LoadingScreenManager.nameScene = "Home";
-        SceneManager.LoadScene("LoadingScreen");
-       // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
-        //inv.GetUsingWeapon().CanUse = false;
+        if (DrugsStat.openedLvls.Contains(1))
+        {
+            LoadingScreenManager.nameScene = "Home";
+            SceneManager.LoadScene("LoadingScreen");
+            // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
+            //inv.GetUsingWeapon().CanUse = false;
+            DrugsStat.level = 1;
+        }
     }
 }
