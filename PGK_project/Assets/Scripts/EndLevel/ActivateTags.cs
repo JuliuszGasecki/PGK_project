@@ -18,8 +18,8 @@ public class ActivateTags : MonoBehaviour {
                 tag1.SetActive(true);
             if (item == 1)
                 tag2.SetActive(true);
-          //  if (item == 2)
-                //tag2.SetActive(true);
+            if (item == 2)
+                tag2.SetActive(true);
         }
 	}
 	

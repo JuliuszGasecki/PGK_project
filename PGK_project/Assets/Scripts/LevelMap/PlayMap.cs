@@ -11,15 +11,10 @@ public class PlayMap : MonoBehaviour {
         {
             DrugsStat.level = 0;
             LoadingScreenManager.nameScene = "DemoScene";
-            SceneManager.LoadScene("LoadingScreen");
+            PlayLoadingScreen();
             // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
             //inv.GetUsingWeapon().CanUse = false;
         }
-    }
-
-    public void playLoadingScreen()
-    {
-        SceneManager.LoadScene("LoadingScreen");
     }
 
     public void playMapHome()
@@ -27,10 +22,25 @@ public class PlayMap : MonoBehaviour {
         if (DrugsStat.openedLvls.Contains(1))
         {
             LoadingScreenManager.nameScene = "Home";
-            SceneManager.LoadScene("LoadingScreen");
+            PlayLoadingScreen();
             // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
             //inv.GetUsingWeapon().CanUse = false;
             DrugsStat.level = 1;
         }
+    }
+
+    public void PlayMapDisco()
+    {
+        if (DrugsStat.openedLvls.Contains(1) && DrugsStat.openedLvls.Contains(0))
+        {
+            DrugsStat.level = 2;
+            LoadingScreenManager.nameScene = "Disco";
+            PlayLoadingScreen();
+        }
+    }
+
+    public void PlayLoadingScreen()
+    {
+        SceneManager.LoadScene("LoadingScreen");
     }
 }
