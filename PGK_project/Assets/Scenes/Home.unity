@@ -1593,7 +1593,8 @@ MonoBehaviour:
   Explanation: "Z powa\u017Caniem, XXXYYYZZZ.\""
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 0}
-  Keys: []
+  Keys:
+  - ' '
 --- !u!114 &424647795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3120,7 +3121,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 909ef0d8ba47f8d40995152828cb5145, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 884892e1dde6a4d478a6186a207ede21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
