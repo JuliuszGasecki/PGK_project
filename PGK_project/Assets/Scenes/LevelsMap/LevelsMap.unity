@@ -276,7 +276,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 894853960}
-        m_MethodName: playMapDemo
+        m_MethodName: PlayMapDemo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1058,7 +1058,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1822101443}
-        m_MethodName: playMapHome
+        m_MethodName: PlayMapHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

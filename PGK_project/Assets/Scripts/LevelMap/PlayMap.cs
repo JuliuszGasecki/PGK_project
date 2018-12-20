@@ -5,21 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class PlayMap : MonoBehaviour {
 
-    public void playMapDemo()
+    public void PlayMapDemo()
     {
-        if (DrugsStat.openedLvls.Contains(0))
-        {
             DrugsStat.level = 0;
             LoadingScreenManager.nameScene = "DemoScene";
             PlayLoadingScreen();
             // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
             //inv.GetUsingWeapon().CanUse = false;
-        }
     }
 
-    public void playMapHome()
+    public void PlayMapHome()
     {
-        if (DrugsStat.openedLvls.Contains(1))
+        if (DrugsStat.openedLvls.Contains(0))                   // when u completed lvl_0, you can join lvl_1 (home)
         {
             LoadingScreenManager.nameScene = "Home";
             PlayLoadingScreen();
@@ -29,7 +26,7 @@ public class PlayMap : MonoBehaviour {
         }
     }
 
-    public void PlayMapDisco()
+    public void PlayMapDisco()                                  // when u completed lvl_0 and lvl_1, you can join lvl_2 (disco)
     {
         if (DrugsStat.openedLvls.Contains(1) && DrugsStat.openedLvls.Contains(0))
         {

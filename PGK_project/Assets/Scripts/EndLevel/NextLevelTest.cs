@@ -1,16 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NextLevelTest : MonoBehaviour {
 
-    public void nextLevelButton(string name)
+    public static Dictionary<string, int> levelNameNumer = new Dictionary<string, int>()
     {
-        
+        { "Demo", 0 },
+        { "Home", 1 },
+        { "Disco", 2 }
+    };
+
+    public void NextLevelButton(string name)
+    {
         DrugsStat.AllStatsReset();
         if (AddCompletedLevel())
         {
+            DrugsStat.level = levelNameNumer.FirstOrDefault(x => x.Key == name).Value;
             LoadingScreenManager.nameScene = name;
             SceneManager.LoadScene("LoadingScreen");
         }
@@ -23,8 +31,6 @@ public class NextLevelTest : MonoBehaviour {
         if (!DrugsStat.openedLvls.Contains(DrugsStat.level))
         {
             DrugsStat.openedLvls.Add(DrugsStat.level);
-            DrugsStat.level++;
-            Debug.Log("TRUEEEE");
             return true;
         }
         else
