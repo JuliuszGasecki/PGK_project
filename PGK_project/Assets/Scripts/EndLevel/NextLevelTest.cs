@@ -16,18 +16,34 @@ public class NextLevelTest : MonoBehaviour {
     public void NextLevelButton(string name)
     {
         DrugsStat.AllStatsReset();
-        if (AddCompletedLevel())
+        if (SceneManager.GetActiveScene().name == name && DrugsStat.completed == false)
+            Do(name);
+        else if (SceneManager.GetActiveScene().name == name && DrugsStat.completed == true)
         {
-            DrugsStat.level = levelNameNumer.FirstOrDefault(x => x.Key == name).Value;
-            LoadingScreenManager.nameScene = name;
-            SceneManager.LoadScene("LoadingScreen");
+            if (!DrugsStat.openedLvls.Contains(DrugsStat.level))
+            {
+                DrugsStat.openedLvls.Add(DrugsStat.level);
+            }
+            Do(name);
+        }
+        else if (AddCompletedLevel())
+        {
+            Do(name);
+            DrugsStat.completed = false;
         }
         Time.timeScale = 1f;
     }
 
+    public void Do(string nameToDo)
+    {
+        DrugsStat.level = levelNameNumer.FirstOrDefault(x => x.Key == nameToDo).Value;
+        LoadingScreenManager.nameScene = nameToDo;
+        SceneManager.LoadScene("LoadingScreen");
+    }
     public bool AddCompletedLevel()
     {
         Debug.Log("LEVELLLLL : " + DrugsStat.level);
+        Debug.Log("DOOOODAJEEEE");
         if (!DrugsStat.openedLvls.Contains(DrugsStat.level))
         {
             DrugsStat.openedLvls.Add(DrugsStat.level);

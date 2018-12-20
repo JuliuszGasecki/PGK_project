@@ -20,11 +20,10 @@ public class ChooseLvl : MonoBehaviour {
 
         if (collision.gameObject.tag == "Player")
         {
-            LoadingScreenManager.nameScene = "LevelsMap";
             DrugsStat.level=2;
             if(!DrugsStat.openedLvls.Contains(1))
                 DrugsStat.openedLvls.Add(1);
-            SceneManager.LoadScene("LoadingScreen");
+            SceneManager.LoadScene("LevelsMap");
         }
     }
 }

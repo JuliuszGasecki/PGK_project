@@ -41,12 +41,14 @@ public class StarsScrpits : MonoBehaviour {
         }
         else if(totalPoints >=5 && totalPoints <10)
         {
+            DrugsStat.completed = true;
             star1.SetActive(true);
             nextLevel.SetActive(true);
             tryAgainText.SetActive(false);
         }
         else if(totalPoints >= 10 && totalPoints < 15)
         {
+            DrugsStat.completed = true;
             star1.SetActive(true);
             star2.SetActive(true);
             nextLevel.SetActive(true);
@@ -54,6 +56,7 @@ public class StarsScrpits : MonoBehaviour {
         }
         else if (totalPoints >= 15)
         {
+            DrugsStat.completed = true;
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(true);

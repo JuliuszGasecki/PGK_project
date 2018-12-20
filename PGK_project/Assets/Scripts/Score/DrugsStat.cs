@@ -26,6 +26,8 @@ public class DrugsStat : MonoBehaviour {
     public static int level = 0;
     public static int wspolczynnikRundy = 40;
     public static float totalPoints = 0;
+    public static bool completed = false;
+
     public Text drugs1;
     public Text drugs2;
 
