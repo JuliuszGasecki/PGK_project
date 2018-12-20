@@ -35,6 +35,7 @@ public class TutorialManager : MonoBehaviour {
         teacher.sprite = teacherSprite;
         SetNextTutorial(0);
         hero.stopWithdrawal();
+        Time.timeScale = 0f;
 	}
 	
 	// Update is called once per frame
@@ -69,6 +70,7 @@ public class TutorialManager : MonoBehaviour {
         teacher.enabled = false;
         tutorialText = null;
         hero.startWithdrawal();
+        Time.timeScale = 1f;
         Destroy(gameObject);
     }
 
