@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     private const int SECONDELEMENT = 1;
     private const int THIRDELEMENT = 2;
     private const int INVENTORYCAPACITY = 3;
+    private const int SPECIALINVENTORYCAPACITY = 3;
     private Animator _heroAnimatior;
     private int usingSlot;
     private int secondWeaponPosition;
@@ -24,11 +25,13 @@ public class Inventory : MonoBehaviour
         M4,
         UMP45,
         SPAS12,
-        KNIFE
+        KNIFE,
+        CROSSBOW
     };
 
-    public List<IWeapon> inventory;
 
+    public List<IWeapon> inventory;
+    private List<ISpecialWeapon> specialWeapons;
     public IWeapon SecondWeapon = null;
 
     public IWeapon ThirdWeapon = null;
@@ -41,7 +44,8 @@ public class Inventory : MonoBehaviour
 	    shotgunAmmo = 15;
 	    deagleAmmo = 10;
         inventory = new List<IWeapon>();
-	    AddToList(this.gameObject.GetComponent<DEAGLE>());
+	    specialWeapons = new List<ISpecialWeapon>();
+        AddToList(this.gameObject.GetComponent<DEAGLE>());
         inventory.ElementAt(FIRSTELEMENT).CanUse = true;
         usingSlot = 0;
 	    secondWeaponPosition = usingSlot + 1;
@@ -255,6 +259,30 @@ public class Inventory : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public bool AddSpecialWeapon(ISpecialWeapon weapon)
+    {
+        if (Enum.IsDefined(typeof(_weaponsID), weapon.ID) && specialWeapons.Count <= SPECIALINVENTORYCAPACITY)
+        {
+            specialWeapons.Add(weapon);
+            weapon.CanUse = true;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public ISpecialWeapon GetUsingSpecialWeapon()
+    {
+        if (specialWeapons.Any())
+        {
+            return specialWeapons.ElementAt(0);
+        }
+
+        return null;
     }
 
     public List<IWeapon> GetInventory()
