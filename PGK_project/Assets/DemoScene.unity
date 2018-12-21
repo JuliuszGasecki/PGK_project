@@ -21821,6 +21821,26 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1735350373}
   m_CullTransparentMesh: 0
+--- !u!1 &1740388609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1602154394428400, guid: 9e83121cfd1454a43a2601311e563632,
+    type: 2}
+  m_PrefabInternal: {fileID: 785862628}
+--- !u!114 &1740388610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740388609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ac14075f59df44aa7020e071963fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1272220941827450, guid: 5f12ca3ae96bc8f4998275284e89c093, type: 2}
+  GunShot: {fileID: 1354585600671296, guid: 1fd692301a5f6164b8bd92e90f4140e5, type: 2}
+  ReloadSound: {fileID: 1578313814201554, guid: 64d58098f826fbe45b1a8efe61f6e760,
+    type: 2}
 --- !u!1 &1742778102
 GameObject:
   m_ObjectHideFlags: 0
