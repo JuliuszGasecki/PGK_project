@@ -16,12 +16,11 @@ public class StarsScrpits : MonoBehaviour {
     bool dox = true;
     void Start () {
         ds = new DrugsStat();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-       // Debug.Log("PUNKTYYYYYYYYYYYY:              " + totalPoints);
         if (dox)
         {
             totalPoints = DrugsStat.calculate();
@@ -32,31 +31,67 @@ public class StarsScrpits : MonoBehaviour {
             EndPoint.done = false;
             dox = false;
             totalPoints = ds.getComboMultiplier(ds.getKilledCombo(), totalPoints);
+            DrugsStat.totalPointsLevel = totalPoints;
+            SetCountOfReachedStars();
+            SetActiveStars();
+            SaveLevel();
         }
-        scoreForPanel.text = "        " + (int)totalPoints;
+        scoreForPanel.text = "        " + (int) totalPoints;
+
+    }
+    public void SaveLevel()
+    {
+        LevelsStatistic.Level new_level = new LevelsStatistic.Level
+            (DrugsStat.level, DrugsStat.totalPointsLevel, DrugsStat.reachedStars, DrugsStat.completed, 3,DrugsStat.numberOfCombo,DrugsStat.longestCombo);
+        LevelsStatistic.level_repo.Add(new_level);
+    }
+
+    public void SetCountOfReachedStars()
+    {
         if (totalPoints < 5)
-        {  
+        {
+            DrugsStat.reachedStars = 0;
+            DrugsStat.completed = false;
+        }
+        else if (totalPoints >= 5 && totalPoints < 10)
+        {
+            DrugsStat.reachedStars = 1;
+            DrugsStat.completed = true;
+        }
+        else if (totalPoints >= 10 && totalPoints < 15)
+        {
+            DrugsStat.reachedStars = 2;
+            DrugsStat.completed = true;
+        }
+        else if (totalPoints >= 15)
+        {
+            DrugsStat.reachedStars = 3;
+            DrugsStat.completed = true;
+        }
+    }
+
+    public void SetActiveStars()
+    {
+        if(DrugsStat.reachedStars == 0)
+        {
             nextLevel.SetActive(false);
             tryAgainText.SetActive(true);
         }
-        else if(totalPoints >=5 && totalPoints <10)
+        else if (DrugsStat.reachedStars == 1)
         {
-            DrugsStat.completed = true;
             star1.SetActive(true);
             nextLevel.SetActive(true);
             tryAgainText.SetActive(false);
         }
-        else if(totalPoints >= 10 && totalPoints < 15)
+        else if (DrugsStat.reachedStars == 2)
         {
-            DrugsStat.completed = true;
             star1.SetActive(true);
             star2.SetActive(true);
             nextLevel.SetActive(true);
             tryAgainText.SetActive(false);
         }
-        else if (totalPoints >= 15)
+        else if (DrugsStat.reachedStars == 3)
         {
-            DrugsStat.completed = true;
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(true);

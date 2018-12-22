@@ -26,7 +26,11 @@ public class DrugsStat : MonoBehaviour {
     public static int level = 0;
     public static int wspolczynnikRundy = 40;
     public static float totalPoints = 0;
+    public static float totalPointsLevel = 0;
+    public static int reachedStars = 0;
     public static bool completed = false;
+    public static int numberOfCombo = 0;
+    public static int longestCombo = 0;
 
     public Text drugs1;
     public Text drugs2;
@@ -67,6 +71,7 @@ public class DrugsStat : MonoBehaviour {
         KilledStat.killedValue = 0;
         ScoreCounter.scoreValue = 0;
         totalPoints = 0;
+        totalPointsLevel = 0;
         comboKilled.Clear();
         KilledStat.killedTimeList.Clear();
     }
@@ -133,7 +138,8 @@ public class DrugsStat : MonoBehaviour {
 
     public int getPointsBonusCombo(Dictionary<int, int> combo)
     {
-        return combo.Keys.Max() * 5;
+        numberOfCombo = combo.Keys.Max();
+        return numberOfCombo * 5;
     }
     public float getComboMultiplier(Dictionary<int, int> combo, float result)
     {
@@ -142,6 +148,8 @@ public class DrugsStat : MonoBehaviour {
             if(combo[item] != 0)
                 result *= combo[item] * 0.65f;
         }
+        longestCombo = combo.Values.Max();
         return result + this.getPointsBonusCombo(combo);
     }
+
 }

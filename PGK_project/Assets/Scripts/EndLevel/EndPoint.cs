@@ -29,4 +29,6 @@ public class EndPoint : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
+
+
 }

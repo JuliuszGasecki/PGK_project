@@ -21,8 +21,12 @@ public class ChooseLvl : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             DrugsStat.level=2;
-            if(!DrugsStat.openedLvls.Contains(1))
+            if (!DrugsStat.openedLvls.Contains(1))
+            {
                 DrugsStat.openedLvls.Add(1);
+                LevelsStatistic.Level level = new LevelsStatistic.Level(1, 0, 0, true, 0,0,0);
+                LevelsStatistic.level_repo.Add(level);
+            }
             SceneManager.LoadScene("LevelsMap");
         }
     }

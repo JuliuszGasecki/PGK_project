@@ -42,8 +42,7 @@ public class NextLevelTest : MonoBehaviour {
     }
     public bool AddCompletedLevel()
     {
-        Debug.Log("LEVELLLLL : " + DrugsStat.level);
-        Debug.Log("DOOOODAJEEEE");
+        LevelsStatistic.level_repo.OrderBy(x => x.Level_number).ThenByDescending(y => y.Level_points);
         if (!DrugsStat.openedLvls.Contains(DrugsStat.level))
         {
             DrugsStat.openedLvls.Add(DrugsStat.level);
