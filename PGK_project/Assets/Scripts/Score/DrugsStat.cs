@@ -20,7 +20,7 @@ public class DrugsStat : MonoBehaviour {
     public static int drugsComboFlash = 0;
     public static int drugsCombowhatDoesntKillYou = 0;
     public static int drugsComboHalfDead = 0;
-    public static int drugsComboLordOftheTime = 0; 
+    public static int drugsComboLordOftheTime = 0;
     public static int drugsComboNoAlcohol = 0;
 
     public static int level = 0;
@@ -38,14 +38,14 @@ public class DrugsStat : MonoBehaviour {
     public static Dictionary<int, int> comboKilled = new Dictionary<int, int>();
     public static List<int> openedLvls = new List<int>();
 
-    void Start ()
+    void Start()
     {
     }
-	
 
-	void Update () {
-        drugs1.text = "" + drugsValue + "\n\n" + drugsHeraValue + "\n" + drugsCocaValue+ "\n" + drugsMariValue+ "\n" + drugsAlcoValue+"\n"+ drugsExtasyValue;
-        drugs2.text = "\n\n" + drugsLSDValue + "\n" + drugsMocarzValue + "\n" + "..." + "\n";
+
+    void Update() {
+        drugs1.text = "" + drugsValue + "\n\n" + drugsHeraValue + "\n" + drugsCocaValue + "\n" + drugsMariValue + "\n" + drugsAlcoValue;
+        drugs2.text = "\n\n" + drugsExtasyValue + "\n" + drugsLSDValue + "\n" + drugsMocarzValue;
         killed = KilledStat.killedValue;
         foreach (var item in openedLvls)
         {
