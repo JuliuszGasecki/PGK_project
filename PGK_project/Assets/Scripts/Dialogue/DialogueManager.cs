@@ -7,10 +7,12 @@ public class DialogueManager : MonoBehaviour {
 
     public List<Dialogue> Dialogues = new List<Dialogue>();
 
-    public Text DialogueText;
-    public Image interlocutor;
+    private Text DialogueText;
+    private Image interlocutor;
     public Sprite interlocutorSprite;
     public string finishDialogue;
+    private GameObject hero;
+    private float previousSpeed;
 
     private static DialogueManager instance;
     public static DialogueManager Instance
@@ -27,15 +29,23 @@ public class DialogueManager : MonoBehaviour {
     private Dialogue currentDialogue;
 
     void Start () {
+        interlocutor = GameObject.Find("Interlocutor").GetComponent<Image>();
+        DialogueText = GameObject.Find("DialogueText").GetComponent<Text>();
         interlocutor.enabled = true;
         interlocutor.sprite = interlocutorSprite;
         SetNextDialogue(0);
+        hero = GameObject.Find("Hero");
+        previousSpeed = hero.GetComponent<Hero>().speed;
+        hero.GetComponent<Hero>().speed = 0;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (currentDialogue)
+        {
+            currentDialogue.CheckIfHappening();
+        }
+    }
 
     public void CompletedDialogue()
     {
@@ -57,9 +67,11 @@ public class DialogueManager : MonoBehaviour {
 
     public void CompleteAllDialogues()
     {
+        hero.GetComponent<Hero>().speed = previousSpeed;
         DialogueText.text = finishDialogue;
         interlocutor.enabled = false;
-        DialogueText.enabled = false;
+        DialogueText.text = null;
+        Destroy(gameObject);
     }
 
 
