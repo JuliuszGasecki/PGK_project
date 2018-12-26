@@ -33,7 +33,7 @@ public class EntranceScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         changeTransparency();
-        if (Time.time - time > 25)
+        if (Time.time - time > 20)
         {
             chapterText.enabled = false;
             dateText.enabled = false;
@@ -51,13 +51,13 @@ public class EntranceScript : MonoBehaviour {
         chapterText.color = new Vector4(chapterText.color.r, chapterText.color.g, chapterText.color.b, 1);
         dateText.color = new Vector4(chapterText.color.r, chapterText.color.g, chapterText.color.b, function(Time.time - time));
         dayOfDrugString.color = new Vector4(chapterText.color.r, chapterText.color.g, chapterText.color.b, function(Time.time - time - 3));
-        background.color = new Vector4(background.color.r, background.color.g, background.color.b, 1 - function(Time.time - time - 15));
+        background.color = new Vector4(background.color.r, background.color.g, background.color.b, 1 - function(Time.time - time - 10));
     }
 
     private float function(float time)
     {
         float temp = time / 10;
-        if(temp > 1.7f)
+        if(temp > 1.3f)
         {
             return temp / (temp+1);
         }

@@ -14,6 +14,8 @@ public class DialogueManager : MonoBehaviour {
     private GameObject hero;
     private float previousSpeed;
 
+    public GameObject blur;
+
     private static DialogueManager instance;
     public static DialogueManager Instance
     {
@@ -71,6 +73,10 @@ public class DialogueManager : MonoBehaviour {
         DialogueText.text = finishDialogue;
         interlocutor.enabled = false;
         DialogueText.text = null;
+        if(blur != null)
+        {
+            blur.SetActive(false);
+        }
         Destroy(gameObject);
     }
 
