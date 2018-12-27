@@ -11,6 +11,8 @@ public class StarsScrpits : MonoBehaviour {
     public GameObject star3;
     public GameObject nextLevel;
     public GameObject tryAgainText;
+    public GameObject youReachedLevel;
+    public GameObject youNotReachedLevel;
     public Text scoreForPanel;
     DrugsStat ds;
     bool dox = true;
@@ -76,27 +78,34 @@ public class StarsScrpits : MonoBehaviour {
         {
             nextLevel.SetActive(false);
             tryAgainText.SetActive(true);
+            youReachedLevel.SetActive(false);
+            youNotReachedLevel.SetActive(true);
         }
         else if (DrugsStat.reachedStars == 1)
         {
             star1.SetActive(true);
-            nextLevel.SetActive(true);
-            tryAgainText.SetActive(false);
+            SetVisibilityForReachedLevel();
         }
         else if (DrugsStat.reachedStars == 2)
         {
             star1.SetActive(true);
             star2.SetActive(true);
-            nextLevel.SetActive(true);
-            tryAgainText.SetActive(false);
+            SetVisibilityForReachedLevel();
         }
         else if (DrugsStat.reachedStars == 3)
         {
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(true);
-            nextLevel.SetActive(true);
-            tryAgainText.SetActive(false);
+            SetVisibilityForReachedLevel();
         }
+    }
+
+    public void SetVisibilityForReachedLevel()
+    {
+        youReachedLevel.SetActive(true);
+        youNotReachedLevel.SetActive(false);
+        nextLevel.SetActive(true);
+        tryAgainText.SetActive(false);
     }
 }

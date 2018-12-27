@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class PointsSummary : MonoBehaviour {
 
-    public Text text1;
-    public Text text2;
-    public Text text3;
-    public Text text4;
-    public Text text5_time_bonus;
+    public Text text1_narco_1;
+    public Text text2_narco_1_bonus;
+    public Text text3_narco_2;
+    public Text text4_narco_2_bonus;
+    public Text text5_time;
+    public Text text6_time_bonus;
     double bonus;
     public float Hera { get; set; }
     public float Coca { get; set; }
@@ -28,20 +29,20 @@ public class PointsSummary : MonoBehaviour {
 
     void Start () {
         SetData();
-        text1.text = "Amount\n\t" + DrugsStat.drugsHeraValue + "\n\t" + DrugsStat.drugsCocaValue + "\n\t" +
-                        DrugsStat.drugsMariValue + "\n\t" + DrugsStat.drugsAlcoValue + "\n\t" + DrugsStat.drugsExtasyValue + "\n\t" +
-                        DrugsStat.drugsLSDValue + "\n\t" + DrugsStat.drugsMocarzValue + "\n\n\t" + DrugsStat.drugsValue;
-        text2.text = "After Bonus\n\t" + Hera + "\n\t" + Coca + "\n\t" + Mari + "\n\t" + Alco + "\n\t" + Extasy + "\n\t" + LSD + "\n\t" + Mocarz;
-        text3.text = "Amount\n\n\t" + DrugsStat.drugsComboFlash + "\n\t" + DrugsStat.drugsCombowhatDoesntKillYou + "\n\t" + DrugsStat.drugsComboHalfDead + "\n\t" +
-                    DrugsStat.drugsComboLordOftheTime + "\n\t" + DrugsStat.drugsComboNoAlcohol;
-        text4.text = "After Bonus\n\n\t" + ComboFlash + "\n\t" + CombowhatDoesntKillYou + "\n\t" + ComboHalfDead + "\n\t" + ComboLordOftheTime + "\n\t" + ComboNoAlcohol;
-        
-        text5_time_bonus.text = "" + bonus;
+        text1_narco_1.text =    "Amount\n\n\t" + DrugsStat.drugsHeraValue + "\n\t" + DrugsStat.drugsCocaValue + "\n\t" +
+                                DrugsStat.drugsMariValue + "\n\t" + DrugsStat.drugsAlcoValue + "\n\t" + DrugsStat.drugsExtasyValue + "\n\t" +
+                                DrugsStat.drugsLSDValue + "\n\t" + DrugsStat.drugsMocarzValue + "\n\n\t" + DrugsStat.drugsValue;
+        text2_narco_1_bonus.text = "After Bonus\n\n\t" + Hera + "\n\t" + Coca + "\n\t" + Mari + "\n\t" + Alco + "\n\t" + Extasy + "\n\t" + LSD + "\n\t" + Mocarz;
+        text3_narco_2.text =    "Amount\n\n\t" + DrugsStat.drugsComboFlash + "\n\t" + DrugsStat.drugsCombowhatDoesntKillYou + "\n\t" + DrugsStat.drugsComboHalfDead + "\n\t" +
+                                DrugsStat.drugsComboLordOftheTime + "\n\t" + DrugsStat.drugsComboNoAlcohol;
+        text4_narco_2_bonus.text = "After Bonus\n\n\t" + ComboFlash + "\n\t" + CombowhatDoesntKillYou + "\n\t" + ComboHalfDead + "\n\t" + ComboLordOftheTime + "\n\t" + ComboNoAlcohol;
+        text5_time.text = "" + Math.Round(Timer.time, 2);
+        bonus = Math.Round(DrugsStat.wspolczynnikRundy / Timer.time, 2);
+        text6_time_bonus.text = "" + bonus;
     }
 	void Update ()
     {
-        text5_time_bonus.text = "" + bonus;
-        bonus = Math.Round(DrugsStat.wspolczynnikRundy / Timer.time,2);
+
     }
 
     public void SetData()
@@ -60,10 +61,4 @@ public class PointsSummary : MonoBehaviour {
         ComboLordOftheTime = DrugsStat.drugsComboLordOftheTime * 8.7f;
         ComboNoAlcohol = DrugsStat.drugsComboNoAlcohol * 2.0f;
     }
-
-
-
-
-
-
 }
