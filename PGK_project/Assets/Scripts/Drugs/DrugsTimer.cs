@@ -151,7 +151,7 @@ public class DrugsTimer : MonoBehaviour {
             Time.timeScale = drug.time_scale;
         zmien_flage_narkotyku(drug.nazwa, true);
         addPoints(drug);
-        hero.poisoning += drug.poison_points;
+        //hero.poisoning += drug.poison_points;
         //drug.setTimeOfUse(Time.time);
         heroW.addWithdrawalPoints(drug.withdroval_points);
         hero.speed += drug.speedBoost;

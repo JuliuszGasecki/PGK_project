@@ -19,6 +19,8 @@ public class DialoguesDiary : MonoBehaviour {
     private int currentChapter;
     private int currnetIndex;
 
+    public Sprite unknown;
+
     [SerializeField] public List<DialogueNote> Notes1 = new List<DialogueNote>();
     [SerializeField] public List<DialogueNote> Notes2 = new List<DialogueNote>();
     [SerializeField] public List<DialogueNote> Notes3 = new List<DialogueNote>();
@@ -109,6 +111,10 @@ public class DialoguesDiary : MonoBehaviour {
         if (currnetIndex < 0)
         {
             currentChapter--;
+            if(currentChapter < 0)
+            {
+                currentChapter = 5;
+            }
             currnetIndex = 0;
         }
             
@@ -120,10 +126,16 @@ public class DialoguesDiary : MonoBehaviour {
         int temp = Notes[currentChapter - 1].Count;
         if (currnetIndex < temp)
         {
+            text1.enabled = true;
             image1.sprite = Notes[currentChapter-1][currnetIndex].sprite;
             text1.text = Notes[currentChapter-1][currnetIndex].text;
-            currnetIndex++;
             setChapterText();
+            if(!Notes[currentChapter - 1][currnetIndex].isActive)
+            {
+                text1.enabled = false;
+                image1.sprite = unknown;
+            }
+            currnetIndex++;
         }
         else
         {
@@ -146,6 +158,11 @@ public class DialoguesDiary : MonoBehaviour {
             text2.enabled = true;
             image2.sprite = Notes[currentChapter - 1][currnetIndex].sprite;
             text2.text = Notes[currentChapter - 1][currnetIndex].text;
+            if (!Notes[currentChapter - 1][currnetIndex].isActive)
+            {
+                text2.enabled = false;
+                image2.sprite = unknown;
+            }
             currnetIndex++;
         }
         else
@@ -159,8 +176,13 @@ public class DialoguesDiary : MonoBehaviour {
             text3.enabled = true;
             image3.sprite = Notes[currentChapter - 1][currnetIndex].sprite;
             text3.text = Notes[currentChapter - 1][currnetIndex].text;
-            currnetIndex++;
             indexOverflow();
+            if (!Notes[currentChapter - 1][currnetIndex].isActive)
+            {
+                text3.enabled = false;
+                image3.sprite = unknown;
+            }
+            currnetIndex++;
         }
         else
         {
@@ -179,6 +201,7 @@ public class DialoguesDiary : MonoBehaviour {
         }
 
     }
+
 
     private void turnOnDiary()
     {

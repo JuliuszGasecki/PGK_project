@@ -105,7 +105,7 @@ MonoBehaviour:
   attackBoost: 10
   lifetime: 5
   withdroval_points: 15
-  poison_points: 0
+  poison_points: 10
   time_scale: 1
   timeLeft: 0
   shuffleDone: 0

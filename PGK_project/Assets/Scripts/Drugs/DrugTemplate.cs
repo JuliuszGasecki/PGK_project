@@ -69,6 +69,7 @@ public class DrugTemplate : MonoBehaviour {
                     Instantiate(drugEffect);
                 destroyObject();
                 heroDrugTimer.addNarcotic(this);
+                hero.poisoning += poison_points;
             }
         }
     }
@@ -93,8 +94,7 @@ public class DrugTemplate : MonoBehaviour {
         attackBoost = Random.Range(0.1f, 1.0f);
         lifetime = Random.Range(3, 5);
         withdroval_points = Random.Range(3, 20);
-        poison_points = Random.Range(0, 5);
-        time_scale = Random.Range(0.1f, 1.0f);
+        poison_points = Random.Range(10, 20);
         timeLeft = 0;
         timeofuse = 1 ;
     }

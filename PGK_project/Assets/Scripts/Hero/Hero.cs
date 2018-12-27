@@ -14,6 +14,7 @@ public class Hero : MonoBehaviour
     public float drugWithdrawal;
     public float attack;
     public Transform spawnPoint;
+    private float wojtek; //speed after what doesnt kill u
 
     private int tempHealth;
 
@@ -34,15 +35,33 @@ public class Hero : MonoBehaviour
         tempPoisoning = poisoning;
         tempDrugWithdrawal = drugWithdrawal;
         tempAttack = attack;
+        wojtek = speed;
     }
 
 	// Update is called once per frame
 	void Update ()
 	{
         healthSlider.value = health;
-	   // respawn();
-        
-	}
+        // respawn();
+        czyWojtek();
+        speedWithoutDrugs();
+    }
+
+    private void czyWojtek()
+    {
+        if(GlobalDrugsVariables.cocoHeraOnceTaken)
+        {
+            wojtek = 10;
+        }
+    }
+
+    private void speedWithoutDrugs()
+    {
+        if(!gameObject.GetComponent<DrugsTimer>().onDrugs)
+        {
+            speed = wojtek;
+        }
+    }
 
     public void respawn()
     {
