@@ -949,8 +949,8 @@ GameObject:
   - component: {fileID: 1818420008}
   - component: {fileID: 1818420007}
   - component: {fileID: 1818420006}
-  - component: {fileID: 1818420012}
   - component: {fileID: 1818420010}
+  - component: {fileID: 1818420012}
   - component: {fileID: 1818420011}
   m_Layer: 5
   m_Name: Canvas
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1818420005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6762aceeaf02975439c8ea81073ae517, type: 3}
+  m_Script: {fileID: 11500000, guid: 04e42afbaf175ab42855c57794a31595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shortInfoPanel: {fileID: 163580629}
