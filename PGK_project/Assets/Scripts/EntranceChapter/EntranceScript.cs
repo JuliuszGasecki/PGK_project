@@ -65,5 +65,4 @@ public class EntranceScript : MonoBehaviour {
             return 1;
         else return temp;
     }
-
 }
