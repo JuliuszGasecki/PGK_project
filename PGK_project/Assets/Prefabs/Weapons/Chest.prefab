@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212322645780823288}
   - component: {fileID: 114973192067857458}
   - component: {fileID: 61525232237625078}
+  - component: {fileID: 114553696080095092}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1446948158497108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5051973, y: -0.9999769, z: -1}
+  m_LocalPosition: {x: 9.18, y: 6.86, z: 0}
   m_LocalScale: {x: 0.31790224, y: 0.31790224, z: 0.31790224}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,8 +66,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.94, y: 6.85}
+  m_Size: {x: 5.13, y: 4.4}
   m_EdgeRadius: 0
+--- !u!114 &114553696080095092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1446948158497108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc8e8cbcaf3220488d89c78f2425b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go: {fileID: 0}
 --- !u!114 &114973192067857458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd766e042d5d2d45954fa0da676fe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 1355489815483340, guid: cf00d43fa09d398429ffdddc8db9e0c0, type: 2}
+  Weapon: {fileID: 1818053348222760, guid: 2a48386a322e87f419b220286237bd1c, type: 2}
 --- !u!212 &212322645780823288
 SpriteRenderer:
   m_ObjectHideFlags: 1

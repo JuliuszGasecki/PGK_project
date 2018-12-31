@@ -8670,8 +8670,9 @@ Transform:
   - {fileID: 557583586}
   - {fileID: 338251839}
   - {fileID: 419954618}
+  - {fileID: 895380405}
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &592024992
 GameObject:
@@ -12129,7 +12130,7 @@ RectTransform:
   - {fileID: 23229786}
   - {fileID: 1932601996}
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12459,12 +12460,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 895380402}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04, y: 6.52, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.519127, y: -5.3646646, z: -5.09375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_Father: {fileID: 585841248}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905685805
 GameObject:
@@ -25185,7 +25186,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25586,7 +25587,6 @@ GameObject:
   - component: {fileID: 1777646457}
   - component: {fileID: 1777646453}
   - component: {fileID: 1777646455}
-  - component: {fileID: 1777646459}
   - component: {fileID: 1777646456}
   - component: {fileID: 1777646454}
   m_Layer: 0
@@ -25731,17 +25731,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.76, y: 36}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.9798426, y: 0.19903708}
---- !u!114 &1777646459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1777646452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfce8cfe087825a4eafc19733c711582, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1782262901
 GameObject:
   m_ObjectHideFlags: 0

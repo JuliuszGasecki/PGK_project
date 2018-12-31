@@ -53,6 +53,7 @@ public class AddSpecialWeapon : MonoBehaviour
             {
                 inv.AddSpecialWeapon(weapon);
                 destroyObject();
+                GameObject.Find("SpecialWeaponTutorialManager").GetComponent<SpecialWeaponsTutorial>().IsActive = true;
             }
 
         }

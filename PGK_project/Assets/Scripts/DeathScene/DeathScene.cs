@@ -8,7 +8,6 @@ public class DeathScene : MonoBehaviour
 {
     private string deadHero = "dead_hero";
     public GameObject deathScene;
-    public float temp;
     private Hero hero;
     private SpriteRenderer spriteR;
     private Animator anim;
@@ -34,7 +33,6 @@ public class DeathScene : MonoBehaviour
 
     public void Pause()
     {
-        temp = Time.fixedDeltaTime;
         deathScene.SetActive(true);
         Time.timeScale = 0f;
        // Time.fixedDeltaTime = 0f;

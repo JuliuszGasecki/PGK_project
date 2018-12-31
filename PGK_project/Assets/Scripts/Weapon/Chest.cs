@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using System.Text;
 using UnityEngine;
 
@@ -15,9 +16,9 @@ public class Chest : MonoBehaviour
     private Vector3 middlePoint;
     private float count = 0.0f;
     private float speed = 2.0f;
-    private float newX = -1.0f;
+    private float newX = -2.0f;
     private float newY = 0.0f;
-    private float height = 2.0f;
+    private float height = 2.5f;
     private SpriteRenderer spriteR;
     private float timeUntilDisableTrail = 0;
     private string OpenedChestSprite = "Chest/openedChest";
@@ -54,11 +55,10 @@ public class Chest : MonoBehaviour
     }
 
 
-    void OnMouseDown()
+    void OnMouseOver()
     {
-        if (CanOpen && !IsEmpty)
-        {
-            
+        if (Input.GetMouseButton(1) && CanOpen && !IsEmpty)
+        {         
             IsEmpty = true;
             _myItem = Instantiate(Weapon, this.transform.position, Quaternion.identity) as GameObject;
             _myItem.GetComponent<TrailRenderer>().enabled = true;
