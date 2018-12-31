@@ -36,10 +36,9 @@ public class PauseScript : MonoBehaviour {
     public void Pause()
     {
         
-        temp = Time.fixedDeltaTime;
+        temp = Time.timeScale;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-       // Time.fixedDeltaTime = 0f;
         GameIsPaused = true;
 
         if (SceneManager.GetActiveScene().name != "Home")
@@ -59,9 +58,7 @@ public class PauseScript : MonoBehaviour {
                 inv.GetUsingWeapon().CanUse = true;
         }
         pauseMenuUI.SetActive(false);
-       // Time.fixedDeltaTime = temp;
-        Time.timeScale = 1f;
+        Time.timeScale = 1.0f;
         GameIsPaused = false;
-        temp = 0f;
     }
 }
