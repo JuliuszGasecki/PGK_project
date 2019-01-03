@@ -107,11 +107,13 @@ public class DialoguesDiary : MonoBehaviour {
 
     public void loadPreviousPage()
     {
-        currnetIndex -= 3;
-        if (currnetIndex < 0)
+        Debug.Log("Przed" + currnetIndex);
+        currnetIndex = currnetIndex - 3;
+        Debug.Log("Po" + currnetIndex);
+        if (currnetIndex <= 0)
         {
             currentChapter--;
-            if(currentChapter < 0)
+            if(currentChapter < 1)
             {
                 currentChapter = 5;
             }

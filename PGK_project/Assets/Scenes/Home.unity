@@ -2375,7 +2375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathScene: {fileID: 0}
-  temp: 0
 --- !u!95 &516246759
 Animator:
   serializedVersion: 3
@@ -2996,7 +2995,7 @@ MonoBehaviour:
     uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
     do\u0142\u0105czony do lek\xF3w"
   chapterNumber: 4
-  isActive: 0
+  isActive: 1
 --- !u!114 &708226475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3011,7 +3010,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: faf101cf77768714dbb4e7d875da940f, type: 3}
   text: "Kurwa nic nie zosta\u0142o..."
   chapterNumber: 4
-  isActive: 0
+  isActive: 1
 --- !u!114 &708226476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3029,7 +3028,7 @@ MonoBehaviour:
     Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
     sob\u0105..."
   chapterNumber: 4
-  isActive: 0
+  isActive: 1
 --- !u!114 &708226477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3047,7 +3046,7 @@ MonoBehaviour:
 
     ~Mama'
   chapterNumber: 4
-  isActive: 0
+  isActive: 1
 --- !u!1 &715139108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,7 +4616,7 @@ MonoBehaviour:
     uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
     do\u0142\u0105czony do lek\xF3w"
   chapterNumber: 3
-  isActive: 0
+  isActive: 1
 --- !u!114 &1190974178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4668,7 +4667,7 @@ MonoBehaviour:
 
     ~Mama'
   chapterNumber: 3
-  isActive: 0
+  isActive: 1
 --- !u!114 &1190974181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4683,7 +4682,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 96f6c6c75be71284ca238093db219562, type: 3}
   text: ADFASDFASDF
   chapterNumber: 3
-  isActive: 0
+  isActive: 1
 --- !u!114 &1190974182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4713,7 +4712,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 9fc21194bd235d34fb6f81e013b2ed90, type: 3}
   text: fdfasdffb
   chapterNumber: 3
-  isActive: 0
+  isActive: 1
 --- !u!114 &1190974184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6657,7 +6656,7 @@ MonoBehaviour:
     uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
     do\u0142\u0105czony do lek\xF3w"
   chapterNumber: 5
-  isActive: 0
+  isActive: 1
 --- !u!114 &1495374567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6672,7 +6671,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: bc538aff04199cd45933c3e7f2b6a0d6, type: 3}
   text: "Kurwa nic nie zosta\u0142o..."
   chapterNumber: 5
-  isActive: 0
+  isActive: 1
 --- !u!114 &1495374568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6708,7 +6707,7 @@ MonoBehaviour:
 
     ~Mama'
   chapterNumber: 5
-  isActive: 0
+  isActive: 1
 --- !u!4 &1508511056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4405501340931774, guid: 94f014bfa8e744947bcac4a05d38d0e3,
