@@ -11350,6 +11350,7 @@ MonoBehaviour:
   arrow: {fileID: 1909049845}
   highlightsSpecialWeapon: {fileID: 411807248}
   highlightsDrugs: {fileID: 1199996495}
+  drugsDictionary: {fileID: 1588601070}
 --- !u!4 &947778495
 Transform:
   m_ObjectHideFlags: 0
