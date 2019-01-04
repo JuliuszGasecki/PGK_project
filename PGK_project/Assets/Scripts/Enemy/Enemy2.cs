@@ -341,7 +341,7 @@ public class Enemy2 : MonoBehaviour
 
                     //}
                 }
-                /*else
+                else
                 {
                     this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x,
                         this.gameObject.transform.position.y, -1);
@@ -397,7 +397,7 @@ public class Enemy2 : MonoBehaviour
                             }
                         }
                     }
-                }*/
+                }
             }
 
             if (hero.lsdFlag == true)
