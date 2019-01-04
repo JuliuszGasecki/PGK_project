@@ -286,6 +286,13 @@ public class Enemy2 : MonoBehaviour
 
     void Update()
     {
+        if (player == null){if (GameObject.FindWithTag("Player")) { player = GameObject.FindWithTag("Player"); }}
+        else
+        {
+            Debug.Log("player eoeoeoe");
+        }
+        if (bullet == null) {Debug.Log(""); } else { Debug.Log("fuck"); }
+       
         if (alive)
         {
             if (!sprawdz_czy_umarl())
@@ -549,9 +556,22 @@ public class Enemy2 : MonoBehaviour
     {
         if (bullet != null)
         {
-            GameObject bulletE = Instantiate(bullet, fire_point.position, fire_point.rotation);
-            bulletE.GetComponent<Bullet>().bulletDamage = 2;
-            bulletE.GetComponent<Bullet>().bulletSpeed = 20f;
+            if (fire_point != null)
+            {
+                GameObject bulletE = Instantiate(bullet, fire_point.position, fire_point.rotation);
+
+                if (bulletE != null)
+                {
+                    bulletE.GetComponent<Bullet>().bulletDamage = 2;
+                    bulletE.GetComponent<Bullet>().bulletSpeed = 20f;
+                }
+                else{
+                    Debug.Log("fuckYY");
+                }
+            }
+            else{
+                Debug.Log("fuckXX");
+            }
         }
     }
 
