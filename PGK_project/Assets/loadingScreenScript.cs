@@ -18,12 +18,12 @@ public class loadingScreenScript : MonoBehaviour {
     public PostProcessingProfile cocaMdmaProfile;
 
 
-    private PostProcessingBehaviour effect;
+   // private PostProcessingBehaviour effect;
     private float time;
 
     // Use this for initialization
     void Start () {
-        effect = GetComponent<PostProcessingBehaviour>();
+        //effect = GetComponent<PostProcessingBehaviour>();
         time = Time.time;
     }
 	

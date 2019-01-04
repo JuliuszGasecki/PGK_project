@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    private string name;
+    private new string _name;
     public GameObject Weapon;
     private bool CanOpen;
     private GameObject _myItem;
@@ -26,7 +26,7 @@ public class Chest : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        name = this.gameObject.name;
+        _name = this.gameObject.name;
         start = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
         endPoint = new Vector3(start.x + newX, start.y + newY, this.transform.position.z);
         middlePoint = start + (endPoint - start) / 2 + Vector3.up * height;

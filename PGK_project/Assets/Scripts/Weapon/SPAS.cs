@@ -152,26 +152,6 @@ public class SPAS : MonoBehaviour, IShootable
 
     public void Shoot()
     {
-        float x = 0.0f;
-        float y = 0.0f;
-        if (direction.y < 0)
-        {
-            x = 0.15f;
-        }
-        else
-        {
-            x = -0.15f;
-        }
-
-        if (direction.x < 0)
-        {
-            y = -0.15f;
-        }
-        else
-        {
-            y = 0.15f;
-        }
-
         GameObject bullet1 = Instantiate(bullet,firePoint.position, firePoint.rotation);
         SetDamageBullet(bullet1);
         SetSpeedBullet(bullet1);

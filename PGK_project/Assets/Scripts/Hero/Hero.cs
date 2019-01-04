@@ -17,7 +17,7 @@ public class Hero : MonoBehaviour
     public Transform spawnPoint;
     private float wojtek; //speed after what doesnt kill u
 
-    private int tempHealth;
+   /* private int tempHealth;
 
     private float tempSpeed;
 
@@ -25,17 +25,17 @@ public class Hero : MonoBehaviour
 
     private float tempDrugWithdrawal;
 
-    private float tempAttack;
+    private float tempAttack;*/
     // Use this for initialization
     void Start ()
     {
         Time.timeScale = 1f;
         this.transform.position = spawnPoint.position;
-        tempHealth = health;
+       /* tempHealth = health;
         tempSpeed = speed;
         tempPoisoning = poisoning;
         tempDrugWithdrawal = drugWithdrawal;
-        tempAttack = attack;
+        tempAttack = attack;*/
         wojtek = speed;
     }
 
