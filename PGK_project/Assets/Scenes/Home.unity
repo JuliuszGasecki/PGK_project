@@ -1667,6 +1667,8 @@ MonoBehaviour:
   vodkaSlider: {fileID: 0}
   lsdSlider: {fileID: 0}
   mocarzSlider: {fileID: 0}
+  cigaretteSlider: {fileID: 0}
+  methSlider: {fileID: 0}
   achievementsControll: {fileID: 0}
   extasyFlag: 0
   marihuanaFlag: 0
@@ -1675,6 +1677,8 @@ MonoBehaviour:
   vodkaFlag: 0
   mocarzFlag: 0
   lsdFlag: 0
+  cigaretteFlag: 0
+  methFlag: 0
 --- !u!4 &336773538
 Transform:
   m_ObjectHideFlags: 0
@@ -2449,6 +2453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 0}
+  maxHeath: 0
   health: 20
   speed: 8
   poisoning: 0
@@ -3927,7 +3932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: 4974d530badadc44ebe565ee5dbf8531, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: b6b55daaa1f5ca74aa80967e3b583c85, type: 3}
   finishDialogue: 
   blur: {fileID: 1484681604}
 --- !u!1001 &947965590
