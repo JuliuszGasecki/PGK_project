@@ -371,13 +371,13 @@ public class Enemy2 : MonoBehaviour
                                 avoid_bullets(sensivity_of_enemys, ref avoid_bullets_movement);
                                 avoid_bullets_timer = Time.time;
                             }
-
+                        }
                             if (Time.time - time_tracker_shoot - Random.Range(0f, 0.4f) > shoot_time)
                             {
                                 strzel();
                                 time_tracker_shoot = Time.time;
                             }
-                        }
+                        //}
                     }
                     else
                     {
@@ -442,7 +442,7 @@ public class Enemy2 : MonoBehaviour
 
                 if (player.transform.Find("Inventory").GetComponent<Inventory>().isAlert())
                 {
-                    if (Vector2.Distance(pozycja_gracza, this.transform.position) < 10)
+                    if (Vector2.Distance(pozycja_gracza, this.transform.position) < 20)
                     {
                         obroc_do_playera();
                     }
@@ -566,11 +566,11 @@ public class Enemy2 : MonoBehaviour
                     bulletE.GetComponent<Bullet>().bulletSpeed = 20f;
                 }
                 else{
-                    Debug.Log("fuckYY");
+                   // Debug.Log("fuckYY");
                 }
             }
             else{
-                Debug.Log("fuckXX");
+               // Debug.Log("fuckXX");
             }
         }
     }
