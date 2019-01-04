@@ -34,7 +34,7 @@ public class AlcoholEffect : MonoBehaviour {
     {
         cam.GetComponent<CameraController>().MoveSpeed = 100;
         hero.health -=
-            20 + (hero.health - previousStateHero);
+            hero.maxHeath + (hero.health - previousStateHero);
     }
     
 }

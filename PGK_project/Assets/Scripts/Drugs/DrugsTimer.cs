@@ -23,6 +23,8 @@ public class DrugsTimer : MonoBehaviour {
     public GameObject vodkaSlider;
     public GameObject lsdSlider;
     public GameObject mocarzSlider;
+    public GameObject cigaretteSlider;
+    public GameObject methSlider;
 
     public AchievementsControllScript achievementsControll;
 
@@ -37,6 +39,8 @@ public class DrugsTimer : MonoBehaviour {
     public bool vodkaFlag = false;
     public bool mocarzFlag = false;
     public bool lsdFlag = false;
+    public bool cigaretteFlag = false;
+    public bool methFlag = false;
     // Use this for initialization
     void Start() {
         onDrugs = false;
@@ -59,6 +63,8 @@ public class DrugsTimer : MonoBehaviour {
         temp.Add("vodka", vodkaSlider);
         temp.Add("mocarz", mocarzSlider);
         temp.Add("lsd", lsdSlider);
+        temp.Add("cigarette", cigaretteSlider);
+        temp.Add("meth", methSlider);
         return temp;
         }
 	
@@ -99,6 +105,8 @@ public class DrugsTimer : MonoBehaviour {
         if (nazwa_narkotyku == "vodka") { vodkaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
         if (nazwa_narkotyku == "mocarz") { mocarzFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
         if (nazwa_narkotyku == "lsd") { lsdFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
+        if (nazwa_narkotyku == "cigarette") { cigaretteFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
+        if (nazwa_narkotyku == "meth") { methFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
     }
 
 
@@ -189,6 +197,8 @@ public class DrugsTimer : MonoBehaviour {
         if (dt.nazwa == "vodka") { vodkaSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
         if (dt.nazwa == "mocarz") { mocarzSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
         if (dt.nazwa == "lsd") { lsdSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
+        if (dt.nazwa == "cigarette") { cigaretteSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
+        if (dt.nazwa == "meth") { methSlider.GetComponent<Image>().fillAmount = dt.lifetime / max; }
         }
         
     }

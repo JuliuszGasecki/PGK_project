@@ -22,6 +22,7 @@ public class CocoHeraEffect : MonoBehaviour {
     {
         if (dt.cocaFlag == false || dt.heroineFlag == false)
         {
+            hero.maxHeath += 2;
             hero.speed += 7;
             hero.health += 10;
             Destroy(gameObject);

@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class Hero : MonoBehaviour
 {
     public Slider healthSlider;
+    public int maxHeath;
     public int health;
     public float speed;
     public float poisoning;
@@ -41,6 +42,8 @@ public class Hero : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+        if (health > maxHeath)
+            health = maxHeath;
         healthSlider.value = health;
         // respawn();
         czyWojtek();
