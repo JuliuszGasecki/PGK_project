@@ -48,7 +48,7 @@ public class Poisoning : MonoBehaviour {
             if(temp == 69)
             {
                 previousSpeed = hero.speed;
-                Debug.Log("Porzygusiałem sie mamusiu");
+                //Debug.Log("Porzygusiałem sie mamusiu");
                 isPuking = true;
             }
         }
@@ -62,7 +62,7 @@ public class Poisoning : MonoBehaviour {
             {
                 hero.poisoning -= 0.1f;
                 hero.speed = 1;
-                Debug.Log("Porzygusiałem sie tatusiu");
+                //Debug.Log("Porzygusiałem sie tatusiu");
             }
             else
             {
