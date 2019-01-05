@@ -41,10 +41,10 @@ public class Poisoning : MonoBehaviour {
 
     private void checkPuke()
     {
-        if(hero.poisoning > poisoningMax / 2 && !isPuking)
+        if(hero.poisoning > poisoningMax / 1.5 && !isPuking)
         {
             pukeTime = Time.time;
-            int temp = Random.Range((int)hero.poisoning, (250 - (int)hero.poisoning));
+            int temp = Random.Range((int)hero.poisoning, (600 - (int)hero.poisoning));
             if(temp == 69)
             {
                 previousSpeed = hero.speed;

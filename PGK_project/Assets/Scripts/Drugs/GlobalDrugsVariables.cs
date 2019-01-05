@@ -9,5 +9,6 @@ public static class GlobalDrugsVariables {
     public static bool alcoSpeedOnceTaken = false;
     public static bool cocoMaryOnceTaken = false;
     public static bool cocoMDMAOnceTaken = false;
+    public static bool methHangoverOnceTaken = false;
 
 }

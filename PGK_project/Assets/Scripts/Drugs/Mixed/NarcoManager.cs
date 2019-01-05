@@ -37,6 +37,9 @@ public class NarcoManager : MonoBehaviour {
     bool cocoMDMAIsInUse = false;
     public Sprite cocMda;
 
+    //Hangover
+    public Sprite hanOve;
+
     public Image image;
 
     float time = 0;
@@ -101,6 +104,14 @@ public class NarcoManager : MonoBehaviour {
             image.enabled = true;
             Instantiate(cocoMDMA);
         }
+    }
+
+    public void hangoverStart()
+    {
+        GlobalDrugsVariables.methHangoverOnceTaken = true;
+        time = Time.time;
+        image.sprite = hanOve;
+        image.enabled = true;
     }
 
     private void checkMix()
