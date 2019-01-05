@@ -25,7 +25,7 @@ public class SetText : MonoBehaviour
 	    {
 	        text.text = "YOU ARE DEAD CUZ OF DRUG WITHDRWAL";
 	    }
-	    if (hero.poisoning > 40)
+	    if (hero.poisoning >= 40)
 	    {
 	        text.text = "YOU ARE DEAD CUZ OF POSIONING";
 	    }

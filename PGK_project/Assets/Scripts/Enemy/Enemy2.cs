@@ -289,9 +289,9 @@ public class Enemy2 : MonoBehaviour
         if (player == null){if (GameObject.FindWithTag("Player")) { player = GameObject.FindWithTag("Player"); }}
         else
         {
-            Debug.Log("player eoeoeoe");
+            //Debug.Log("player eoeoeoe");
         }
-        if (bullet == null) {Debug.Log(""); } else { Debug.Log("fuck"); }
+        if (bullet == null) { }//{Debug.Log(""); } else { Debug.Log("fuck"); }
        
         if (alive)
         {

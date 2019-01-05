@@ -8,6 +8,7 @@ public class MusicScript : MonoBehaviour {
     public AudioClip startMission;
     public AudioClip onDrugs;
     public AudioClip onWeed;
+    public AudioClip onWtf;
     public DrugsTimer hero;
     // Use this for initialization
     private bool startFlag = false;
@@ -35,7 +36,18 @@ public class MusicScript : MonoBehaviour {
                 onDrugsFlag = true;
             }
 
-            if (hero.marihuanaFlag == true)
+            if(hero.lsdFlag && hero.cocaFlag)
+            {
+                if (onDrugsFlag == true)
+                {
+                    audioSource.Stop();
+                    onDrugsFlag = false;
+                    audioSource.clip = onWtf;
+                    audioSource.Play();
+                }
+            }
+
+            else if (hero.marihuanaFlag == true)
             {
                 if (onDrugsFlag == true)
                 {
@@ -44,8 +56,6 @@ public class MusicScript : MonoBehaviour {
                     audioSource.clip = onWeed;
                     audioSource.Play();
                 }
-
-
             }
             else if (onDrugsFlag == false)
             {
