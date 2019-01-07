@@ -11,8 +11,8 @@ public class CocoMaryEffect : MonoBehaviour {
     void Start () {
         hero = GameObject.Find("Hero").GetComponent<Hero>();
         dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
-        hero.speed += 20;
-        Time.timeScale = 0.2f;
+        hero.speed += 15;
+        Time.timeScale = 0.35f;
     }
 	
 	// Update is called once per frame
@@ -23,7 +23,7 @@ public class CocoMaryEffect : MonoBehaviour {
                 Time.timeScale = 1f;
             else
                 Time.timeScale = 0.6f;
-            hero.speed -= 20;
+            hero.speed -= 15;
             Destroy(gameObject);
         }
 

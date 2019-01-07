@@ -37,6 +37,18 @@ public class NarcoManager : MonoBehaviour {
     bool cocoMDMAIsInUse = false;
     public Sprite cocMda;
 
+    //Koka + LSD
+    public GameObject cocoLSD;
+    bool cocoLSDFlag = false;
+    bool cocoLSDIsInUse = false;
+    public Sprite cocLsd;
+
+    //Cigarette + Mary
+    public GameObject maryCigar;
+    bool maryCigarFlag = false;
+    bool maryCigarIsInUse = false;
+    public Sprite marCig;
+
     //Hangover
     public Sprite hanOve;
 
@@ -104,6 +116,24 @@ public class NarcoManager : MonoBehaviour {
             image.enabled = true;
             Instantiate(cocoMDMA);
         }
+        if (cocoLSDFlag == true && cocoLSDIsInUse == false)
+        {
+            cocoLSDIsInUse = true;
+            GlobalDrugsVariables.cocoLSDOnceTaken = true;
+            time = Time.time;
+            image.sprite = cocLsd;
+            image.enabled = true;
+            Instantiate(cocoLSD);
+        }
+        if (maryCigarFlag == true && maryCigarIsInUse == false)
+        {
+            maryCigarIsInUse = true;
+            GlobalDrugsVariables.maryCigarOnceTaken = true;
+            time = Time.time;
+            image.sprite = marCig;
+            image.enabled = true;
+            Instantiate(maryCigar);
+        }
     }
 
     public void hangoverStart()
@@ -169,10 +199,33 @@ public class NarcoManager : MonoBehaviour {
             cocoMDMAIsInUse = false;
         }
 
+        //Coco LSD
+        if (dt.lsdFlag == true && dt.cocaFlag == true)
+        {
+            cocoLSDFlag = true;
+        }
+        else
+        {
+            cocoLSDFlag = false;
+            cocoLSDIsInUse = false;
+        }
+
+        //Mary Cigarette
+        if (dt.marihuanaFlag == true && dt.cigaretteFlag == true)
+        {
+            maryCigarFlag = true;
+        }
+        else
+        {
+            maryCigarFlag = false;
+            maryCigarIsInUse = false;
+        }
+
     }
 
     public void turnOffTheImage(float time)
     {
+        Debug.Log(time - Time.time);
         if(deathScene.active == true)
         {
             image.enabled = false;
@@ -182,7 +235,12 @@ public class NarcoManager : MonoBehaviour {
             stop = 2f;
         if(Time.timeScale < 1.0f)
         {
-            stop = 0.3f;
+            stop = 1.5f;
+            if(Time.timeScale < 0.5f)
+            {
+                stop = 0.4f;
+            }
+            
         }
         if (Time.time - time > stop)
             image.enabled = false;

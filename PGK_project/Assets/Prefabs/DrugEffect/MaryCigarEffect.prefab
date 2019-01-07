@@ -9,48 +9,48 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1528574923100422}
+  m_RootGameObject: {fileID: 1043326610580014}
   m_IsPrefabAsset: 1
---- !u!1 &1528574923100422
+--- !u!1 &1043326610580014
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4298540072462750}
-  - component: {fileID: 114638496409797136}
-  - component: {fileID: 82306458189333446}
+  - component: {fileID: 4423247563817010}
+  - component: {fileID: 82170682734077472}
+  - component: {fileID: 114288052938665064}
   m_Layer: 0
-  m_Name: Hangover
+  m_Name: MaryCigarEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4298540072462750
+--- !u!4 &4423247563817010
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528574923100422}
+  m_GameObject: {fileID: 1043326610580014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17043132, y: 1.4784682, z: -0.015015295}
+  m_LocalPosition: {x: -2.540727, y: -0.76801044, z: -0.18359375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82306458189333446
+--- !u!82 &82170682734077472
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528574923100422}
+  m_GameObject: {fileID: 1043326610580014}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: efb9f6666616f3947829004dcec209c1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 04b81e8e485e166419c2c682148831b0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -136,14 +136,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114638496409797136
+--- !u!114 &114288052938665064
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528574923100422}
+  m_GameObject: {fileID: 1043326610580014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7130049cbf44f824eafb5b4c658bdf07, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ad2e32a8cfa7704992aba2d6e06e87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

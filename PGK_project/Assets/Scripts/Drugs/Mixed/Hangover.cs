@@ -18,6 +18,10 @@ public class Hangover : MonoBehaviour {
         time = Time.time;
         maxHp = hero.maxHeath;
         speed = hero.speed;
+        if (!drugsTimer.onDrugs)
+        {
+            GameObject.Find("NarcoManager").GetComponent<NarcoManager>().hangoverStart();
+        }
 	}
 	
 	// Update is called once per frame
@@ -25,7 +29,7 @@ public class Hangover : MonoBehaviour {
 
         if (!drugsTimer.onDrugs)
         {
-            GameObject.Find("NarcoManager").GetComponent<NarcoManager>().hangoverStart();
+            
             hero.maxHeath = maxHp - 5;
             hero.speed = speed - 5;
         }

@@ -17,6 +17,10 @@ public class ExtasyEffect : MonoBehaviour {
     public PostProcessingProfile heraCocaProfile;
     public PostProcessingProfile cocaMaryProfile;
     public PostProcessingProfile cocaMdmaProfile;
+    public PostProcessingProfile cocaLsdProfile;
+    public PostProcessingProfile maryCigarProfile;
+    public PostProcessingProfile hangoverProfile;
+
     
     private PostProcessingBehaviour effect;
     // Use this for initialization
@@ -25,9 +29,16 @@ public class ExtasyEffect : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void Update () {
-
-        if (hero.lsdFlag == true)
+	void Update () { 
+        if(hero.cigaretteFlag && hero.marihuanaFlag)
+        {
+            GetComponent<PostProcessingBehaviour>().profile = maryCigarProfile;
+        }       
+        else if (hero.lsdFlag == true && hero.cocaFlag)
+        {
+            GetComponent<PostProcessingBehaviour>().profile = cocaLsdProfile;
+        }
+        else if (hero.lsdFlag == true)
         {
             GetComponent<PostProcessingBehaviour>().profile = lsdProfile;
         }

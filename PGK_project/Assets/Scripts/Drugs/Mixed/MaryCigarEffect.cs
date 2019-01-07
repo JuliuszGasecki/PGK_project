@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CocoLsdEffect : MonoBehaviour {
+public class MaryCigarEffect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
 		
-
-
 	}
 	
 	// Update is called once per frame
