@@ -16,9 +16,9 @@ public class NextLevelTest : MonoBehaviour {
     public void NextLevelButton(string name)
     {
         DrugsStat.AllStatsReset();
-        if (SceneManager.GetActiveScene().name == name && DrugsStat.completed == false)
+        if (SceneManager.GetActiveScene().name == name && DrugsStat.completed == false)             // powtorzenie, nie zaliczony lvl
             Do(name);
-        else if (SceneManager.GetActiveScene().name == name && DrugsStat.completed == true)
+        else if (SceneManager.GetActiveScene().name == name && DrugsStat.completed == true)         // powtorzenie ale level zaliczony
         {
             if (!DrugsStat.openedLvls.Contains(DrugsStat.level))
             {
@@ -26,7 +26,7 @@ public class NextLevelTest : MonoBehaviour {
             }
             Do(name);
         }
-        else if (AddCompletedLevel())
+        else if (AddCompletedLevel())                                                               // nastepny level
         {
             Do(name);
             DrugsStat.completed = false;
@@ -34,7 +34,7 @@ public class NextLevelTest : MonoBehaviour {
         Time.timeScale = 1f;
     }
 
-    public void Do(string nameToDo)
+    public void Do(string nameToDo)                             // do powtorzenia
     {
         DrugsStat.level = levelNameNumer.FirstOrDefault(x => x.Key == nameToDo).Value;
         LoadingScreenManager.nameScene = nameToDo;

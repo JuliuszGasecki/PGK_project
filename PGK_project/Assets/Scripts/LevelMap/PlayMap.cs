@@ -19,10 +19,13 @@ public class PlayMap : MonoBehaviour {
     {
         if (DrugsStat.openedLvls.Contains(0))                   // when u completed lvl_0, you can join lvl_1 (home)
         {
-            SceneManager.LoadScene("Home");                     // load scene without LoadingScene
+            DrugsStat.level = 1;
+            LoadingScreenManager.nameScene = "Home";
+            PlayLoadingScreen();
+            // SceneManager.LoadScene("Home");                     // load scene without LoadingScene
             // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
             //inv.GetUsingWeapon().CanUse = false;
-            DrugsStat.level = 1;
+
         }
     }
 

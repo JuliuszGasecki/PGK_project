@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LoadingScreenManager : MonoBehaviour {
 
     private float time;
-    public static string nameScene = "Home";
+    public static string nameScene = "DemoScene";
 
     void Start()
     {
@@ -19,8 +19,9 @@ public class LoadingScreenManager : MonoBehaviour {
         if(Time.time - time > 4)
         {
             DrugsStat.AllStatsReset();
-            SceneManager.LoadScene(nameScene);
-           // SceneManager.LoadScene("home");
+            SceneManager.LoadScene("Required");
+            // SceneManager.LoadScene(nameScene);
+            // SceneManager.LoadScene("home");
         }
     }
 

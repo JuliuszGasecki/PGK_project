@@ -8,6 +8,7 @@ public class BackToMenu : MonoBehaviour {
     public void Back()
     {
         Time.timeScale = 1f;
+       // LoadingScreenManager.nameScene = "DemoScene";
         SceneManager.LoadScene("test");
     }
 }
