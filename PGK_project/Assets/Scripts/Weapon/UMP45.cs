@@ -28,6 +28,9 @@ public class UMP45 : MonoBehaviour, IShootable {
     private Vector3 mousePosition;
     public bool alert { set; get; }
 
+    private float time;
+    private bool isAnimOn = false;
+
     public string Name { get; set; }
 
     void Start ()
@@ -60,7 +63,8 @@ public class UMP45 : MonoBehaviour, IShootable {
 	        //Reload();
 	        UseWeapon();
 	        UpdateAmmo();
-	    }
+            setAnim();
+        }
 	}
 
     public void AutoReloading()
@@ -81,7 +85,24 @@ public class UMP45 : MonoBehaviour, IShootable {
                 this.gameObject.GetComponent<Inventory>().rifleAmmo -= difference;
                 //anim.SetBool("loading", true);
             }
-            //anim.SetBool("loading", false);
+            //anim.SetBool("loading", true);
+            time = Time.time;
+            isAnimOn = true;
+        }
+        //anim.SetBool("loading", false);
+    }
+
+    private void setAnim()
+    {
+        if (isAnimOn)
+        {
+            anim.SetBool("loading", true);
+            isAnimOn = false;
+        }
+        else if (Time.time - time >= 1 && time != 0)
+        {
+            anim.SetBool("loading", false);
+            time = 0;
         }
     }
 

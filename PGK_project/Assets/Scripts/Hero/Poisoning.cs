@@ -10,17 +10,19 @@ public class Poisoning : MonoBehaviour {
     public Slider poisoninglSLider;
     public float poisoningMax;
     public bool poisoningFlag = false;
-    private bool isPuking;
+    private bool isPukingAnim;
     float time;
     private float pukeTime;
     float previousSpeed;
+    private Animator anim;
 
     // Use this for initialization
     void Start () {
         hero = GetComponent<Hero>();
+        anim = GameObject.Find("Hero").GetComponent<Animator>();
         hero.poisoning = 0;
         time = Time.time;
-        isPuking = false;
+        isPukingAnim = false;
     }
 	
 	// Update is called once per frame
@@ -41,33 +43,35 @@ public class Poisoning : MonoBehaviour {
 
     private void checkPuke()
     {
-        if(hero.poisoning > poisoningMax / 1.5 && !isPuking)
+        if(hero.poisoning > poisoningMax / 1.5 && !isPukingAnim)
         {
             pukeTime = Time.time;
             int temp = Random.Range((int)hero.poisoning, (600 - (int)hero.poisoning));
             if(temp == 69)
             {
                 previousSpeed = hero.speed;
-                //Debug.Log("Porzygusiałem sie mamusiu");
-                isPuking = true;
+                Debug.Log("Porzygusiałem sie mamusiu");
+                isPukingAnim = true;
             }
         }
     }
 
     private void puke()
     {
-        if (isPuking)
+        if (isPukingAnim)
         {
             if(Time.time - pukeTime < 2)
             {
                 hero.poisoning -= 0.1f;
                 hero.speed = 1;
-                //Debug.Log("Porzygusiałem sie tatusiu");
+                Debug.Log("Porzygusiałem sie tatusiu");
+                anim.SetBool("isPuking", true);
             }
             else
             {
                 hero.speed = previousSpeed;
-                isPuking = false;
+                isPukingAnim = false;
+                anim.SetBool("isPuking", false);
             }
             
         }

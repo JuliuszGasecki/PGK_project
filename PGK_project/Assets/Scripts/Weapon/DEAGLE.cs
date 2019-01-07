@@ -30,6 +30,9 @@ public class DEAGLE : MonoBehaviour, IShootable
     private Vector2 direction;
     private Vector3 mousePosition;
 
+    private float time;
+    private bool isAnimOn = false;
+
 
     void Start()
     {
@@ -62,6 +65,7 @@ public class DEAGLE : MonoBehaviour, IShootable
             //  Reload();
             UseWeapon();
             UpdateAmmo();
+            setAnim();
         }
     }
 
@@ -90,6 +94,23 @@ public class DEAGLE : MonoBehaviour, IShootable
                 ammoInMagazine += difference;
                 this.gameObject.GetComponent<Inventory>().deagleAmmo -= difference;
             }
+
+            time = Time.time;
+            isAnimOn = true;
+        }
+    }
+
+    private void setAnim()
+    {
+        if (isAnimOn)
+        {
+            anim.SetBool("loading", true);
+            isAnimOn = false;
+        }
+        else if (Time.time - time >= 1 && time != 0)
+        {
+            anim.SetBool("loading", false);
+            time = 0;
         }
     }
 
