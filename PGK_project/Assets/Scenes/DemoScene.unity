@@ -1128,6 +1128,11 @@ Transform:
   m_Father: {fileID: 1695874796}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 71.536}
+--- !u!1 &92580225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1167576340382066, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
+    type: 2}
+  m_PrefabInternal: {fileID: 2107142484}
 --- !u!224 &92580226 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224922592300880276, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
@@ -1164,7 +1169,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4501,6 +4506,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 309924310}
   m_CullTransparentMesh: 0
+--- !u!1 &311454314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1167576340382066, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1239054581}
 --- !u!224 &311454315 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224922592300880276, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
@@ -5670,7 +5680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &382261416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8055,7 +8065,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8772,7 +8782,7 @@ Transform:
   - {fileID: 419954618}
   - {fileID: 895380405}
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &592024992
 GameObject:
@@ -11056,6 +11066,21 @@ Prefab:
       propertyPath: methSlider
       value: 
       objectReference: {fileID: 1003485211}
+    - target: {fileID: 114730968310348708, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: panel3
+      value: 
+      objectReference: {fileID: 311454314}
+    - target: {fileID: 114730968310348708, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: panel4
+      value: 
+      objectReference: {fileID: 2045727810}
+    - target: {fileID: 114730968310348708, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: panel5
+      value: 
+      objectReference: {fileID: 92580225}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e83121cfd1454a43a2601311e563632, type: 2}
   m_IsPrefabAsset: 0
@@ -12324,7 +12349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &873362308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17913,12 +17938,12 @@ Prefab:
     - target: {fileID: 114570933392288562, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
         type: 2}
       propertyPath: m_Text
-      value: uzyj banji conajmniej 6 razy
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114870155886411896, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
         type: 2}
       propertyPath: m_Text
-      value: '420 km/h i nie zwalnia '
+      value: "Mixy kt\xF3rych nie mo\u017Cemy zmy\u0107\n"
       objectReference: {fileID: 0}
     - target: {fileID: 224780185866942590, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
         type: 2}
@@ -20081,7 +20106,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26249,68 +26274,6 @@ Transform:
   m_Father: {fileID: 1695874796}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -175.00601}
---- !u!1 &1753000800
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1753000802}
-  - component: {fileID: 1753000801}
-  m_Layer: 5
-  m_Name: AchievementsController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1753000801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1753000800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e490bd4193b04681a85405ddf9b3903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myHead: {fileID: 0}
-  enemy: []
-  mixes: []
-  takenDrugs: []
-  panel: {fileID: 158359964}
-  panel1: {fileID: 1803315832}
-  panel2: {fileID: 23229785}
-  panel3: {fileID: 0}
-  panel4: {fileID: 0}
-  panel5: {fileID: 0}
-  achievementCanvas: {fileID: 873362310}
-  content: {fileID: 0}
-  heart: {fileID: 21300000, guid: 8ac64c0bbe01147eab788d1ec954a8a7, type: 3}
-  lama: {fileID: 21300000, guid: 5aefc237518dd4f8b9c9178474085c4c, type: 3}
-  cannabis: {fileID: 21300000, guid: 3069ed97957dc478ba432d62663f2f9a, type: 3}
-  achievement_box: {fileID: 1167576340382066, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
-    type: 2}
---- !u!224 &1753000802
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1753000800}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 55
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 417.5, y: 253}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1756178641
 GameObject:
   m_ObjectHideFlags: 0
@@ -29964,6 +29927,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2042950768}
   m_CullTransparentMesh: 0
+--- !u!1 &2045727810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1167576340382066, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1256696330}
 --- !u!224 &2045727811 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224922592300880276, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
