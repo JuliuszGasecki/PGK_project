@@ -1,0 +1,635 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1132477922919738}
+  m_IsPrefabAsset: 1
+--- !u!1 &1080771151971446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4050248331962548}
+  - component: {fileID: 114672813042961724}
+  - component: {fileID: 114749609146715424}
+  - component: {fileID: 114751914142900802}
+  - component: {fileID: 114603231261697648}
+  m_Layer: 0
+  m_Name: Chapter5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1102022993479126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4622062721060402}
+  - component: {fileID: 114529714502695138}
+  - component: {fileID: 114636357327157990}
+  - component: {fileID: 114168805447062226}
+  - component: {fileID: 114788262893567414}
+  m_Layer: 0
+  m_Name: Chapter1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1132477922919738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4526601636074478}
+  - component: {fileID: 114480969362981384}
+  m_Layer: 0
+  m_Name: DialogueNotesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1384037093453708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4838476070966324}
+  - component: {fileID: 114499423956936792}
+  - component: {fileID: 114998706832879894}
+  - component: {fileID: 114171676845985364}
+  - component: {fileID: 114640861941989812}
+  m_Layer: 0
+  m_Name: Chapter4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1408244501718214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4740556380364358}
+  - component: {fileID: 114239479537977862}
+  - component: {fileID: 114350596236066184}
+  - component: {fileID: 114664103821327698}
+  - component: {fileID: 114271066535496550}
+  - component: {fileID: 114410291174345986}
+  - component: {fileID: 114766918007936448}
+  - component: {fileID: 114473998409325482}
+  - component: {fileID: 114074807380931482}
+  m_Layer: 0
+  m_Name: Chapter3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1409884939395232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4400048312236512}
+  - component: {fileID: 114205081425070956}
+  - component: {fileID: 114627721052372402}
+  - component: {fileID: 114614594689692098}
+  - component: {fileID: 114701651632658854}
+  m_Layer: 0
+  m_Name: Chapter2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4050248331962548
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1080771151971446}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4526601636074478}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4400048312236512
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409884939395232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4526601636074478}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4526601636074478
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132477922919738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 555.507, y: 321.07498, z: -5.892144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4838476070966324}
+  - {fileID: 4740556380364358}
+  - {fileID: 4400048312236512}
+  - {fileID: 4622062721060402}
+  - {fileID: 4050248331962548}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4622062721060402
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102022993479126}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4526601636074478}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4740556380364358
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408244501718214}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4526601636074478}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4838476070966324
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384037093453708}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4526601636074478}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114074807380931482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408244501718214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 96f6c6c75be71284ca238093db219562, type: 3}
+  text: ADFASDFASDF
+  chapterNumber: 3
+  isActive: 1
+--- !u!114 &114168805447062226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102022993479126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 80b72354ef9bb2341a6d24a2d018a0d6, type: 3}
+  text: "Kurwa nic nie zosta\u0142o..."
+  chapterNumber: 1
+  isActive: 1
+--- !u!114 &114171676845985364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384037093453708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: faf101cf77768714dbb4e7d875da940f, type: 3}
+  text: "Kurwa nic nie zosta\u0142o..."
+  chapterNumber: 4
+  isActive: 1
+--- !u!114 &114205081425070956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409884939395232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
+  text: 'We no odpisz synek proszem :/
+
+
+    ~Mama'
+  chapterNumber: 2
+  isActive: 1
+--- !u!114 &114239479537977862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408244501718214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 32a67b572654b29478d3c22da9f2da9b, type: 3}
+  text: 'We no odpisz synek proszem :/
+
+
+    ~Mama'
+  chapterNumber: 3
+  isActive: 1
+--- !u!114 &114271066535496550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408244501718214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 9f9202a69a669b3498d798452ad0676a, type: 3}
+  text: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej to zdoby\u0107.
+    uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
+    do\u0142\u0105czony do lek\xF3w"
+  chapterNumber: 3
+  isActive: 1
+--- !u!114 &114350596236066184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408244501718214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 4002e268b764f23479576ff44622a730, type: 3}
+  text: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
+    na klatce schodowej.\n\nSzkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
+    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
+    sob\u0105..."
+  chapterNumber: 3
+  isActive: 0
+--- !u!114 &114410291174345986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408244501718214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: b53264c057562794da53967f9f92ca4b, type: 3}
+  text: sdsfasdf
+  chapterNumber: 3
+  isActive: 0
+--- !u!114 &114473998409325482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408244501718214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 3f60472ce9fdc2742bd00d0535b0806a, type: 3}
+  text: dfsddfDAF
+  chapterNumber: 3
+  isActive: 0
+--- !u!114 &114480969362981384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132477922919738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3381cf186af5b44aa4d49946809404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textChapter: {fileID: 0}
+  text1: {fileID: 0}
+  image1: {fileID: 0}
+  text2: {fileID: 0}
+  image2: {fileID: 0}
+  text3: {fileID: 0}
+  image3: {fileID: 0}
+  unknown: {fileID: 21300000, guid: 8365e77e8a4611f4ca4cb086e3f2ac38, type: 3}
+  Notes1: []
+  Notes2: []
+  Notes3: []
+  Notes4: []
+  Notes5: []
+--- !u!114 &114499423956936792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384037093453708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: afb0b9c1c34376f418db3ea3d08a7e98, type: 3}
+  text: 'We no odpisz synek proszem :/
+
+
+    ~Mama'
+  chapterNumber: 4
+  isActive: 1
+--- !u!114 &114529714502695138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102022993479126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 57988c377f1751f479346ca79275958a, type: 3}
+  text: 'We no odpisz synek proszem :/
+
+
+    ~Mama'
+  chapterNumber: 1
+  isActive: 1
+--- !u!114 &114603231261697648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1080771151971446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: d18ecf51bf02d43489075983bc65b70d, type: 3}
+  text: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej to zdoby\u0107.
+    uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
+    do\u0142\u0105czony do lek\xF3w"
+  chapterNumber: 5
+  isActive: 1
+--- !u!114 &114614594689692098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409884939395232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
+  text: "Kurwa nic nie zosta\u0142o..."
+  chapterNumber: 2
+  isActive: 1
+--- !u!114 &114627721052372402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409884939395232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 4974d530badadc44ebe565ee5dbf8531, type: 3}
+  text: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
+    na klatce schodowej.\n\nSzkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
+    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
+    sob\u0105..."
+  chapterNumber: 2
+  isActive: 1
+--- !u!114 &114636357327157990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102022993479126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: faf101cf77768714dbb4e7d875da940f, type: 3}
+  text: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
+    na klatce schodowej.\n\nSzkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
+    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
+    sob\u0105..."
+  chapterNumber: 1
+  isActive: 0
+--- !u!114 &114640861941989812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384037093453708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: ed142396f9f0066419fb6ba6ccf5c4a8, type: 3}
+  text: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej to zdoby\u0107.
+    uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
+    do\u0142\u0105czony do lek\xF3w"
+  chapterNumber: 4
+  isActive: 1
+--- !u!114 &114664103821327698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408244501718214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: dc47c4aad53edf946a7b334ab86052ff, type: 3}
+  text: "Kurwa nic nie zosta\u0142o..."
+  chapterNumber: 3
+  isActive: 0
+--- !u!114 &114672813042961724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1080771151971446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: d65b68f6b1e34994da9bff3249300f70, type: 3}
+  text: 'We no odpisz synek proszem :/
+
+
+    ~Mama'
+  chapterNumber: 5
+  isActive: 1
+--- !u!114 &114701651632658854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409884939395232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 17cab659efbf0e44f8564f6f9573ee2a, type: 3}
+  text: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej to zdoby\u0107.
+    uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
+    do\u0142\u0105czony do lek\xF3w"
+  chapterNumber: 2
+  isActive: 1
+--- !u!114 &114749609146715424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1080771151971446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 3096bfc8905181b42a245055bb04374e, type: 3}
+  text: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
+    na klatce schodowej.\n\nSzkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
+    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
+    sob\u0105..."
+  chapterNumber: 5
+  isActive: 0
+--- !u!114 &114751914142900802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1080771151971446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: bc538aff04199cd45933c3e7f2b6a0d6, type: 3}
+  text: "Kurwa nic nie zosta\u0142o..."
+  chapterNumber: 5
+  isActive: 1
+--- !u!114 &114766918007936448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408244501718214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 9fc21194bd235d34fb6f81e013b2ed90, type: 3}
+  text: fdfasdffb
+  chapterNumber: 3
+  isActive: 1
+--- !u!114 &114788262893567414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102022993479126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 70ecde5ebc651064a9b6847fa782b55f, type: 3}
+  text: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej to zdoby\u0107.
+    uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
+    do\u0142\u0105czony do lek\xF3w"
+  chapterNumber: 1
+  isActive: 0
+--- !u!114 &114998706832879894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384037093453708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: ebc65a36dfd40894f9fcb4009094d793, type: 3}
+  text: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
+    na klatce schodowej.\n\nSzkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
+    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
+    sob\u0105..."
+  chapterNumber: 4
+  isActive: 1

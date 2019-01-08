@@ -18,6 +18,7 @@ public class Hangover : MonoBehaviour {
         time = Time.time;
         maxHp = hero.maxHeath;
         speed = hero.speed;
+        hero.hangover = true;
         if (!drugsTimer.onDrugs)
         {
             GameObject.Find("NarcoManager").GetComponent<NarcoManager>().hangoverStart();
@@ -37,6 +38,7 @@ public class Hangover : MonoBehaviour {
         {
             hero.maxHeath = maxHp;
             hero.speed = speed;
+            hero.hangover = false;
             Destroy(gameObject);
         }
 		

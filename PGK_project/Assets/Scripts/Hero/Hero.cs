@@ -15,6 +15,7 @@ public class Hero : MonoBehaviour
     public float drugWithdrawal;
     public float attack;
     public Transform spawnPoint;
+    public bool hangover = false;
     private float wojtek; //speed after what doesnt kill u
 
    /* private int tempHealth;

@@ -11,7 +11,10 @@ public class MixImagemanager : MonoBehaviour {
     public GameObject halfDead;
     public GameObject lordOftheTime;
     public GameObject noAlcohol;
-    public bool flag1 = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false;
+    public GameObject hangover;
+    public GameObject cocoLsd;
+    public GameObject weedCigar;
+    public bool flag1 = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false, flag6 = false, flag7 = false, flag8 = false;
     // Use this for initialization
     void Start () {
         dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
@@ -92,6 +95,48 @@ public class MixImagemanager : MonoBehaviour {
         {
             lordOftheTime.SetActive(false);
             flag5 = false;
+        }
+        if (dt.marihuanaFlag && dt.cigaretteFlag)
+        {
+            weedCigar.SetActive(true);
+            if (!flag6)
+            {
+                flag6 = true;
+                //DrugsStat.drugsComboLordOftheTime++;
+            }
+        }
+        else
+        {
+            weedCigar.SetActive(false);
+            flag6 = false;
+        }
+        if (dt.cocaFlag && dt.lsdFlag)
+        {
+            cocoLsd.SetActive(true);
+            if (!flag7)
+            {
+                flag7 = true;
+                //DrugsStat.drugsComboLordOftheTime++;
+            }
+        }
+        else
+        {
+            cocoLsd.SetActive(false);
+            flag7 = false;
+        }
+        if (GameObject.Find("Hero").GetComponent<Hero>().hangover)
+        {
+            hangover.SetActive(true);
+            if (!flag8)
+            {
+                flag8 = true;
+                //DrugsStat.drugsComboLordOftheTime++;
+            }
+        }
+        else
+        {
+            hangover.SetActive(false);
+            flag8 = false;
         }
     }
 }

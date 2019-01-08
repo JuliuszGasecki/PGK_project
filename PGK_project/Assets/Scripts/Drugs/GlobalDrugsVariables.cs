@@ -4,6 +4,18 @@ using UnityEngine;
 
 public static class GlobalDrugsVariables {
 
+    public static bool alcoOnceTaken = false;
+    public static bool cocoOnceTaken = false;
+    public static bool heraOnceTaken = false;
+    public static bool cigaretteOnceTaken = false;
+    public static bool methOnceTaken = false;
+    public static bool extasyOnceTaken = false;
+    public static bool weedOnceTaken = false;
+    public static bool lsdOnceTaken = false;
+    public static bool mocarzOnceTaken = false;
+
+
+
     public static bool alcoHeraOnceTaken = false;
     public static bool cocoHeraOnceTaken = false;
     public static bool alcoSpeedOnceTaken = false;
