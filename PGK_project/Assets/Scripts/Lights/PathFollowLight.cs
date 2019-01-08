@@ -19,7 +19,7 @@ public class PathFollowLight : MonoBehaviour {
         Vector3 dir = path[currentPoint].position - transform.position;
         transform.position += dir * (Time.time - time)* speed;
         time = Time.time;
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
 
         if (dir.magnitude <= reachDist)
         {

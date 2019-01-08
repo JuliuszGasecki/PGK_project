@@ -32,7 +32,7 @@ public class OutdoorLightBlink : MonoBehaviour {
     private void Blink()
     {
         float fun = function();
-        Debug.Log(fun);
+        //Debug.Log(fun);
         if(fun <= 1-blinkRatio && fun >= blinkRatio)
         {
             spriteRenderer.enabled = false;
