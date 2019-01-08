@@ -1584,13 +1584,14 @@ GameObject:
   - component: {fileID: 129137533}
   - component: {fileID: 129137535}
   - component: {fileID: 129137534}
+  - component: {fileID: 129137536}
   m_Layer: 5
   m_Name: SpecialWeaponAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &129137533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1646,6 +1647,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 129137532}
   m_CullTransparentMesh: 0
+--- !u!114 &129137536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129137532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f22b8cd733f76148b58bfc93622a652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &131534520
 GameObject:
   m_ObjectHideFlags: 0
@@ -5362,7 +5374,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 370583216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f22b8cd733f76148b58bfc93622a652, type: 3}
+  m_Script: {fileID: 11500000, guid: 83b3b9ed2a93eec4b8cfed5a614b5c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &370583219
@@ -13100,7 +13112,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &948540366
 GameObject:
@@ -19963,7 +19975,7 @@ Transform:
   - {fileID: 958970544}
   - {fileID: 606324085}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1486449798
 GameObject:

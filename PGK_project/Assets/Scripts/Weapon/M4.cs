@@ -35,7 +35,7 @@ public class M4 : MonoBehaviour, IShootable
         fireRate = 0.2f;
         speed = 30f;
         magazineCapacity = 20;
-        ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
+        ammo = this.gameObject.GetComponent<Inventory>().RifleAmmo;
         ammoInMagazine = magazineCapacity;
         Name = "M4";
         alert = false;
@@ -68,12 +68,12 @@ public class M4 : MonoBehaviour, IShootable
             if (difference > ammo)
             {
                 ammoInMagazine += ammo;
-                this.gameObject.GetComponent<Inventory>().rifleAmmo = 0;
+                this.gameObject.GetComponent<Inventory>().RifleAmmo = 0;
             }
             else
             {
                 ammoInMagazine += difference;
-                this.gameObject.GetComponent<Inventory>().rifleAmmo -= difference;
+                this.gameObject.GetComponent<Inventory>().RifleAmmo -= difference;
             }
         }
     }
@@ -90,12 +90,12 @@ public class M4 : MonoBehaviour, IShootable
                 if (difference > ammo)
                 {
                     ammoInMagazine += ammo;
-                    this.gameObject.GetComponent<Inventory>().rifleAmmo = 0;
+                    this.gameObject.GetComponent<Inventory>().RifleAmmo = 0;
                 }
                 else
                 {
                     ammoInMagazine += difference;
-                    this.gameObject.GetComponent<Inventory>().rifleAmmo -= difference;
+                    this.gameObject.GetComponent<Inventory>().RifleAmmo -= difference;
                 }
             }
 
@@ -150,7 +150,7 @@ public class M4 : MonoBehaviour, IShootable
 
     public void UpdateAmmo()
     {
-        ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
+        ammo = this.gameObject.GetComponent<Inventory>().RifleAmmo;
     }
 
     public void DeafultAmmo()

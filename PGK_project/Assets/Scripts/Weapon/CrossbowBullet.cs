@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,10 @@ public class CrossbowBullet : MonoBehaviour
 {
     public float bulletSpeed { set; get; }
 
-    public int bulletDamage { set; get; }
+    public int specialEffect { set; get; }
+
+    private List<Action> functions;
+
     public GameObject BulletSplash;
 
     // Use this for initialization
@@ -14,6 +18,9 @@ public class CrossbowBullet : MonoBehaviour
     {
         // bulletDamage = 3;
         //bulletSpeed = 20f;
+        functions = new List<Action>();
+        functions.Add(GreenArrowsEffects);
+        functions.Add(RedArrowsEffects);
     }
 
     // Update is called once per frame
@@ -40,4 +47,13 @@ public class CrossbowBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void GreenArrowsEffects()
+    {
+
+    }
+
+    void RedArrowsEffects()
+    {
+
+    }
 }

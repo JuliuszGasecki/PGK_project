@@ -39,7 +39,7 @@ public class SPAS : MonoBehaviour, IShootable
         fireRate = 0.7f;
         speed = 20f;
         magazineCapacity = 9;
-        ammo = this.gameObject.GetComponent<Inventory>().shotgunAmmo;
+        ammo = this.gameObject.GetComponent<Inventory>().ShotgunAmmo;
         ammoInMagazine = magazineCapacity;
         Name = "SPAS";
         alert = false;
@@ -77,12 +77,12 @@ public class SPAS : MonoBehaviour, IShootable
                 if (difference > ammo)
                 {
                     ammoInMagazine += ammo;
-                    this.gameObject.GetComponent<Inventory>().shotgunAmmo = 0;
+                    this.gameObject.GetComponent<Inventory>().ShotgunAmmo = 0;
                 }
                 else
                 {
                     ammoInMagazine += difference;
-                    this.gameObject.GetComponent<Inventory>().shotgunAmmo -= difference;
+                    this.gameObject.GetComponent<Inventory>().ShotgunAmmo -= difference;
                 }
             }
 
@@ -99,12 +99,12 @@ public class SPAS : MonoBehaviour, IShootable
             if (difference > ammo)
             {
                 ammoInMagazine += ammo;
-                this.gameObject.GetComponent<Inventory>().shotgunAmmo = 0;
+                this.gameObject.GetComponent<Inventory>().ShotgunAmmo = 0;
             }
             else
             {
                 ammoInMagazine += difference;
-                this.gameObject.GetComponent<Inventory>().shotgunAmmo -= difference;
+                this.gameObject.GetComponent<Inventory>().ShotgunAmmo -= difference;
             }
 
             time = Time.time;
@@ -203,7 +203,7 @@ public class SPAS : MonoBehaviour, IShootable
 
     public void UpdateAmmo()
     {
-        ammo = this.gameObject.GetComponent<Inventory>().shotgunAmmo;
+        ammo = this.gameObject.GetComponent<Inventory>().ShotgunAmmo;
     }
 
     public void DeafultAmmo()

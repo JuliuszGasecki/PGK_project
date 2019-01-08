@@ -42,7 +42,7 @@ public class DEAGLE : MonoBehaviour, IShootable
         fireRate = 0.6f;
         speed = 25f;
         magazineCapacity = 7;
-        ammo = this.gameObject.GetComponent<Inventory>().deagleAmmo; 
+        ammo = this.gameObject.GetComponent<Inventory>().DeagleAmmo; 
         ammoInMagazine = magazineCapacity;
         Name = "DEAGLE";
         alert = false;
@@ -87,12 +87,12 @@ public class DEAGLE : MonoBehaviour, IShootable
             if (difference > ammo)
             {
                 ammoInMagazine += ammo;
-                this.gameObject.GetComponent<Inventory>().deagleAmmo = 0;
+                this.gameObject.GetComponent<Inventory>().DeagleAmmo = 0;
             }
             else
             {
                 ammoInMagazine += difference;
-                this.gameObject.GetComponent<Inventory>().deagleAmmo -= difference;
+                this.gameObject.GetComponent<Inventory>().DeagleAmmo -= difference;
             }
 
             time = Time.time;
@@ -174,7 +174,7 @@ public class DEAGLE : MonoBehaviour, IShootable
 
     public void UpdateAmmo()
     {
-        ammo = this.gameObject.GetComponent<Inventory>().deagleAmmo;
+        ammo = this.gameObject.GetComponent<Inventory>().DeagleAmmo;
     }
 
     public void DeafultAmmo()

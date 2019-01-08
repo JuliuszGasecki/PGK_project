@@ -79,22 +79,22 @@ public class BounceAndAdd : MonoBehaviour {
 
         if (nameW.Equals(_weaponNames[0]))
         {
-            inv.deagleAmmo += 3;
+            inv.DeagleAmmo += 3;
             return;
         }
         if (nameW.Equals(_weaponNames[1]))
         {
-            inv.rifleAmmo += 20;
+            inv.RifleAmmo += 20;
             return;
         }
         if(nameW.Equals(_weaponNames[2]))
         {
-            inv.rifleAmmo += 20;
+            inv.RifleAmmo += 20;
             return;
         }
         if(nameW.Equals(_weaponNames[4]))
         {
-            inv.shotgunAmmo += 5;
+            inv.ShotgunAmmo += 5;
             return;
         }
     }
@@ -103,15 +103,15 @@ public class BounceAndAdd : MonoBehaviour {
     {
         if (nameW.Equals(_ammoNames[0]))
         {
-            inv.rifleAmmo += 150;
+            inv.RifleAmmo += 150;
         }
         else if (nameW.Equals(_ammoNames[1]))
         {
-            inv.shotgunAmmo += 5;
+            inv.ShotgunAmmo += 5;
         }
         else if (nameW.Equals(_ammoNames[2]))
         {
-            inv.deagleAmmo += 3;
+            inv.DeagleAmmo += 3;
         }
     }
     
