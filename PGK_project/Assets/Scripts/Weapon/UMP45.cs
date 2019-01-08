@@ -41,7 +41,7 @@ public class UMP45 : MonoBehaviour, IShootable {
         fireRate = 0.1f;
         speed = 25f;
         magazineCapacity = 30;
-        ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
+        ammo = this.gameObject.GetComponent<Inventory>().RifleAmmo;
         ammoInMagazine = magazineCapacity;
         Name = "UMP45";
         alert = false;
@@ -76,13 +76,13 @@ public class UMP45 : MonoBehaviour, IShootable {
             if (difference > ammo)
             {
                 ammoInMagazine += ammo;
-                this.gameObject.GetComponent<Inventory>().rifleAmmo = 0;
+                this.gameObject.GetComponent<Inventory>().RifleAmmo = 0;
                 //anim.SetBool("loading", true);
             }
             else
             {
                 ammoInMagazine += difference;
-                this.gameObject.GetComponent<Inventory>().rifleAmmo -= difference;
+                this.gameObject.GetComponent<Inventory>().RifleAmmo -= difference;
                 //anim.SetBool("loading", true);
             }
             //anim.SetBool("loading", true);
@@ -176,7 +176,7 @@ public class UMP45 : MonoBehaviour, IShootable {
 
     public void UpdateAmmo()
     {
-        ammo = this.gameObject.GetComponent<Inventory>().rifleAmmo;
+        ammo = this.gameObject.GetComponent<Inventory>().RifleAmmo;
     }
 
     public void DeafultAmmo()

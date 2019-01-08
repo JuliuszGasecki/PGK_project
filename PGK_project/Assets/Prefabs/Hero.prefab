@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1947799448747012}
   m_LocalRotation: {x: -0, y: -0, z: -0.0052293153, w: 0.99998635}
-  m_LocalPosition: {x: 0.18, y: 1.59, z: -1}
+  m_LocalPosition: {x: -7.41, y: 45.98, z: -1}
   m_LocalScale: {x: 0.06694192, y: 0.062343426, z: 0.075385034}
   m_Children:
   - {fileID: 4945793687859220}
@@ -334,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 0}
+  maxHeath: 20
   health: 20
   speed: 8
   poisoning: 0
@@ -387,6 +388,8 @@ MonoBehaviour:
   vodkaSlider: {fileID: 0}
   lsdSlider: {fileID: 0}
   mocarzSlider: {fileID: 0}
+  cigaretteSlider: {fileID: 0}
+  methSlider: {fileID: 0}
   achievementsControll: {fileID: 0}
   extasyFlag: 0
   marihuanaFlag: 0
@@ -395,6 +398,8 @@ MonoBehaviour:
   vodkaFlag: 0
   mocarzFlag: 0
   lsdFlag: 0
+  cigaretteFlag: 0
+  methFlag: 0
 --- !u!114 &114870152575117114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -424,7 +429,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathScene: {fileID: 0}
-  temp: 0
 --- !u!212 &212392909236315788
 SpriteRenderer:
   m_ObjectHideFlags: 1

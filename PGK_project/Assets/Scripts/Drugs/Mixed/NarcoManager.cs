@@ -9,43 +9,43 @@ public class NarcoManager : MonoBehaviour {
     DrugsTimer dt;
     //Alkohol i heroina
     public GameObject alcoHera;
-    bool alcoHeraFlag = false;
+    public bool alcoHeraFlag { set; get; }
     bool alcoHeraIsInUse = false;
     public Sprite alcHer;
 
     //Heroina i kokaina
     public GameObject cocoHera;
-    bool cocoHeraFlag = false;
+    public bool cocoHeraFlag { set; get; }
     bool cocoHeraIsInUse = false;
     public Sprite cocHer;
 
     //Alkohol i kokaina/MDMA
     public GameObject alcoSpeed;
-    bool alcoSpeedFlag = false;
+    public bool alcoSpeedFlag { set; get; }
     bool alcoSpeedIsInUse = false;
     public Sprite alcSpe;
 
     //Koka + Mary
     public GameObject cocoMary;
-    bool cocoMaryFlag = false;
+    public bool cocoMaryFlag { set; get; }
     bool cocoMaryIsInUse = false;
     public Sprite cocMar;
 
     //Koka + MDMA
     public GameObject cocoMDMA;
-    bool cocoMDMAFlag = false;
+    public bool cocoMDMAFlag { set; get; }
     bool cocoMDMAIsInUse = false;
     public Sprite cocMda;
 
     //Koka + LSD
     public GameObject cocoLSD;
-    bool cocoLSDFlag = false;
+    public bool cocoLSDFlag { set; get; }
     bool cocoLSDIsInUse = false;
     public Sprite cocLsd;
 
     //Cigarette + Mary
     public GameObject maryCigar;
-    bool maryCigarFlag = false;
+    public bool maryCigarFlag { set; get; }
     bool maryCigarIsInUse = false;
     public Sprite marCig;
 
