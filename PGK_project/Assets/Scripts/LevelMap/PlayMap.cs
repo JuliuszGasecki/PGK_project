@@ -39,6 +39,26 @@ public class PlayMap : MonoBehaviour {
         }
     }
 
+    public void PlayLastMap()
+    {
+       // DrugsStat.level = 0;
+        if(DrugsStat.level == 0)
+        {
+            LoadingScreenManager.nameScene = "DemoScene";
+            PlayLoadingScreen();
+        }
+        else if(DrugsStat.level == 1)
+        {
+            LoadingScreenManager.nameScene = "DemoScene";
+            PlayLoadingScreen();
+        }
+        else if(DrugsStat.level == 2)
+        {
+            LoadingScreenManager.nameScene = "Home";
+            PlayLoadingScreen();
+        }
+    }
+
     public void PlayLoadingScreen()
     {
         SceneManager.LoadScene("LoadingScreen");

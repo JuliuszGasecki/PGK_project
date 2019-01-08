@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DataSet : MonoBehaviour {
 
+    public Text textLevel;
     public Text textFirst;
     public GameObject First;
     public Text textSecond;
@@ -56,6 +57,7 @@ public class DataSet : MonoBehaviour {
 
     public void SetData0()
     {
+        textLevel.text = "0";
         foreach (var item in lista)
         {
             item.SetActive(true);
@@ -65,11 +67,12 @@ public class DataSet : MonoBehaviour {
         textThird.text = "Masz ze soba bron! Jesli ktos Ci stanie na drodze,mozesz jej uzyc! Kazde zabojstwo to dodatkowy punkt i bonus w postaci 2.7 punkta!";
         textForth.text = "Jesli Cie poniesie i zabijesz kilku agentow pod rzad - uzbierane za runde punkty zostana pomnozone przez bonus za combo";
         textFifth.text = "Na przejscie rundy masz okreslony czas (ta runda 40s), ale nie martw sie- gdy nie dasz rady- uzbierane punkty beda stopniowo malec";
-        textSixth.text = "Aby przejsc ten poziom musisz zdobyc co najmniej 15 punktow!";
+        textSixth.text = "Aby przejsc ten poziom musisz zdobyc co najmniej 15 punktow! Kazde kolejne 5, to kolejna gwiazdka.";
         textSeventh.text = "Z czasem dowiesz sie wiecej jak przezyc w tym swiecie!";
     }
     public void SetData1()
     {
+        textLevel.text = "1";
         for (int i = 0; i < 4; i++)
         {
             lista[i].SetActive(true);
@@ -85,21 +88,22 @@ public class DataSet : MonoBehaviour {
     }
     public void SetData2()
     {
-        for (int i = 0; i < 5; i++)
+        textLevel.text = "2";
+        for (int i = 0; i < 7; i++)
         {
             lista[i].SetActive(true);
         }
-        for (int i = 5; i < 7; i++)
-        {
-            lista[i].SetActive(false);
-        }
-        textFirst.text = "jestesmy w klubie";
-        textSecond.text = "0";
-        textThird.text = "0";
-        textForth.text = "0";
-        textFifth.text = "0";
-        textSixth.text = "0";
-        textSeventh.text = "0";
+       // for (int i = 5; i < 7; i++)       // dezaktywacja linii
+       // {
+       //     lista[i].SetActive(false);
+     //   }
+        textFirst.text = "Jestesmy w klubie";
+        textSecond.text = "Tutaj bedzie jakis ladny opis!";
+        textThird.text = "A na razie: ";
+        textForth.text = "nie ma fal";
+        textFifth.text = "nie ma fal";
+        textSixth.text = "nie ma fal";
+        textSeventh.text = "nie ma fal";
     }
 
     public void SetData_loading()
