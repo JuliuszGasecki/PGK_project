@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ISpecialWeapon : IShootable
 {
-    void SetSpecialEffect();
+    void SetSpecialEffect(GameObject bullet);
 }

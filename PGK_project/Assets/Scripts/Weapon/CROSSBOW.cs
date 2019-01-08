@@ -59,7 +59,6 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
             //  Reload();
             UseWeapon();
             UpdateAmmo();
-            SetSpecialEffect();
         }
     }
 
