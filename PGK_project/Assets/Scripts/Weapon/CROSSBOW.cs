@@ -75,7 +75,7 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
     {
         if (ammoInMagazine == 0)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
         
     }
@@ -139,4 +139,5 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
             bullet.GetComponent<CrossbowBullet>().specialEffect = narcoMixId;
         }
     }
+
 }

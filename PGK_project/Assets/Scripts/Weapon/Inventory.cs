@@ -79,7 +79,6 @@ public class Inventory : MonoBehaviour
         }
 
         RemoveFromInventory();
-
         //Debug.Log(DeagleAmmo);
     }
 
