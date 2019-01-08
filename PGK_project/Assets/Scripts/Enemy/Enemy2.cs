@@ -9,7 +9,7 @@ public class Enemy2 : MonoBehaviour
     //***** zmienne ogol
     public bool show_rotation;
 
-    private bool alive;
+    public bool alive;
     public int life;
     public int attack;
     public int punch_attack;

@@ -225,7 +225,7 @@ public class NarcoManager : MonoBehaviour {
 
     public void turnOffTheImage(float time)
     {
-        Debug.Log(time - Time.time);
+//        Debug.Log(time - Time.time);
         if(deathScene.active == true)
         {
             image.enabled = false;
