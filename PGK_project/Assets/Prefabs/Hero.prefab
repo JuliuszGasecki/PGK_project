@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1947799448747012}
   m_LocalRotation: {x: -0, y: -0, z: -0.0052293153, w: 0.99998635}
-  m_LocalPosition: {x: -7.41, y: 45.98, z: -1}
+  m_LocalPosition: {x: 0.18, y: 1.59, z: -1}
   m_LocalScale: {x: 0.06694192, y: 0.062343426, z: 0.075385034}
   m_Children:
   - {fileID: 4945793687859220}
@@ -352,16 +352,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e490bd4193b04681a85405ddf9b3903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myHead: {fileID: 0}
+  enemy: []
+  mixes: []
   takenDrugs: []
-  achievementsText: {fileID: 0}
-  achievementsImage: {fileID: 0}
   panel: {fileID: 0}
-  achievementsTex1t: {fileID: 0}
-  achievementsImage1: {fileID: 0}
   panel1: {fileID: 0}
-  achievementsText2: {fileID: 0}
-  achievementsImage2: {fileID: 0}
   panel2: {fileID: 0}
+  panel3: {fileID: 0}
+  panel4: {fileID: 0}
+  panel5: {fileID: 0}
   achievementCanvas: {fileID: 0}
   content: {fileID: 0}
   heart: {fileID: 0}

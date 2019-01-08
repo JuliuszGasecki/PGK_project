@@ -39,10 +39,10 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
     {
         anim = GameObject.Find("Hero").GetComponent<Animator>();
         ID = 5;
-        damage = 10;
+        damage = 0;
         fireRate = 0.6f;
         speed = 25f;
-        magazineCapacity = 5;
+        magazineCapacity = 10000;
         ammoInMagazine = 0;
         Name = "CROSSBOW";
     }
@@ -58,23 +58,14 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
         if (firePoint != null)
         {
             narcoMixId = this.gameObject.GetComponent<Inventory>().ReturnDrugsMix();
-            //Debug.Log(narcoMixId);
-            AutoReloading();
+            Debug.Log(narcoMixId);
+            //AutoReloading();
             //  Reload();
             UseWeapon();
             UpdateAmmo();
         }
     }
 
-   /* void Direction()
-    {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        direction = new Vector2(
-            mousePosition.x - transform.position.x,
-            mousePosition.y - transform.position.y);
-        direction.Normalize();
-    }*/
     public void AutoReloading()
     {   
     }
@@ -85,14 +76,9 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
         {
             if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
-                //Direction();
                 Instantiate(GunShot, this.transform.position, this.transform.rotation);
                 Shoot();
                 timeUntilFire = Time.time + fireRate;
-            }
-            else
-            {
-                //wyswietlkomunikat()
             }
         }
     }
@@ -100,7 +86,6 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
     public void Shoot()
     {
         GameObject bulletC = Instantiate(bullet, firePoint.position, firePoint.rotation);
-        //SetDamageBullet(bulletC);
         SetSpecialEffect(bulletC);
         SetSpeedBullet(bulletC);
         ammoInMagazine--;
@@ -122,7 +107,10 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
 
     public void UpdateAmmo()
     {
-        ammo = this.gameObject.GetComponent<Inventory>().DeagleAmmo;
+        if (Enum.IsDefined(typeof(_specialEffect), narcoMixId))
+        {
+            ammoInMagazine++;
+        }
     }
 
     public void DeafultAmmo()

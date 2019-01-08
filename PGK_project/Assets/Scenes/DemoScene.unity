@@ -10976,31 +10976,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 33
       objectReference: {fileID: 0}
-    - target: {fileID: 114627219578278010, guid: 9e83121cfd1454a43a2601311e563632,
-        type: 2}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 1651808143}
-    - target: {fileID: 114627219578278010, guid: 9e83121cfd1454a43a2601311e563632,
-        type: 2}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 592024993}
-    - target: {fileID: 114593011644353940, guid: 9e83121cfd1454a43a2601311e563632,
-        type: 2}
-      propertyPath: withdrawalSLider
-      value: 
-      objectReference: {fileID: 137527430}
-    - target: {fileID: 114056851517876558, guid: 9e83121cfd1454a43a2601311e563632,
-        type: 2}
-      propertyPath: poisoninglSLider
-      value: 
-      objectReference: {fileID: 271784775}
-    - target: {fileID: 114897969677343790, guid: 9e83121cfd1454a43a2601311e563632,
-        type: 2}
-      propertyPath: deathScene
-      value: 
-      objectReference: {fileID: 1682873682}
     - target: {fileID: 114730968310348708, guid: 9e83121cfd1454a43a2601311e563632,
         type: 2}
       propertyPath: panel
@@ -11016,6 +10991,46 @@ Prefab:
       propertyPath: panel2
       value: 
       objectReference: {fileID: 23229785}
+    - target: {fileID: 114730968310348708, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: panel3
+      value: 
+      objectReference: {fileID: 311454314}
+    - target: {fileID: 114730968310348708, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: panel4
+      value: 
+      objectReference: {fileID: 2045727810}
+    - target: {fileID: 114730968310348708, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: panel5
+      value: 
+      objectReference: {fileID: 92580225}
+    - target: {fileID: 114627219578278010, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1651808143}
+    - target: {fileID: 114627219578278010, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 592024993}
+    - target: {fileID: 114056851517876558, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: poisoninglSLider
+      value: 
+      objectReference: {fileID: 271784775}
+    - target: {fileID: 114593011644353940, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: withdrawalSLider
+      value: 
+      objectReference: {fileID: 137527430}
+    - target: {fileID: 114897969677343790, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: deathScene
+      value: 
+      objectReference: {fileID: 1682873682}
     - target: {fileID: 114792516658807452, guid: 9e83121cfd1454a43a2601311e563632,
         type: 2}
       propertyPath: extasySlider
@@ -11051,11 +11066,6 @@ Prefab:
       propertyPath: mocarzSlider
       value: 
       objectReference: {fileID: 1251119940}
-    - target: {fileID: 114627219578278010, guid: 9e83121cfd1454a43a2601311e563632,
-        type: 2}
-      propertyPath: maxHeath
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 114792516658807452, guid: 9e83121cfd1454a43a2601311e563632,
         type: 2}
       propertyPath: cigaretteSlider
@@ -11066,21 +11076,6 @@ Prefab:
       propertyPath: methSlider
       value: 
       objectReference: {fileID: 1003485211}
-    - target: {fileID: 114730968310348708, guid: 9e83121cfd1454a43a2601311e563632,
-        type: 2}
-      propertyPath: panel3
-      value: 
-      objectReference: {fileID: 311454314}
-    - target: {fileID: 114730968310348708, guid: 9e83121cfd1454a43a2601311e563632,
-        type: 2}
-      propertyPath: panel4
-      value: 
-      objectReference: {fileID: 2045727810}
-    - target: {fileID: 114730968310348708, guid: 9e83121cfd1454a43a2601311e563632,
-        type: 2}
-      propertyPath: panel5
-      value: 
-      objectReference: {fileID: 92580225}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e83121cfd1454a43a2601311e563632, type: 2}
   m_IsPrefabAsset: 0
