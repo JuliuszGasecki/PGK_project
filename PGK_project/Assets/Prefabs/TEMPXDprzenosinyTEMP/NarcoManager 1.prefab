@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1451985905511510}
+  m_IsPrefabAsset: 1
+--- !u!1 &1451985905511510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4549479959521002}
+  - component: {fileID: 114275146210876694}
+  m_Layer: 0
+  m_Name: NarcoManager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4549479959521002
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451985905511510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2615166, y: 1.1180701, z: 4.982278}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114275146210876694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451985905511510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13de0aced6bca7445b912854e7bd12aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementsControllScript: {fileID: 0}
+  deathScene: {fileID: 0}
+  alcoHera: {fileID: 1177366017326304, guid: 70ba54ec936de7a4f83c5bbc9b2f29c4, type: 2}
+  alcHer: {fileID: 21300000, guid: d6b6f55b49e435e429da59bda2bc0822, type: 3}
+  cocoHera: {fileID: 1504666914970706, guid: 6bb9d7b34980fba4199929d82554bcfc, type: 2}
+  cocHer: {fileID: 21300000, guid: fec1ee36474083847ad8a6c9edfb32f8, type: 3}
+  alcoSpeed: {fileID: 1574351898281576, guid: e5ccf7599ccfabc4d950fc99d696d204, type: 2}
+  alcSpe: {fileID: 21300000, guid: df39365f790dfa74db53eac17672c8ea, type: 3}
+  cocoMary: {fileID: 1938010663000474, guid: 996369946fcc8a44599365dcf1cbe6d3, type: 2}
+  cocMar: {fileID: 21300000, guid: 489b8da138a785946b2e3e15ec3eb1b4, type: 3}
+  cocoMDMA: {fileID: 1438509950758554, guid: 63d2fd53790894e40b137b4e79bacdb2, type: 2}
+  cocMda: {fileID: 21300000, guid: 5bd54b22f7133454ea694836fb5f3bfc, type: 3}
+  cocoLSD: {fileID: 1195462415444110, guid: afd4d655789e1eb47a70b0bffbfed262, type: 2}
+  cocLsd: {fileID: 21300000, guid: 2d2741db8e3fc874a9de03a321597c6e, type: 3}
+  maryCigar: {fileID: 1043326610580014, guid: 27f2897e7f15b434b8950fadbc72f5b2, type: 2}
+  marCig: {fileID: 21300000, guid: efed5053d0972fc41a15fe9a9139897f, type: 3}
+  hanOve: {fileID: 21300000, guid: f0f312bb0904cb14b9f0a4e7d198df84, type: 3}
+  image: {fileID: 0}
