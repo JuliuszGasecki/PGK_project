@@ -93,6 +93,7 @@ public class Enemy2 : MonoBehaviour
 
     //***** specjalny efekt z specjalnych broni dla specjalnych ludzi specjalnie od specjalnego Stempnia moje wy specjały :*
     private List<Action> AmazingEffectFunctions;
+    public GameObject M4;
 
     void print_angle(Vector3 point)
     {
@@ -637,7 +638,12 @@ public class Enemy2 : MonoBehaviour
 
     void GreenArrowsEffects()
     {
-
+        float x = Random.Range(-0.2f, 0.2f);
+        float y = Random.Range(-0.2f, 0.2f);
+        Vector3 placment_bron = new Vector3(0f + x, 0f + y, 0f);
+        if (weapon != null)
+            Instantiate(M4, transform.position + placment_bron, transform.rotation);
+        Destroy(gameObject);
     }
 
     void RedArrowsEffects()

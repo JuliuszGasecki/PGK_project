@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6eb28df6325e48ac825e4fc5cd46bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  show_rotation: 0
+  alive: 0
   life: 3
   attack: 10
   punch_attack: 1
@@ -157,6 +159,7 @@ MonoBehaviour:
   path: []
   avoid_bullets_time: 0.1
   sensivity_of_enemys: 0
+  M4: {fileID: 1355489815483340, guid: cf00d43fa09d398429ffdddc8db9e0c0, type: 2}
 --- !u!114 &114664788735044684
 MonoBehaviour:
   m_ObjectHideFlags: 1

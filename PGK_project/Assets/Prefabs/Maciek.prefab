@@ -124,6 +124,7 @@ MonoBehaviour:
   path: []
   avoid_bullets_time: 0.1
   sensivity_of_enemys: 0
+  M4: {fileID: 1355489815483340, guid: cf00d43fa09d398429ffdddc8db9e0c0, type: 2}
 --- !u!114 &114431452716951216
 MonoBehaviour:
   m_ObjectHideFlags: 1
