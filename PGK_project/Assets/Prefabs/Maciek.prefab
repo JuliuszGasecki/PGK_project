@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6eb28df6325e48ac825e4fc5cd46bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
   show_rotation: 0
   alive: 0
   life: 3
@@ -125,6 +126,10 @@ MonoBehaviour:
   avoid_bullets_time: 0.1
   sensivity_of_enemys: 0
   M4: {fileID: 1355489815483340, guid: cf00d43fa09d398429ffdddc8db9e0c0, type: 2}
+  RiffleAmmo: {fileID: 1688917605921872, guid: 0ca5875b01fba3e41a490d46b97332d1, type: 2}
+  DeagleAmmo: {fileID: 1670275276217954, guid: c846bf72358dcfa4799d7ad458c86a8a, type: 2}
+  ShotgunAmmo: {fileID: 1510352199692136, guid: cd84be6d835a13c4695b09eff1a740e9,
+    type: 2}
 --- !u!114 &114431452716951216
 MonoBehaviour:
   m_ObjectHideFlags: 1
