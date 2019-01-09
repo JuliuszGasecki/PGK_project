@@ -26,7 +26,7 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
     public bool alert { set; get; }
     private Animator anim;
 
-    private int narcoMixId;
+    public int NarcoMixId { set; get; }
    // private Vector2 direction;
     private Vector3 mousePosition;
     private enum _specialEffect
@@ -57,10 +57,6 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
     {
         if (firePoint != null)
         {
-            narcoMixId = this.gameObject.GetComponent<Inventory>().ReturnDrugsMix();
-            Debug.Log(narcoMixId);
-            //AutoReloading();
-            //  Reload();
             UseWeapon();
             UpdateAmmo();
         }
@@ -107,7 +103,7 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
 
     public void UpdateAmmo()
     {
-        if (Enum.IsDefined(typeof(_specialEffect), narcoMixId))
+        if (Enum.IsDefined(typeof(_specialEffect), NarcoMixId))
         {
             ammoInMagazine++;
         }
@@ -120,10 +116,9 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
 
     public void SetSpecialEffect(GameObject bullet)
     {   
-        if (Enum.IsDefined(typeof(_specialEffect), narcoMixId))
+        if (Enum.IsDefined(typeof(_specialEffect), NarcoMixId))
         {
-            ammoInMagazine++;
-            bullet.GetComponent<CrossbowBullet>().specialEffect = narcoMixId;
+            bullet.GetComponent<CrossbowBullet>().specialEffect = NarcoMixId;
         }
     }
 

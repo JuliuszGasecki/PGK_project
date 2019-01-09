@@ -367,6 +367,10 @@ public class Inventory : MonoBehaviour
                 return i;
             }
 
+        for (int i = 0; i < DRUGSMIXLISTCAPACITY; i++) if (_drugsMixListTemp[i] && _drugsMixList[i] == false)
+        {
+            _drugsMixListTemp[i] = false;
+        }
         return -1;
     }
 }
