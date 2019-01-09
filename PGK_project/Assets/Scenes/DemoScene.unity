@@ -981,6 +981,11 @@ Prefab:
       propertyPath: shoot_time
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: level
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
   m_IsPrefabAsset: 0
@@ -1459,6 +1464,11 @@ Prefab:
         type: 2}
       propertyPath: shoot_time
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: level
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -6454,6 +6464,11 @@ Prefab:
       propertyPath: life
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: level
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
   m_IsPrefabAsset: 0
@@ -7226,6 +7241,11 @@ Prefab:
         type: 2}
       propertyPath: life
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: level
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -8818,6 +8838,11 @@ Prefab:
       propertyPath: shoot_time
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: level
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
   m_IsPrefabAsset: 0
@@ -9413,6 +9438,11 @@ Prefab:
         type: 2}
       propertyPath: life
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: level
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -11149,6 +11179,11 @@ Prefab:
         type: 2}
       propertyPath: shoot_time
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: level
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -13688,6 +13723,11 @@ Prefab:
     - target: {fileID: 1474930441896188, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
       propertyPath: m_Name
       value: SebaShoot2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: level
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}
@@ -26069,6 +26109,11 @@ Prefab:
         type: 2}
       propertyPath: shoot_time
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690924211708392, guid: 4e9292ed4495a4efc9420a05fc1b60c6,
+        type: 2}
+      propertyPath: level
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e9292ed4495a4efc9420a05fc1b60c6, type: 2}

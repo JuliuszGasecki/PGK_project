@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class Enemy2 : MonoBehaviour
 {
+    public float level;
     //***** zmienne ogol
     public bool show_rotation;
 
@@ -94,6 +95,9 @@ public class Enemy2 : MonoBehaviour
     //***** specjalny efekt z specjalnych broni dla specjalnych ludzi specjalnie od specjalnego Stempnia moje wy specjały :*
     private List<Action> AmazingEffectFunctions;
     public GameObject M4;
+    public GameObject RiffleAmmo;
+    public GameObject DeagleAmmo;
+    public GameObject ShotgunAmmo;
 
     void print_angle(Vector3 point)
     {
@@ -173,7 +177,7 @@ public class Enemy2 : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(this.transform.position, new_position, distance);
         if (hit.collider != null)
         {
-//            Debug.Log(hit.collider.tag);
+            //            Debug.Log(hit.collider.tag);
             return false;
         }
         else
@@ -211,7 +215,7 @@ public class Enemy2 : MonoBehaviour
                     number_of_try = number_of_break_points;
                 }
 
-//                Debug.Log(number_of_try);
+                //                Debug.Log(number_of_try);
             }
 
             if (numPoints < 0)
@@ -233,7 +237,7 @@ public class Enemy2 : MonoBehaviour
         RaycastHit2D ray = Physics2D.Raycast(old_point, new_point, magnitude + 0.1f);
         if (ray.collider != null)
         {
-//            Debug.Log(ray.collider.ToString());
+            //            Debug.Log(ray.collider.ToString());
             return false;
         }
         else
@@ -295,13 +299,13 @@ public class Enemy2 : MonoBehaviour
 
     void Update()
     {
-        if (player == null){if (GameObject.FindWithTag("Player")) { player = GameObject.FindWithTag("Player"); }}
+        if (player == null) { if (GameObject.FindWithTag("Player")) { player = GameObject.FindWithTag("Player"); } }
         else
         {
             //Debug.Log("player eoeoeoe");
         }
         if (bullet == null) { }//{Debug.Log(""); } else { Debug.Log("fuck"); }
-       
+
         if (alive)
         {
             if (!sprawdz_czy_umarl())
@@ -353,7 +357,7 @@ public class Enemy2 : MonoBehaviour
                 else
                 {
                     this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x,
-                        this.gameObject.transform.position.y, -1);
+                                                                     this.gameObject.transform.position.y, level);
                     Vector2 upX = new Vector2(player.transform.up.x, player.transform.up.y);
                     Vector2 upC = new Vector2(this.transform.up.x, this.transform.up.y);
 
@@ -381,11 +385,11 @@ public class Enemy2 : MonoBehaviour
                                 avoid_bullets_timer = Time.time;
                             }
                         }
-                            if (Time.time - time_tracker_shoot - Random.Range(0f, 0.4f) > shoot_time)
-                            {
-                                strzel();
-                                time_tracker_shoot = Time.time;
-                            }
+                        if (Time.time - time_tracker_shoot - Random.Range(0f, 0.4f) > shoot_time)
+                        {
+                            strzel();
+                            time_tracker_shoot = Time.time;
+                        }
                         //}
                     }
                     else
@@ -574,12 +578,14 @@ public class Enemy2 : MonoBehaviour
                     bulletE.GetComponent<Bullet>().bulletDamage = 2;
                     bulletE.GetComponent<Bullet>().bulletSpeed = 20f;
                 }
-                else{
-                   // Debug.Log("fuckYY");
+                else
+                {
+                    // Debug.Log("fuckYY");
                 }
             }
-            else{
-               // Debug.Log("fuckXX");
+            else
+            {
+                // Debug.Log("fuckXX");
             }
         }
     }
@@ -642,12 +648,23 @@ public class Enemy2 : MonoBehaviour
         float y = Random.Range(-0.2f, 0.2f);
         Vector3 placment_bron = new Vector3(0f + x, 0f + y, 0f);
         if (weapon != null)
-            Instantiate(M4, transform.position + placment_bron, transform.rotation);
+            Instantiate(M4, transform.position + placment_bron, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
         Destroy(gameObject);
     }
 
     void RedArrowsEffects()
     {
+        float x = Random.Range(-0.5f, 0.5f);
+        float y = Random.Range(-0.5f, 0.5f);
+        Vector3 placment_bron = new Vector3(0f + x, 0f + y, 0f);
+        if (weapon != null)
+        {
+            Instantiate(ShotgunAmmo, transform.position + placment_bron, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+            Instantiate(ShotgunAmmo, transform.position + placment_bron, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+            Instantiate(RiffleAmmo, transform.position + placment_bron, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+            Instantiate(DeagleAmmo, transform.position + placment_bron, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+        }
 
+        Destroy(gameObject);
     }
 }
