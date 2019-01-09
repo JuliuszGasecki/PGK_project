@@ -25,7 +25,7 @@ public class MusicScript : MonoBehaviour {
 
         audioSource.volume = SettingsManager.sliderValue;
 
-        if (hero.onDrugs == true)
+        if (hero.tookDrug == true)
         {
             if (startFlag == true)
             {
