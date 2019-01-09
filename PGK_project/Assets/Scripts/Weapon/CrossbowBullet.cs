@@ -37,7 +37,7 @@ public class CrossbowBullet : MonoBehaviour
 
         if (tag == "Enemy")
         {
-            //ustaw specjalny efekt
+            collision.gameObject.GetComponent<Enemy2>().UseSpecialEffect(specialEffect);
         }
 
         if (tag != "Ammo")

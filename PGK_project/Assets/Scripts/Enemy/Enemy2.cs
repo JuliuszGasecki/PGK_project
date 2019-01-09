@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Profiling;
 using Pathfinding;
+using Random = UnityEngine.Random;
 
 public class Enemy2 : MonoBehaviour
 {
@@ -88,6 +90,9 @@ public class Enemy2 : MonoBehaviour
     public float sensivity_of_enemys;
 
     DrugsTimer hero;
+
+    //***** specjalny efekt z specjalnych broni dla specjalnych ludzi specjalnie od specjalnego Stempnia moje wy specjały :*
+    private List<Action> AmazingEffectFunctions;
 
     void print_angle(Vector3 point)
     {
@@ -236,6 +241,9 @@ public class Enemy2 : MonoBehaviour
 
     void Start()
     {
+        AmazingEffectFunctions = new List<Action>();
+        FillAmazingEffectList();
+
         hero = GameObject.Find("Hero").GetComponent<DrugsTimer>();
         indexOfCurrentPath = 0;
         Random random = new Random();
@@ -614,5 +622,26 @@ public class Enemy2 : MonoBehaviour
             this.transform.position.y + Random.Range(0, 1f));
         Vector2 result = new Vector2(gracz.x - wrog.x, gracz.y - wrog.y);
         this.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, -1 * Vector2.SignedAngle(result, Vector2.up)));
+    }
+
+    void FillAmazingEffectList()
+    {
+        AmazingEffectFunctions.Add(GreenArrowsEffects);
+        AmazingEffectFunctions.Add(RedArrowsEffects);
+    }
+
+    public void UseSpecialEffect(int index)
+    {
+        AmazingEffectFunctions[index]();
+    }
+
+    void GreenArrowsEffects()
+    {
+
+    }
+
+    void RedArrowsEffects()
+    {
+
     }
 }
