@@ -19,8 +19,10 @@ public class Hangover : MonoBehaviour {
         maxHp = hero.maxHeath;
         speed = hero.speed;
         hero.hangover = true;
+        //Debug.Log("Dupka XDDDDDDDDD " + !drugsTimer.onDrugs);
         if (!drugsTimer.onDrugs)
         {
+            //Debug.Log("Dupka XDDDDDDDDD");
             GameObject.Find("NarcoManager").GetComponent<NarcoManager>().hangoverStart();
         }
 	}

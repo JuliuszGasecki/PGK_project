@@ -41,11 +41,13 @@ public class Enemy : MonoBehaviour
     public Sprite dead_enemy;
     public GameObject weapon;
     private Animator anim;
+    DrugsTimer hero;
 
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        hero = GameObject.Find("Hero").GetComponent<DrugsTimer>();
         go_forwad = true;
         currentState = statePATH;
         targetpathPoint = 0;
@@ -115,6 +117,15 @@ public class Enemy : MonoBehaviour
                         chodzenie_po_sciezce();
                     }
                 }
+
+            if (hero.lsdFlag == true)
+            {
+                anim.SetTrigger("activeLSD");
+            }
+            else if (hero.lsdFlag == false)
+            {
+                anim.SetTrigger("removeLSD");
+            }
         }
     }
 

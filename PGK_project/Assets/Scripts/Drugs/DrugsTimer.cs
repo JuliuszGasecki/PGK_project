@@ -73,6 +73,10 @@ public class DrugsTimer : MonoBehaviour {
         controllNarcotics();
         drawSliders();
         time = Time.time;
+        if(active_drugs.Count == 0)
+        {
+            onDrugs = false;
+        }
 
     }
     public void addNarcotic(DrugTemplate drug){
@@ -149,7 +153,11 @@ public class DrugsTimer : MonoBehaviour {
               }
           }
           else
-              onDrugs = false; // nie ma nic
+        {
+            Debug.Log("ile narko" + active_drugs.Count);
+            onDrugs = false; // nie ma nic
+        }
+              
 
     }
 
