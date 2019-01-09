@@ -223,8 +223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1272220941827450, guid: 5f12ca3ae96bc8f4998275284e89c093, type: 2}
-  GunShot: {fileID: 1354585600671296, guid: 1fd692301a5f6164b8bd92e90f4140e5, type: 2}
-  ReloadSound: {fileID: 1578313814201554, guid: 64d58098f826fbe45b1a8efe61f6e760,
+  GunShot: {fileID: 1015981718368012, guid: 111817a0e1d589a409c9071829bee542, type: 2}
+  ReloadSound: {fileID: 1827949068463424, guid: c91c1e03c23c5cd428f05a76d4c80cdf,
     type: 2}
 --- !u!114 &114056851517876558
 MonoBehaviour:
@@ -341,6 +341,7 @@ MonoBehaviour:
   drugWithdrawal: 20
   attack: 0
   spawnPoint: {fileID: 0}
+  hangover: 0
 --- !u!114 &114730968310348708
 MonoBehaviour:
   m_ObjectHideFlags: 1
