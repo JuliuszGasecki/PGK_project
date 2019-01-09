@@ -12,6 +12,8 @@ public class AchievementsControllScript : MonoBehaviour
     private int enemyFight;
     private int deadShoot;
     private int deadFight;
+    private int enemyNumber;
+    private Hero hero;
 
 
 
@@ -40,6 +42,7 @@ public class AchievementsControllScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        hero = gameObject.GetComponent<Hero>();
         enemyShoot = 0; enemyFight = 0; deadFight = 0; deadShoot = 0;
         takenDrugs = new List<string>();
         countEnemys();
@@ -47,6 +50,7 @@ public class AchievementsControllScript : MonoBehaviour
     void countEnemys()
     {
         enemy = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
+        enemyNumber = enemy.Count;
         foreach (GameObject en in enemy)
         {
             if (en.gameObject.GetComponent<Enemy2>().isStatic) enemyShoot++;
@@ -84,6 +88,9 @@ public class AchievementsControllScript : MonoBehaviour
     {
         takenDrugs.Add(drug_name);
     }
+    public void addMix(string mix) { mixes.Add(mix); }
+    public int howManyMix(string mix) { return mixes.FindAll((obj) => obj.Equals(mix)).Count; }
+
     public bool checkIfOnlyTake(string drug_name)
     {
         if (takenDrugs.TrueForAll((obj) => obj.Equals(drug_name)))
@@ -140,7 +147,7 @@ public class AchievementsControllScript : MonoBehaviour
         {
             panel3.GetComponent<Image>().color = Color.red;
         }
-        if (howManyTaken("vodka") == 1)
+        if (mixes.Count > 10)
         {
             panel4.GetComponent<Image>().color = Color.blue;
         }
@@ -149,7 +156,7 @@ public class AchievementsControllScript : MonoBehaviour
             panel4.GetComponent<Image>().color = Color.red;
         }
 
-        if (howManyTaken("vodka") == 1)
+        if (hero.maxHeath <= hero.health && enemyNumber == enemy.Count)
         {
             panel5.GetComponent<Image>().color = Color.blue;
         }

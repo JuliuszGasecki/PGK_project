@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class NarcoManager : MonoBehaviour {
 
+    //Achievments
+    public AchievementsControllScript achievementsControllScript;
+
     public GameObject deathScene;
     DrugsTimer dt;
     //Alkohol i heroina
@@ -59,7 +62,8 @@ public class NarcoManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         dt = GameObject.Find("Hero").GetComponent<DrugsTimer>();
-    }
+        achievementsControllScript = GameObject.Find("Hero").GetComponent<AchievementsControllScript>();
+       }
 	
 	// Update is called once per frame
 	void Update () {
@@ -78,6 +82,7 @@ public class NarcoManager : MonoBehaviour {
             image.sprite = alcHer;
             image.enabled = true;
             Instantiate(alcoHera);
+            achievementsControllScript.addMix("alcoHera");
         }
         if (cocoHeraFlag == true && cocoHeraIsInUse == false)
         {
@@ -88,6 +93,7 @@ public class NarcoManager : MonoBehaviour {
             image.sprite = cocHer;
             image.enabled = true;
             Instantiate(cocoHera);
+            achievementsControllScript.addMix("cocoHera");
         }
         if (alcoSpeedFlag == true && alcoSpeedIsInUse == false)
         {
@@ -97,6 +103,7 @@ public class NarcoManager : MonoBehaviour {
             image.sprite = alcSpe;
             image.enabled = true;
             Instantiate(alcoSpeed);
+            achievementsControllScript.addMix("alcoSpeed");
         }
         if (cocoMaryFlag == true && cocoMaryIsInUse == false)
         {
@@ -106,6 +113,7 @@ public class NarcoManager : MonoBehaviour {
             image.sprite = cocMar;
             image.enabled = true;
             Instantiate(cocoMary);
+            achievementsControllScript.addMix("alcoSpeed");
         }
         if (cocoMDMAFlag == true && cocoMDMAIsInUse == false)
         {
@@ -115,6 +123,7 @@ public class NarcoManager : MonoBehaviour {
             image.sprite = cocMda;
             image.enabled = true;
             Instantiate(cocoMDMA);
+            achievementsControllScript.addMix("cocoMDMA");
         }
         if (cocoLSDFlag == true && cocoLSDIsInUse == false)
         {
@@ -124,6 +133,7 @@ public class NarcoManager : MonoBehaviour {
             image.sprite = cocLsd;
             image.enabled = true;
             Instantiate(cocoLSD);
+            achievementsControllScript.addMix("cocoLSD");
         }
         if (maryCigarFlag == true && maryCigarIsInUse == false)
         {
@@ -133,6 +143,7 @@ public class NarcoManager : MonoBehaviour {
             image.sprite = marCig;
             image.enabled = true;
             Instantiate(maryCigar);
+            achievementsControllScript.addMix("maryCigar");
         }
     }
 
