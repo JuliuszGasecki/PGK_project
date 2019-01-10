@@ -13,10 +13,18 @@ public class ButtonHighlighted : MonoBehaviour, IPointerEnterHandler,IPointerExi
     public Dictionary<string, int> levelValue = new Dictionary<string, int>()
     {
         {"DemoTag0",0 },
+        {"DemoTag0Done",0 },
+        {"DemoName",0 },
         {"Text0",0 },
+
         {"HomeTag1",1 },
+        {"HomeTag1Done",1 },
+        {"HomeName",1 },
         {"Text1",1 },
+
         {"DiscoTag2",2 },
+        {"DiscoTag2Done",2 },
+        {"DiscoName",2 },
         {"Text2",2 }
     };
 
@@ -52,6 +60,7 @@ public class ButtonHighlighted : MonoBehaviour, IPointerEnterHandler,IPointerExi
     {
         string dane = "Not reached";
         string nazwa = eventData.pointerCurrentRaycast.gameObject.name;
+        Debug.Log("Nazwa : " + nazwa);
 
         foreach (var item in LevelsStatistic.level_repo)
         {
