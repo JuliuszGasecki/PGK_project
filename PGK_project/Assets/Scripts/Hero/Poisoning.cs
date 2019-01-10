@@ -15,6 +15,7 @@ public class Poisoning : MonoBehaviour {
     private float pukeTime;
     float previousSpeed;
     private Animator anim;
+    public GameObject pukeSprite;
 
     // Use this for initialization
     void Start () {
@@ -38,7 +39,7 @@ public class Poisoning : MonoBehaviour {
     public void poisoningEffect()
     {
         if(hero.poisoning > 0)
-        hero.poisoning -= (Time.time - time) * 0.7f;
+        hero.poisoning -= (Time.time - time) * 0.8f;
     }
 
     private void checkPuke()
@@ -46,7 +47,7 @@ public class Poisoning : MonoBehaviour {
         if(hero.poisoning > poisoningMax / 1.5 && !isPukingAnim)
         {
             pukeTime = Time.time;
-            int temp = Random.Range((int)hero.poisoning, (600 - (int)hero.poisoning));
+            int temp = Random.Range((int)hero.poisoning, (300 - (int)hero.poisoning));
             if(temp == 69)
             {
                 previousSpeed = hero.speed;
@@ -60,8 +61,15 @@ public class Poisoning : MonoBehaviour {
     {
         if (isPukingAnim)
         {
+            Instantiate(pukeSprite, transform.position, transform.rotation);
+            if(Time.time - pukeTime < 0.2f)
+            {
+                
+                hero.speed = 0;
+            }
             if(Time.time - pukeTime < 2)
             {
+                Instantiate(pukeSprite, transform.position, transform.rotation);
                 hero.poisoning -= 0.1f;
                 hero.speed = 1;
                 //Debug.Log("Porzygusiałem sie tatusiu");
