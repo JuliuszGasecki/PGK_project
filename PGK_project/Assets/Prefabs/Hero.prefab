@@ -226,6 +226,7 @@ MonoBehaviour:
   GunShot: {fileID: 1015981718368012, guid: 111817a0e1d589a409c9071829bee542, type: 2}
   ReloadSound: {fileID: 1827949068463424, guid: c91c1e03c23c5cd428f05a76d4c80cdf,
     type: 2}
+  AmmoIcon: {fileID: 1746069584277204, guid: d7cfb40b2271f0846820500253a13069, type: 2}
 --- !u!114 &114056851517876558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,6 +241,7 @@ MonoBehaviour:
   poisoninglSLider: {fileID: 0}
   poisoningMax: 40
   poisoningFlag: 0
+  pukeSprite: {fileID: 0}
 --- !u!114 &114086569967192200
 MonoBehaviour:
   m_ObjectHideFlags: 1

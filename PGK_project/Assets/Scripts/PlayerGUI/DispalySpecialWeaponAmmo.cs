@@ -10,9 +10,10 @@ public class DispalySpecialWeaponAmmo : MonoBehaviour
     private Sprite sprite;
     private List<string> _arrowNames;
     private bool IsImage;
-    private float _firstPosX = -266.2f;
-    private float _firstPosY = 76.0f;
-    private float _width = 50.0f;
+    public float FirstPosX = -100f;
+    public float FirstPosY = 76.0f;
+    public float Width = 50.0f;
+    public int indexArrow { set; get; }
 
     // Use this for initialization
     void Start()
@@ -37,15 +38,14 @@ public class DispalySpecialWeaponAmmo : MonoBehaviour
         }
         else
         {
-            int indexArrow = weapon.ReturnDrugsMix();
+            //indexArrow = weapon.GetComponent<CROSSBOW>().NarcoMixId;
             if (indexArrow >= 0)
             {
                 image.enabled = true;
                 IsImage = true;
                 image.type = Image.Type.Filled;
                 image.fillMethod = Image.FillMethod.Radial360;
-                image.sprite = Resources.Load<Sprite>("Weapons/" + _arrowNames[indexArrow]);
-                weapon.GetComponent<CROSSBOW>().NarcoMixId = indexArrow;
+                image.sprite = Resources.Load<Sprite>("Weapons/" + _arrowNames[indexArrow]);           
             }
         }
     }

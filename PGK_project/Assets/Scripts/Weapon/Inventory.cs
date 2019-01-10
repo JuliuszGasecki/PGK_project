@@ -351,11 +351,11 @@ public class Inventory : MonoBehaviour
     {
         _drugsMixList[0] = _narcoManager.alcoHeraFlag;
         _drugsMixList[1] = _narcoManager.cocoHeraFlag;
-        _drugsMixList[2] = _narcoManager.alcoSpeedFlag;
-        _drugsMixList[3] = _narcoManager.cocoMaryFlag;
-        _drugsMixList[4] = _narcoManager.cocoMDMAFlag;
-        _drugsMixList[5] = _narcoManager.cocoLSDFlag;
-        _drugsMixList[6] = _narcoManager.maryCigarFlag;
+        //_drugsMixList[2] = _narcoManager.alcoSpeedFlag;
+        //_drugsMixList[3] = _narcoManager.cocoMaryFlag;
+        //_drugsMixList[4] = _narcoManager.cocoMDMAFlag;
+        //_drugsMixList[5] = _narcoManager.cocoLSDFlag;
+        //_drugsMixList[6] = _narcoManager.maryCigarFlag;
     }
 
     public int ReturnDrugsMix()
@@ -367,10 +367,12 @@ public class Inventory : MonoBehaviour
                 return i;
             }
 
-        for (int i = 0; i < DRUGSMIXLISTCAPACITY; i++) if (_drugsMixListTemp[i] && _drugsMixList[i] == false)
-        {
-            _drugsMixListTemp[i] = false;
-        }
+        for (int i = 0; i < DRUGSMIXLISTCAPACITY; i++)
+            if (_drugsMixListTemp[i] && _drugsMixList[i] == false)
+            {
+                _drugsMixListTemp[i] = false;
+            }
+
         return -1;
     }
 }

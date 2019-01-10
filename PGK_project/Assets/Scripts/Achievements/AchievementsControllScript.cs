@@ -74,9 +74,9 @@ public class AchievementsControllScript : MonoBehaviour
     {
         giveAchievements();
         countDeadEnemys();
-        Debug.Log(deadFight + " f");
-        Debug.Log(deadShoot + " s");
-        Debug.Log(enemy.Count + " c ");
+        //Debug.Log(deadFight + " f");
+        //Debug.Log(deadShoot + " s");
+       //Debug.Log(enemy.Count + " c ");
 
     }
 

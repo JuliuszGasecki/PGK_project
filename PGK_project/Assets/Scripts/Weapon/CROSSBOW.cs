@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CROSSBOW : MonoBehaviour, ISpecialWeapon
 {
-
     // Use this for initialization
     private float timeUntilFire = 0;
     Transform firePoint;
@@ -14,6 +14,7 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
     public GameObject ReloadSound;
     private DrugsTimer drugsStats;
     private GameObject _reloadSoundCopy;
+    public GameObject AmmoIcon;
     public float fireRate { get; set; }
     public int damage { get; set; }
     public int ID { get; set; }
@@ -25,10 +26,13 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
     public string Name { get; set; }
     public bool alert { set; get; }
     private Animator anim;
+    private List<GameObject> ammoIcons;
 
     public int NarcoMixId { set; get; }
-   // private Vector2 direction;
+
+    // private Vector2 direction;
     private Vector3 mousePosition;
+
     private enum _specialEffect
     {
         GreenArrows,
@@ -37,6 +41,7 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
 
     void Start()
     {
+        ammoIcons = new List<GameObject>();
         anim = GameObject.Find("Hero").GetComponent<Animator>();
         ID = 5;
         damage = 0;
@@ -50,20 +55,22 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
     void Awake()
     {
         firePoint = transform.Find("FirePoint");
-
     }
+
     // Update is called once per frame
     void Update()
     {
         if (firePoint != null)
         {
-            UseWeapon();
+            NarcoMixId = GameObject.Find("Inventory").GetComponent<Inventory>().ReturnDrugsMix();
+            Debug.Log(NarcoMixId);
             UpdateAmmo();
+            UseWeapon();
         }
     }
 
     public void AutoReloading()
-    {   
+    {
     }
 
     public void UseWeapon()
@@ -85,9 +92,11 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
         SetSpecialEffect(bulletC);
         SetSpeedBullet(bulletC);
         ammoInMagazine--;
+        ammoIcons.RemoveAt(0);
     }
+
     public void SetDamageBullet(GameObject bullet)
-    {     
+    {
     }
 
     public void SetSpeedBullet(GameObject bullet)
@@ -106,6 +115,15 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
         if (Enum.IsDefined(typeof(_specialEffect), NarcoMixId))
         {
             ammoInMagazine++;
+            ammoIcons.Add(Instantiate(AmmoIcon));
+            GameObject lastGameObject = ammoIcons.Last();
+            lastGameObject.GetComponent<DispalySpecialWeaponAmmo>().indexArrow = NarcoMixId;
+            lastGameObject.transform.SetParent(GameObject.Find("Canvas").transform);
+            lastGameObject.transform.position =
+                new Vector3(
+                    lastGameObject.GetComponent<DispalySpecialWeaponAmmo>().FirstPosX -
+                    lastGameObject.GetComponent<DispalySpecialWeaponAmmo>().Width * (ammoIcons.Count - 1),
+                    lastGameObject.GetComponent<DispalySpecialWeaponAmmo>().FirstPosY, 0.0f);
         }
     }
 
@@ -115,11 +133,10 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
     }
 
     public void SetSpecialEffect(GameObject bullet)
-    {   
+    {
         if (Enum.IsDefined(typeof(_specialEffect), NarcoMixId))
         {
             bullet.GetComponent<CrossbowBullet>().specialEffect = NarcoMixId;
         }
     }
-
 }
