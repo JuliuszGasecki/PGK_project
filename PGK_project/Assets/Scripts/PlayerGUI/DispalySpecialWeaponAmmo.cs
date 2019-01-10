@@ -9,10 +9,9 @@ public class DispalySpecialWeaponAmmo : MonoBehaviour
     private Image image;
     private Sprite sprite;
     private List<string> _arrowNames;
-    private bool IsImage;
-    public float FirstPosX = -100f;
-    public float FirstPosY = 76.0f;
-    public float Width = 50.0f;
+    public float FirstPosX;
+    public float FirstPosY;
+    public float Width;
     public int indexArrow { set; get; }
 
     // Use this for initialization
@@ -29,12 +28,10 @@ public class DispalySpecialWeaponAmmo : MonoBehaviour
         if (weapon.GetUsingSpecialWeapon() == null)
         {
             image.enabled = false;
-            IsImage = false;
         }
         else if (Time.timeScale == 0f) //usun icon w summaryPanel
         {
             image.enabled = false;
-            IsImage = false;
         }
         else
         {
@@ -42,7 +39,6 @@ public class DispalySpecialWeaponAmmo : MonoBehaviour
             if (indexArrow >= 0)
             {
                 image.enabled = true;
-                IsImage = true;
                 image.type = Image.Type.Filled;
                 image.fillMethod = Image.FillMethod.Radial360;
                 image.sprite = Resources.Load<Sprite>("Weapons/" + _arrowNames[indexArrow]);           

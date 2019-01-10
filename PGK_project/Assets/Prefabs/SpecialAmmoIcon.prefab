@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstPosX: -266.2
-  FirstPosY: 76
+  FirstPosY: -188
   Width: 50
 --- !u!222 &222787617390896992
 CanvasRenderer:
@@ -92,6 +92,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -266.2, y: 76}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 49.580017, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}

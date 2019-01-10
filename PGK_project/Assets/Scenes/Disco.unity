@@ -3113,7 +3113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &153649603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3161,6 +3161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b3b9ed2a93eec4b8cfed5a614b5c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FirstPosX: -100
+  FirstPosY: 76
+  Width: 50
 --- !u!1001 &156940343
 Prefab:
   m_ObjectHideFlags: 0
@@ -16255,6 +16258,10 @@ Prefab:
       propertyPath: m_Name
       value: SpecialWeaponAmmo
       objectReference: {fileID: 0}
+    - target: {fileID: 1236506736146232, guid: c3214a3639b821f4681de13abfb6feaf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3214a3639b821f4681de13abfb6feaf, type: 2}
   m_IsPrefabAsset: 0
@@ -19294,12 +19301,12 @@ Prefab:
     - target: {fileID: 224729354860452492, guid: 97d732c95356c06478dd27de91b48cfe,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -6.94
+      value: 13.16
       objectReference: {fileID: 0}
     - target: {fileID: 224729354860452492, guid: 97d732c95356c06478dd27de91b48cfe,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 43.41
+      value: 3.77
       objectReference: {fileID: 0}
     - target: {fileID: 224729354860452492, guid: 97d732c95356c06478dd27de91b48cfe,
         type: 2}

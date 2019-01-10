@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CROSSBOW : MonoBehaviour, ISpecialWeapon
 {
@@ -92,7 +93,14 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
         SetSpecialEffect(bulletC);
         SetSpeedBullet(bulletC);
         ammoInMagazine--;
-        ammoIcons.RemoveAt(0);
+        Destroy(ammoIcons[0]);
+        for (int i = 0; i < ammoIcons.Count; i++)
+        {
+            ammoIcons[i].transform.localPosition = new Vector3(
+                ammoIcons[i].transform.position.x +
+                50.0f * (i+1),
+                ammoIcons[i].transform.position.y, 0.0f);
+        }
     }
 
     public void SetDamageBullet(GameObject bullet)
@@ -119,7 +127,7 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
             GameObject lastGameObject = ammoIcons.Last();
             lastGameObject.GetComponent<DispalySpecialWeaponAmmo>().indexArrow = NarcoMixId;
             lastGameObject.transform.SetParent(GameObject.Find("Canvas").transform);
-            lastGameObject.transform.position =
+            lastGameObject.transform.localPosition =
                 new Vector3(
                     lastGameObject.GetComponent<DispalySpecialWeaponAmmo>().FirstPosX -
                     lastGameObject.GetComponent<DispalySpecialWeaponAmmo>().Width * (ammoIcons.Count - 1),
