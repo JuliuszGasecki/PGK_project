@@ -94,12 +94,13 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
         SetSpeedBullet(bulletC);
         ammoInMagazine--;
         Destroy(ammoIcons[0]);
+        ammoIcons.RemoveAt(0);
         for (int i = 0; i < ammoIcons.Count; i++)
         {
             ammoIcons[i].transform.localPosition = new Vector3(
-                ammoIcons[i].transform.position.x +
+                ammoIcons[i].GetComponent<DispalySpecialWeaponAmmo>().FirstPosX +
                 50.0f * (i+1),
-                ammoIcons[i].transform.position.y, 0.0f);
+                ammoIcons[i].GetComponent<DispalySpecialWeaponAmmo>().FirstPosY, 0.0f);
         }
     }
 
