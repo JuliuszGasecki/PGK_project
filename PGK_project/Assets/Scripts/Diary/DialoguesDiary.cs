@@ -16,7 +16,9 @@ public class DialoguesDiary : MonoBehaviour {
     [SerializeField] private Text text3;
     [SerializeField] private Image image3;
 
+    [SerializeField]
     private int currentChapter;
+    [SerializeField]
     private int currnetIndex;
 
     public Sprite unknown;
@@ -24,8 +26,6 @@ public class DialoguesDiary : MonoBehaviour {
     [SerializeField] public List<DialogueNote> Notes1 = new List<DialogueNote>();
     [SerializeField] public List<DialogueNote> Notes2 = new List<DialogueNote>();
     [SerializeField] public List<DialogueNote> Notes3 = new List<DialogueNote>();
-    [SerializeField] public List<DialogueNote> Notes4 = new List<DialogueNote>();
-    [SerializeField] public List<DialogueNote> Notes5 = new List<DialogueNote>();
     private List<List<DialogueNote>> Notes = new List<List<DialogueNote>>();
 
     private static DialoguesDiary diaryInstance;
@@ -44,9 +44,7 @@ public class DialoguesDiary : MonoBehaviour {
     private string[] Chapters = {
         "Chapter 1",
         "Chapter 2",
-        "Chapter 3",
-        "Chapter 4",
-        "Chapter 5"
+        "Chapter 3"
     };
     
 
@@ -60,39 +58,13 @@ public class DialoguesDiary : MonoBehaviour {
         Notes.Add(Notes1);
         Notes.Add(Notes2);
         Notes.Add(Notes3);
-        Notes.Add(Notes4);
-        Notes.Add(Notes5);
     }
 
 	// Update is called once per frame
 	void Update () {
-        turnOnDiary();
-    }
-
-    private void indexOverflow()
-    {
-        if(currnetIndex >= Notes[currentChapter-1].Count)
-        {
-            currnetIndex = 0;
-        }
-    }
-
-    private bool isIndexOverflow()
-    {
-        if(currnetIndex >= Notes[currentChapter-1].Count)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    private bool isIndexOverflow(int lol)
-    {
-        if (lol >= Notes.Count)
-        {
-            return true;
-        }
-        return false;
+        if(Notes1.Count != 0 || Notes2.Count != 0 || Notes1.Count != 0)
+            turnOnDiary();
+        setChapterText();
     }
 
     private void setChapterText()
@@ -102,106 +74,87 @@ public class DialoguesDiary : MonoBehaviour {
 
     public void loadNextPage()
     {
+        currnetIndex += 3;
         loadCurrentPage();
     }
 
     public void loadPreviousPage()
     {
         Debug.Log("Przed" + currnetIndex);
-        currnetIndex = currnetIndex - 3;
+        int mod = currnetIndex % 3;    
+        currnetIndex =  currnetIndex - 3 + mod;
         Debug.Log("Po" + currnetIndex);
-        if (currnetIndex <= 0)
+        if (currnetIndex < 0)
         {
             currentChapter--;
             if(currentChapter < 1)
             {
-                currentChapter = 5;
+                currentChapter = 3;
             }
             currnetIndex = 0;
         }
-            
         loadCurrentPage();
     }
 
     private void loadCurrentPage()
     {
         int temp = Notes[currentChapter - 1].Count;
+        Debug.Log(temp);
         if (currnetIndex < temp)
         {
+            Debug.Log("Pierwsze okno " + currnetIndex);
+            image1.enabled = true;
             text1.enabled = true;
             image1.sprite = Notes[currentChapter-1][currnetIndex].sprite;
             text1.text = Notes[currentChapter-1][currnetIndex].text;
             setChapterText();
-            if(!Notes[currentChapter - 1][currnetIndex].isActive)
-            {
-                text1.enabled = false;
-                image1.sprite = unknown;
-            }
-            currnetIndex++;
+            //currnetIndex++;
         }
         else
         {
-            if(currentChapter + 1 >5)
+            Debug.Log("KURWA" + currnetIndex + " " + temp);
+            if(currentChapter == 3)
             {
                 currentChapter = 1;
-                currnetIndex = 0;
                 setChapterText();
+                currnetIndex = 0;
             }
             else
             {
                 currentChapter++;
+                setChapterText();
                 currnetIndex = 0;
             }
             loadCurrentPage();
         }
-        if (currnetIndex < temp)
+        if (currnetIndex + 1 < temp)
         {
+            Debug.Log("Drugie okno " + currnetIndex + 1);
             image2.enabled = true;
             text2.enabled = true;
-            image2.sprite = Notes[currentChapter - 1][currnetIndex].sprite;
-            text2.text = Notes[currentChapter - 1][currnetIndex].text;
-            if (!Notes[currentChapter - 1][currnetIndex].isActive)
-            {
-                text2.enabled = false;
-                image2.sprite = unknown;
-            }
-            currnetIndex++;
+            image2.sprite = Notes[currentChapter - 1][currnetIndex + 1].sprite;
+            text2.text = Notes[currentChapter - 1][currnetIndex + 1].text;
+            //currnetIndex++;
         }
         else
         {
             image2.enabled = false;
             text2.enabled = false;
         }
-        if (currnetIndex < temp)
+        if (currnetIndex + 2 < temp)
         {
+            Debug.Log("Trzecie okno " + currnetIndex + 2);
             image3.enabled = true;
             text3.enabled = true;
-            image3.sprite = Notes[currentChapter - 1][currnetIndex].sprite;
-            text3.text = Notes[currentChapter - 1][currnetIndex].text;
-            indexOverflow();
-            if (!Notes[currentChapter - 1][currnetIndex].isActive)
-            {
-                text3.enabled = false;
-                image3.sprite = unknown;
-            }
-            currnetIndex++;
+            image3.sprite = Notes[currentChapter - 1][currnetIndex + 2].sprite;
+            text3.text = Notes[currentChapter - 1][currnetIndex + 2].text;
+            //currnetIndex++;
         }
         else
         {
             image3.enabled = false;
             text3.enabled = false;
-            if (currentChapter + 1 > 5)
-            {
-                currentChapter = 1;
-                currnetIndex = 0;
-            }
-            else
-            {
-                currentChapter++;
-                currnetIndex = 0;
-            }
         }
-
     }
 
 
@@ -211,6 +164,26 @@ public class DialoguesDiary : MonoBehaviour {
         {
             if(!isOn)
             {
+                if (Notes1.Count > 0)
+                {
+                    currentChapter = 1;
+                    Debug.Log("Wybrałem 1");
+                }
+                else if (Notes2.Count > 0)
+                {
+                    currentChapter = 2;
+                    Debug.Log("Wybrałem 2");
+                }  
+                else if (Notes3.Count > 0)
+                {
+                    currentChapter = 3;
+                    Debug.Log("Wybrałem 3");
+                }
+                currnetIndex = 0;
+                Notes.Clear();
+                Notes.Add(Notes1);
+                Notes.Add(Notes2);
+                Notes.Add(Notes3);
                 loadCurrentPage();
                 setChapterText();
                 Diary.SetActive(true);

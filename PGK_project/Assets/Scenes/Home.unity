@@ -483,6 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue: {fileID: 509365648}
+  text: Wasyl2
 --- !u!61 &41865249
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1297,6 +1298,11 @@ GameObject:
   - component: {fileID: 266762144}
   - component: {fileID: 266762143}
   - component: {fileID: 266762142}
+  - component: {fileID: 266762150}
+  - component: {fileID: 266762149}
+  - component: {fileID: 266762148}
+  - component: {fileID: 266762147}
+  - component: {fileID: 266762146}
   m_Layer: 0
   m_Name: Chapter1
   m_TagString: Untagged
@@ -1315,7 +1321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1161011767}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &266762142
 MonoBehaviour:
@@ -1329,11 +1335,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 70ecde5ebc651064a9b6847fa782b55f, type: 3}
-  text: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej to zdoby\u0107.
-    uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
-    do\u0142\u0105czony do lek\xF3w"
+  text: Leki1
   chapterNumber: 1
-  isActive: 0
+  nameText: Leki1
 --- !u!114 &266762143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,9 +1350,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 80b72354ef9bb2341a6d24a2d018a0d6, type: 3}
-  text: "Kurwa nic nie zosta\u0142o..."
+  text: bartek1
   chapterNumber: 1
-  isActive: 1
+  nameText: Bartek1
 --- !u!114 &266762144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,12 +1365,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: faf101cf77768714dbb4e7d875da940f, type: 3}
-  text: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
-    na klatce schodowej.\n\nSzkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
-    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
-    sob\u0105..."
+  text: Wasyl1
   chapterNumber: 1
-  isActive: 0
+  nameText: Wasyl1
 --- !u!114 &266762145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,12 +1380,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 57988c377f1751f479346ca79275958a, type: 3}
-  text: 'We no odpisz synek proszem :/
-
-
-    ~Mama'
+  text: Marta1
   chapterNumber: 1
-  isActive: 1
+  nameText: Marta1
+--- !u!114 &266762146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 266762140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: Gumki
+  chapterNumber: 1
+  nameText: Gumki1
+--- !u!114 &266762147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 266762140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: DeathNote
+  chapterNumber: 1
+  nameText: DeathNote1
+--- !u!114 &266762148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 266762140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: Plyt1
+  chapterNumber: 1
+  nameText: Plyta1
+--- !u!114 &266762149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 266762140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: Tele1
+  chapterNumber: 1
+  nameText: Telefon1
+--- !u!114 &266762150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 266762140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: List1
+  chapterNumber: 1
+  nameText: List1
 --- !u!1 &290828587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,106 +3027,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &708226472
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 708226473}
-  - component: {fileID: 708226477}
-  - component: {fileID: 708226476}
-  - component: {fileID: 708226475}
-  - component: {fileID: 708226474}
-  m_Layer: 0
-  m_Name: Chapter4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &708226473
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 708226472}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1161011767}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &708226474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 708226472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: ed142396f9f0066419fb6ba6ccf5c4a8, type: 3}
-  text: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej to zdoby\u0107.
-    uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
-    do\u0142\u0105czony do lek\xF3w"
-  chapterNumber: 4
-  isActive: 1
---- !u!114 &708226475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 708226472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: faf101cf77768714dbb4e7d875da940f, type: 3}
-  text: "Kurwa nic nie zosta\u0142o..."
-  chapterNumber: 4
-  isActive: 1
---- !u!114 &708226476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 708226472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: ebc65a36dfd40894f9fcb4009094d793, type: 3}
-  text: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
-    na klatce schodowej.\n\nSzkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
-    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
-    sob\u0105..."
-  chapterNumber: 4
-  isActive: 1
---- !u!114 &708226477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 708226472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: afb0b9c1c34376f418db3ea3d08a7e98, type: 3}
-  text: 'We no odpisz synek proszem :/
-
-
-    ~Mama'
-  chapterNumber: 4
-  isActive: 1
 --- !u!1 &715139108
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,6 +3659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue: {fileID: 1719711018}
+  text: Leki2
 --- !u!61 &850412522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3983,6 +3957,46 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 310ebb9f96d221f4098943c4e4ceb13b, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &976126256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 976126258}
+  - component: {fileID: 976126257}
+  m_Layer: 0
+  m_Name: FillGlobalDialogues
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &976126257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976126256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a823a782929a924aa3b620135ef9481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &976126258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976126256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 538.39844, y: 342.10794, z: -6.746866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &979483024
 GameObject:
   m_ObjectHideFlags: 0
@@ -4134,6 +4148,11 @@ GameObject:
   - component: {fileID: 1040681413}
   - component: {fileID: 1040681412}
   - component: {fileID: 1040681411}
+  - component: {fileID: 1040681418}
+  - component: {fileID: 1040681417}
+  - component: {fileID: 1040681416}
+  - component: {fileID: 1040681415}
+  - component: {fileID: 1040681419}
   m_Layer: 0
   m_Name: Chapter2
   m_TagString: Untagged
@@ -4152,7 +4171,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1161011767}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1040681411
 MonoBehaviour:
@@ -4166,11 +4185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 17cab659efbf0e44f8564f6f9573ee2a, type: 3}
-  text: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej to zdoby\u0107.
-    uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
-    do\u0142\u0105czony do lek\xF3w"
+  text: Waga2
   chapterNumber: 2
-  isActive: 1
+  nameText: Waga2
 --- !u!114 &1040681412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4183,9 +4200,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
-  text: "Kurwa nic nie zosta\u0142o..."
+  text: Wasyl2
   chapterNumber: 2
-  isActive: 1
+  nameText: Wasyl2
 --- !u!114 &1040681413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4198,12 +4215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 4974d530badadc44ebe565ee5dbf8531, type: 3}
-  text: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
-    na klatce schodowej.\n\nSzkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
-    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
-    sob\u0105..."
+  text: Bartek2
   chapterNumber: 2
-  isActive: 1
+  nameText: Bartek2
 --- !u!114 &1040681414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4216,12 +4230,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
-  text: 'We no odpisz synek proszem :/
-
-
-    ~Mama'
+  text: Marta2
   chapterNumber: 2
-  isActive: 1
+  nameText: Marta2
+--- !u!114 &1040681415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1040681409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: tesket2
+  chapterNumber: 2
+  nameText: Tekst2
+--- !u!114 &1040681416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1040681409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: test2
+  chapterNumber: 2
+  nameText: TestCiazowy2
+--- !u!114 &1040681417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1040681409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: tele2
+  chapterNumber: 2
+  nameText: Telefon2
+--- !u!114 &1040681418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1040681409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: stzrykawki2
+  chapterNumber: 2
+  nameText: Strzykawki2
+--- !u!114 &1040681419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1040681409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: teleBar2
+  chapterNumber: 2
+  nameText: TelefonBartek2
 --- !u!1001 &1082203184
 Prefab:
   m_ObjectHideFlags: 0
@@ -4486,12 +4572,12 @@ MonoBehaviour:
   image2: {fileID: 1448512129}
   text3: {fileID: 1892123152}
   image3: {fileID: 1269182111}
+  currentChapter: 0
+  currnetIndex: 0
   unknown: {fileID: 21300000, guid: 8365e77e8a4611f4ca4cb086e3f2ac38, type: 3}
   Notes1: []
   Notes2: []
   Notes3: []
-  Notes4: []
-  Notes5: []
 --- !u!4 &1161011767
 Transform:
   m_ObjectHideFlags: 0
@@ -4502,13 +4588,11 @@ Transform:
   m_LocalPosition: {x: 555.507, y: 321.07498, z: -5.892144}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 708226473}
   - {fileID: 1190974176}
   - {fileID: 1040681410}
   - {fileID: 266762141}
-  - {fileID: 1495374565}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1169250920
 Prefab:
@@ -4586,7 +4670,7 @@ GameObject:
   - component: {fileID: 1190974184}
   - component: {fileID: 1190974183}
   - component: {fileID: 1190974182}
-  - component: {fileID: 1190974181}
+  - component: {fileID: 1190974185}
   m_Layer: 0
   m_Name: Chapter3
   m_TagString: Untagged
@@ -4605,7 +4689,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1161011767}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1190974177
 MonoBehaviour:
@@ -4619,11 +4703,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 9f9202a69a669b3498d798452ad0676a, type: 3}
-  text: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej to zdoby\u0107.
-    uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
-    do\u0142\u0105czony do lek\xF3w"
+  text: list3
   chapterNumber: 3
-  isActive: 1
+  nameText: List3
 --- !u!114 &1190974178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4636,9 +4718,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: dc47c4aad53edf946a7b334ab86052ff, type: 3}
-  text: "Kurwa nic nie zosta\u0142o..."
+  text: Leki3
   chapterNumber: 3
-  isActive: 0
+  nameText: Leki3
 --- !u!114 &1190974179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4651,12 +4733,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 4002e268b764f23479576ff44622a730, type: 3}
-  text: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
-    na klatce schodowej.\n\nSzkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
-    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
-    sob\u0105..."
+  text: Bartek3
   chapterNumber: 3
-  isActive: 0
+  nameText: Bartek3
 --- !u!114 &1190974180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4669,27 +4748,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 32a67b572654b29478d3c22da9f2da9b, type: 3}
-  text: 'We no odpisz synek proszem :/
-
-
-    ~Mama'
+  text: Mart3
   chapterNumber: 3
-  isActive: 1
---- !u!114 &1190974181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190974175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 96f6c6c75be71284ca238093db219562, type: 3}
-  text: ADFASDFASDF
-  chapterNumber: 3
-  isActive: 1
+  nameText: Marta3
 --- !u!114 &1190974182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4702,9 +4763,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 3f60472ce9fdc2742bd00d0535b0806a, type: 3}
-  text: dfsddfDAF
+  text: listmilosny3
   chapterNumber: 3
-  isActive: 0
+  nameText: ListMilosny3
 --- !u!114 &1190974183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4717,9 +4778,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 9fc21194bd235d34fb6f81e013b2ed90, type: 3}
-  text: fdfasdffb
+  text: tele3
   chapterNumber: 3
-  isActive: 1
+  nameText: Telefon3
 --- !u!114 &1190974184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4732,9 +4793,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: b53264c057562794da53967f9f92ca4b, type: 3}
-  text: sdsfasdf
+  text: lyzkamaf3
   chapterNumber: 3
-  isActive: 0
+  nameText: LyzkaMafia3
+--- !u!114 &1190974185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1190974175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  text: Ksiazka3
+  chapterNumber: 3
+  nameText: Ksiazka3
 --- !u!4 &1192075512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4328386014537048, guid: eb168999612bbce4abf61e27c907d57c,
@@ -4755,7 +4831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1198061109
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5959,6 +6035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue: {fileID: 1967615222}
+  text: Telefon2
 --- !u!61 &1369256741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6240,6 +6317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue: {fileID: 901021062}
+  text: Marta2
 --- !u!4 &1399277762 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4882404110297752, guid: 1bf46103e7feef44584ba1b9db65194a,
@@ -6515,6 +6593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue: {fileID: 1729746849}
+  text: Tekst2
 --- !u!61 &1468431083
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6616,106 +6695,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4945629176430610, guid: f7df149581019284c9123d24dc69096f,
     type: 2}
   m_PrefabInternal: {fileID: 1082203184}
---- !u!1 &1495374564
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1495374565}
-  - component: {fileID: 1495374569}
-  - component: {fileID: 1495374568}
-  - component: {fileID: 1495374567}
-  - component: {fileID: 1495374566}
-  m_Layer: 0
-  m_Name: Chapter5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1495374565
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1495374564}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1161011767}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1495374566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1495374564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: d18ecf51bf02d43489075983bc65b70d, type: 3}
-  text: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej to zdoby\u0107.
-    uwa\u017Caj z tymi lekami. Ziperid jest mocny\"\n\n~XxXraPidoxTrollXxX, li\u015Bcik
-    do\u0142\u0105czony do lek\xF3w"
-  chapterNumber: 5
-  isActive: 1
---- !u!114 &1495374567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1495374564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: bc538aff04199cd45933c3e7f2b6a0d6, type: 3}
-  text: "Kurwa nic nie zosta\u0142o..."
-  chapterNumber: 5
-  isActive: 1
---- !u!114 &1495374568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1495374564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3096bfc8905181b42a245055bb04374e, type: 3}
-  text: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
-    na klatce schodowej.\n\nSzkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
-    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
-    sob\u0105..."
-  chapterNumber: 5
-  isActive: 0
---- !u!114 &1495374569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1495374564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: d65b68f6b1e34994da9bff3249300f70, type: 3}
-  text: 'We no odpisz synek proszem :/
-
-
-    ~Mama'
-  chapterNumber: 5
-  isActive: 1
 --- !u!4 &1508511056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4405501340931774, guid: 94f014bfa8e744947bcac4a05d38d0e3,
@@ -6950,6 +6929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue: {fileID: 1224565751}
+  text: Strzykawki2
 --- !u!61 &1643123897
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -11298,6 +11298,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1318524483180954, guid: 29813b0c2ab847c44acb1f2dd5c92573,
         type: 2}
+    - target: {fileID: 50023081713728914, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e83121cfd1454a43a2601311e563632, type: 2}
   m_IsPrefabAsset: 0
