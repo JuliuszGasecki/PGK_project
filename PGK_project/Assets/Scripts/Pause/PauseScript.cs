@@ -13,8 +13,8 @@ public class PauseScript : MonoBehaviour {
 
     void Start()
     {
-        //if (SceneManager.GetActiveScene().name != "Home")
-          //  inv = GameObject.Find("Inventory").GetComponent<Inventory>();
+        // if (SceneManager.GetActiveScene().name != "Home")
+            // inv = GameObject.Find("Inventory").GetComponent<Inventory>();
     }
 
 	void Update () {
@@ -40,23 +40,23 @@ public class PauseScript : MonoBehaviour {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-
+        /*
         if (SceneManager.GetActiveScene().name != "Home")
         {
             inv = GameObject.Find("Inventory").GetComponent<Inventory>();
             if (inv.GetUsingWeapon() != null)
                 inv.GetUsingWeapon().CanUse = false;
-        }
+        }*/
     }
 
     public void Resume()
-    {
+    {/*
         if (SceneManager.GetActiveScene().name != "Home")
         {
             inv = GameObject.Find("Inventory").GetComponent<Inventory>();
             if (inv.GetUsingWeapon() != null)
                 inv.GetUsingWeapon().CanUse = true;
-        }
+        }*/
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
         GameIsPaused = false;
