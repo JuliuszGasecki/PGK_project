@@ -60,12 +60,12 @@ public class ButtonHighlighted : MonoBehaviour, IPointerEnterHandler,IPointerExi
     {
         string dane = "Not reached";
         string nazwa = eventData.pointerCurrentRaycast.gameObject.name;
-        Debug.Log("Nazwa : " + nazwa);
+        //Debug.Log("Nazwa : " + nazwa);
 
         foreach (var item in LevelsStatistic.level_repo)
         {
 
-            Debug.Log("Level " + item.Level_number + " Colected points " + (int)item.Level_points + " Stars: " + item.Level_stars);
+           // Debug.Log("Level " + item.Level_number + " Colected points " + (int)item.Level_points + " Stars: " + item.Level_stars);
             if (item.Level_number == (levelValue.FirstOrDefault(x => x.Key == nazwa).Value))
             {
                 dane = "Level " + item.Level_number + "\nColected points " + (int)item.Level_points + "\nStars: " + item.Level_stars

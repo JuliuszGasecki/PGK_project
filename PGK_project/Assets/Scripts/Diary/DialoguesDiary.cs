@@ -62,7 +62,7 @@ public class DialoguesDiary : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if(Notes1.Count != 0 || Notes2.Count != 0 || Notes1.Count != 0)
+        if(Notes1.Count != 0 || Notes2.Count != 0 || Notes3.Count != 0)
             turnOnDiary();
         setChapterText();
     }
@@ -80,10 +80,10 @@ public class DialoguesDiary : MonoBehaviour {
 
     public void loadPreviousPage()
     {
-        Debug.Log("Przed" + currnetIndex);
+       // Debug.Log("Przed" + currnetIndex);
         int mod = currnetIndex % 3;    
         currnetIndex =  currnetIndex - 3 + mod;
-        Debug.Log("Po" + currnetIndex);
+       // Debug.Log("Po" + currnetIndex);
         if (currnetIndex < 0)
         {
             currentChapter--;
@@ -99,10 +99,10 @@ public class DialoguesDiary : MonoBehaviour {
     private void loadCurrentPage()
     {
         int temp = Notes[currentChapter - 1].Count;
-        Debug.Log(temp);
+        //Debug.Log(temp);
         if (currnetIndex < temp)
         {
-            Debug.Log("Pierwsze okno " + currnetIndex);
+            //Debug.Log("Pierwsze okno " + currnetIndex);
             image1.enabled = true;
             text1.enabled = true;
             image1.sprite = Notes[currentChapter-1][currnetIndex].sprite;
@@ -112,7 +112,7 @@ public class DialoguesDiary : MonoBehaviour {
         }
         else
         {
-            Debug.Log("KURWA" + currnetIndex + " " + temp);
+            //Debug.Log("KURWA" + currnetIndex + " " + temp);
             if(currentChapter == 3)
             {
                 currentChapter = 1;
@@ -129,7 +129,7 @@ public class DialoguesDiary : MonoBehaviour {
         }
         if (currnetIndex + 1 < temp)
         {
-            Debug.Log("Drugie okno " + currnetIndex + 1);
+            //Debug.Log("Drugie okno " + currnetIndex + 1);
             image2.enabled = true;
             text2.enabled = true;
             image2.sprite = Notes[currentChapter - 1][currnetIndex + 1].sprite;
@@ -143,7 +143,7 @@ public class DialoguesDiary : MonoBehaviour {
         }
         if (currnetIndex + 2 < temp)
         {
-            Debug.Log("Trzecie okno " + currnetIndex + 2);
+            //Debug.Log("Trzecie okno " + currnetIndex + 2);
             image3.enabled = true;
             text3.enabled = true;
             image3.sprite = Notes[currentChapter - 1][currnetIndex + 2].sprite;
@@ -167,17 +167,17 @@ public class DialoguesDiary : MonoBehaviour {
                 if (Notes1.Count > 0)
                 {
                     currentChapter = 1;
-                    Debug.Log("Wybrałem 1");
+                   // Debug.Log("Wybrałem 1");
                 }
                 else if (Notes2.Count > 0)
                 {
                     currentChapter = 2;
-                    Debug.Log("Wybrałem 2");
+                   // Debug.Log("Wybrałem 2");
                 }  
                 else if (Notes3.Count > 0)
                 {
                     currentChapter = 3;
-                    Debug.Log("Wybrałem 3");
+                   // Debug.Log("Wybrałem 3");
                 }
                 currnetIndex = 0;
                 Notes.Clear();

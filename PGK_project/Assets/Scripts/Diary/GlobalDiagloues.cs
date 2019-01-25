@@ -18,14 +18,15 @@ public static class GlobalDiagloues {
         dialogues.Add("Gumki1", false);
         dialogues.Add("Plyta1", false);
         dialogues.Add("DeathNote1", false);
+        dialogues.Add("Strzykawki1", false);
         //Chapter2
         dialogues.Add("Marta2", false);
         dialogues.Add("Bartek2", false);
         dialogues.Add("Wasyl2", false);
         dialogues.Add("Waga2", false);
-        dialogues.Add("Strzykawki2", false);
         dialogues.Add("Telefon2", false);
         dialogues.Add("TestCiazowy2", false);
+        dialogues.Add("Strzykawki2", false);
         dialogues.Add("Tekst2", false);
         dialogues.Add("TelefonBartek2", false);
         //Chaopter3 
