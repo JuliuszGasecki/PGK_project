@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Days of taking drugs: 46'
+  m_Text: 'Days of drug addiction: 40'
 --- !u!222 &3086880
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -773,7 +773,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Chapter 1
+  m_Text: Chapter 2
 --- !u!222 &129426249
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4831,7 +4831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1198061109
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5240,7 +5240,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Date: 30-04-2019'
+  m_Text: 'Date: ??-06-2019'
 --- !u!222 &1280174578
 CanvasRenderer:
   m_ObjectHideFlags: 0
