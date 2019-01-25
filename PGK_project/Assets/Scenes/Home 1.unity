@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: 062f137c10c53254fbc951b0f1920b7a, type: 3}
   finishDialogue: 
   blur: {fileID: 1804031197}
 --- !u!4 &56751026 stripped
@@ -1619,7 +1619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: 23a72ec1682cecd48bbd6227303de46a, type: 3}
   finishDialogue: 
   blur: {fileID: 1392044896}
 --- !u!1 &290828587
@@ -1861,7 +1861,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 062f137c10c53254fbc951b0f1920b7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3940,7 +3940,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3fa4f18bd19e9d409db9c5e72b94d64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4593,7 +4593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 17cab659efbf0e44f8564f6f9573ee2a, type: 3}
+  sprite: {fileID: 21300000, guid: a62f839c712774c46959241eec507cd1, type: 3}
   text: Waga2
   chapterNumber: 2
   nameText: Waga2
@@ -4608,7 +4608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
+  sprite: {fileID: 21300000, guid: c7ceed7c69079904c93240c1ec1885c6, type: 3}
   text: Wasyl2
   chapterNumber: 2
   nameText: Wasyl2
@@ -4623,7 +4623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 4974d530badadc44ebe565ee5dbf8531, type: 3}
+  sprite: {fileID: 21300000, guid: 2dbdae21b35d33342828401235791ec0, type: 3}
   text: Bartek2
   chapterNumber: 2
   nameText: Bartek2
@@ -4638,7 +4638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
+  sprite: {fileID: 21300000, guid: b6b55daaa1f5ca74aa80967e3b583c85, type: 3}
   text: Marta2
   chapterNumber: 2
   nameText: Marta2
@@ -4653,7 +4653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  sprite: {fileID: 21300000, guid: 23a72ec1682cecd48bbd6227303de46a, type: 3}
   text: tesket2
   chapterNumber: 2
   nameText: Tekst2
@@ -4668,7 +4668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  sprite: {fileID: 21300000, guid: 062f137c10c53254fbc951b0f1920b7a, type: 3}
   text: test2
   chapterNumber: 2
   nameText: TestCiazowy2
@@ -4683,7 +4683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
   text: tele2
   chapterNumber: 2
   nameText: Telefon2
@@ -4698,7 +4698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
   text: stzrykawki2
   chapterNumber: 2
   nameText: Strzykawki2
@@ -4713,7 +4713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  sprite: {fileID: 21300000, guid: c3fa4f18bd19e9d409db9c5e72b94d64, type: 3}
   text: teleBar2
   chapterNumber: 2
   nameText: TelefonBartek2
@@ -4823,7 +4823,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23a72ec1682cecd48bbd6227303de46a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6148,11 +6148,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4945629176430610, guid: f7df149581019284c9123d24dc69096f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 4945629176430610, guid: f7df149581019284c9123d24dc69096f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.87
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 4945629176430610, guid: f7df149581019284c9123d24dc69096f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6180,16 +6180,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4945629176430610, guid: f7df149581019284c9123d24dc69096f, type: 2}
       propertyPath: m_LocalScale.y
-      value: 30.330153
+      value: 36.623653
       objectReference: {fileID: 0}
     - target: {fileID: 4945629176430610, guid: f7df149581019284c9123d24dc69096f, type: 2}
       propertyPath: m_LocalScale.x
-      value: 35.208134
+      value: 42.51382
       objectReference: {fileID: 0}
     - target: {fileID: 212889839252737144, guid: f7df149581019284c9123d24dc69096f,
         type: 2}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945629176430610, guid: f7df149581019284c9123d24dc69096f, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 8.411736
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7df149581019284c9123d24dc69096f, type: 2}
@@ -7233,7 +7237,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a62f839c712774c46959241eec507cd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7584,7 +7588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: 2dbdae21b35d33342828401235791ec0, type: 3}
   finishDialogue: 
   blur: {fileID: 1856494404}
 --- !u!1 &1643123895
@@ -8024,7 +8028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: a62f839c712774c46959241eec507cd1, type: 3}
   finishDialogue: 
   blur: {fileID: 731473692}
 --- !u!1 &1753538864
