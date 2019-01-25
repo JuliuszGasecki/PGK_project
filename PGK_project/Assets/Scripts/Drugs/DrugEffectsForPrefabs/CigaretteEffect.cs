@@ -10,6 +10,6 @@ public class CigaretteEffect : MonoBehaviour {
 	void Start () {
         hero = GameObject.Find("Hero").GetComponent<Hero>();
         hero.health += 4;
-
+        DrugsStat.drugsFajkiValue++;
 	}
 }

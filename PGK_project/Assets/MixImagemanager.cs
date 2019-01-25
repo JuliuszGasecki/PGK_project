@@ -21,8 +21,9 @@ public class MixImagemanager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if(dt.extasyFlag && dt.cocaFlag)
+	void Update ()
+    {
+        if (dt.extasyFlag && dt.cocaFlag)
         {
             flash.SetActive(true);
             if (!flag1)
@@ -102,7 +103,7 @@ public class MixImagemanager : MonoBehaviour {
             if (!flag6)
             {
                 flag6 = true;
-                //DrugsStat.drugsComboLordOftheTime++;
+                DrugsStat.drugsComboSmokeGrenade++;
             }
         }
         else
@@ -116,7 +117,7 @@ public class MixImagemanager : MonoBehaviour {
             if (!flag7)
             {
                 flag7 = true;
-                //DrugsStat.drugsComboLordOftheTime++;
+                DrugsStat.drugsComboWTF++;
             }
         }
         else
@@ -130,7 +131,7 @@ public class MixImagemanager : MonoBehaviour {
             if (!flag8)
             {
                 flag8 = true;
-                //DrugsStat.drugsComboLordOftheTime++;
+                DrugsStat.drugsCombHangover++;
             }
         }
         else

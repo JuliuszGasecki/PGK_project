@@ -64,7 +64,7 @@ public class CROSSBOW : MonoBehaviour, ISpecialWeapon
         if (firePoint != null)
         {
             NarcoMixId = GameObject.Find("Inventory").GetComponent<Inventory>().ReturnDrugsMix();
-            Debug.Log(NarcoMixId);
+           // Debug.Log(NarcoMixId);
             UpdateAmmo();
             UseWeapon();
         }

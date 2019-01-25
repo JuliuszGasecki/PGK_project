@@ -9,6 +9,7 @@ public class MethEffect : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         drugsTimer = GameObject.Find("Hero").GetComponent<DrugsTimer>();
+        DrugsStat.drugsMethValue++;
 	}
 	
 	// Update is called once per frame

@@ -154,7 +154,7 @@ public class DrugsTimer : MonoBehaviour {
           }
           else
         {
-            Debug.Log("ile narko" + active_drugs.Count);
+           // Debug.Log("ile narko" + active_drugs.Count);
             onDrugs = false; // nie ma nic
         }
               

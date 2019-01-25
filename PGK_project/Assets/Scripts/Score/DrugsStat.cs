@@ -6,7 +6,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class DrugsStat : MonoBehaviour {
+public class DrugsStat : MonoBehaviour
+{
 
     public static int killed = 0;
     public static int drugsValue = 0;
@@ -17,11 +18,18 @@ public class DrugsStat : MonoBehaviour {
     public static int drugsExtasyValue = 0;
     public static int drugsLSDValue = 0;
     public static int drugsMocarzValue = 0;
+    public static int drugsFajkiValue = 0;
+    public static int drugsMethValue = 0;
     public static int drugsComboFlash = 0;
     public static int drugsCombowhatDoesntKillYou = 0;
     public static int drugsComboHalfDead = 0;
     public static int drugsComboLordOftheTime = 0;
     public static int drugsComboNoAlcohol = 0;
+    public static int drugsComboSmokeGrenade = 0;           // mari + Fajki
+    public static int drugsComboWTF = 0;                     // Coca + LSD
+    public static int drugsCombHangover = 0;
+
+
 
     public static int level = 0;
     public static int wspolczynnikRundy = 40;
@@ -43,9 +51,10 @@ public class DrugsStat : MonoBehaviour {
     }
 
 
-    void Update() {
+    void Update()
+    {
         drugs1.text = "" + drugsValue + "\n\n" + drugsHeraValue + "\n" + drugsCocaValue + "\n" + drugsMariValue + "\n" + drugsAlcoValue;
-        drugs2.text = "\n\n" + drugsExtasyValue + "\n" + drugsLSDValue + "\n" + drugsMocarzValue;
+        drugs2.text = "\n\n" + drugsExtasyValue + "\n" + drugsLSDValue + "\n" + drugsMocarzValue + "\n" + drugsMethValue + "\n" + drugsFajkiValue;
         killed = KilledStat.killedValue;
         foreach (var item in openedLvls)
         {
@@ -64,10 +73,15 @@ public class DrugsStat : MonoBehaviour {
         drugsComboFlash = 0;
         drugsLSDValue = 0;
         drugsMocarzValue = 0;
+        drugsFajkiValue = 0;
+        drugsMethValue = 0;
         drugsCombowhatDoesntKillYou = 0;
         drugsComboHalfDead = 0;
         drugsComboLordOftheTime = 0;
         drugsComboNoAlcohol = 0;
+        drugsComboSmokeGrenade = 0;           // mari + Fajki
+        drugsComboWTF = 0;                     // Coca + LSD
+        drugsCombHangover = 0;                     // Coca + LSD
         KilledStat.killedValue = 0;
         ScoreCounter.scoreValue = 0;
         totalPoints = 0;
@@ -86,6 +100,8 @@ public class DrugsStat : MonoBehaviour {
         + (drugsHeraValue * 3.2f)
         + (drugsMariValue * 1.5f)
         + drugsValue
+        + drugsMethValue
+        + drugsFajkiValue
         + (killed * 2.7f)
          + (float)Math.Pow(2.3, drugsComboFlash) - 1
         + (drugsCombowhatDoesntKillYou * 3.4f)
@@ -93,7 +109,10 @@ public class DrugsStat : MonoBehaviour {
         + (drugsComboLordOftheTime * 8.7f)
         + (drugsComboNoAlcohol * 2.0f)
         + drugsLSDValue
-        + (drugsMocarzValue * (1.5f));
+        + (drugsMocarzValue * (1.5f))
+        + drugsComboSmokeGrenade                        // mari + Fajki
+        + drugsComboWTF +                                // Coca + LSD
+        +drugsCombHangover;                     // Coca + LSD
 
         Math.Round(totalPoints, 2);
 
@@ -115,13 +134,13 @@ public class DrugsStat : MonoBehaviour {
             float time1 = KilledStat.killedTimeList[0];
             foreach (var item in KilledStat.killedTimeList)
             {
-                if(item - time1 != 0 && item - time1 <=5)
+                if (item - time1 != 0 && item - time1 <= 5)
                 {
                     result++;
                 }
                 else
                 {
-                    if(result != 1)
+                    if (result != 1)
                     {
                         numberOfCombo++;
                         comboKilled.Add(numberOfCombo, result);
@@ -145,7 +164,7 @@ public class DrugsStat : MonoBehaviour {
     {
         foreach (var item in combo.Keys)
         {
-            if(combo[item] != 0)
+            if (combo[item] != 0)
                 result *= combo[item] * 0.65f;
         }
         longestCombo = combo.Values.Max();
