@@ -1092,7 +1092,6 @@ GameObject:
   m_Component:
   - component: {fileID: 167683314}
   - component: {fileID: 167683316}
-  - component: {fileID: 167683315}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -1114,19 +1113,6 @@ Transform:
   m_Father: {fileID: 1164220475}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &167683315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 167683313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: ~Mama
 --- !u!114 &167683316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,7 +1125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: We no odpisz synek proszem :/
+  Explanation: Kurwa nic nie zostalo...
 --- !u!1 &194230016 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1469617920048094, guid: f7df149581019284c9123d24dc69096f,
@@ -1435,7 +1421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 70ecde5ebc651064a9b6847fa782b55f, type: 3}
+  sprite: {fileID: 21300000, guid: 17cab659efbf0e44f8564f6f9573ee2a, type: 3}
   text: Leki1
   chapterNumber: 1
   nameText: Leki1
@@ -1450,7 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 80b72354ef9bb2341a6d24a2d018a0d6, type: 3}
+  sprite: {fileID: 21300000, guid: 3116780f38eb51b438f9989c061d0981, type: 3}
   text: bartek1
   chapterNumber: 1
   nameText: Bartek1
@@ -1465,7 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: faf101cf77768714dbb4e7d875da940f, type: 3}
+  sprite: {fileID: 21300000, guid: 9e9eb477759a638499e3a75b8100e6e6, type: 3}
   text: Wasyl1
   chapterNumber: 1
   nameText: Wasyl1
@@ -1480,7 +1466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 57988c377f1751f479346ca79275958a, type: 3}
+  sprite: {fileID: 21300000, guid: fd53de14131e24f4c94c52db6369f30d, type: 3}
   text: Marta1
   chapterNumber: 1
   nameText: Marta1
@@ -1495,7 +1481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  sprite: {fileID: 21300000, guid: 5a04d2986ea308d40bc769b2aad051e6, type: 3}
   text: Gumki
   chapterNumber: 1
   nameText: Gumki1
@@ -1510,7 +1496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  sprite: {fileID: 21300000, guid: 87681c7965bee6f4ebb362c4de84ebca, type: 3}
   text: DeathNote
   chapterNumber: 1
   nameText: DeathNote1
@@ -1525,7 +1511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  sprite: {fileID: 21300000, guid: cd7583c9dbfd9ba45ae3d34c2b8e1880, type: 3}
   text: Plyt1
   chapterNumber: 1
   nameText: Plyta1
@@ -1540,7 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
   text: Tele1
   chapterNumber: 1
   nameText: Telefon1
@@ -1555,7 +1541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
+  sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
   text: List1
   chapterNumber: 1
   nameText: List1
@@ -1570,7 +1556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
   text: Strzykawki1
   chapterNumber: 1
   nameText: Strzykawki1
@@ -2605,6 +2591,21 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 212889839252737144, guid: f7df149581019284c9123d24dc69096f,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212889839252737144, guid: f7df149581019284c9123d24dc69096f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212889839252737144, guid: f7df149581019284c9123d24dc69096f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7df149581019284c9123d24dc69096f, type: 2}
   m_IsPrefabAsset: 0
@@ -3039,7 +3040,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4304,6 +4305,21 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 212889839252737144, guid: f7df149581019284c9123d24dc69096f,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212889839252737144, guid: f7df149581019284c9123d24dc69096f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212889839252737144, guid: f7df149581019284c9123d24dc69096f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7df149581019284c9123d24dc69096f, type: 2}
   m_IsPrefabAsset: 0
@@ -4895,6 +4911,21 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 8.515881
       objectReference: {fileID: 0}
+    - target: {fileID: 212889839252737144, guid: f7df149581019284c9123d24dc69096f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212889839252737144, guid: f7df149581019284c9123d24dc69096f,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212889839252737144, guid: f7df149581019284c9123d24dc69096f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7df149581019284c9123d24dc69096f, type: 2}
   m_IsPrefabAsset: 0
@@ -5208,7 +5239,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1147342140}
   m_LocalRotation: {x: -0, y: -0, z: 0.96059185, w: 0.2779627}
-  m_LocalPosition: {x: -9.81, y: -1.01, z: 5.9261427}
+  m_LocalPosition: {x: -3.51, y: -6.03, z: 5.9261427}
   m_LocalScale: {x: 0.08512996, y: 0.089509964, z: 0.13052}
   m_Children:
   - {fileID: 17245990}
@@ -5289,7 +5320,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd7583c9dbfd9ba45ae3d34c2b8e1880, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5432,7 +5463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
   finishDialogue: 
   blur: {fileID: 1098586995}
 --- !u!1 &1168437381
@@ -5541,7 +5572,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87681c7965bee6f4ebb362c4de84ebca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6090,7 +6121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: 5a04d2986ea308d40bc769b2aad051e6, type: 3}
   finishDialogue: 
   blur: {fileID: 1845623501}
 --- !u!4 &1224565753
@@ -7881,7 +7912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: 87681c7965bee6f4ebb362c4de84ebca, type: 3}
   finishDialogue: 
   blur: {fileID: 801100151}
 --- !u!1001 &1571983715
@@ -8155,7 +8186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a04d2986ea308d40bc769b2aad051e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8335,7 +8366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: cd7583c9dbfd9ba45ae3d34c2b8e1880, type: 3}
   finishDialogue: 
   blur: {fileID: 17245988}
 --- !u!1 &1693399013
@@ -8382,7 +8413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: c7ceed7c69079904c93240c1ec1885c6, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: 3116780f38eb51b438f9989c061d0981, type: 3}
   finishDialogue: 
   blur: {fileID: 465377030}
 --- !u!1 &1700643990
