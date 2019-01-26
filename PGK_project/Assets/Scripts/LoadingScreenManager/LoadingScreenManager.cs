@@ -19,8 +19,8 @@ public class LoadingScreenManager : MonoBehaviour {
         if(Time.time - time > 4)
         {
             DrugsStat.AllStatsReset();
-            SceneManager.LoadScene("Required");
-            // SceneManager.LoadScene(nameScene);
+            // SceneManager.LoadScene("Required");
+            SceneManager.LoadScene(nameScene);
             // SceneManager.LoadScene("home");
         }
     }
