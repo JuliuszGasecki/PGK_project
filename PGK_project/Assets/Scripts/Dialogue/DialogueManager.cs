@@ -77,6 +77,7 @@ public class DialogueManager : MonoBehaviour {
         {
             blur.SetActive(false);
         }
+        GameObject.Find("TextPressZ").GetComponent<PressZToSee>().turnOnMessage();
         Destroy(gameObject);
     }
 
