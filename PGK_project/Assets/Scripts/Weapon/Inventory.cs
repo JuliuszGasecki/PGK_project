@@ -59,8 +59,8 @@ public class Inventory : MonoBehaviour
         _usingSlot = 0;
         _secondWeaponPosition = _usingSlot + 1;
         _thirdWeaponPosition = _usingSlot + 2;
-        _heroAnimatior.SetBool("changingWeapon", true);
-        _heroAnimatior.SetInteger("weaponID", _usingSlot);
+        //_heroAnimatior.SetBool("changingWeapon", true);
+        //_heroAnimatior.SetInteger("weaponID", _usingSlot);
     }
 
     // Update is called once per frame
