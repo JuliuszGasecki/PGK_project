@@ -1372,194 +1372,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4662670003345560, guid: 5a592dff96c4ed7408acfacfdf8cb6e1,
     type: 2}
   m_PrefabInternal: {fileID: 164912406}
---- !u!1 &266762140
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 266762141}
-  - component: {fileID: 266762145}
-  - component: {fileID: 266762144}
-  - component: {fileID: 266762143}
-  - component: {fileID: 266762142}
-  - component: {fileID: 266762150}
-  - component: {fileID: 266762149}
-  - component: {fileID: 266762148}
-  - component: {fileID: 266762147}
-  - component: {fileID: 266762146}
-  - component: {fileID: 266762151}
-  m_Layer: 0
-  m_Name: Chapter1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &266762141
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1161011767}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &266762142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 17cab659efbf0e44f8564f6f9573ee2a, type: 3}
-  text: Leki1
-  chapterNumber: 1
-  nameText: Leki1
---- !u!114 &266762143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3116780f38eb51b438f9989c061d0981, type: 3}
-  text: bartek1
-  chapterNumber: 1
-  nameText: Bartek1
---- !u!114 &266762144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 9e9eb477759a638499e3a75b8100e6e6, type: 3}
-  text: Wasyl1
-  chapterNumber: 1
-  nameText: Wasyl1
---- !u!114 &266762145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: fd53de14131e24f4c94c52db6369f30d, type: 3}
-  text: Marta1
-  chapterNumber: 1
-  nameText: Marta1
---- !u!114 &266762146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 5a04d2986ea308d40bc769b2aad051e6, type: 3}
-  text: Gumki
-  chapterNumber: 1
-  nameText: Gumki1
---- !u!114 &266762147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 87681c7965bee6f4ebb362c4de84ebca, type: 3}
-  text: DeathNote
-  chapterNumber: 1
-  nameText: DeathNote1
---- !u!114 &266762148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: cd7583c9dbfd9ba45ae3d34c2b8e1880, type: 3}
-  text: Plyt1
-  chapterNumber: 1
-  nameText: Plyta1
---- !u!114 &266762149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
-  text: Tele1
-  chapterNumber: 1
-  nameText: Telefon1
---- !u!114 &266762150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
-  text: List1
-  chapterNumber: 1
-  nameText: List1
---- !u!114 &266762151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266762140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
-  text: Strzykawki1
-  chapterNumber: 1
-  nameText: Strzykawki1
 --- !u!1 &274683344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4658,178 +4470,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4072647191522284, guid: 81f9679ffdb272047961405e769152f7,
     type: 2}
   m_PrefabInternal: {fileID: 1850032763}
---- !u!1 &1040681409
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1040681410}
-  - component: {fileID: 1040681414}
-  - component: {fileID: 1040681413}
-  - component: {fileID: 1040681412}
-  - component: {fileID: 1040681411}
-  - component: {fileID: 1040681418}
-  - component: {fileID: 1040681417}
-  - component: {fileID: 1040681416}
-  - component: {fileID: 1040681415}
-  - component: {fileID: 1040681419}
-  m_Layer: 0
-  m_Name: Chapter2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1040681410
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040681409}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1161011767}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1040681411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040681409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 17cab659efbf0e44f8564f6f9573ee2a, type: 3}
-  text: Waga2
-  chapterNumber: 2
-  nameText: Waga2
---- !u!114 &1040681412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040681409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
-  text: Wasyl2
-  chapterNumber: 2
-  nameText: Wasyl2
---- !u!114 &1040681413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040681409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 4974d530badadc44ebe565ee5dbf8531, type: 3}
-  text: Bartek2
-  chapterNumber: 2
-  nameText: Bartek2
---- !u!114 &1040681414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040681409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
-  text: Marta2
-  chapterNumber: 2
-  nameText: Marta2
---- !u!114 &1040681415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040681409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
-  text: tesket2
-  chapterNumber: 2
-  nameText: Tekst2
---- !u!114 &1040681416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040681409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
-  text: test2
-  chapterNumber: 2
-  nameText: TestCiazowy2
---- !u!114 &1040681417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040681409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
-  text: tele2
-  chapterNumber: 2
-  nameText: Telefon2
---- !u!114 &1040681418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040681409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
-  text: stzrykawki2
-  chapterNumber: 2
-  nameText: Strzykawki2
---- !u!114 &1040681419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040681409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
-  text: teleBar2
-  chapterNumber: 2
-  nameText: TelefonBartek2
 --- !u!1 &1059536695
 GameObject:
   m_ObjectHideFlags: 0
@@ -5363,62 +5003,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1161011765
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1161011767}
-  - component: {fileID: 1161011766}
-  m_Layer: 0
-  m_Name: DialogueNotesManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1161011766
+--- !u!114 &1161011766 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1161011765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114437617865159714, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+    type: 2}
+  m_PrefabInternal: {fileID: 1904160201}
   m_Script: {fileID: 11500000, guid: ee3381cf186af5b44aa4d49946809404, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textChapter: {fileID: 1211865560}
-  text1: {fileID: 159131546}
-  image1: {fileID: 1516780810}
-  text2: {fileID: 441298124}
-  image2: {fileID: 1448512129}
-  text3: {fileID: 1892123152}
-  image3: {fileID: 1269182111}
-  currentChapter: 0
-  currnetIndex: 0
-  unknown: {fileID: 21300000, guid: 8365e77e8a4611f4ca4cb086e3f2ac38, type: 3}
-  Notes1: []
-  Notes2: []
-  Notes3: []
---- !u!4 &1161011767
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1161011765}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 555.507, y: 321.07498, z: -5.892144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1190974176}
-  - {fileID: 1040681410}
-  - {fileID: 266762141}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1164220474
 GameObject:
   m_ObjectHideFlags: 0
@@ -5694,162 +5284,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7df149581019284c9123d24dc69096f, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1190974175
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1190974176}
-  - component: {fileID: 1190974180}
-  - component: {fileID: 1190974179}
-  - component: {fileID: 1190974178}
-  - component: {fileID: 1190974177}
-  - component: {fileID: 1190974184}
-  - component: {fileID: 1190974183}
-  - component: {fileID: 1190974182}
-  - component: {fileID: 1190974185}
-  m_Layer: 0
-  m_Name: Chapter3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1190974176
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190974175}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1161011767}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1190974177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190974175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 9f9202a69a669b3498d798452ad0676a, type: 3}
-  text: list3
-  chapterNumber: 3
-  nameText: List3
---- !u!114 &1190974178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190974175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: dc47c4aad53edf946a7b334ab86052ff, type: 3}
-  text: Leki3
-  chapterNumber: 3
-  nameText: Leki3
---- !u!114 &1190974179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190974175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 4002e268b764f23479576ff44622a730, type: 3}
-  text: Bartek3
-  chapterNumber: 3
-  nameText: Bartek3
---- !u!114 &1190974180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190974175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 32a67b572654b29478d3c22da9f2da9b, type: 3}
-  text: Mart3
-  chapterNumber: 3
-  nameText: Marta3
---- !u!114 &1190974182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190974175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3f60472ce9fdc2742bd00d0535b0806a, type: 3}
-  text: listmilosny3
-  chapterNumber: 3
-  nameText: ListMilosny3
---- !u!114 &1190974183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190974175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 9fc21194bd235d34fb6f81e013b2ed90, type: 3}
-  text: tele3
-  chapterNumber: 3
-  nameText: Telefon3
---- !u!114 &1190974184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190974175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: b53264c057562794da53967f9f92ca4b, type: 3}
-  text: lyzkamaf3
-  chapterNumber: 3
-  nameText: LyzkaMafia3
---- !u!114 &1190974185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190974175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d01988b7c9020428190ab1b0861870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 04015c0331f461148bdee71a861ddc4b, type: 3}
-  text: Ksiazka3
-  chapterNumber: 3
-  nameText: Ksiazka3
 --- !u!4 &1192075512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4328386014537048, guid: eb168999612bbce4abf61e27c907d57c,
@@ -9542,6 +8976,87 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892123150}
   m_CullTransparentMesh: 0
+--- !u!1001 &1904160201
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811066663548422, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 555.507
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811066663548422, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 321.07498
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811066663548422, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5.892144
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811066663548422, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811066663548422, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811066663548422, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811066663548422, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811066663548422, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563225852988074, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
+      propertyPath: m_Name
+      value: DialogueNotesManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437617865159714, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: textChapter
+      value: 
+      objectReference: {fileID: 1211865560}
+    - target: {fileID: 114437617865159714, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text1
+      value: 
+      objectReference: {fileID: 159131546}
+    - target: {fileID: 114437617865159714, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: image1
+      value: 
+      objectReference: {fileID: 1516780810}
+    - target: {fileID: 114437617865159714, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text2
+      value: 
+      objectReference: {fileID: 441298124}
+    - target: {fileID: 114437617865159714, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: image2
+      value: 
+      objectReference: {fileID: 1448512129}
+    - target: {fileID: 114437617865159714, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text3
+      value: 
+      objectReference: {fileID: 1892123152}
+    - target: {fileID: 114437617865159714, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: image3
+      value: 
+      objectReference: {fileID: 1269182111}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!4 &1909418265 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4236820996667624, guid: fe99e4c6b8dd3b045a9e009bada757f8,
