@@ -39,7 +39,7 @@ public class DEAGLE : MonoBehaviour, IShootable
         anim = GameObject.Find("Hero").GetComponent<Animator>();
         ID = 0;
         damage = 10;
-        fireRate = 0.6f;
+        fireRate = 0.70f;
         speed = 25f;
         magazineCapacity = 7;
         ammo = this.gameObject.GetComponent<Inventory>().DeagleAmmo; 
@@ -116,7 +116,7 @@ public class DEAGLE : MonoBehaviour, IShootable
 
     public void UseWeapon()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire && CanUse)
+        if (Input.GetMouseButton(0) && Time.time > timeUntilFire && CanUse)
         {
             if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
