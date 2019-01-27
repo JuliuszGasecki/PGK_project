@@ -11,6 +11,7 @@ public class PlayButton : MonoBehaviour {
     }
     public void PlayGameName(string name)
     {
-        SceneManager.LoadScene(name);
+        LoadingScreenManager.nameScene = "Required";
+        SceneManager.LoadScene("LoadingScreen");
     }
 }

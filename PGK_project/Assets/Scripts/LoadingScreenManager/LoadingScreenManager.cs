@@ -61,6 +61,10 @@ public class LoadingScreenManager : MonoBehaviour {
         {
             image5.SetActive(true);
         }
+        else
+        {
+            image5.SetActive(true);
+        }
     }
 
     public void SetUnvisiable()
