@@ -39,19 +39,19 @@ public class LoadingScreenManager : MonoBehaviour {
         SetUnvisiable();
         if (DrugsStat.level == 0)
         {
-            image0.SetActive(true);
+            image5.SetActive(true);
         }
         else if (DrugsStat.level == 1)
         {
-            image1.SetActive(true);
+            image3.SetActive(true);
         }
         else if (DrugsStat.level == 2)
         {
-            image2.SetActive(true);
+            image0.SetActive(true);
         }
         else if (DrugsStat.level == 3)
         {
-            image3.SetActive(true);
+            image1.SetActive(true);
         }
         else if (DrugsStat.level == 4)
         {
@@ -59,7 +59,7 @@ public class LoadingScreenManager : MonoBehaviour {
         }
         else if (DrugsStat.level == 5)
         {
-            image5.SetActive(true);
+            image2.SetActive(true);
         }
         else
         {

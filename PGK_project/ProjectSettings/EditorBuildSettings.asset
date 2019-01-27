@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenuScene.unity
     guid: 7cc4c2fb8eef33745a5236777fa0dcfd
+  - enabled: 1
+    path: Assets/Scenes/TestScene/test.unity
+    guid: 109de788cb0514742b53483c6b6f1bf2
   - enabled: 1
     path: Assets/Scenes/DemoScene.unity
     guid: d9fc1a3c9c72087439b135715d7c1b32
@@ -32,9 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelsMap/LevelsMap.unity
     guid: a1c8b4cb5815d0849830f6efbd2fa547
-  - enabled: 1
-    path: Assets/Scenes/TestScene/test.unity
-    guid: 109de788cb0514742b53483c6b6f1bf2
   - enabled: 1
     path: Assets/Scenes/LoadingScreen.unity
     guid: 445e47cccdc69da4497c8f562bc6ed3e

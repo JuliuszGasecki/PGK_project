@@ -11,6 +11,8 @@ public class TutorialManager : MonoBehaviour {
     public Image teacher;
     public Sprite teacherSprite;
     public string finishTutorial;
+    public List<Sprite> sprites;
+    public Image tutImage;
     Withdrawal hero;
 
     private static TutorialManager instance;
@@ -30,13 +32,20 @@ public class TutorialManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if (TutekOdwiedzon.odwiedzon)
+        {
+            teacher.enabled = false;
+            tutorialText.text = "";
+            Destroy(gameObject);
+            
+        }
         hero = GameObject.Find("Hero").GetComponent<Withdrawal>();
         teacher.enabled = true;
         teacher.sprite = teacherSprite;
         SetNextTutorial(0);
         hero.stopWithdrawal();
-        Time.timeScale = 0f;
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -53,6 +62,15 @@ public class TutorialManager : MonoBehaviour {
 
     public void SetNextTutorial(int currentOrder)
     {
+        if(currentOrder > 0 && currentOrder < 6 || currentOrder == 10)
+        {
+            tutImage.enabled = true;
+            tutImage.sprite = sprites[currentOrder];
+        }
+        else
+        {
+            tutImage.enabled = false;
+        }
         currentTutorial = getTutorialByOrder(currentOrder);
         if(!currentTutorial)
         {
@@ -71,6 +89,7 @@ public class TutorialManager : MonoBehaviour {
         tutorialText = null;
         hero.startWithdrawal();
         Time.timeScale = 1f;
+        TutekOdwiedzon.odwiedzon = true;
         Destroy(gameObject);
     }
 

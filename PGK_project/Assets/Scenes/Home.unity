@@ -628,10 +628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "To ta jebana dyskoteka. Wiesz kt\xF3ra. Tam maj\u0105 proch\xF3w \u017Ce
-    starczy nam na miesi\u0105c. Tylko jesli tam p\xF3\u017Ajdziesz mam pro\u015Bb\u0119.
-    Zajeb ich wszystkich..."
+  order: 0
+  Explanation: I already have seizures after drug withdrawal. Man, they have so many
+    drugs, we have to take some of theirs
 --- !u!114 &66851421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,9 +643,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Ooooo obudzi\u0142e\u015B si\u0119. Dawaj walniemy z bonga... W sumie
-    to wszystko co mi zosta\u0142o. Stary znam miejsce w kt\xF3ym m\xF3glby\u015B
-    si\u0119 ob\u0142owi\u0107"
+  Explanation: "Dude, I got kicked so bad. Fuck it man. I went to talk with the boys
+    to the dark alley, but they said I owe them money. Fucking kidding me, I ain\u2019t
+    got any of their money."
 --- !u!4 &88434629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4945629176430610, guid: f7df149581019284c9123d24dc69096f,
@@ -1125,7 +1124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: Kurwa nic nie zostalo...
+  Explanation: For fuck's sake. Nothing left...
 --- !u!1 &194230016 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1469617920048094, guid: f7df149581019284c9123d24dc69096f,
@@ -2208,7 +2207,6 @@ GameObject:
   m_Component:
   - component: {fileID: 424647793}
   - component: {fileID: 424647795}
-  - component: {fileID: 424647794}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -2230,19 +2228,6 @@ Transform:
   m_Father: {fileID: 1729746851}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &424647794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 424647792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "Z powa\u017Caniem, XXXYYYZZZ.\""
 --- !u!114 &424647795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2255,8 +2240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Szanowny Panie ///0/9089789 zawiadamiam, \u017Ce wci\u0105\u017C
-    oczekuj\u0119 wp\u0142aty czynszu za poprzedni miesi\u0105c"
+  Explanation: "\u201CDear Mr. White, I am writing to inform you that I am still expecting
+    a payment for the previous month\u2019s rent. Yours sincerely, Mr. Greenwitch.\u201D"
 --- !u!1 &441298122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,7 +2973,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Explanation: ~Mama
+  Explanation: "Son, you haven\u2019t answered me for 3 weeks. It will be nice if
+    you sometimes write to your mother."
 --- !u!114 &624270316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3001,7 +2987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: We no odpisz synek proszem :/
+  Explanation: From Mom
 --- !u!4 &663709926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4328386014537048, guid: eb168999612bbce4abf61e27c907d57c,
@@ -3530,7 +3516,6 @@ GameObject:
   m_Component:
   - component: {fileID: 765428413}
   - component: {fileID: 765428415}
-  - component: {fileID: 765428414}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -3552,21 +3537,6 @@ Transform:
   m_Father: {fileID: 1693399014}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &765428414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 765428412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "To ta jebana dyskoteka. Wiesz kt\xF3ra. Tam maj\u0105 proch\xF3w \u017Ce
-    starczy nam na miesi\u0105c. Tylko jesli tam p\xF3\u017Ajdziesz mam pro\u015Bb\u0119.
-    Zajeb ich wszystkich..."
 --- !u!114 &765428415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3579,9 +3549,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Ooooo obudzi\u0142e\u015B si\u0119. Dawaj walniemy z bonga... W sumie
-    to wszystko co mi zosta\u0142o. Stary znam miejsce w kt\xF3ym m\xF3glby\u015B
-    si\u0119 ob\u0142owi\u0107"
+  Explanation: "Bro, have you seen how they fucked up Matt? We have to beat this bastards
+    up! If there is something that life has taught me, that is to never turn the other
+    cheek. Anyway they have plenty of this good stuff..\r\n"
 --- !u!1 &766823044
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,7 +3947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Kurwa nic nie zosta\u0142o..."
+  Explanation: "CD with inscription: \u201CFor best hypeman I know. Dude, I wish you
+    would rebound. Your BB\u201D"
 --- !u!1 &848724360
 GameObject:
   m_ObjectHideFlags: 0
@@ -7071,7 +7042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Explanation: "~XxXraPidoxTrollXxX, li\u015Bcik do\u0142\u0105czony do lek\xF3w"
+  Explanation: ' - note attached to the pills'
 --- !u!114 &1443900172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7084,8 +7055,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej
-    to zdoby\u0107. uwa\u017Caj z tymi lekami. Ziperid jest mocny\""
+  Explanation: "\u201CThe price of drugs will have increased by 0.02 bitcoin by the
+    end of the month. It is getting harder and harder to get it. Be careful taking
+    this pills. They are very strong.\u201D "
 --- !u!1 &1448512127
 GameObject:
   m_ObjectHideFlags: 0
@@ -8195,7 +8167,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 588e74d7626e9574f9fd007e049b8c39, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -8541,9 +8513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Explanation: "Szkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
-    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
-    sob\u0105..."
+  Explanation: "Also our Goddamn rapper got beaten up by some Motherfuckers. He can\u2019t
+    even make an easy deal, dealers don\u2019t trust him.\r"
 --- !u!114 &1786443136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8556,8 +8527,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
-    na klatce schodowej."
+  Explanation: "Oh, you finally got up. I don\u2019t remember last two weeks at all\u2026
+    We have no more drugs left. Well, I will go to see the boys, but I can\u2019t
+    make it for all of us. \n"
 --- !u!4 &1787863374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4120336262365710, guid: 690b8b878db22db48a88fd483fa4202f,
@@ -9172,6 +9144,59 @@ Prefab:
       propertyPath: image3
       value: 
       objectReference: {fileID: 1269182111}
+    - target: {fileID: 114743421594037522, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "From Mom\nSon, you haven\u2019t answered me for 3 weeks. It will be
+        nice if you sometimes write to your mother."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279895668804090, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "\u201CThe price of drugs will have increased by 0.02 bitcoin by the
+        end of the month. It is getting harder and harder to get it. Be careful taking
+        this pills. They are very strong.\u201D \n - note attached to the pills"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114434341792160172, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "\u201CDear Mr. White, I am writing to inform you that I am still expecting
+        a payment for the previous month\u2019s rent. Yours sincerely, Mr. Greenwitch.\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114018076683904070, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: For fuck's sake. Nothing left...
+      objectReference: {fileID: 0}
+    - target: {fileID: 114450389870279076, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "CD with inscription: \u201CFor best hypeman I know. Dude, I wish you
+        would rebound. Your BB\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114069035595443246, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Oh, you finally got up. I don\u2019t remember last two weeks at all\u2026
+        We have no more drugs left. Well, I will go to see the boys, but I can\u2019t
+        make it for all of us. Also our Goddamn rapper got beaten up by some Motherfuckers.
+        He can\u2019t even make an easy deal, dealers don\u2019t trust him.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114075549209481136, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Dude, I got kicked so bad. Fuck it man. I went to talk with the boys
+        to the dark alley, but they said I owe them money. Fucking kidding me, I ain\u2019t
+        got any of their money. I already have seizures after drug withdrawal. Man,
+        they have so many drugs, we have to take some of theirs"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215234438662510, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Bro, have you seen how they fucked up Matt? We have to beat this bastards
+        up! If there is something that life has taught me, that is to never turn the
+        other cheek. Anyway they have plenty of this good stuff..\r"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
   m_IsPrefabAsset: 0
