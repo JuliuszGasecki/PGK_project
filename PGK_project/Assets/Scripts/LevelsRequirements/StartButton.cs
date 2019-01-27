@@ -9,4 +9,9 @@ public class StartButton : MonoBehaviour {
     {
         SceneManager.LoadScene(LoadingScreenManager.nameScene);
     }
+
+    public void StartGameThroughHome()
+    {
+        SceneManager.LoadScene("Home");
+    }
 }

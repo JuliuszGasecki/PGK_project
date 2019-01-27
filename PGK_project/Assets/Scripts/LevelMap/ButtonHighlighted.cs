@@ -27,20 +27,20 @@ public class ButtonHighlighted : MonoBehaviour, IPointerEnterHandler,IPointerExi
         {"HomeName",1 },
         {"Text1",1 },
         */
-        {"DiscoTag2",2 },
-        {"DiscoTag2Done",2 },
-        {"DiscoName",2 },
-        {"Text2",2 },
+        {"DiscoTag2",3 },
+        {"DiscoTag2Done",3 },
+        {"DiscoName",3 },
+        {"Text2",3 },
         /*
         {"Home1Tag1",3 },
         {"Home1Tag1Done",3 },
         {"Home1Name",3 },
         {"Text11",3 },
         */
-        {"MetroTag3",4 },
-        {"MetroTag3Done",4 },
-        {"MetroName",4 },
-        {"Text4",4 },
+        {"MetroTag3",5 },
+        {"MetroTag3Done",5 },
+        {"MetroName",5 },
+        {"Text4",5 },
         /*
         {"Home2Tag1",5 },
         {"Home2Tag1Done",5 },
@@ -52,6 +52,16 @@ public class ButtonHighlighted : MonoBehaviour, IPointerEnterHandler,IPointerExi
         {"MetroName",6 },
         {"Text0",6 },
        */
+    };
+
+    public Dictionary<string, int> levelname = new Dictionary<string, int>()
+    {
+        {"Home",0 },
+        {"Demo",1 },
+        {"Home ",2 },
+        {"Disco",3 },
+        {"Home  ",4 },
+        {"Metro",5 },
     };
 
     void Start()
@@ -94,8 +104,13 @@ public class ButtonHighlighted : MonoBehaviour, IPointerEnterHandler,IPointerExi
             Debug.Log("Level " + item.Level_number + " Colected points " + (int)item.Level_points + " Stars: " + item.Level_stars);
             if (item.Level_number == (levelValue.FirstOrDefault(x => x.Key == nazwa).Value))
             {
-                dane = "Level " + item.Level_number + "\nColected points " + (int)item.Level_points + "\nStars: " + item.Level_stars
+                
+                dane = "Level " + levelname.FirstOrDefault(x => x.Value == item.Level_number).Key + "\nColected points " + (int)item.Level_points + "\nStars: " + item.Level_stars
                     + "\nCombo: " + item.Level_numberOfCombo + "  Longest: " + item.Level_longestCombo;
+                /*
+            dane = "Level " + item.Level_number + "\nColected points " + (int)item.Level_points + "\nStars: " + item.Level_stars
+                + "\nCombo: " + item.Level_numberOfCombo + "  Longest: " + item.Level_longestCombo;
+                */
             }
 
         }

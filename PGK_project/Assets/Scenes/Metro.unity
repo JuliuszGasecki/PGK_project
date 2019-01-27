@@ -5977,7 +5977,7 @@ Prefab:
         type: 2}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 2045022661}
+      objectReference: {fileID: 999740083}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa3de3dbc3c9e52459ba76ed1decc082, type: 2}
   m_IsPrefabAsset: 0

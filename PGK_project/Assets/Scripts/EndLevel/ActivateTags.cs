@@ -24,14 +24,14 @@ public class ActivateTags : MonoBehaviour {
                 tag1.SetActive(true);       // tag1 is active(lvl_1)
                 tag0Done.SetActive(true);
             }
-            if (item == 1)                  // when lvl_1 is completed
+            if (item == 2)                  // when lvl_2 is completed home 1
             {
-                tag2.SetActive(true);       // tag2 is active(lvl_2)
+                tag2.SetActive(true);       // tag2 is active(lvl_3) disco
                 tag1Done.SetActive(true);
             }
-            if (item == 2)                  // when lvl_2 is completed
+            if (item == 4)                  // when lvl_4 is completed
             {
-                tag3.SetActive(true);       // tag3 is active(lvl_3)
+                tag3.SetActive(true);       // tag3 is active(lvl_5)
                 tag2Done.SetActive(true);
             }
         }
