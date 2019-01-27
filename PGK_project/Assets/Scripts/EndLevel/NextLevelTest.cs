@@ -13,7 +13,9 @@ public class NextLevelTest : MonoBehaviour {
         { "Home 1", 2 },
         { "Disco", 3 },
         { "Home 2", 4 },
-        { "Metro", 5 }
+        { "Metro", 5 },
+        { "DemoScene", 1 },
+
     };
 
     public void NextLevelButton(string name)
@@ -53,10 +55,22 @@ public class NextLevelTest : MonoBehaviour {
         }
         else
         {
-            LoadingScreenManager.nameScene = "LevelsMap";
+            //LoadingScreenManager.nameScene = "LevelsMap";             // po replay wracamy na mape          
+            LoadingScreenManager.nameScene = NextScene();               // Po replay wracamy do home
+
             SceneManager.LoadScene("LoadingScreen");
             return false;
         }
     }
+
+    public string NextScene()
+    {
+        int next;
+        next = levelNameNumer.FirstOrDefault(x => x.Key == SceneManager.GetActiveScene().name).Value;
+        next++;
+        string nazwa = levelNameNumer.FirstOrDefault(y => y.Value == next).Key;
+        return nazwa;
+    }
+
 
 }
