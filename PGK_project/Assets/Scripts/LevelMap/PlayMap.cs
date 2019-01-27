@@ -6,17 +6,56 @@ using UnityEngine.SceneManagement;
 public class PlayMap : MonoBehaviour {
 
 
-    public void PlayMapDemo()
-    {
-            DrugsStat.level = 0;
-            LoadingScreenManager.nameScene = "DemoScene";
-            PlayLoadingScreen();
-            // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
-            //inv.GetUsingWeapon().CanUse = false;
-    }
 
     public void PlayMapHome()
     {
+        if (DrugsStat.openedLvls.Contains(0) && DrugsStat.openedLvls.Contains(1) && DrugsStat.openedLvls.Contains(2) && DrugsStat.openedLvls.Contains(3) && DrugsStat.openedLvls.Contains(4) && !DrugsStat.openedLvls.Contains(5))
+        // when u completed lvl_0, you can join lvl_1 (demo)
+        {
+            DrugsStat.level = 4;
+            LoadingScreenManager.nameScene = "Home 2";
+            PlayLoadingScreen();
+
+        }
+        else if (DrugsStat.openedLvls.Contains(0) && DrugsStat.openedLvls.Contains(1) && DrugsStat.openedLvls.Contains(2) && !DrugsStat.openedLvls.Contains(3))                  // when u completed lvl_0, you can join lvl_1 (demo)
+        {
+            DrugsStat.level = 2;
+            LoadingScreenManager.nameScene = "Home 1";
+            PlayLoadingScreen();
+        }
+        else
+        {
+            DrugsStat.level = 0;
+            LoadingScreenManager.nameScene = "Home";
+            PlayLoadingScreen();
+        }
+
+
+
+        /*
+        foreach (var item in LevelsStatistic.level_repo)
+        {
+            if(item.Level_number == 1)
+            {
+                foreach (var item1 in LevelsStatistic.level_repo)
+                {
+                    if(item1.Level_number == 3)
+                    {
+                        DrugsStat.level = 4;
+                        LoadingScreenManager.nameScene = "Home 2";
+                        PlayLoadingScreen();
+                    }
+                }
+                DrugsStat.level = 2;
+                LoadingScreenManager.nameScene = "Home 1";
+                PlayLoadingScreen();
+            }
+        }
+
+        DrugsStat.level = 0;
+        LoadingScreenManager.nameScene = "Home";
+        PlayLoadingScreen();
+        /*
         if (DrugsStat.openedLvls.Contains(0))                   // when u completed lvl_0, you can join lvl_1 (home)
         {
             DrugsStat.level = 1;
@@ -25,19 +64,39 @@ public class PlayMap : MonoBehaviour {
             // SceneManager.LoadScene("Home");                     // load scene without LoadingScene
             // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
             //inv.GetUsingWeapon().CanUse = false;
-
+        }
+        */
+    }
+    public void PlayMapDemo()
+    {
+        if (DrugsStat.openedLvls.Contains(0))                   // when u completed lvl_0, you can join lvl_1 (demo)
+        {
+            DrugsStat.level = 1;
+            LoadingScreenManager.nameScene = "DemoScene";
+            PlayLoadingScreen();
         }
     }
 
     public void PlayMapDisco()                                  // when u completed lvl_0 and lvl_1, you can join lvl_2 (disco)
     {
-        if (DrugsStat.openedLvls.Contains(1) && DrugsStat.openedLvls.Contains(0))
+        if (DrugsStat.openedLvls.Contains(2) && DrugsStat.openedLvls.Contains(1) && DrugsStat.openedLvls.Contains(0))
         {
-            DrugsStat.level = 2;
+            DrugsStat.level = 3;
             LoadingScreenManager.nameScene = "Disco";
             PlayLoadingScreen();
         }
     }
+
+    public void PlayMapMetro()                                 // when u completed lvl_0, lvl_1 and lvl_2, you can join lvl_3 (metro)
+    {
+        if (DrugsStat.openedLvls.Contains(2) && DrugsStat.openedLvls.Contains(1) && DrugsStat.openedLvls.Contains(0))
+        {
+            DrugsStat.level = 3;
+            LoadingScreenManager.nameScene = "Metro";
+            PlayLoadingScreen();
+        }
+    }
+
 
     public void PlayLastMap()
     {

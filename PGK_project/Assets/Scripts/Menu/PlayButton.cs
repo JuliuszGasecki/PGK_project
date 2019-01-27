@@ -9,4 +9,8 @@ public class PlayButton : MonoBehaviour {
     {
         SceneManager.LoadScene(level);
     }
+    public void PlayGameName(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 }

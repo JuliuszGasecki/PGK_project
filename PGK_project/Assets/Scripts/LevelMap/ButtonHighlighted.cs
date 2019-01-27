@@ -12,20 +12,46 @@ public class ButtonHighlighted : MonoBehaviour, IPointerEnterHandler,IPointerExi
     public Text text;
     public Dictionary<string, int> levelValue = new Dictionary<string, int>()
     {
-        {"DemoTag0",0 },
-        {"DemoTag0Done",0 },
-        {"DemoName",0 },
+        {"HomeTag0",0 },
+        {"HomeTag0Done",0 },
+        {"HomeName",0 },
         {"Text0",0 },
-
+        
+        {"DemoTag1",1 },
+        {"DemoTag1Done",1 },
+        {"DemoName",1 },
+        {"Text1",1 },
+        /*
         {"HomeTag1",1 },
         {"HomeTag1Done",1 },
         {"HomeName",1 },
         {"Text1",1 },
-
+        */
         {"DiscoTag2",2 },
         {"DiscoTag2Done",2 },
         {"DiscoName",2 },
-        {"Text2",2 }
+        {"Text2",2 },
+        /*
+        {"Home1Tag1",3 },
+        {"Home1Tag1Done",3 },
+        {"Home1Name",3 },
+        {"Text11",3 },
+        */
+        {"MetroTag3",4 },
+        {"MetroTag3Done",4 },
+        {"MetroName",4 },
+        {"Text4",4 },
+        /*
+        {"Home2Tag1",5 },
+        {"Home2Tag1Done",5 },
+        {"Home2Name",5 },
+        {"Text21",5 },
+
+        {"MetroTag3",6 },
+        {"MetroTag0Done",6 },
+        {"MetroName",6 },
+        {"Text0",6 },
+       */
     };
 
     void Start()
@@ -60,12 +86,12 @@ public class ButtonHighlighted : MonoBehaviour, IPointerEnterHandler,IPointerExi
     {
         string dane = "Not reached";
         string nazwa = eventData.pointerCurrentRaycast.gameObject.name;
-        //Debug.Log("Nazwa : " + nazwa);
+        Debug.Log("Nazwa : " + nazwa);
 
         foreach (var item in LevelsStatistic.level_repo)
         {
 
-           // Debug.Log("Level " + item.Level_number + " Colected points " + (int)item.Level_points + " Stars: " + item.Level_stars);
+            Debug.Log("Level " + item.Level_number + " Colected points " + (int)item.Level_points + " Stars: " + item.Level_stars);
             if (item.Level_number == (levelValue.FirstOrDefault(x => x.Key == nazwa).Value))
             {
                 dane = "Level " + item.Level_number + "\nColected points " + (int)item.Level_points + "\nStars: " + item.Level_stars

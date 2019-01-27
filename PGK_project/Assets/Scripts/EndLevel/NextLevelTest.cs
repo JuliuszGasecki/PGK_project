@@ -8,9 +8,12 @@ public class NextLevelTest : MonoBehaviour {
 
     public static Dictionary<string, int> levelNameNumer = new Dictionary<string, int>()
     {
-        { "Demo", 0 },
-        { "Home", 1 },
-        { "Disco", 2 }
+        { "Home", 0 },
+        { "Demo", 1 },
+        { "Home 1", 2 },
+        { "Disco", 3 },
+        { "Home 2", 4 },
+        { "Metro", 5 }
     };
 
     public void NextLevelButton(string name)

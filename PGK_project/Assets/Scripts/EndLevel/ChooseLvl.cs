@@ -17,7 +17,7 @@ public class ChooseLvl : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-
+        /*
         if (collision.gameObject.tag == "Player")
         {
             DrugsStat.level=2;
@@ -29,5 +29,20 @@ public class ChooseLvl : MonoBehaviour {
             }
             SceneManager.LoadScene("LevelsMap");
         }
+        */
+
+        if (collision.gameObject.tag == "Player")
+        {
+            DrugsStat.level = 1;                                // lvl to reach
+            if (!DrugsStat.openedLvls.Contains(0))              // reached lvl
+            {
+                DrugsStat.openedLvls.Add(0);
+                LevelsStatistic.Level level = new LevelsStatistic.Level(0, 0, 0, true, 0, 0, 0);
+                LevelsStatistic.level_repo.Add(level);
+            }
+            SceneManager.LoadScene("LevelsMap");
+        }
+
+
     }
 }
