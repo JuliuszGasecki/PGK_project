@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 8390878}
   - component: {fileID: 8390877}
   - component: {fileID: 8390876}
+  - component: {fileID: 8390882}
   - component: {fileID: 8390875}
   - component: {fileID: 8390881}
   m_Layer: 0
@@ -263,6 +264,17 @@ MonoBehaviour:
           m_StringArgument: SettingsScene
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 8390882}
+        m_MethodName: turnOnMenu
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &8390879
@@ -308,6 +320,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 518c79bf03bea76448fe8b96e54831ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8390882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 8390873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4aa6d08f1c5daa438c6c66b3d568455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &94092122
@@ -1071,6 +1094,46 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!1 &566087879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 566087881}
+  - component: {fileID: 566087880}
+  m_Layer: 0
+  m_Name: DialogueDiaryInjection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &566087880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566087879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a823a782929a924aa3b620135ef9481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &566087881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566087879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23719893, y: 0.25655636, z: -1.0265332}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &595764974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,6 +1209,47 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 595764974}
   m_CullTransparentMesh: 0
+--- !u!1 &612672306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 612672308}
+  - component: {fileID: 612672307}
+  m_Layer: 0
+  m_Name: MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &612672307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 612672306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505b64a0d76168345abedc2e89ffbe97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baby: {fileID: 1563118500}
+--- !u!4 &612672308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 612672306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23719893, y: 0.25655636, z: -1.0265332}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &706229529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,6 +1646,7 @@ GameObject:
   - component: {fileID: 1284290575}
   - component: {fileID: 1284290574}
   - component: {fileID: 1284290579}
+  - component: {fileID: 1284290581}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1659,6 +1764,17 @@ MonoBehaviour:
           m_StringArgument: Required
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1284290581}
+        m_MethodName: turnOnMenu
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1284290577
@@ -1722,6 +1838,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2901b9c989c1bd64e9e595fc3fb0934c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1284290581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1284290572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4aa6d08f1c5daa438c6c66b3d568455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1322066303
@@ -1900,7 +2027,7 @@ GameObject:
   - component: {fileID: 1563118502}
   - component: {fileID: 1563118503}
   m_Layer: 0
-  m_Name: Baby Habbit
+  m_Name: BabyHabbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
