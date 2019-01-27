@@ -3256,6 +3256,11 @@ Prefab:
       propertyPath: panelDetails
       value: 
       objectReference: {fileID: 968038772}
+    - target: {fileID: 114182315657554142, guid: 312d35e3d4905d442be4a82d947a3251,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Metro
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 312d35e3d4905d442be4a82d947a3251, type: 2}
   m_IsPrefabAsset: 0
