@@ -118,7 +118,7 @@ public class UMP45 : MonoBehaviour, IShootable {
 
     public void UseWeapon()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > timeUntilFire && CanUse)
+        if (Input.GetMouseButton(0) && Time.time > timeUntilFire && CanUse)
         {
             if (ammoInMagazine > 0 && _reloadSoundCopy == null)
             {
