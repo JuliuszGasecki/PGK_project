@@ -127,6 +127,7 @@ public class DialoguesDiary : MonoBehaviour {
             }
             loadCurrentPage();
         }
+        temp = Notes[currentChapter - 1].Count;
         if (currnetIndex + 1 < temp)
         {
             //Debug.Log("Drugie okno " + currnetIndex + 1);
@@ -141,6 +142,7 @@ public class DialoguesDiary : MonoBehaviour {
             image2.enabled = false;
             text2.enabled = false;
         }
+        temp = Notes[currentChapter - 1].Count;
         if (currnetIndex + 2 < temp)
         {
             //Debug.Log("Trzecie okno " + currnetIndex + 2);
