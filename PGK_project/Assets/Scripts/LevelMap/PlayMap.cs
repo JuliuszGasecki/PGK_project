@@ -29,43 +29,6 @@ public class PlayMap : MonoBehaviour {
             LoadingScreenManager.nameScene = "Home";
             PlayLoadingScreen();
         }
-
-
-
-        /*
-        foreach (var item in LevelsStatistic.level_repo)
-        {
-            if(item.Level_number == 1)
-            {
-                foreach (var item1 in LevelsStatistic.level_repo)
-                {
-                    if(item1.Level_number == 3)
-                    {
-                        DrugsStat.level = 4;
-                        LoadingScreenManager.nameScene = "Home 2";
-                        PlayLoadingScreen();
-                    }
-                }
-                DrugsStat.level = 2;
-                LoadingScreenManager.nameScene = "Home 1";
-                PlayLoadingScreen();
-            }
-        }
-
-        DrugsStat.level = 0;
-        LoadingScreenManager.nameScene = "Home";
-        PlayLoadingScreen();
-        /*
-        if (DrugsStat.openedLvls.Contains(0))                   // when u completed lvl_0, you can join lvl_1 (home)
-        {
-            DrugsStat.level = 1;
-            LoadingScreenManager.nameScene = "Home";
-            PlayLoadingScreen();
-            // SceneManager.LoadScene("Home");                     // load scene without LoadingScene
-            // Inventory inv = GameObject.Find("Hero").GetComponent<Inventory>();
-            //inv.GetUsingWeapon().CanUse = false;
-        }
-        */
     }
     public void PlayMapDemo()
     {
@@ -103,7 +66,7 @@ public class PlayMap : MonoBehaviour {
        // DrugsStat.level = 0;
         if(DrugsStat.level == 0)
         {
-            LoadingScreenManager.nameScene = "DemoScene";
+            LoadingScreenManager.nameScene = "Home";
             PlayLoadingScreen();
         }
         else if(DrugsStat.level == 1)
@@ -111,9 +74,24 @@ public class PlayMap : MonoBehaviour {
             LoadingScreenManager.nameScene = "DemoScene";
             PlayLoadingScreen();
         }
-        else if(DrugsStat.level == 2)
+        else if (DrugsStat.level == 2)
         {
-            LoadingScreenManager.nameScene = "Home";
+            LoadingScreenManager.nameScene = "Home 1";
+            PlayLoadingScreen();
+        }
+        else if (DrugsStat.level == 3)
+        {
+            LoadingScreenManager.nameScene = "Disco";
+            PlayLoadingScreen();
+        }
+        else if (DrugsStat.level == 4)
+        {
+            LoadingScreenManager.nameScene = "Home 2";
+            PlayLoadingScreen();
+        }
+        else if (DrugsStat.level == 5)
+        {
+            LoadingScreenManager.nameScene = "Metro";
             PlayLoadingScreen();
         }
     }

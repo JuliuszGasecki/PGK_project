@@ -94,7 +94,7 @@ public class ButtonHighlighted : MonoBehaviour, IPointerEnterHandler,IPointerExi
 
     public void SetText(PointerEventData eventData)
     {
-        string dane = "Not reached";
+        string dane = "Next level to reach! \nClick to PLAY";
         string nazwa = eventData.pointerCurrentRaycast.gameObject.name;
         Debug.Log("Nazwa : " + nazwa);
 
@@ -107,10 +107,6 @@ public class ButtonHighlighted : MonoBehaviour, IPointerEnterHandler,IPointerExi
                 
                 dane = "Level " + levelname.FirstOrDefault(x => x.Value == item.Level_number).Key + "\nColected points " + (int)item.Level_points + "\nStars: " + item.Level_stars
                     + "\nCombo: " + item.Level_numberOfCombo + "  Longest: " + item.Level_longestCombo;
-                /*
-            dane = "Level " + item.Level_number + "\nColected points " + (int)item.Level_points + "\nStars: " + item.Level_stars
-                + "\nCombo: " + item.Level_numberOfCombo + "  Longest: " + item.Level_longestCombo;
-                */
             }
 
         }

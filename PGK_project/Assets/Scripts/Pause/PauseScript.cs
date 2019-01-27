@@ -58,7 +58,7 @@ public class PauseScript : MonoBehaviour {
                 inv.GetUsingWeapon().CanUse = true;
         }*/
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1.0f;
+        Time.timeScale = temp;
         GameIsPaused = false;
     }
 }

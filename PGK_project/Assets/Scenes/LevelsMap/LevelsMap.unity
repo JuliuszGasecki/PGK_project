@@ -460,7 +460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &61905995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -774,7 +774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &367778035
 RectTransform:
   m_ObjectHideFlags: 0
@@ -877,7 +877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &651905215
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1847,7 +1847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1691070036
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2116,12 +2116,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tag0: {fileID: 1822101437}
   tag0Done: {fileID: 2114341417}
+  tag0Name: {fileID: 1691070035}
   tag1: {fileID: 2058528943}
   tag1Done: {fileID: 927914052}
+  tag1Name: {fileID: 651905214}
   tag2: {fileID: 1563994646}
   tag2Done: {fileID: 185525356}
+  tag2Name: {fileID: 367778034}
   tag3: {fileID: 2110591162}
   tag3Done: {fileID: 1384525821}
+  tag3Name: {fileID: 61905994}
 --- !u!114 &1818420012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2490,7 +2494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2058528944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2524,7 +2528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2110591163
 RectTransform:
   m_ObjectHideFlags: 0
