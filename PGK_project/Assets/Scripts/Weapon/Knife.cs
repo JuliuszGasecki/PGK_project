@@ -10,12 +10,13 @@ public class Knife : MonoBehaviour
     public Transform attackPos;
     public int damage;
     private Inventory _inventory;
-
+    private Animator heroAnim;
     private bool CanAttack;
     // Use this for initialization
     void Start()
     {
         _inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        heroAnim = GameObject.Find("Hero").GetComponent<Animator>();
     }
 
     void Attack()
@@ -36,9 +37,11 @@ public class Knife : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V))
         {
             _inventory.VModeUser = !_inventory.VModeUser;
+            //heroAnim.SetBool("isKnfie", true);
         }
         if(_inventory.VMode)
         {
+            //heroAnim.SetBool("isKnfie", true);
             if (_timeBtwAttack <= 0)
             {
                 Attack();
