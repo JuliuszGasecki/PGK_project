@@ -17,7 +17,7 @@ public class DisplayWeaponIcon1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	    weapon = GameObject.Find("Inventory").GetComponent<Inventory>();
-	    if (weapon.VMode || weapon.VModeUser)
+	    if (weapon.VMode || weapon.VModeUser ||Time.timeScale == 0f)
 	    {
 	        image.enabled = false;
 	    }
