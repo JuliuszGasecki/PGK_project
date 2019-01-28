@@ -187,7 +187,7 @@ public class Inventory : MonoBehaviour
             SetWeaponActivity(_usingSlot);
             inventory.ElementAt(_usingSlot).UseWeapon();
             _heroAnimatior.SetBool("changingWeapon", true);
-            _heroAnimatior.SetInteger("weaponID", _usingSlot);
+            _heroAnimatior.SetInteger("weaponID", GetUsingWeapon().ID);
             return;
         }
 
@@ -198,7 +198,7 @@ public class Inventory : MonoBehaviour
             SetWeaponActivity(_usingSlot);
             inventory.ElementAt(_usingSlot).UseWeapon();
             _heroAnimatior.SetBool("changingWeapon", true);
-            _heroAnimatior.SetInteger("weaponID", _usingSlot);
+            _heroAnimatior.SetInteger("weaponID", GetUsingWeapon().ID);
             return;
         }
     }
@@ -269,8 +269,11 @@ public class Inventory : MonoBehaviour
             }
 
             SetWeaponActivity(_usingSlot);
-            _heroAnimatior.SetBool("changingWeapon", true);
-            _heroAnimatior.SetInteger("weaponID", _usingSlot);
+            if (inventory.Any())
+            {
+                _heroAnimatior.SetBool("changingWeapon", true);
+                _heroAnimatior.SetInteger("weaponID", GetUsingWeapon().ID);
+            }
         }
     }
 
@@ -298,6 +301,11 @@ public class Inventory : MonoBehaviour
     {
         if (Enum.IsDefined(typeof(_weaponsID), weapon.ID) && inventory.Count < INVENTORYCAPACITY)
         {
+            if (!inventory.Any())
+            {
+                _heroAnimatior.SetBool("changingWeapon", true);
+                _heroAnimatior.SetInteger("weaponID", weapon.ID);
+            }
             inventory.Add(weapon);
             if (GetUsingWeapon().ammoInMagazine == 0 && GetUsingWeapon().ammo == 0) 
             {
@@ -307,7 +315,8 @@ public class Inventory : MonoBehaviour
                 _heroAnimatior.SetBool("changingWeapon", true);
                 _heroAnimatior.SetInteger("weaponID", GetUsingWeapon().ID);
             }
-//            Debug.Log(_usingSlot);
+            
+            //            Debug.Log(_usingSlot);
             if (inventory.Count == 1)
             {
                 SetWeaponActivity(0);
