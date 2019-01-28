@@ -17,7 +17,7 @@ public class TeleportFloors : MonoBehaviour {
             hero = GameObject.Find("Hero").GetComponent<Transform>();
             hero.transform.position = destination.transform.position;
             to.SetActive(true);
-            from.SetActive(false);
+            from.SetActive(true);
         }
     }
 }
