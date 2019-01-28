@@ -299,7 +299,7 @@ public class Inventory : MonoBehaviour
         if (Enum.IsDefined(typeof(_weaponsID), weapon.ID) && inventory.Count < INVENTORYCAPACITY)
         {
             inventory.Add(weapon);
-            if (GetUsingWeapon().ammoInMagazine == 0 && GetUsingWeapon().ammo == 0)
+            if (GetUsingWeapon().ammoInMagazine == 0 && GetUsingWeapon().ammo == 0) 
             {
                 IShootable weaponTemp = inventory[_usingSlot];
                 inventory[_usingSlot] = inventory[inventory.Count - 1];
