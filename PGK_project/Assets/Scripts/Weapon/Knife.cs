@@ -27,7 +27,8 @@ public class Knife : MonoBehaviour
             {
                 Debug.Log("wtf222");
                 CanAttack = true;
-            }
+                heroAnim.SetBool("isKnifeAttack", CanAttack);
+        }
         //}
     }
 
@@ -38,11 +39,11 @@ public class Knife : MonoBehaviour
         {
             _inventory.VModeUser = !_inventory.VModeUser;
             Debug.Log("wtf222");
-            heroAnim.SetBool("isKnfie", _inventory.VModeUser);
+            heroAnim.SetBool("isKnife", _inventory.VModeUser);
         }
         if(_inventory.VMode)
         {
-            heroAnim.SetBool("isKnfie", true);
+            heroAnim.SetBool("isKnife", true);
             if (_timeBtwAttack <= 0)
             {
                 Attack();
@@ -56,7 +57,7 @@ public class Knife : MonoBehaviour
 
         if (!_inventory.VMode && !_inventory.VModeUser)
         {
-            heroAnim.SetBool("isKnfie", false);
+            heroAnim.SetBool("isKnife", false);
         }
        
         
@@ -69,7 +70,8 @@ public class Knife : MonoBehaviour
         {
             collision.gameObject.GetComponent<Enemy2>().life -= damage;
             Debug.Log("wtf");
-            CanAttack = false;
+            //CanAttack = false;
+            //heroAnim.SetBool("isKnifeAttack", CanAttack);
         }
 
     }
