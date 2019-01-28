@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395183831805112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.81, y: 7.44, z: 0}
+  m_LocalPosition: {x: -21.826889, y: 1.9383923, z: 0}
   m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
   m_Children:
   - {fileID: 4515810398968258}
@@ -223,6 +223,9 @@ MonoBehaviour:
   lsd: {fileID: 1151467287755436, guid: 392b2700754c952448fa3c9c03711b39, type: 2}
   mocarz: {fileID: 1240035729088234, guid: c01829830c845ad4dacda7472f4d3739, type: 2}
   vodka: {fileID: 1497568687984880, guid: 1b1b0ed7d3cbe384692c66aa6f29edeb, type: 2}
+  meth: {fileID: 1736281324280750, guid: 4665ac02616a59d4eabe38be267d7b88, type: 2}
+  cigarette: {fileID: 1900091786030402, guid: c0b401186d616ae4a83f253a57842879, type: 2}
+  hera: {fileID: 1218390056037202, guid: 7c9c3bd48b287e242ab8f09fe6daaf19, type: 2}
   generate_path: 0
   length_of_the_path: 0
   number_of_break_points: 0

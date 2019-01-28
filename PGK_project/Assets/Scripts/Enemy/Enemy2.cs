@@ -65,6 +65,10 @@ public class Enemy2 : MonoBehaviour
     public GameObject lsd;
     public GameObject mocarz;
     public GameObject vodka;
+    public GameObject meth;
+    public GameObject cigarette;
+    public GameObject hera;
+
 
     //*****
 
@@ -563,6 +567,30 @@ public class Enemy2 : MonoBehaviour
             Instantiate(vodka, transform.position, transform.rotation);
             wypadl_narkotyk = true;
         }
+
+        if (Random.Range(0f, 7f) < 1 && wypadl_narkotyk == false)
+        {
+            Instantiate(lsd, transform.position, transform.rotation);
+            wypadl_narkotyk = true;
+        }
+
+        if (Random.Range(0f, 6f) > 5 && wypadl_narkotyk == false)
+        {
+            Instantiate(meth, transform.position, transform.rotation);
+            wypadl_narkotyk = true;
+        }
+
+        if (Random.Range(0f, 10f) > 9 && wypadl_narkotyk == false)
+        {
+            Instantiate(hera, transform.position, transform.rotation);
+            wypadl_narkotyk = true;
+        }
+        if (Random.Range(0f, 2f) > 1 && wypadl_narkotyk == false)
+        {
+            Instantiate(cigarette, transform.position, transform.rotation);
+            wypadl_narkotyk = true;
+        }
+
     }
 
     void strzel()

@@ -67,6 +67,7 @@ public class BossOne : MonoBehaviour
                     while (!goodPoint(temporaryPosition))
                     {
                         temporaryPosition -= temporaryPosition / 100;
+                        Debug.Log("wtf");
                     }
                     chargeTimer = Time.time;
                     chargeState = true;
