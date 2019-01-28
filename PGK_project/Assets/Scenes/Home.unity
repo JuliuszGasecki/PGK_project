@@ -9279,6 +9279,64 @@ Prefab:
         I get it that you wanted to pay them back for how they had treated you, but
         really you should stop it. Take care, Jack.\r\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 114543788925831454, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Fuck! He is dead. Oh my motherfucking God, I don\u2019t know what to
+        do. Bart has called for help. They will leave him in some den in the middle
+        of the woods. How could you get drugs like that?! Are you insane? I hate you,
+        I don\u2019t want to talk to you anymore. He commited suicide because of you!
+        What\u2019s more, I know they want to kill you. I need something strong..
+        Do you have anything?\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114823412041983010, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Do you have some pills? Or anything? Shit, it turned out that we have
+        bigger problems than Matts\u2019 death. This bastards from who we had stolen
+        stuff, want revenge. I know what we can do to fuck them up. They have some
+        \u201Clab\u201D in abandoned railway station, where they produce meth. Go
+        there. There is no other option. Take as much as you can hide. I feel so bad,
+        because of withdrawal..\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114607836367819294, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "It\u2019s empty.. Someone had to steal the rest of it.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798469419868524, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Don\u2019t you dare come back home! I have heard what you and your shitty
+        friends are doing all the time. Sitting and constantly getting high, congratulations.
+        I am absolutely ashamed of you.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114615576021135240, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Thie Lucifer Effect. How good peopl turn evil\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594642065823922, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "I\u2019m sorry, I will never hit you again. I promise. You don\u2019t
+        have to live like a slut anymore. I will take care of you. We will be so happy,
+        having enough drugs, no worries. Anyway, your friends are already dead. They
+        have killed half of the gang and have stolen two whole shipments. Please,
+        think about it and let me know. Yours Alex.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114140248531091092, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Dear Mr. White, you shall expect the police and a bailiff. You haven\u2019t
+        paid your rent for four months.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114892512100924786, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Dear Mr. White, you shall expect the police and a bailiff. You haven\u2019t
+        paid your rent for four months.\r\n"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}
   m_IsPrefabAsset: 0
