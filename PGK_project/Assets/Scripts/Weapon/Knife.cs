@@ -11,39 +11,67 @@ public class Knife : MonoBehaviour
     public int damage;
     private Inventory _inventory;
     private Animator heroAnim;
+
     private bool CanAttack;
+
+    private bool CanDoDmg;
+    private bool CanPlayAnim;
+    private float AnimationTime;
+
+    private float time;
     // Use this for initialization
     void Start()
     {
         _inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
         heroAnim = GameObject.Find("Hero").GetComponent<Animator>();
+        AnimationTime = Time.time;
     }
 
     void Attack()
     {
-       // if (_inventory.GetInventory().Count == 0)
-        //{
-            if (Input.GetMouseButton(0))
-            {
-                Debug.Log("wtf222");
-                CanAttack = true;
-                heroAnim.SetBool("isKnifeAttack", CanAttack);
+        if (Input.GetMouseButton(0))
+        {
+            Debug.Log("LPM");
+            CanPlayAnim = true;
+            time = Time.time;
         }
-        //}
     }
 
+    private void PlayAnimation()
+    {
+        if (CanPlayAnim)
+        {
+            heroAnim.SetBool("isKnifeAttack", true);
+            CanDoDmg = true;
+            CanPlayAnim = false;
+        }
+        else if (Time.time - time >= 0.25 && !CanPlayAnim)
+        {
+            heroAnim.SetBool("isKnifeAttack", false);
+        }
+        
+    }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.V))
         {
             _inventory.VModeUser = !_inventory.VModeUser;
-            Debug.Log("wtf222");
             heroAnim.SetBool("isKnife", _inventory.VModeUser);
+            CanAttack = true;
         }
-        if(_inventory.VMode)
+        if (_inventory.VMode)
         {
             heroAnim.SetBool("isKnife", true);
+            CanAttack = true;
+        }
+        if (!_inventory.VMode && !_inventory.VModeUser)
+        {
+            heroAnim.SetBool("isKnife", false);
+            CanAttack = false;
+        }
+        if (CanAttack)
+        {
             if (_timeBtwAttack <= 0)
             {
                 Attack();
@@ -54,27 +82,19 @@ public class Knife : MonoBehaviour
                 _timeBtwAttack -= Time.deltaTime;
             }
         }
-
-        if (!_inventory.VMode && !_inventory.VModeUser)
-        {
-            heroAnim.SetBool("isKnife", false);
-        }
-       
-        
+        PlayAnimation();
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-
         var tag = collision.gameObject.tag;
-        if (tag == "Enemy" && CanAttack)
+        if (tag == "Enemy" && CanDoDmg)
         {
             collision.gameObject.GetComponent<Enemy2>().life -= damage;
-            Debug.Log("wtf");
+            Debug.Log("ATTACk");
+            CanDoDmg = false;
             //CanAttack = false;
             //heroAnim.SetBool("isKnifeAttack", CanAttack);
         }
-
     }
-
-
 }
