@@ -21,7 +21,7 @@ public class DisplayWeaponIcon : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 	    weapon = GameObject.Find("Inventory").GetComponent<Inventory>();
-        if (weapon.GetUsingWeapon() == null)
+        if (weapon.GetUsingWeapon() == null || weapon.VMode || weapon.VModeUser)
 	    {
 	        image.type = Image.Type.Filled;
 	        image.fillMethod = Image.FillMethod.Radial360;

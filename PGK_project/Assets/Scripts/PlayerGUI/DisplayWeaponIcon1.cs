@@ -17,21 +17,28 @@ public class DisplayWeaponIcon1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	    weapon = GameObject.Find("Inventory").GetComponent<Inventory>();
-        if (weapon.IsSecondWeapon() && weapon.SecondWeapon != null)
+	    if (weapon.VMode || weapon.VModeUser)
 	    {
-            
-	        image.enabled = true;
-	        image.type = Image.Type.Filled;
-	        image.fillMethod = Image.FillMethod.Radial360;
-	        image.sprite = Resources.Load<Sprite>("Weapons/" + weapon.SecondWeapon.Name);
+	        image.enabled = false;
 	    }
-	     else if (!weapon.IsSecondWeapon())
-         {
-             image.enabled = false;
-         }
-        else if (Time.timeScale == 0f)          //usun icon w summaryPanel
+        else
+	    {
+	        if (weapon.IsSecondWeapon() && weapon.SecondWeapon != null)
+	        {
+	            image.enabled = true;
+	            image.type = Image.Type.Filled;
+	            image.fillMethod = Image.FillMethod.Radial360;
+	            image.sprite = Resources.Load<Sprite>("Weapons/" + weapon.SecondWeapon.Name);
+	        }
+	        else if (!weapon.IsSecondWeapon() || Time.timeScale == 0f)
+	        {
+	            image.enabled = false;
+	        }
+        }
+
+	    /*else if (Time.timeScale == 0f)          //usun icon w summaryPanel
         {
             image.enabled = false;
-        }
+        }*/
     }
 }

@@ -9,7 +9,7 @@ public class BounceAndAdd : MonoBehaviour {
     private float angle = 0;
     private Hero hero;
 
-    private IWeapon weapon;
+    private IShootable weapon;
     private bool _isWeapon;
     private bool _isAmmo;
     private Inventory inv;
@@ -29,7 +29,7 @@ public class BounceAndAdd : MonoBehaviour {
         if (_weaponNames.Contains(nameW))
         {
             _isWeapon = true;
-            weapon = GameObject.Find("Inventory").GetComponent(nameW) as IWeapon;
+            weapon = GameObject.Find("Inventory").GetComponent(nameW) as IShootable;
             _isAmmo = false;
         }
 

@@ -13,6 +13,8 @@ public interface IShootable: IWeapon
 
     int magazineCapacity { set; get; }
 
+    int ammoInMagazine { set; get; }
+
     int ammo { set; get; }
 
     void SetDamageBullet(GameObject bullet);

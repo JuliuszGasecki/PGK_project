@@ -34,13 +34,17 @@ public class Inventory : MonoBehaviour
     };
 
 
-    public List<IWeapon> inventory;
+    public List<IShootable> inventory;
     private List<ISpecialWeapon> specialWeapons;
     public IWeapon SecondWeapon = null;
     public IWeapon ThirdWeapon = null;
     private List<bool> _drugsMixList;
 
     private List<bool> _drugsMixListTemp;
+
+    public bool VMode { set; get; }
+
+    public bool VModeUser { set; get; }
 
     // Use this for initialization
     void Start()
@@ -52,7 +56,7 @@ public class Inventory : MonoBehaviour
         RifleAmmo = 30;
         ShotgunAmmo = 15;
         DeagleAmmo = 10;
-        inventory = new List<IWeapon>();
+        inventory = new List<IShootable>();
         specialWeapons = new List<ISpecialWeapon>();
         AddToList(this.gameObject.GetComponent<DEAGLE>());
         inventory.ElementAt(FIRSTELEMENT).CanUse = true;
@@ -66,20 +70,65 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckDrugsMix();
-        UseWeapon();
-        if (IsSecondWeapon())
+        if (!VModeUser)
         {
-            SecondWeapon = inventory.ElementAt(_secondWeaponPosition);
+            if (!VMode)
+            {
+                if (!IsAmmo())
+                {
+                    VMode = true;
+                }
+                else
+                {
+                    if (inventory.Any())
+                    {
+                        GetUsingWeapon().CanUse = true;
+                    }
+
+                    UseWeapon();
+                    if (IsSecondWeapon())
+                    {
+                        SecondWeapon = inventory.ElementAt(_secondWeaponPosition);
+                    }
+
+                    if (IsThirdWeapon())
+                    {
+                        ThirdWeapon = inventory.ElementAt(_thirdWeaponPosition);
+                    }
+
+                    RemoveFromInventory();
+                }
+            }
+            else
+            {
+                if (inventory.Any())
+                {
+                    GetUsingWeapon().CanUse = false;
+                }
+                //UseWeapon();
+                if (IsAmmo())
+                {
+                    VMode = false;
+                }
+            }
+        }
+        else
+        {
+            if (inventory.Any())
+                {
+                    GetUsingWeapon().CanUse = false;
+                }
         }
 
-        if (IsThirdWeapon())
-        {
-            ThirdWeapon = inventory.ElementAt(_thirdWeaponPosition);
-        }
-
-        RemoveFromInventory();
         //Debug.Log(DeagleAmmo);
+    }
+
+    private bool IsAmmo()
+    {
+        for (int i = 0; i < inventory.Count; i++)
+            if (inventory[i].ammo != 0 || inventory[i].ammoInMagazine != 0)
+                return true;
+        return false;
     }
 
     private void SetWeaponActivity(int avoid)
@@ -245,7 +294,7 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    public bool AddToList(IWeapon weapon)
+    public bool AddToList(IShootable weapon)
     {
         if (Enum.IsDefined(typeof(_weaponsID), weapon.ID) && inventory.Count < INVENTORYCAPACITY)
         {
@@ -306,7 +355,7 @@ public class Inventory : MonoBehaviour
         return null;
     }
 
-    public List<IWeapon> GetInventory()
+    public List<IShootable> GetInventory()
     {
         return inventory;
     }

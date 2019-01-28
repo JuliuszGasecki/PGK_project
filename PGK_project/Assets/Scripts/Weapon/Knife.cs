@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Knife : MonoBehaviour
@@ -32,15 +33,24 @@ public class Knife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_timeBtwAttack <= 0)
+        if (Input.GetKeyDown(KeyCode.V))
         {
-            Attack();
-            _timeBtwAttack = startTimeBtwAttack;
+            _inventory.VModeUser = !_inventory.VModeUser;
         }
-        else
+        if(_inventory.VMode)
         {
-            _timeBtwAttack -= Time.deltaTime;
+            if (_timeBtwAttack <= 0)
+            {
+                Attack();
+                _timeBtwAttack = startTimeBtwAttack;
+            }
+            else
+            {
+                _timeBtwAttack -= Time.deltaTime;
+            }
         }
+       
+        
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
