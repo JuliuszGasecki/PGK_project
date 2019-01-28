@@ -3595,7 +3595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Kurwa nic nie zosta\u0142o..."
+  Explanation: "It\u2019s good that she always has them with herself. Last thing we
+    need here is a brat.\r\n"
 --- !u!4 &771907835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4739761280079266, guid: b4d7159a6c6a62f4d8efec3940b6c697,
@@ -4701,7 +4702,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Kurwa nic nie zosta\u0142o..."
+  Explanation: "DeathNote: A list of names at the back of the comic. He might have
+    not recovered from that what happened in high school.\r\n"
 --- !u!1001 &1098586994
 Prefab:
   m_ObjectHideFlags: 0
@@ -9200,6 +9202,82 @@ Prefab:
       value: "Bro, have you seen how they fucked up Matt? We have to beat this bastards
         up! If there is something that life has taught me, that is to never turn the
         other cheek. Anyway they have plenty of this good stuff..\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114767095886079504, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "It\u2019s good that she always has them with herself. Last thing we
+        need here is a brat.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114403510538573868, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "DeathNote: A list of names at the back of the comic. He might have not
+        recovered from that what happened in high school.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114352309499000776, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "I feel so stoned. What have you brought here and from where? Guys don\u2019t
+        want to tell me either. I hope you won\u2019t get in trouble. Oh, I forgot
+        to tell you, I earned some money yesterday and I guess it will be enough until
+        tomorrow. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859095972124162, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Oh, you\u2019ve woken up. We have a problem, big problem with Matt.
+        Today is an anniversary of his girlfriend\u2019s accident in the club. He\u2019s
+        so sad. I wonder how he\u2019s still alive after he almost overdose. He has
+        some fucked up idea. He wants to attack them. You know how many drugs they
+        have. Well you know, we may take some after we kick their asses.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114310388625145712, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Dude, I don\u2019t want to ask you anymore, but you know what happened
+        three years ago. There is an anniversary next week. I can\u2019t handle it
+        anymore. We really need stuff. Come on, in this club there is so much of this
+        stuff that we will keep on being high for weeks and we could retaliate against
+        them.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114438087644814874, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Scale in the bathroom: Three kilograms less than lately? Damn, when
+        was it? I have to eat more or I will disappear completely.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114747516804879194, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "What a surprise, there is nothing left again..\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114124992487795710, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "You little pissy snot, why you don\u2019t answer you mather?! Why you
+        ignored your father\u2019s death anniversary?! I am so ashamed of you, your
+        mother was absolutely right!\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114782524105813516, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Gross, she could have throw it away to the bin. She is not pregnant
+        at least.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588268316933394, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Rap song which have been written quite incoherently. You can see how
+        stoned he was while writing this song. He refers to his girlfriend\u2019s
+        rape in it. This situation left a huge mark on him.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114910234975106300, guid: 82aa36440f4631b479ca4c5e9980a2ac,
+        type: 2}
+      propertyPath: text
+      value: "Dude, if you come over again and make a scene, I will not let you in.
+        I get it that you wanted to pay them back for how they had treated you, but
+        really you should stop it. Take care, Jack.\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82aa36440f4631b479ca4c5e9980a2ac, type: 2}

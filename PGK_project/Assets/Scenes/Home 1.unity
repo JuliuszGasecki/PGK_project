@@ -661,9 +661,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Explanation: "To ta jebana dyskoteka. Wiesz kt\xF3ra. Tam maj\u0105 proch\xF3w \u017Ce
-    starczy nam na miesi\u0105c. Tylko jesli tam p\xF3\u017Ajdziesz mam pro\u015Bb\u0119.
-    Zajeb ich wszystkich..."
+  Explanation: "We really need stuff. Come on, in this club there is so much of this
+    stuff that we will keep on being high for weeks and we could retaliate against
+    them.\r\n"
 --- !u!114 &66851421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,9 +676,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Ooooo obudzi\u0142e\u015B si\u0119. Dawaj walniemy z bonga... W sumie
-    to wszystko co mi zosta\u0142o. Stary znam miejsce w kt\xF3ym m\xF3glby\u015B
-    si\u0119 ob\u0142owi\u0107"
+  Explanation: "Dude, I don\u2019t want to ask you anymore, but you know what happened
+    three years ago. There is an anniversary next week. I can\u2019t handle it anymore."
 --- !u!4 &88434629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4945629176430610, guid: f7df149581019284c9123d24dc69096f,
@@ -976,7 +975,6 @@ GameObject:
   m_Component:
   - component: {fileID: 142530321}
   - component: {fileID: 142530323}
-  - component: {fileID: 142530322}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -998,19 +996,6 @@ Transform:
   m_Father: {fileID: 52895751}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &142530322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 142530320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "Z powa\u017Caniem, XXXYYYZZZ.\""
 --- !u!114 &142530323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,8 +1008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Szanowny Panie ///0/9089789 zawiadamiam, \u017Ce wci\u0105\u017C
-    oczekuj\u0119 wp\u0142aty czynszu za poprzedni miesi\u0105c"
+  Explanation: "Gross, she could have throw it away to the bin. She is not pregnant
+    at least.\r\nesi\u0105c"
 --- !u!1 &149626378
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,7 +3055,6 @@ GameObject:
   m_Component:
   - component: {fileID: 424647793}
   - component: {fileID: 424647795}
-  - component: {fileID: 424647794}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -3092,19 +3076,6 @@ Transform:
   m_Father: {fileID: 1729746851}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &424647794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 424647792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "Z powa\u017Caniem, XXXYYYZZZ.\""
 --- !u!114 &424647795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3117,8 +3088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Szanowny Panie ///0/9089789 zawiadamiam, \u017Ce wci\u0105\u017C
-    oczekuj\u0119 wp\u0142aty czynszu za poprzedni miesi\u0105c"
+  Explanation: "Three kilograms less than lately? Damn, when was it? I have to eat
+    more or I will disappear completely.\r\n"
 --- !u!1 &428099180
 GameObject:
   m_ObjectHideFlags: 0
@@ -4114,7 +4085,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Explanation: ~Mama
+  Explanation: "You little pissy snot, why you don\u2019t answer you mather?! Why
+    you ignored your father\u2019s death anniversary?! I am so ashamed of you, your
+    mother was absolutely right!\r\n"
 --- !u!114 &624270316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4127,7 +4100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: We no odpisz synek proszem :/
+  Explanation: From Aunt Ann
 --- !u!1 &650267987
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,7 +4769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Kurwa nic nie zosta\u0142o..."
+  Explanation: What a surprise, there is nothing left again..
 --- !u!4 &771907835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4739761280079266, guid: b4d7159a6c6a62f4d8efec3940b6c697,
@@ -8803,9 +8776,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Explanation: "To ta jebana dyskoteka. Wiesz kt\xF3ra. Tam maj\u0105 proch\xF3w \u017Ce
-    starczy nam na miesi\u0105c. Tylko jesli tam p\xF3\u017Ajdziesz mam pro\u015Bb\u0119.
-    Zajeb ich wszystkich..."
+  Explanation: "I wonder how he\u2019s still alive after he almost overdose. He has
+    some fucked up idea. He wants to attack them. You know how many drugs they have.
+    Well you know, we may take some after we kick their asses.\r\n"
 --- !u!114 &1549092511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8818,9 +8791,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Ooooo obudzi\u0142e\u015B si\u0119. Dawaj walniemy z bonga... W sumie
-    to wszystko co mi zosta\u0142o. Stary znam miejsce w kt\xF3ym m\xF3glby\u015B
-    si\u0119 ob\u0142owi\u0107"
+  Explanation: "Oh, you\u2019ve woken up. We have a problem, big problem with Matt.
+    Today is an anniversary of his girlfriend\u2019s accident in the club. He\u2019s
+    so sad."
 --- !u!1 &1572317410
 GameObject:
   m_ObjectHideFlags: 0
@@ -9455,7 +9428,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1682845464}
   - component: {fileID: 1682845466}
-  - component: {fileID: 1682845465}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -9477,19 +9449,6 @@ Transform:
   m_Father: {fileID: 288578606}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1682845465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1682845463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "Z powa\u017Caniem, XXXYYYZZZ.\""
 --- !u!114 &1682845466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9502,8 +9461,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Szanowny Panie ///0/9089789 zawiadamiam, \u017Ce wci\u0105\u017C
-    oczekuj\u0119 wp\u0142aty czynszu za poprzedni miesi\u0105c"
+  Explanation: "Rap song which have been written quite incoherently. You can see how
+    stoned he was while writing this song. He refers to his girlfriend\u2019s rape
+    in it. This situation left a huge mark on him.\r\niesi\u0105c"
 --- !u!1 &1683362981
 GameObject:
   m_ObjectHideFlags: 0
@@ -10176,7 +10136,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1786443132}
   - component: {fileID: 1786443136}
-  - component: {fileID: 1786443135}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -10198,21 +10157,6 @@ Transform:
   m_Father: {fileID: 901021064}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1786443135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1786443131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "Szkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
-    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
-    sob\u0105..."
 --- !u!114 &1786443136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10225,8 +10169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
-    na klatce schodowej."
+  Explanation: "I feel so stoned. What have you brought here and from where? Guys
+    don\u2019t want to tell me either. I hope you won\u2019t get in trouble. Oh, I
+    forgot to tell you, I earned some money yesterday and I guess it will be enough
+    until tomorrow. \r\n"
 --- !u!4 &1787863374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4120336262365710, guid: 690b8b878db22db48a88fd483fa4202f,
@@ -11131,7 +11077,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1953358513}
   - component: {fileID: 1953358515}
-  - component: {fileID: 1953358514}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -11153,19 +11098,6 @@ Transform:
   m_Father: {fileID: 1633308018}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1953358514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1953358512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "Z powa\u017Caniem, XXXYYYZZZ.\""
 --- !u!114 &1953358515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11178,8 +11110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Szanowny Panie ///0/9089789 zawiadamiam, \u017Ce wci\u0105\u017C
-    oczekuj\u0119 wp\u0142aty czynszu za poprzedni miesi\u0105c"
+  Explanation: "Dude, if you come over again and make a scene, I will not let you
+    in. I get it that you wanted to pay them back for how they had treated you, but
+    really you should stop it. Take care, Jack.\r\n"
 --- !u!1 &1958564298
 GameObject:
   m_ObjectHideFlags: 0
