@@ -21,14 +21,14 @@ public class Knife : MonoBehaviour
 
     void Attack()
     {
-        if (_inventory.GetInventory().Count == 0)
-        {
+       // if (_inventory.GetInventory().Count == 0)
+        //{
             if (Input.GetMouseButton(0))
             {
                 Debug.Log("wtf222");
                 CanAttack = true;
             }
-        }
+        //}
     }
 
     // Update is called once per frame
@@ -37,11 +37,12 @@ public class Knife : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V))
         {
             _inventory.VModeUser = !_inventory.VModeUser;
-            //heroAnim.SetBool("isKnfie", true);
+            Debug.Log("wtf222");
+            heroAnim.SetBool("isKnfie", _inventory.VModeUser);
         }
         if(_inventory.VMode)
         {
-            //heroAnim.SetBool("isKnfie", true);
+            heroAnim.SetBool("isKnfie", true);
             if (_timeBtwAttack <= 0)
             {
                 Attack();
@@ -51,6 +52,11 @@ public class Knife : MonoBehaviour
             {
                 _timeBtwAttack -= Time.deltaTime;
             }
+        }
+
+        if (!_inventory.VMode && !_inventory.VModeUser)
+        {
+            heroAnim.SetBool("isKnfie", false);
         }
        
         
