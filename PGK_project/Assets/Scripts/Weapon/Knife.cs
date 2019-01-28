@@ -1,41 +1,59 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Knife : MonoBehaviour
 {
-    public Hero hero;
-    private GameObject knife;
-    private bool canShoot;
+    private float _timeBtwAttack = 0;
+    public float startTimeBtwAttack;
+    public Transform attackPos;
+    public int damage;
+    private Inventory _inventory;
+
+    private bool CanAttack;
     // Use this for initialization
     void Start()
     {
-        knife = GameObject.Find("knife");
-        knife.SetActive(false);
+        _inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
     }
 
     void Attack()
     {
-
-        if (canShoot == false)
+        if (_inventory.GetInventory().Count == 0)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
-                knife.SetActive(true);
+                Debug.Log("wtf222");
+                CanAttack = true;
             }
-        }
-        else
-        {
-            knife.SetActive(false);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_timeBtwAttack <= 0)
+        {
+            Attack();
+            _timeBtwAttack = startTimeBtwAttack;
+        }
+        else
+        {
+            _timeBtwAttack -= Time.deltaTime;
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
 
+        var tag = collision.gameObject.tag;
+        if (tag == "Enemy" && CanAttack)
+        {
+            collision.gameObject.GetComponent<Enemy2>().life -= damage;
+            Debug.Log("wtf");
+            CanAttack = false;
+        }
 
-        //Attack();
     }
 
-}*/
+
+}

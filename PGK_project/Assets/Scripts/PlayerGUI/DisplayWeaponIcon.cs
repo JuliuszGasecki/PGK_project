@@ -23,7 +23,9 @@ public class DisplayWeaponIcon : MonoBehaviour
 	    weapon = GameObject.Find("Inventory").GetComponent<Inventory>();
         if (weapon.GetUsingWeapon() == null)
 	    {
-	        image.enabled = false;
+	        image.type = Image.Type.Filled;
+	        image.fillMethod = Image.FillMethod.Radial360;
+	        image.sprite = Resources.Load<Sprite>("Weapons/" + "KNIFE");
         }
         else if (Time.timeScale == 0f)          //usun icon w summaryPanel
         {
