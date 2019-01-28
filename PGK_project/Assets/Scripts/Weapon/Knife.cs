@@ -16,7 +16,6 @@ public class Knife : MonoBehaviour
 
     private bool CanDoDmg;
     private bool CanPlayAnim;
-    private float AnimationTime;
 
     private float time;
     // Use this for initialization
@@ -24,7 +23,6 @@ public class Knife : MonoBehaviour
     {
         _inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
         heroAnim = GameObject.Find("Hero").GetComponent<Animator>();
-        AnimationTime = Time.time;
     }
 
     void Attack()
@@ -48,6 +46,7 @@ public class Knife : MonoBehaviour
         else if (Time.time - time >= 0.25 && !CanPlayAnim)
         {
             heroAnim.SetBool("isKnifeAttack", false);
+            CanDoDmg = false;
         }
         
     }
@@ -79,13 +78,13 @@ public class Knife : MonoBehaviour
             }
             else
             {
-                _timeBtwAttack -= Time.deltaTime;
+                _timeBtwAttack -= Time.time;
             }
         }
         PlayAnimation();
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         var tag = collision.gameObject.tag;
         if (tag == "Enemy" && CanDoDmg)

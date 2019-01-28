@@ -6466,6 +6466,16 @@ Prefab:
       propertyPath: methSlider
       value: 
       objectReference: {fileID: 1003485211}
+    - target: {fileID: 61029964142219740, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 15.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 61029964142219740, guid: 9e83121cfd1454a43a2601311e563632,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 9.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e83121cfd1454a43a2601311e563632, type: 2}
   m_IsPrefabAsset: 0

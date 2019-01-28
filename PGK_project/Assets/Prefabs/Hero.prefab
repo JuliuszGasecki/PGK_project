@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe0479bec558744da0e4c301b6f43b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwAttack: 0.2
+  startTimeBtwAttack: 0.3
   attackPos: {fileID: 4033711096238924}
   damage: 3
 --- !u!114 &114487867912486546
