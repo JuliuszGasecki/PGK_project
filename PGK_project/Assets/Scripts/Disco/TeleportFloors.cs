@@ -16,8 +16,6 @@ public class TeleportFloors : MonoBehaviour {
             Debug.Log("Dupsko wielkie");
             hero = GameObject.Find("Hero").GetComponent<Transform>();
             hero.transform.position = destination.transform.position;
-            to.SetActive(true);
-            from.SetActive(true);
         }
     }
 }
