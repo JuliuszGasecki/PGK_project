@@ -14,7 +14,8 @@ public class NextLevelTest : MonoBehaviour {
         { "Disco", 3 },
         { "Home 2", 4 },
         { "Metro", 5 },
-        { "DemoScene", 1 },
+        //{ "DemoScene", 1 },
+        { "EndScene", 6 },
 
     };
 

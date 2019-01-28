@@ -61,7 +61,7 @@ public class LoadingScreenManager : MonoBehaviour {
         {
             image2.SetActive(true);
         }
-        else
+        else if(DrugsStat.level == 6)
         {
             image5.SetActive(true);
         }

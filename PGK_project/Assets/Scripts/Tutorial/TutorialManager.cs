@@ -32,18 +32,23 @@ public class TutorialManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+       
         if (TutekOdwiedzon.odwiedzon)
         {
             teacher.enabled = false;
-            tutorialText.text = "";
+            tutorialText.enabled = false;
             Destroy(gameObject);
-            
         }
-        hero = GameObject.Find("Hero").GetComponent<Withdrawal>();
-        teacher.enabled = true;
-        teacher.sprite = teacherSprite;
-        SetNextTutorial(0);
-        hero.stopWithdrawal();
+        else
+        {
+            hero = GameObject.Find("Hero").GetComponent<Withdrawal>();
+            teacher.enabled = true;
+            teacher.sprite = teacherSprite;
+
+            SetNextTutorial(0);
+            hero.stopWithdrawal();
+        }
+        
 
     }
 	
@@ -57,12 +62,28 @@ public class TutorialManager : MonoBehaviour {
 
     public void CompletedTutorial()
     {
-        SetNextTutorial(currentTutorial.order + 1);
+        if (TutekOdwiedzon.odwiedzon)
+        {
+            teacher.enabled = false;
+            tutorialText.enabled = false;
+            Destroy(gameObject);
+        }
+        else
+        {
+            SetNextTutorial(currentTutorial.order + 1);
+        }
+        
     }
 
     public void SetNextTutorial(int currentOrder)
     {
-        if(currentOrder > 0 && currentOrder < 6 || currentOrder == 10)
+        if (TutekOdwiedzon.odwiedzon)
+        {
+            teacher.enabled = false;
+            tutorialText.text = null;
+            Destroy(gameObject);
+        }
+        if (currentOrder > 0 && currentOrder < 6 || currentOrder == 10)
         {
             tutImage.enabled = true;
             tutImage.sprite = sprites[currentOrder];

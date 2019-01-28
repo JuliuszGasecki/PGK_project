@@ -2027,7 +2027,7 @@ GameObject:
   - component: {fileID: 1563118502}
   - component: {fileID: 1563118503}
   m_Layer: 0
-  m_Name: BabyHabbit
+  m_Name: BabyHabit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2885,7 +2885,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Baby Habbit
+  m_Text: Baby Habit
 --- !u!222 &1944506269
 CanvasRenderer:
   m_ObjectHideFlags: 0

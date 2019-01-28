@@ -102,15 +102,15 @@ public class DrugsTimer : MonoBehaviour {
     public void zmien_flage_narkotyku(string nazwa_narkotyku, bool dziala)
     {
         //Debug.Log(nazwa_narkotyku);
-        if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
-        if (nazwa_narkotyku == "coca") { cocaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
-        if (nazwa_narkotyku == "extasy") { extasyFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
-        if (nazwa_narkotyku == "hera") { heroineFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
-        if (nazwa_narkotyku == "vodka") { vodkaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
-        if (nazwa_narkotyku == "mocarz") { mocarzFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
-        if (nazwa_narkotyku == "lsd") { lsdFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
-        if (nazwa_narkotyku == "cigarette") { cigaretteFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
-        if (nazwa_narkotyku == "meth") { methFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); }
+        if (nazwa_narkotyku == "ganja") { marihuanaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); GlobalDrugsVariables.weedOnceTaken = true; }
+        if (nazwa_narkotyku == "coca") { cocaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); GlobalDrugsVariables.cocoOnceTaken = true; }
+        if (nazwa_narkotyku == "extasy") { extasyFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); GlobalDrugsVariables.extasyOnceTaken = true; }
+        if (nazwa_narkotyku == "hera") { heroineFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); GlobalDrugsVariables.heraOnceTaken = true; }
+        if (nazwa_narkotyku == "vodka") { vodkaFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); GlobalDrugsVariables.alcoOnceTaken = true; }
+        if (nazwa_narkotyku == "mocarz") { mocarzFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); GlobalDrugsVariables.mocarzOnceTaken = true; }
+        if (nazwa_narkotyku == "lsd") { lsdFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); GlobalDrugsVariables.lsdOnceTaken = true; }
+        if (nazwa_narkotyku == "cigarette") { cigaretteFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); GlobalDrugsVariables.cigaretteOnceTaken = true; }
+        if (nazwa_narkotyku == "meth") { methFlag = dziala; sliders[nazwa_narkotyku].SetActive(true); GlobalDrugsVariables.methOnceTaken = true; }
     }
 
 
