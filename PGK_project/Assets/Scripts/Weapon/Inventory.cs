@@ -299,6 +299,14 @@ public class Inventory : MonoBehaviour
         if (Enum.IsDefined(typeof(_weaponsID), weapon.ID) && inventory.Count < INVENTORYCAPACITY)
         {
             inventory.Add(weapon);
+            if (GetUsingWeapon().ammoInMagazine == 0 && GetUsingWeapon().ammo == 0)
+            {
+                IShootable weaponTemp = inventory[_usingSlot];
+                inventory[_usingSlot] = inventory[inventory.Count - 1];
+                inventory[inventory.Count -1] = weaponTemp;
+                _heroAnimatior.SetBool("changingWeapon", true);
+                _heroAnimatior.SetInteger("weaponID", GetUsingWeapon().ID);
+            }
 //            Debug.Log(_usingSlot);
             if (inventory.Count == 1)
             {
@@ -360,7 +368,7 @@ public class Inventory : MonoBehaviour
         return inventory;
     }
 
-    public IWeapon GetUsingWeapon()
+    public IShootable GetUsingWeapon()
     {
         if (inventory.Any())
         {
