@@ -14,7 +14,7 @@ public class NextLevelTest : MonoBehaviour {
         { "Disco", 3 },
         { "Home 2", 4 },
         { "Metro", 5 },
-        //{ "DemoScene", 1 },
+        { "DemoScene", 1 },
         { "EndScene", 6 },
 
     };
@@ -67,11 +67,9 @@ public class NextLevelTest : MonoBehaviour {
     public string NextScene()
     {
         int next;
-        next = levelNameNumer.FirstOrDefault(x => x.Key == SceneManager.GetActiveScene().name).Value;
+        next = levelNameNumer.LastOrDefault(x => x.Key == SceneManager.GetActiveScene().name).Value;
         next++;
         string nazwa = levelNameNumer.FirstOrDefault(y => y.Value == next).Key;
         return nazwa;
     }
-
-
 }
