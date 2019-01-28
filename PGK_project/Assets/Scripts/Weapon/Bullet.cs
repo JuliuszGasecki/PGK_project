@@ -36,7 +36,10 @@ public class Bullet : MonoBehaviour
         if (tag == "Enemy"){
             GameObject _blood = Instantiate(BloodSplash, collision.gameObject.GetComponent<Renderer>().bounds.center, this.gameObject.transform.rotation );
             _blood.transform.parent = GameObject.Find(collision.gameObject.name).transform;
-            collision.gameObject.GetComponent<Enemy2>().life -= bulletDamage;
+            if(collision.gameObject.GetComponent<Enemy2>() !=null)
+                collision.gameObject.GetComponent<Enemy2>().life -= bulletDamage;
+            if (collision.gameObject.GetComponent<BossOne>() != null)
+                collision.gameObject.GetComponent<BossOne>().bossHealth -= bulletDamage;
             _blood.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
         }
 

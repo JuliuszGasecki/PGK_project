@@ -52,6 +52,8 @@ public class BossOne : MonoBehaviour
     }
     void Update()
     {
+        this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, 0);
+        Debug.Log(bossHealth);
         if (coldown)
         {
             if (alive)
@@ -98,17 +100,6 @@ public class BossOne : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             hero.GetComponent<Hero>().health -= demage;
-        }
-        if (collision.gameObject.tag == "Bullet")
-        {
-
-            if (bossHealth > 0) bossHealth--;
-            else
-            {
-                alive = false;
-                aItarget.target = null;
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = deadBoss;
-            }
         }
 
     }
