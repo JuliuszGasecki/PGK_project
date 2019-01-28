@@ -48,7 +48,7 @@ public class Knife : MonoBehaviour
             heroAnim.SetBool("isKnifeAttack", false);
             CanDoDmg = false;
         }
-        
+
     }
     // Update is called once per frame
     void Update()

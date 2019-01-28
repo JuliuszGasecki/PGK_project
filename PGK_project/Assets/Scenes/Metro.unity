@@ -5678,6 +5678,18 @@ Prefab:
       propertyPath: panelMain
       value: 
       objectReference: {fileID: 999740083}
+    - target: {fileID: 1185540665447204, guid: 509f992d9c684334bba52d03377b4f08, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984070025866604, guid: 509f992d9c684334bba52d03377b4f08, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375598103963390, guid: 509f992d9c684334bba52d03377b4f08, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 509f992d9c684334bba52d03377b4f08, type: 2}
   m_IsPrefabAsset: 0
