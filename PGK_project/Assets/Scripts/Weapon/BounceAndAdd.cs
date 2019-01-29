@@ -94,7 +94,7 @@ public class BounceAndAdd : MonoBehaviour {
         }
         if(nameW.Equals(_weaponNames[4]))
         {
-            inv.ShotgunAmmo += 5;
+            inv.ShotgunAmmo += 6;
             return;
         }
     }
