@@ -62,7 +62,7 @@ public class DrugTemplate : MonoBehaviour {
         {
             hero = collision.GetComponent<Hero>();
             heroDrugTimer = collision.GetComponent<DrugsTimer>();
-            if (Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.E))
+            if (Input.GetMouseButton(1))
             {
 
                 if (drugEffect != null)

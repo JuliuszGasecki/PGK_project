@@ -103,7 +103,7 @@ MonoBehaviour:
   speedBoost: 0
   lifeBoost: 0
   attackBoost: 0
-  lifetime: 0
+  lifetime: 5
   withdroval_points: 3
   poison_points: 5
   time_scale: 1
