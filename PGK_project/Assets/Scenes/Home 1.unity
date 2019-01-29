@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Days of taking drugs: 4?'
+  m_Text: 'Days of taking drugs: 8?'
 --- !u!222 &3086880
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 0
   Explanation: "Gross, she could have throw it away to the bin. She is not pregnant
-    at least.\r\nesi\u0105c"
+    at least.\r"
 --- !u!1 &149626378
 GameObject:
   m_ObjectHideFlags: 0
