@@ -47,10 +47,10 @@ public class DataSet : MonoBehaviour {
         {
             lista[i].SetActive(false);
         }
-        textFirst.text = "Punkty w grze zdobedziesz za narkotyki, zabojstwa i ich combo oraz premie czasowe";
-        textSecond.text = "Na przejscie kazdej rundy masz okreslony czas - poziom 1 - 40 sekund, po tym czasie uzbierane punkty beda stopniowo malec ";
-        textThird.text = "Aby przejsc na nastepny etap musisz uzbierac co najmniej 15 punktow!";
-        textForth.text = "POWODZENIA!";
+        textFirst.text = "You get points and time bonuses for taking drugs, killings and combo killings during the game.";
+        textSecond.text = "For passing each round you have some specified time - level 1 - 40 seconds, after that points you got will start disappearing ";
+        textThird.text = "To pass to a next level you need to score at least 15 points";
+        textForth.text = "GOOD LUCK!";
     }
 
     public void SetData_loading()
