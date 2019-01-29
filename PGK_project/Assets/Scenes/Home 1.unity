@@ -6633,7 +6633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogues: []
-  interlocutorSprite: {fileID: 21300000, guid: c7ceed7c69079904c93240c1ec1885c6, type: 3}
+  interlocutorSprite: {fileID: 21300000, guid: 2dbdae21b35d33342828401235791ec0, type: 3}
   finishDialogue: 
   blur: {fileID: 320574052}
 --- !u!1001 &1210181093
