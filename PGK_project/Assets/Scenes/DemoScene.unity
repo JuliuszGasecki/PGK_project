@@ -352,7 +352,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &41452599
 GameObject:
@@ -910,6 +910,48 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1621817773499200, guid: 520dd8a3b5c84e34889d44ec45c8a7d2,
     type: 2}
   m_PrefabInternal: {fileID: 550499356}
+--- !u!1001 &152103616
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4458322206549298, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.5110343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458322206549298, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.6035366
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458322206549298, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458322206549298, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458322206549298, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458322206549298, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458322206549298, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458322206549298, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 64c240b9379d5438ab7e0ea38339f059, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &158359964 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1167576340382066, guid: a5aad1e6fe2794795bdf726da6b2dfeb,
@@ -1296,7 +1338,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &230644528
 GameObject:
@@ -1524,7 +1566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: WASD poruszanie
+  Explanation: "Are you sure you can do it? I am so beaten-up and weak that I can\u2019t
+    help you. You do not look so good either. Use keys: W S A D and mouse to walk
+    and control.\r\n"
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 1502013632}
   frized: 0
@@ -2377,7 +2421,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 959814096}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &360414943
 MonoBehaviour:
@@ -2390,13 +2434,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206dd10aa4b31dc43b5b6f0fb0213f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: 6
-  Explanation: Tutaj narkotyki i mixy
+  order: 7
+  Explanation: " If you are not sure what effects gives each substance, you can always
+    check in drug diary after pressing F. You can also find there some good recipes
+    for mixing different substances.\r\n"
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 211785288}
-  frized: 1
+  frized: 0
   Keys:
-  - ' '
+  - f
 --- !u!1 &368677619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,7 +2789,7 @@ RectTransform:
   - {fileID: 368677620}
   - {fileID: 1203964176}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3243,7 +3289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 2
-  Explanation: "Z\xF3\u0142ty to zatrucie"
+  Explanation: "Then we have yellow bar. During taking drugs you will be finding,
+    you can get poisoned.\r\n"
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 1502013632}
   frized: 1
@@ -3413,11 +3460,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4335845889452170, guid: 0ca5875b01fba3e41a490d46b97332d1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.0661268
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 4335845889452170, guid: 0ca5875b01fba3e41a490d46b97332d1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -9.514665
+      value: -7.27
       objectReference: {fileID: 0}
     - target: {fileID: 4335845889452170, guid: 0ca5875b01fba3e41a490d46b97332d1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4729,8 +4776,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: 588e74d7626e9574f9fd007e049b8c39, type: 3}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -4782,9 +4829,8 @@ Transform:
   - {fileID: 338251839}
   - {fileID: 419954618}
   - {fileID: 873414577}
-  - {fileID: 689364371}
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &592024993 stripped
 Transform:
@@ -5482,53 +5528,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4594929615119752, guid: d574c4d17aca7f74eb2cadba21efdbbb,
     type: 2}
   m_PrefabInternal: {fileID: 1289654824}
---- !u!1001 &689364370
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 585841248}
-    m_Modifications:
-    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 3.337
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -7.602
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4e9e271fce056f647bb6d477eae3deac, type: 2}
-  m_IsPrefabAsset: 0
---- !u!4 &689364371 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4936276274122790, guid: 4e9e271fce056f647bb6d477eae3deac,
-    type: 2}
-  m_PrefabInternal: {fileID: 689364370}
 --- !u!4 &696710764 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4072647191522284, guid: 81f9679ffdb272047961405e769152f7,
@@ -5867,7 +5866,7 @@ Transform:
   m_Children:
   - {fileID: 18102156}
   m_Father: {fileID: 959814096}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &748126209
 MonoBehaviour:
@@ -5880,8 +5879,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9698da741477c084bbdd7a3615dc1948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: 7
-  Explanation: "We\u017A narkotyk"
+  order: 6
+  Explanation: So I think you know everything what is needed. Approach a trash bin.
+    There is often hidden something for clients who pay in advance. When you walk
+    over it, click right mouse button to take a drug.
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 415934299}
 --- !u!1 &748489132
@@ -7301,7 +7302,7 @@ RectTransform:
   - {fileID: 92580226}
   - {fileID: 1689940645}
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7790,7 +7791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &959814095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7815,9 +7816,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0651c880b0d0e964e8620b31e643a342, type: 3}
   - {fileID: 21300000, guid: 1f37a3454a9a58741b1d887e93476647, type: 3}
   - {fileID: 21300000, guid: 1f37a3454a9a58741b1d887e93476647, type: 3}
-  - {fileID: 21300000, guid: 1f37a3454a9a58741b1d887e93476647, type: 3}
-  - {fileID: 21300000, guid: 1f37a3454a9a58741b1d887e93476647, type: 3}
-  - {fileID: 21300000, guid: 1f37a3454a9a58741b1d887e93476647, type: 3}
+  - {fileID: 21300000, guid: f2797b7e6255c674a834f81a7bcbdff7, type: 3}
+  - {fileID: 21300000, guid: f2797b7e6255c674a834f81a7bcbdff7, type: 3}
   - {fileID: 21300000, guid: f2797b7e6255c674a834f81a7bcbdff7, type: 3}
   tutImage: {fileID: 511989750}
 --- !u!4 &959814096
@@ -7836,13 +7836,13 @@ Transform:
   - {fileID: 1459400965}
   - {fileID: 1862812319}
   - {fileID: 1388457199}
-  - {fileID: 360414942}
   - {fileID: 748126208}
+  - {fileID: 360414942}
   - {fileID: 2096555157}
   - {fileID: 1664224931}
   - {fileID: 304854644}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &964750893
 Prefab:
@@ -8787,7 +8787,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1032198854
 BoxCollider2D:
@@ -10063,7 +10063,7 @@ Transform:
   - {fileID: 1809595590}
   - {fileID: 381689697}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199837075
 GameObject:
@@ -10823,7 +10823,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Explanation: "Zielony pasek to g\u0142od narkotykowy"
+  Explanation: "Okay, I see you are feeling good enough. Look around. You have the
+    red bar of life here. If it falls to 0, you will die. If everything is clear,
+    press space.\r\n"
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 1502013632}
   frized: 1
@@ -10956,7 +10958,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1336356905
 GameObject:
@@ -11545,9 +11547,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 5
-  Explanation: 'Tutaj czas misji i punkty
-
-'
+  Explanation: "There is time and your score. You should play it cool as if you were
+    a professionalist. You get points for combo in killings, for time of your play
+    and for drugs you take. After pressing TAB your statistics will be shown. If you
+    get it all, press space.\r\n\n\n"
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 1502013632}
   frized: 1
@@ -12186,7 +12189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 3
-  Explanation: Czerwony to HP
+  Explanation: "Green bar is your drug withdrawal. I see you start having delirium.
+    Be careful if it falls to 0, you will die. If you get it all, press space.\r\n"
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 1502013632}
   frized: 1
@@ -13083,7 +13087,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1537225367
 GameObject:
@@ -13538,7 +13542,7 @@ Transform:
   m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -88.837006}
 --- !u!114 &1567948353 stripped
 MonoBehaviour:
@@ -13905,7 +13909,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1620873439}
   m_LocalRotation: {x: -0, y: -0, z: -0.9999959, w: 0.0028769488}
-  m_LocalPosition: {x: -6.87, y: 10.19, z: -1}
+  m_LocalPosition: {x: -6.87, y: 11.21, z: -1}
   m_LocalScale: {x: 1.1208444, y: 1.1208444, z: 1.1208444}
   m_Children: []
   m_Father: {fileID: 2096555157}
@@ -14324,8 +14328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206dd10aa4b31dc43b5b6f0fb0213f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: 10
-  Explanation: "Musisz to zebra\u0107"
+  order: 9
+  Explanation: "Now you know how to play. Our target is the bag. They hide in it lots
+    of drugs for sale. Remember about withdrawal and poisoning. Of course don\u2019t
+    get killed. I will be waiting for you. If everything is clear, press space.  \r\n"
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 0}
   frized: 0
@@ -14728,7 +14734,7 @@ Transform:
   - {fileID: 696710764}
   - {fileID: 870082371}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1696635298
 GameObject:
@@ -15438,7 +15444,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 4
-  Explanation: "Tutaj mozesz zobaczy\u0107 bronie"
+  Explanation: There you have ammo and weapons which you can change by using a scroll
+    wheel. Remember if you are out of ammo, you have to change weapon. If everything
+    is clear, press space.
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 1502013632}
   frized: 0
@@ -16017,7 +16025,7 @@ Transform:
   m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1912226981
 GameObject:
@@ -17673,7 +17681,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 8
-  Explanation: "We\u017A E i stzrel"
+  Explanation: "Ok, great. I see your pupils have narrowed. Take that shotgun, lying
+    over there. To grab him while standing on it, press E. When you do that kill an
+    enemy in the first room and take his stuff. Out of an enemy after killing him,
+    there can come out some drugs or weapons.\r\n"
   mapBlocker: {fileID: 0}
   heroBlock: {fileID: 752251804}
 --- !u!114 &2102044172 stripped

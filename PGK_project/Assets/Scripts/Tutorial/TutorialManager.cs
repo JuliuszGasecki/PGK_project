@@ -83,7 +83,7 @@ public class TutorialManager : MonoBehaviour {
             tutorialText.text = null;
             Destroy(gameObject);
         }
-        if (currentOrder > 0 && currentOrder < 6 || currentOrder == 10)
+        if (currentOrder > 0 && currentOrder < 6 || currentOrder == 9)
         {
             tutImage.enabled = true;
             tutImage.sprite = sprites[currentOrder];
