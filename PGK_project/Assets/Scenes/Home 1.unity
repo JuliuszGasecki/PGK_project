@@ -1640,7 +1640,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 17cab659efbf0e44f8564f6f9573ee2a, type: 3}
-  text: Leki1
+  text: "\u201CThe price of drugs will have increased by 0.02 bitcoin by the end of
+    the month. It is getting harder and harder to get it. Be careful taking this pills.
+    They are very strong.\u201D \n - note attached to the pills"
   chapterNumber: 1
   nameText: Leki1
 --- !u!114 &266762143
@@ -1655,7 +1657,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 3116780f38eb51b438f9989c061d0981, type: 3}
-  text: bartek1
+  text: "Bro, have you seen how they fucked up Matt? We have to beat this bastards
+    up! If there is something that life has taught me, that is to never turn the other
+    cheek. Anyway they have plenty of this good stuff..\r\n"
   chapterNumber: 1
   nameText: Bartek1
 --- !u!114 &266762144
@@ -1670,7 +1674,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 9e9eb477759a638499e3a75b8100e6e6, type: 3}
-  text: Wasyl1
+  text: "Dude, I got kicked so bad. Fuck it man. I went to talk with the boys to the
+    dark alley, but they said I owe them money. Fucking kidding me, I ain\u2019t got
+    any of their money. I already have seizures after drug withdrawal. Man, they have
+    so many drugs, we have to take some of theirs"
   chapterNumber: 1
   nameText: Wasyl1
 --- !u!114 &266762145
@@ -1685,7 +1692,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: fd53de14131e24f4c94c52db6369f30d, type: 3}
-  text: Marta1
+  text: "Oh, you finally got up. I don\u2019t remember last two weeks at all\u2026
+    We have no more drugs left. Well, I will go to see the boys, but I can\u2019t
+    make it for all of us. Also our Goddamn rapper got beaten up by some Motherfuckers.
+    He can\u2019t even make an easy deal, dealers don\u2019t trust him.\r\n"
   chapterNumber: 1
   nameText: Marta1
 --- !u!114 &266762146
@@ -1700,7 +1710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 5a04d2986ea308d40bc769b2aad051e6, type: 3}
-  text: Gumki
+  text: "t\u2019s good that she always has them with herself. Last thing we need here
+    is a brat.\r\n"
   chapterNumber: 1
   nameText: Gumki1
 --- !u!114 &266762147
@@ -1715,7 +1726,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 87681c7965bee6f4ebb362c4de84ebca, type: 3}
-  text: DeathNote
+  text: 'DeathNote: A list of names at the back of the comic. He might have not recovered
+    from that what happened in high school.'
   chapterNumber: 1
   nameText: DeathNote1
 --- !u!114 &266762148
@@ -1730,7 +1742,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: cd7583c9dbfd9ba45ae3d34c2b8e1880, type: 3}
-  text: Plyt1
+  text: "CD with inscription: \u201CFor best hypeman I know. Dude, I wish you would
+    rebound. Your BB\u201D"
   chapterNumber: 1
   nameText: Plyta1
 --- !u!114 &266762149
@@ -1745,7 +1758,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
-  text: Tele1
+  text: "From Mom\nSon, you haven\u2019t answered me for 3 weeks. It will be nice
+    if you sometimes write to your mother."
   chapterNumber: 1
   nameText: Telefon1
 --- !u!114 &266762150
@@ -1760,7 +1774,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
-  text: List1
+  text: "\u201CDear Mr. White, I am writing to inform you that I am still expecting
+    a payment for the previous month\u2019s rent. Yours sincerely, Mr. Greenwitch.\u201D\r\n"
   chapterNumber: 1
   nameText: List1
 --- !u!114 &266762151
@@ -1775,7 +1790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
-  text: Strzykawki1
+  text: "For fuck's sake. Nothing left\u2026"
   chapterNumber: 1
   nameText: Strzykawki1
 --- !u!1 &285080137
@@ -5714,7 +5729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a62f839c712774c46959241eec507cd1, type: 3}
-  text: Waga2
+  text: 'Scale in the bathroom: Three kilograms less than lately? Damn, when was it?
+    I have to eat more or I will disappear completely.'
   chapterNumber: 2
   nameText: Waga2
 --- !u!114 &1040681412
@@ -5729,7 +5745,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: c7ceed7c69079904c93240c1ec1885c6, type: 3}
-  text: Wasyl2
+  text: "Dude, I don\u2019t want to ask you anymore, but you know what happened three
+    years ago. There is an anniversary next week. I can\u2019t handle it anymore.
+    We really need stuff. Come on, in this club there is so much of this stuff that
+    we will keep on being high for weeks and we could retaliate against them."
   chapterNumber: 2
   nameText: Wasyl2
 --- !u!114 &1040681413
@@ -5744,7 +5763,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 2dbdae21b35d33342828401235791ec0, type: 3}
-  text: Bartek2
+  text: "Oh, you\u2019ve woken up. We have a problem, big problem with Matt. Today
+    is an anniversary of his girlfriend\u2019s accident in the club. He\u2019s so
+    sad. I wonder how he\u2019s still alive after he almost overdose. He has some
+    fucked up idea. He wants to attack them. You know how many drugs they have. Well
+    you know, we may take some after we kick their asses."
   chapterNumber: 2
   nameText: Bartek2
 --- !u!114 &1040681414
@@ -5759,7 +5782,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: b6b55daaa1f5ca74aa80967e3b583c85, type: 3}
-  text: Marta2
+  text: "I feel so stoned. What have you brought here and from where? Guys don\u2019t
+    want to tell me either. I hope you won\u2019t get in trouble. Oh, I forgot to
+    tell you, I earned some money yesterday and I guess it will be enough until tomorrow. "
   chapterNumber: 2
   nameText: Marta2
 --- !u!114 &1040681415
@@ -5774,7 +5799,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 23a72ec1682cecd48bbd6227303de46a, type: 3}
-  text: tesket2
+  text: "Rap song which have been written quite incoherently. You can see how stoned
+    he was while writing this song. He refers to his girlfriend\u2019s rape in it.
+    This situation left a huge mark on him."
   chapterNumber: 2
   nameText: Tekst2
 --- !u!114 &1040681416
@@ -5789,7 +5816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 062f137c10c53254fbc951b0f1920b7a, type: 3}
-  text: test2
+  text: Gross, she could have throw it away to the bin. She is not pregnant at least.
   chapterNumber: 2
   nameText: TestCiazowy2
 --- !u!114 &1040681417
@@ -5804,7 +5831,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
-  text: tele2
+  text: "You little pissy snot, why you don\u2019t answer you mather?! Why you ignored
+    your father\u2019s death anniversary?! I am so ashamed of you, your mother was
+    absolutely right!"
   chapterNumber: 2
   nameText: Telefon2
 --- !u!114 &1040681418
@@ -5819,7 +5848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
-  text: stzrykawki2
+  text: What a surprise, there is nothing left again..
   chapterNumber: 2
   nameText: Strzykawki2
 --- !u!114 &1040681419
@@ -5834,7 +5863,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: c3fa4f18bd19e9d409db9c5e72b94d64, type: 3}
-  text: teleBar2
+  text: Dude, if you come over again and make a scene, I will not let you in. I get
+    it that you wanted to pay them back for how they had treated you, but really you
+    should stop it. Take care, Jack.
   chapterNumber: 2
   nameText: TelefonBartek2
 --- !u!1 &1074412806
@@ -6424,7 +6455,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
-  text: list3
+  text: Im sorry. I just couldn't stand that. We have done to many bad things. I thought
+    I would help me to forget about the past, but i was wrong.
   chapterNumber: 3
   nameText: List3
 --- !u!114 &1190974178
@@ -6439,7 +6471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 17cab659efbf0e44f8564f6f9573ee2a, type: 3}
-  text: Leki3
+  text: "It\u2019s empty.. Someone had to steal the rest of it."
   chapterNumber: 3
   nameText: Leki3
 --- !u!114 &1190974179
@@ -6454,7 +6486,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: f0735bb8845b1264588116b429f7ac8a, type: 3}
-  text: Bartek3
+  text: "Do you have some pills? Or anything? Shit, it turned out that we have bigger
+    problems than Matts\u2019 death. This bastards from who we had stolen stuff, want
+    revenge. I know what we can do to fuck them up. They have some \u201Clab\u201D
+    in abandoned railway station, where they produce meth. Go there. There is no other
+    option. Take as much as you can hide. I feel so bad, because of withdrawal.."
   chapterNumber: 3
   nameText: Bartek3
 --- !u!114 &1190974180
@@ -6469,7 +6505,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 46ef91f8f0eec434fa80c8f0dc1bfc5d, type: 3}
-  text: Mart3
+  text: "Fuck! He is dead. Oh my motherfucking God, I don\u2019t know what to do.
+    Bart has called for help. They will leave him in some den in the middle of the
+    woods. How could you get drugs like that?! Are you insane? I hate you, I don\u2019t
+    want to talk to you anymore. He commited suicide because of you! What\u2019s more,
+    I know they want to kill you. I need something strong.. Do you have anything?"
   chapterNumber: 3
   nameText: Marta3
 --- !u!114 &1190974182
@@ -6484,7 +6524,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 8237a44f3a547024cb064118df8d6b2d, type: 3}
-  text: listmilosny3
+  text: "I\u2019m sorry, I will never hit you again. I promise. You don\u2019t have
+    to live like a slut anymore. I will take care of you. We will be so happy, having
+    enough drugs, no worries. Anyway, your friends are already dead. They have killed
+    half of the gang and have stolen two whole shipments. Please, think about it and
+    let me know. Yours Alex."
   chapterNumber: 3
   nameText: ListMilosny3
 --- !u!114 &1190974183
@@ -6499,7 +6543,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
-  text: tele3
+  text: "Don\u2019t you dare come back home! I have heard what you and your shitty
+    friends are doing all the time. Sitting and constantly getting high, congratulations.
+    I am absolutely ashamed of you.\r\n"
   chapterNumber: 3
   nameText: Telefon3
 --- !u!114 &1190974184
@@ -6514,7 +6560,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
-  text: lyzkamaf3
+  text: "Dear Mr. White, you shall expect the police and a bailiff. You haven\u2019t
+    paid your rent for four months."
   chapterNumber: 3
   nameText: LyzkaMafia3
 --- !u!114 &1190974185
@@ -6529,7 +6576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 0d665b6c312129545989e467159b2c6c, type: 3}
-  text: Ksiazka3
+  text: Thie Lucifer Effect. How good peopl turn evil
   chapterNumber: 3
   nameText: Ksiazka3
 --- !u!4 &1192075512 stripped

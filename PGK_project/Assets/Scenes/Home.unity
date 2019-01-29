@@ -9328,8 +9328,10 @@ Prefab:
     - target: {fileID: 114140248531091092, guid: 82aa36440f4631b479ca4c5e9980a2ac,
         type: 2}
       propertyPath: text
-      value: "Dear Mr. White, you shall expect the police and a bailiff. You haven\u2019t
-        paid your rent for four months.\r\n"
+      value: 'Im sorry. I just couldn''t stand that. We have done to many bad things.
+        I thought I would help me to forget about the past, but i was wrong.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 114892512100924786, guid: 82aa36440f4631b479ca4c5e9980a2ac,
         type: 2}

@@ -764,9 +764,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Explanation: "To ta jebana dyskoteka. Wiesz kt\xF3ra. Tam maj\u0105 proch\xF3w \u017Ce
-    starczy nam na miesi\u0105c. Tylko jesli tam p\xF3\u017Ajdziesz mam pro\u015Bb\u0119.
-    Zajeb ich wszystkich..."
+  Explanation: "They have some \u201Clab\u201D in abandoned railway station, where
+    they produce meth. Go there. There is no other option. Take as much as you can
+    hide. I feel so bad, because of withdrawal.."
 --- !u!114 &66851421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,9 +779,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Ooooo obudzi\u0142e\u015B si\u0119. Dawaj walniemy z bonga... W sumie
-    to wszystko co mi zosta\u0142o. Stary znam miejsce w kt\xF3ym m\xF3glby\u015B
-    si\u0119 ob\u0142owi\u0107"
+  Explanation: "Do you have some pills? Or anything? Shit, it turned out that we have
+    bigger problems than Matts\u2019 death. This bastards from who we had stolen stuff,
+    want revenge. I know what we can do to fuck them up. "
 --- !u!1 &87810681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1520,6 @@ GameObject:
   m_Component:
   - component: {fileID: 227456428}
   - component: {fileID: 227456430}
-  - component: {fileID: 227456429}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -1542,19 +1541,6 @@ Transform:
   m_Father: {fileID: 636209170}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &227456429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 227456427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "Z powa\u017Caniem, XXXYYYZZZ.\""
 --- !u!114 &227456430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,8 +1553,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Szanowny Panie ///0/9089789 zawiadamiam, \u017Ce wci\u0105\u017C
-    oczekuj\u0119 wp\u0142aty czynszu za poprzedni miesi\u0105c"
+  Explanation: Im sorry. I just couldn't stand that. We have done to many bad things.
+    I thought It  would help me to forget about the past, but i was wrong.
 --- !u!4 &227817258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4016636619613376, guid: 0d7dbd43908365c43ae97a17b78f9cac,
@@ -1987,7 +1973,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 17cab659efbf0e44f8564f6f9573ee2a, type: 3}
-  text: Leki1
+  text: "\u201CThe price of drugs will have increased by 0.02 bitcoin by the end of
+    the month. It is getting harder and harder to get it. Be careful taking this pills.
+    They are very strong.\u201D \n - note attached to the pills"
   chapterNumber: 1
   nameText: Leki1
 --- !u!114 &266762143
@@ -2002,7 +1990,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 3116780f38eb51b438f9989c061d0981, type: 3}
-  text: bartek1
+  text: "Bro, have you seen how they fucked up Matt? We have to beat this bastards
+    up! If there is something that life has taught me, that is to never turn the other
+    cheek. Anyway they have plenty of this good stuff..\r\n"
   chapterNumber: 1
   nameText: Bartek1
 --- !u!114 &266762144
@@ -2017,7 +2007,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 9e9eb477759a638499e3a75b8100e6e6, type: 3}
-  text: Wasyl1
+  text: "Dude, I got kicked so bad. Fuck it man. I went to talk with the boys to the
+    dark alley, but they said I owe them money. Fucking kidding me, I ain\u2019t got
+    any of their money. I already have seizures after drug withdrawal. Man, they have
+    so many drugs, we have to take some of theirs\r\n"
   chapterNumber: 1
   nameText: Wasyl1
 --- !u!114 &266762145
@@ -2032,7 +2025,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: fd53de14131e24f4c94c52db6369f30d, type: 3}
-  text: Marta1
+  text: "Oh, you finally got up. I don\u2019t remember last two weeks at all\u2026
+    We have no more drugs left. Well, I will go to see the boys, but I can\u2019t
+    make it for all of us. Also our Goddamn rapper got beaten up by some Motherfuckers.
+    He can\u2019t even make an easy deal, dealers don\u2019t trust him."
   chapterNumber: 1
   nameText: Marta1
 --- !u!114 &266762146
@@ -2047,7 +2043,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 5a04d2986ea308d40bc769b2aad051e6, type: 3}
-  text: Gumki
+  text: "It\u2019s good that she always has them with herself. Last thing we need
+    here is a brat."
   chapterNumber: 1
   nameText: Gumki1
 --- !u!114 &266762147
@@ -2062,7 +2059,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 87681c7965bee6f4ebb362c4de84ebca, type: 3}
-  text: DeathNote
+  text: 'DeathNote: A list of names at the back of the comic. He might have not recovered
+    from that what happened in high school.'
   chapterNumber: 1
   nameText: DeathNote1
 --- !u!114 &266762148
@@ -2077,7 +2075,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: cd7583c9dbfd9ba45ae3d34c2b8e1880, type: 3}
-  text: Plyt1
+  text: "CD with inscription: \u201CFor best hypeman I know. Dude, I wish you would
+    rebound. Your BB\u201D"
   chapterNumber: 1
   nameText: Plyta1
 --- !u!114 &266762149
@@ -2092,7 +2091,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
-  text: Tele1
+  text: "From Mom\nSon, you haven\u2019t answered me for 3 weeks. It will be nice
+    if you sometimes write to your mother.\r\n"
   chapterNumber: 1
   nameText: Telefon1
 --- !u!114 &266762150
@@ -2107,7 +2107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
-  text: List1
+  text: "\u201CDear Mr. White, I am writing to inform you that I am still expecting
+    a payment for the previous month\u2019s rent. Yours sincerely, Mr. Greenwitch.\u201D"
   chapterNumber: 1
   nameText: List1
 --- !u!114 &266762151
@@ -2122,7 +2123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
-  text: Strzykawki1
+  text: "For fuck's sake. Nothing left\u2026"
   chapterNumber: 1
   nameText: Strzykawki1
 --- !u!1001 &272523041
@@ -2967,7 +2968,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Explanation: "Z powa\u017Caniem, XXXYYYZZZ.\""
+  Explanation: "Don\u2019t you dare come back home! I have heard what you and your
+    shitty friends are doing all the time. Sitting and constantly getting high, congratulations.
+    I am absolutely ashamed of you."
 --- !u!114 &424647795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2980,8 +2983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Szanowny Panie ///0/9089789 zawiadamiam, \u017Ce wci\u0105\u017C
-    oczekuj\u0119 wp\u0142aty czynszu za poprzedni miesi\u0105c"
+  Explanation: From Mom
 --- !u!1 &433026695
 GameObject:
   m_ObjectHideFlags: 0
@@ -4249,7 +4251,6 @@ GameObject:
   m_Component:
   - component: {fileID: 624270314}
   - component: {fileID: 624270316}
-  - component: {fileID: 624270315}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -4271,19 +4272,6 @@ Transform:
   m_Father: {fileID: 1967615223}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &624270315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 624270313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: ~Mama
 --- !u!114 &624270316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4296,7 +4284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: We no odpisz synek proszem :/
+  Explanation: "Dear Mr. White, you shall expect the police and a bailiff. You haven\u2019t
+    paid your rent for four months."
 --- !u!1 &636209169
 GameObject:
   m_ObjectHideFlags: 0
@@ -7026,7 +7015,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a62f839c712774c46959241eec507cd1, type: 3}
-  text: Waga2
+  text: 'Scale in the bathroom: Three kilograms less than lately? Damn, when was it?
+    I have to eat more or I will disappear completely.'
   chapterNumber: 2
   nameText: Waga2
 --- !u!114 &1040681412
@@ -7041,7 +7031,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: c7ceed7c69079904c93240c1ec1885c6, type: 3}
-  text: Wasyl2
+  text: "Dude, I don\u2019t want to ask you anymore, but you know what happened three
+    years ago. There is an anniversary next week. I can\u2019t handle it anymore.
+    We really need stuff. Come on, in this club there is so much of this stuff that
+    we will keep on being high for weeks and we could retaliate against them.\r\n"
   chapterNumber: 2
   nameText: Wasyl2
 --- !u!114 &1040681413
@@ -7056,7 +7049,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 2dbdae21b35d33342828401235791ec0, type: 3}
-  text: Bartek2
+  text: "Oh, you\u2019ve woken up. We have a problem, big problem with Matt. Today
+    is an anniversary of his girlfriend\u2019s accident in the club. He\u2019s so
+    sad. I wonder how he\u2019s still alive after he almost overdose. He has some
+    fucked up idea. He wants to attack them. You know how many drugs they have. Well
+    you know, we may take some after we kick their asses."
   chapterNumber: 2
   nameText: Bartek2
 --- !u!114 &1040681414
@@ -7071,7 +7068,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: b6b55daaa1f5ca74aa80967e3b583c85, type: 3}
-  text: Marta2
+  text: " feel so stoned. What have you brought here and from where? Guys don\u2019t
+    want to tell me either. I hope you won\u2019t get in trouble. Oh, I forgot to
+    tell you, I earned some money yesterday and I guess it will be enough until tomorrow. "
   chapterNumber: 2
   nameText: Marta2
 --- !u!114 &1040681415
@@ -7086,7 +7085,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 23a72ec1682cecd48bbd6227303de46a, type: 3}
-  text: tesket2
+  text: "Rap song which have been written quite incoherently. You can see how stoned
+    he was while writing this song. He refers to his girlfriend\u2019s rape in it.
+    This situation left a huge mark on him."
   chapterNumber: 2
   nameText: Tekst2
 --- !u!114 &1040681416
@@ -7101,7 +7102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 062f137c10c53254fbc951b0f1920b7a, type: 3}
-  text: test2
+  text: "Gross, she could have throw it away to the bin. She is not pregnant at least.\r\n"
   chapterNumber: 2
   nameText: TestCiazowy2
 --- !u!114 &1040681417
@@ -7116,7 +7117,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
-  text: tele2
+  text: "You little pissy snot, why you don\u2019t answer you mather?! Why you ignored
+    your father\u2019s death anniversary?! I am so ashamed of you, your mother was
+    absolutely right!\r\n"
   chapterNumber: 2
   nameText: Telefon2
 --- !u!114 &1040681418
@@ -7131,7 +7134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a9fc788319c7dd94fa2afe5eeeccf708, type: 3}
-  text: stzrykawki2
+  text: "What a surprise, there is nothing left again..\r\n"
   chapterNumber: 2
   nameText: Strzykawki2
 --- !u!114 &1040681419
@@ -7146,7 +7149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: c3fa4f18bd19e9d409db9c5e72b94d64, type: 3}
-  text: teleBar2
+  text: Dude, if you come over again and make a scene, I will not let you in. I get
+    it that you wanted to pay them back for how they had treated you, but really you
+    should stop it. Take care, Jack.
   chapterNumber: 2
   nameText: TelefonBartek2
 --- !u!1 &1056491678
@@ -8069,7 +8074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
-  text: list3
+  text: Im sorry. I just couldn't stand that. We have done to many bad things. I thought
+    I would help me to forget about the past, but i was wrong.
   chapterNumber: 3
   nameText: List3
 --- !u!114 &1190974178
@@ -8084,7 +8090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 17cab659efbf0e44f8564f6f9573ee2a, type: 3}
-  text: Leki3
+  text: "It\u2019s empty.. Someone had to steal the rest of it."
   chapterNumber: 3
   nameText: Leki3
 --- !u!114 &1190974179
@@ -8099,7 +8105,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: f0735bb8845b1264588116b429f7ac8a, type: 3}
-  text: Bartek3
+  text: "Do you have some pills? Or anything? Shit, it turned out that we have bigger
+    problems than Matts\u2019 death. This bastards from who we had stolen stuff, want
+    revenge. I know what we can do to fuck them up. They have some \u201Clab\u201D
+    in abandoned railway station, where they produce meth. Go there. There is no other
+    option. Take as much as you can hide. I feel so bad, because of withdrawal.."
   chapterNumber: 3
   nameText: Bartek3
 --- !u!114 &1190974180
@@ -8114,7 +8124,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 46ef91f8f0eec434fa80c8f0dc1bfc5d, type: 3}
-  text: Mart3
+  text: "Fuck! He is dead. Oh my motherfucking God, I don\u2019t know what to do.
+    Bart has called for help. They will leave him in some den in the middle of the
+    woods. How could you get drugs like that?! Are you insane? I hate you, I don\u2019t
+    want to talk to you anymore. He commited suicide because of you! What\u2019s more,
+    I know they want to kill you. I need something strong.. Do you have anything?"
   chapterNumber: 3
   nameText: Marta3
 --- !u!114 &1190974182
@@ -8129,7 +8143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 8237a44f3a547024cb064118df8d6b2d, type: 3}
-  text: listmilosny3
+  text: "I\u2019m sorry, I will never hit you again. I promise. You don\u2019t have
+    to live like a slut anymore. I will take care of you. We will be so happy, having
+    enough drugs, no worries. Anyway, your friends are already dead. They have killed
+    half of the gang and have stolen two whole shipments. Please, think about it and
+    let me know. Yours Alex."
   chapterNumber: 3
   nameText: ListMilosny3
 --- !u!114 &1190974183
@@ -8144,7 +8162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6bfaf83ce49f5dd4fab9ca8db40b06f5, type: 3}
-  text: tele3
+  text: "Don\u2019t you dare come back home! I have heard what you and your shitty
+    friends are doing all the time. Sitting and constantly getting high, congratulations.
+    I am absolutely ashamed of you."
   chapterNumber: 3
   nameText: Telefon3
 --- !u!114 &1190974184
@@ -8159,7 +8179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: ee645472e619f6e4283f7bd1e484b112, type: 3}
-  text: lyzkamaf3
+  text: "Dear Mr. White, you shall expect the police and a bailiff. You haven\u2019t
+    paid your rent for four months."
   chapterNumber: 3
   nameText: LyzkaMafia3
 --- !u!114 &1190974185
@@ -8174,7 +8195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 0d665b6c312129545989e467159b2c6c, type: 3}
-  text: Ksiazka3
+  text: Thie Lucifer Effect. How good peopl turn evil
   chapterNumber: 3
   nameText: Ksiazka3
 --- !u!4 &1192075512 stripped
@@ -8449,7 +8470,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1221810991}
   - component: {fileID: 1221810993}
-  - component: {fileID: 1221810992}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -8471,19 +8491,6 @@ Transform:
   m_Father: {fileID: 712426051}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1221810992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1221810990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "Z powa\u017Caniem, XXXYYYZZZ.\""
 --- !u!114 &1221810993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8496,8 +8503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Szanowny Panie ///0/9089789 zawiadamiam, \u017Ce wci\u0105\u017C
-    oczekuj\u0119 wp\u0142aty czynszu za poprzedni miesi\u0105c"
+  Explanation: Thie Lucifer Effect. How good peopl turn evil
 --- !u!1 &1225687513
 GameObject:
   m_ObjectHideFlags: 0
@@ -10652,7 +10658,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1443900170}
   - component: {fileID: 1443900172}
-  - component: {fileID: 1443900171}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -10674,19 +10679,6 @@ Transform:
   m_Father: {fileID: 1719711020}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1443900171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1443900169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "~XxXraPidoxTrollXxX, li\u015Bcik do\u0142\u0105czony do lek\xF3w"
 --- !u!114 &1443900172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10699,8 +10691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Za miesi\u0105c cena wzro\u015Bnie o 0.02 bitcoina. Coraz trudniej
-    to zdoby\u0107. uwa\u017Caj z tymi lekami. Ziperid jest mocny\""
+  Explanation: "It\u2019s empty.. Someone had to steal the rest of it."
 --- !u!1 &1444564298
 GameObject:
   m_ObjectHideFlags: 0
@@ -12412,7 +12403,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1740240993}
   - component: {fileID: 1740240995}
-  - component: {fileID: 1740240994}
   m_Layer: 0
   m_Name: Conv1
   m_TagString: Untagged
@@ -12434,19 +12424,6 @@ Transform:
   m_Father: {fileID: 1293343140}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1740240994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1740240992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3bdb6d3724854bb6a069d6e1a0299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Explanation: "Z powa\u017Caniem, XXXYYYZZZ.\""
 --- !u!114 &1740240995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12459,8 +12436,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "\"Szanowny Panie ///0/9089789 zawiadamiam, \u017Ce wci\u0105\u017C
-    oczekuj\u0119 wp\u0142aty czynszu za poprzedni miesi\u0105c"
+  Explanation: "I\u2019m sorry, I will never hit you again. I promise. You don\u2019t
+    have to live like a slut anymore. I will take care of you. We will be so happy,
+    having enough drugs, no worries. Anyway, your friends are already dead. They have
+    killed half of the gang and have stolen two whole shipments. Please, think about
+    it and let me know. Yours Alex"
 --- !u!1 &1747536464
 GameObject:
   m_ObjectHideFlags: 0
@@ -13093,9 +13073,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Explanation: "Szkoda... Dzi\u015B chyba znowu p\xF3jd\u0119 po dzia\u0142k\u0119.
-    Masz jak\u0105\u015B kase?  Musze kupi\u0107 gumy. Ostatnio nie bior\u0105 ze
-    sob\u0105..."
+  Explanation: "How could you get drugs like that?! Are you insane? I hate you, I
+    don\u2019t want to talk to you anymore. He commited suicide because of you! What\u2019s
+    more, I know they want to kill you. I need something strong.. Do you have anything?"
 --- !u!114 &1786443136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13108,8 +13088,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 0
-  Explanation: "Pami\u0119tasz co si\u0119 dzia\u0142o wczoraj? Obudzia\u0142am si\u0119
-    na klatce schodowej."
+  Explanation: "uck! He is dead. Oh my motherfucking God, I don\u2019t know what to
+    do. Bart has called for help. They will leave him in some den in the middle of
+    the woods. "
 --- !u!1 &1794216422
 GameObject:
   m_ObjectHideFlags: 0
